@@ -1,0 +1,13 @@
+#0
+#1
+3DModels(NW4R)
+DrawOpa
+Material152
+NodeTree
+Textures(NW4R)
+polygon0
+polygon1
+shoes_43
+shoes_43_inside__Material153
+shoes_43_shoes_wii_43__Material152
+shoes_wii_43

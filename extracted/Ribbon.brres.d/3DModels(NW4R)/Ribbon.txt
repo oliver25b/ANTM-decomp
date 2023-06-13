@@ -1,0 +1,434 @@
+#MDL  <<<  The first 4 characters '#MDL' are the magic for a MDL text file.
+#     <<<  Don't remove them!
+#
+###############################################################################
+#
+# This is a textual representation of a MDL file used in Nintendos "Mario Kart
+# Wii". "Wiimms SZS Tools" may convert binary (raw) and text MDL files in both
+# directions in the near future. The text parser supports variables, C like
+# expressions and nested IF-THEN-ELSE structures.
+#
+# Info about the general parser syntax and semantics:
+#   * https://szs.wiimm.de/doc/syntax
+#
+# Info about the MDL text syntax and semantics:
+#   * https://szs.wiimm.de/doc/mdl/syntax
+#
+# Reference list of MDL parser functions:
+#   * https://szs.wiimm.de/doc/mdl/func
+#
+# Info about the MDL file format:
+#   * https://szs.wiimm.de/r/wiki/MDL0
+#
+# Hint:
+#   Set one of the options --no-header (-H) or --brief (-B) while decoding
+#   to suppress this large syntax info. The --brief option will also disable
+#   info parts in the different sections.
+
+#
+###############################################################################
+
+[SETUP]
+# This is the general setup and info section. Some parameters are preceeded by
+# a hash ('#') to signal the informative only status. The scanning starts
+# always with this section.
+
+# Identify the tool and version, that have written this file:
+TOOL     = wszst
+SYSTEM   = x86_64
+VERSION  = 2.33a
+REVISION = 8773
+DATE     = 2023-01-14
+
+# The MDL name & version and the number of sections
+@MDL-NAME    = ""
+@MDL-VERSION = 11
+@N-SECTIONS  = 14
+
+
+#
+###############################################################################
+
+[HEADER]
+# MDL header
+@REVISION = 8773
+
+HEAD-LEN    =       0x40
+OFFSET      = 0xffffffb4
+UNKNOWN-08  =        0x1
+UNKNOWN-0c  =        0x1
+N-VERTEX    =          4
+N-FACE      =          2
+UNKNOWN-18  =          0
+N-BONE      =          1
+UNKNOWN-20  =        0x1
+UNKNOWN-08  =        0x1
+BONE-OFFSET =       0x40
+MIN         =      -0.500       0.000      -0.500
+MAX         =       0.500       0.000       0.500
+
+
+#
+###############################################################################
+
+[BONE-TABLE]
+@REVISION = 8773
+
+# N =  1
+       0
+
+#
+###############################################################################
+
+[SECTION-0]
+# MDL.draw-list.00, MDL file offset 0x218, BRRES file offset 0x2f8
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    20
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   2  0  0  0   0  1  /                               :......:
+
+#
+###############################################################################
+
+[SECTION-0]
+# MDL.draw-list.01, MDL file offset 0x21e, BRRES file offset 0x2fe
+@REVISION    =  8773
+@ENTRY-INDEX =     1
+@SORT-INDEX  =    30
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   4  0  0  0   0  0  0  0   1  /                     :.........:
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.00, MDL file offset 0x228, BRRES file offset 0x308
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    40
+@NAME        = "åVåVåwåwåVåwåwåVåVåVåwåVåvåvÝ6Ý6ÝVåvåVÝ6åwåVå6Ý6Ý6åVåvåwÝ5åVåvåwå¸å·åVåwå¸å—å—åwå—ÝVå—å—å—åvå¸åØåØå¸å¸åøå¸å¸å—åØåØåøå¸åØåùå·å¸å¸å—å—åØå¸å—åwåØåØå·Ý5å¸åØå¸ÝVåwÝVåvå—åvÝ6ÝåVÝVå—å6åwÝVåwÝVåwå6å6åå6å—åVå6Ý6å—åvåWÝ6åVåVåVåwåwåvåwåvåVåvå—å—åwåwåVå—íØå6å6å—å—åÙå·å¸å—å¸å—åwå—å¸åØå—å·å¸å·å¸å—åwåVÝVåwåwåvåwåwåVåVåVå—åVåwåVÝVÝVåvå6åwÝVå6ÜõÝ6åVåvå6Ý6ÝÝÝ6ÜõÝ6å—åVÝÝåVÝVå6ÝÜõÜõå5Üõå6åVÝ6åVåVÝÝ6ÝVåwåvåwåwåwåVåVåVå—åwåvå—å¸å—å·åØå·å¸å¸å—å¸åØå—å·å¸åØå—å¸å—åwå—å—å—åwå—å—å—åwå¸å—å—å—åvåwå6åVåvåVå6åVåVåVåwåwåVåVåVåVåwå—å—å6åVå—åwÝ6åwÝ6åVÝ6åwåvåvåwåVåVÝÝ6åVå—å6Ýåwå—åVå6å6ÝVå—å—å·å¸å—å—åwåVÝwå·åVÝ6å—å—åwå¸å—åØåØå·å—å—åwåøåùå¸Ývå·å¸åØå¸å—åØåØåØå·åwåvå·å—åwåwå·å¸å·å—åØå¸å—åVåwÝVÝVÝVå—Ý6ÝVÝ6åvÝÝå6å6å6Ý6åVÝ6åVåVå—Ý6Ýå6Ý6Ý6Ý5Ý6Ý6Ý6ÝÝVåwåØå—å—å¸ÝVåwå—å¸åvåVåwå¸å—åwåwå˜å¸å¸å·å—åØåØåØå·å—åØåØå—åØå—å¸å—å—åVåwåVåwåwå—åwåwåwå—åVåwå—åvå6åwå6å6ååVÝÝåVÝ6ÝÝÜõåVÝå6Ýå6åVåVÝ6åWåVÝ6ÝåVå6åVÝÝÝåVå6Ý6åwå—å¸Ý6Ý6å—å¸Ý6Ý6åwåwå6å6åVå—åØåØå¸åØå¸å¸å—å¸åØå—å¸å·åØå·å—å—å·å¸å·å—å¸å·åwåwå¸ÝVå—å·å¸å¸åvå—åwå6Üõå6å—åVÝ5åVå—å6ÜÔÝ6åwåVåå5å—åwå—å—åwåvåwåwåVÝåVåvå—åwå—åvåVÝVå—å—å—åVå—åVåVåVåvÝVÝåwåVåvå—å—Ýwå·å—å—Ýwå·å—å—å—åØå—å¸å·å—å—å—åØåùåØå·åùåØåØåØåùåØå¸åØåØå¸åøå—å¸åvå—å—å—åVå—ÝVÝ6åVå¸ÝVÝ6åVÝVåVå6å5åVåvå6åwåvÝ6åVåwÝåVåVÝ6Ýå6å6åvåwåwåwåwåwåwåVåvåvÝVåwåwåwåwå¸å—åvåVå¸íØåwå6å—åØå—åwå—å¸å—å¸å—å—å¸å¸å·å¸å¸å¸å·å¸å·å¸å¸å¸åwåvåVåVåØå—åVåVå·åVå6å6åvåVå6ÜõÝ6åVÝÜõÜõÝ5ÜõÜ´ååVå6åå6å6ååwÝå6å6å6åVå6å6Ýå6åVåVåVå6åVåVåVÝ6ÝÝ6åvÝåvåVåwå6å6Ý6å—å6åVåVåvå—åwå—å¸å—å—å¸åØå¸å—å—å˜å—å·å—å—åØåØå—åVå¸å—å·åwåØå¸å—å—åØå—åwåvÝåVåVå6åVåvåvå6å—åvåwåwåVåVåwåwåwåvå—å—Ý6å6åvå—åVåVåwåwå—åwåVÝ6Ý5Ý6å—å—åVå6ÝVåVå6å6åVåwå6åVåVåwå—å—åwå·åwå—åwåØåvåwå—å¸å·åwåØåØå·åØåùå·å¸åØåØå¸åØå—å—å¸å·åØå¸åØå—å—åVåVå¸å—å—å—å¸å·å¸å—åøåØå—åwå6åVå6Üõå—åVå5å5å6Ýå6åVÝÝÜõåvåvå—å6åVåVÝÝåVå6Ý6åVÝ6åVå—å—åVåVÝwå·å—ÝVåwå—å¸Ý6å—å¸åØÝ6åvÝvå—å¸åØå·å—å¸åØå¸å·åØåØåØå—å—åøå·å—å—å·åwå—å·å—åwå—å—åwÝVåwå—å—å—åwåVå6å6å6åwåVåVÝå—åwåwåwå—ÝVå6åwÝ6åwåVÝVÝ6å—åvåVÝåVåwå—å6Ý6åwå—åVå6åwå—åVå6åVå—åwåVåwåwåwåwåVåvå¸å¸å—å¸åØå¸å·å¸å¸å¸åØå¸å¸åØåØå¸å—åvåwåVå¸å—åvÝå¸å¸åwåwå¸å¸å—åvåVå—åVåVå—å—åVåvåwåwåvåwÝÝ6ÝÝ6åwåwåwåVåwå—åvåvå6åwåvåwååVåvå—å6åwå—åvåVå—å—å—åwåwå—åwå—åwå—åwå—å—å¸åØå·í¸å¸åØå—å—å·åØåwå—å·å—å¸åøåùíøåùåØå¸å¸åøå—å¸åØå¸åØåØå¸å—å—å—å—å¸åwåwåwå·å—åVåVå—åVÝå6åVåVåVåVå6å6åwåwå—åvåVå6å·åVåwåVåwåwåwåVå—åVÝ6Ý6åvåVåVåvåVåvåwåwåVå—å—å¸åVå—å—å¸åwå—å—å¸åVåwåVå—åØåØå—åvå·å¸å—åwÝwå¸å·å¸å—å·åØåØå·å—å·åVå—å—åwåwå—åwåVÝVå˜åwåwåVÝåvÝVåVå6ÝVåwåVÝ6Ý6åVåwåVåVåVåwå6Ý6åvåVÝåVå6åwåVå—å—åwåVåvÝ6åwå6åVå—åwå—åVå—å¸å—åVåwå¸åwåVåwå—å·å·å·åØå—å·å—å¸å—å¸åØåØåØåØåØåùåØå—åwåVåØåØåvåvåØå·å—åwåøåØå—å—Üõå6å6åVåVå6åVåvåVå6å6Ý6åvåwåVåVåvÝ6åwåvåwå6å—åVåvåWåwå—åwåwåVåvåVåVÝVåwåVåVåwåvå—åVåwåvå—åwåwå—åwå—å·å—åVå—å·å·åwå—å—å·å—åwå—å¸å¸åùå¸å—å¸å—å¸å¸åØå—å¸å¸å¸å¸å—å—å—å—åVåVå¸å¸åwåVåØåØå—åVå¸å¸åwÝ6åVÝ6Ý6åWÝ5ÝVåVåVÝ6åWåwå—Ý6ÝVÝ6åvåwåwå—åVå—å—åVÝ6åVÝ6å6åVåVåVåVå·Ý6åVåVå—å6å—í¸å¸åVå—å¸åØå—å¸åvå¸å¸å¸åØåØå—åùå·å·å¸å¸åØå—å¸å—å·å—å·å—å—å6å—å¸å—åVåwå·å—åwåwÝVåwÝVÝVÝVåVåwÝ6Ý6å6å—åVÝ6åwåVåvÝVå—å—Ý6Ý6åvåwå6åVå—åwÝ6å—åwåwÝåvå·åwåwåvå—å—åVåWåvåwåVåWåVåwÝ6ÝVåVåwå—å¸å·åØå¸åØå—å¸å—å¸å¸å¸å¸åØå·åwíùåØå—åwåùå·å—åwåØå¸å—ÝVå—å·ÝVåwåvåVåVåwå—åVåVÝ6å—åVÝ6Ý6åvåVåVåVåvåVåwåVåVå—åwå—åVå—åvå—åVåVåVå6åvåwåVåwå—åwåVåwå—åVå—å—åwåvÝvå·åwåWåØíøå·åØåøåøå·å—åØåØíØåVå¸åØå¸åØåØå¸åØåØåØå·å¸å—å—å·å·å¸å¸å—åØå·åvÝå¸å—å—å6å¸å—åVåwå·å—åVåVåVå—åwåVåVå—åvåvåVåwÝVåVåwåVå6Ý6åwå6å6åwåVåVåWåwåVåVå—åwåVåvåwåVåVå—å·åØåVå—å¸åØåwå—å—å—åvå—å—å—åØå—å—å·åØåwå—å¸åØå¸å—å¸å¸åØåØåØå¸åVÝ6åwå—å—åvåwåwå—åwåVåwå—å—ÝVÝ6ÝVåVåVå6åVå6åVåwåwåVå6åVåwå6åVÜõÝ6å—ÝVåVåVÝ6ÝVåwåwÝ6ÝVåVåwåwåwå6åwåwå—åVåwåwå—åVåWåVå—åwåwåwå·åØåØå¸åØå—å—åØåùåØå¸å·å¸å·åøå¸å—åØåØå—åVåØå—å—åwåØå¸å—å—å¸å¸å—å—åwåvåVåvåwåVåVåVå—åwÝåVåwåVÝÝ6åVåVåvåvåVå·å—åwÝ6åVåVåwåVåwåwå—åVåVå—å—å—å—å—å—å¸å—å—å¸åwÝVå—å·å—å—å¸åøåwåwåØíøå—åwåØåøå—å—å—å¸åØå¸å¸å¸åØåØå—å¸å¸å—åØå·å¸ÝwÝwå¸å·åwåwåVåØå·å—åVå¸åwÝVåwå·å—åvÝVåwåvÝ5åVåwåwå6å6åwåwÝåVåwåVÝ6åwåwåwåVÝÝ6åwåVåvÝ6åVåwåwåVåVå6åvÝ6Ý6åwå·åVåwå—å—å—åwå—å—åVåwåwå¸å¸å·å—å·åwå¸å—å—å·å—å·åØåØåØåØåØåwåwåvÝå—Ý6åwåwå—åVå·å—å—åWå—åwåwåVå6åVåvåwå—å—ÝVÝVå—åwåWåVåVå¸åwå—åwåwå—ÝVåVÝ6åwåVÝ6Ý6å—åvÝ6Ý6å—å·å—å¸åwå·åwå—åwåVå—å—åwåVåwåØå—Ý—Ý—íùå¸å—å—åØå—å—å¸å¸å·åwå¸å—å¸å¸åwåwå¸å·å—å—åØå—å—å—å¸åØå·å—å—å—åvåVå—å·åwåVåwåwåVÝVåwåVåvå—åVåwåwåvå—åwåvåvå—åwåwåVåwåwåVåwåwÝVåvå·åwåwåwåvå·å—åwåwåwåwåwå¸å—å¸å·å—å—å¸å¸å¸å—å¸å¸å¸å·å—å¸å·å¸å—å—å—åØå¸å˜å¸åØå¸íØå—å¸åøå·íùå—å—åvÝVåøåØåVÝVåØåøå—åVåØå¸å·åwåwåwÝ6å—ÝVå—å—åwÝ6åVåvåVåVåVÝVÝ6å—åwåvåwå·å·åwÝVåwå¸å—ÝvÝVå¸å—ÝVåwå—å·å¸ÝVåØå·åØÝVå—å—å·åVåwå¸å—åØåØåØåØåØåØå¸å¸åøåøå·åwå¸åØå—å—å·å—åwå—å¸å¸å—å—å—å¸å·å—Ýwå¸å¸åwåVåwåVåwåwÝvåwÝ6å—ÝVÝÝ6å—Ý6åvåVåwÝ6Ý6åVåVåVåVåVÝ6åVåwÝVÝÝ6Ý6ÝVå—å6ÝVå—Ý6Ý6åVÝ6å6åVåwå—Ý6åVåVå¸å·å—åØåØå—å·å·åØå—å—å—å¸å¸åwÝwå¸åØåØå—åVå¸å·ÝVå—å¸åØå—åwåøåØå¸å—åwÝ6åwåwå—åvÝ6Ý6å—åVå6åVåwåVåvÝ6Ý6åwåVåwåVåvåVåVåwåwåwå—í˜å—å—å—åvåwåwåwå—ÝVÝVåwåwåwåwåwå6Ý6å—åwå—å6å—å·åvåwåØå¸åwå—åØåØåwå·å—å·å·åØå·åøå—åØåØå¸å—å¸åøå—íØå¸åØå¸å¸å—å·ÝVå·å¸åwåVå·å·å—åwå·å—íØå¸åwåwÝ5Ôóåwå—åVÝUå—å¸åVåwå—å¸å¸å—åWå·åVÝVåwå·åVÝVåwåwåwå—åwåwÝ6åwå—åwå·å—å—å—å¸å—åwå¸åØå·å·å·åØå¸å¸å¸íøåØå—åwåøåØå·å¸å—åØíøíøå¸åùå—å¸ÝVåVå—å—åwåVå·åwåvåwåØå¸å—åwåwåwåVåVåVÝvÝÝ6åVÝVÝÝ6åVÝ6åVåwÝ6Ý6åVåVåVå6å6åwåwå6ÝÝ6å—åVå6åwåVåwå—åwåwåVå—å—åVåVå—å¸ÝVÝ6åwå—å—åØå—å¸å¸åØåØåØåøåøåùåØå—å·íùåøå¸Ý—å—ÝVå·å—ÝVÝVå¸å·åwåvå¸å—åvåvåwåVåVÝVåwå—åwÝ6åVÝVÝ5ÝVåwåVÝVåwåwåwå—åwåVåwåwå—åwåwå—åwåwå—åwÝVåwåwåVåVå¸å—åVå—åwåwåVå—ÝVåWåVåvåwå˜å—å¸í¸åwå¸åØå—å¸åØåØåVåØåøåøå—åwåØíøÝVå—åØå¸å—åØíùåØåøåØåøíùåØíùå¸å—åøåØå·å—å—å¸íØå—åØåØåøå—å—åwåwå—å—å—åVå—åwåwÝ6åvåWå—å—åwå—å—åwåVåwå—å—åwå·å·å—åwå—å·å—åVå—å¸åØíøÝVå—åØå¸å—åØíøå—å—å—åØåØîåØåØåøåùåùåØå·åØåùåøåØåøåøåØåØåØåØå—åVå¸åøåvåVå—åØå—å—å¸åØåØå¸åwåvåVå—åwåwÝVåwåwåwåVÝ6å¸åwåVÝ6å—åwåwåwåwå—åvåvåWåVå—åVåwåwå—åwåwÝVÝVå—ÝVÝ6ÝVå—ÜõÝåvåwÜõåVå—å—å·å·å—åØåøåØå—åØåØåØå¸åØå¸åøåØå¸å¸å—åvåwå¸å—å—åwåøå—å—åvåØåØåvÝVåwÝVÝ6åVÝVÝ6åwåVÝVåVåVåvåVåwå6åVå—å—åwåVåwåVå—å·åwå—åwåwå—åVåwåwåvåwå·å—åVåVå—å—åwåvÝ6åwíØå—åví¸å—å—åØîå¸å—åØåøåØå¸å¸åøå—å—å—å·åøå¸åØíùåøåØå¸åØåùîåøåØåùåøå¸å·åøå¸å—åwåØå·åwÝVåØå—åwåwå—å¸å—å—å—åwåwåvå—åwåVåwÝwåwÝVåwå—åvåvåwåvåwåwå—åwÝVÝvå—åVåwåVåwåwå—åVåwåwå—å·åØå—å¸å—å·å—å·å¸å¸å¸åØåØåØå¸åØåøåØåØåùåØå¸íøåØåØå—åØå¸åøå¸åØåØå—å—åØå¸å·å—å¸å—å—å—å¸å¸å—åwå—å—åwÝVå—ÝVåVÝ6åwÝVÝ6Ý6åwåwåwå—ÝVå—åvåwåVåvåwå—åVÝVÝWÝ6å—åvåVÝ6å6åwå¸å—åVå—å—å—åVåwÝwå—ÝVÝVÝ6ÝvåØåøå·å¸åØåøå¸åØåØåùåøåØåØåØåØåØå¸å¸åvåVåØå—å—åwå¸å—å·å¸åØåØå¸å—åVåwÝåwå—åvåwåVå—åVåwåvåwåwå—åwå—å—åVåvåvåVå—å—åwåvå—å—å—åVåVåwå—å—å¸å—åVÝwåØå—åvåwåwå·åvå—ÝVå¸åwå—åØåØåwå¸åØåØå—å—å¸åùå¸å¸å·åØåØåØå¸åØåØæåØåØåùåØîåøåùåØå¸åùå¸åøå—å—å¸å·å—å—å·åwå—åvåØåwå·åwå—å—åVÝVåvå—å—Ý6åVå—åwåVÝVÝVåvåwåvå—å—å·Ý6å—åvÝwÝ5ÝVåVÝwÝVåwåVå—åØåØå¸åØå·å¸åøåøÝ—å—åØåØå—å—åØåØåøåØåøåùåØåùæîåøåØíùå—åØåØÝ—å—å¸åØå—åvåØå¸å¸å—åwå—å—åwå—å—Ý—å—åVÝVÝVÝ6å—åVÝ6åwåwåvå—å—åwåwå·å—ÝVåwåwå—åVå—ÝVÝ6ÝVÝVåwåVÝ5Ý6Ý6ÝVÝVÝ6ÝVåwÝ6åVåVå·ÝÝ6å—åØå6å6åwå—å—åØåØåøåØåØåØå¸å¸å·å¸å¸å·å·å¸åØåØåØå¸åwåØå¸åwå—å—å¸åvÝ6å¸å—å—Ý6å—åVÝVåwåvÝ5åVåVÝVåVå—å—åvÝ6ÝVÝVå¸åwåVå—åwåwå—å—åwåwåwåwåØå—åwåwÝ6åvå—åwÝVåwåwÝVåwåVåvåwå—å—åvåwå—å¸åØåØå—å—å¸åøå—å—å·å¸íØåØåøåøåØå¸å˜åØåùåøåøåøåøåøåøíùåøåØåØåùåØå—åØå—åØå¸å·åVå¸åØå·ÝVåùåøå·ÝvÝVÝ6åwåVÝ5åVÝVÝVåVåwÝ6å—åvåwÝ6åwåwå·å·Ýwå¸å¸åwÝwåVÝwå—å—å—å—åVåwå—å—å¸åøÝwå—å¸å¸å—åwå¸åØå·å·å·å¸åØå¸å—åØå¸åØå·åØåØå—åwå¸å·îåØå·å—å¸å·å—åØåwå—åwå¸å—å—å—ÝvÝwå—å·åwÝvÝVåVåWÝvÝ6åVå—åVåVåwå—å—åvÝ6åwåvå—åwåwåvåwåwåwåvÝVåwåVåvåwåwåwåVÝVÝVÝVå6åwå—åvåVå¸å¸åwåwå¸å·å—Ýwå¸å¸å¸ÝwåØå¸å·Ýwå¸å·å—å¸åØå—å¸åØå—åwå¸åØå¸åVå¸åØå¸å—å¸å·Ý6å—ÝVåvåVåVÝVå—åVåVåwåwåVå6åwåVåVÝ6å—åwå—å·ÝVåVåwå—åwÝ6åVå—å—åvå5åVå—å—åwåVå¸åwÝVå—Ý6ÝWå—åvåVÝVå—å—å·å¸åøåØå—åwÝ—å—åwåwåvåøåwå—åØåùå¸åøæåØåØåùåØåØíùåùæåøåùåùåØåøåØåØå·åwåØåøå·åwå·å·åwåwå·å·å—åwåvåwåVåvåwå—åvå6åwå—å—åVå·å—å·å—ÝVåvåwå—åVåwå—ÝVåwå—åwåVå—å·åVåwå—å¸åØå—ÝVå—åØå·åVå—å¸åØå—å¸åøåøåØî9åøåØåøåØåØå·íøåØåØå¸åØåùåøåØåØÝwåvåwåØåwå—å—å¸å·å·å—å¸Ýwå·åwåwå—å—Ý6å—å—å—åwÝVå—å—åwåVåwåwåwÝ6åvåVÝ6åwåwåVÝåwåwåwåVåwåvå—å—å—å—å—å—åwå—åØå·åvÝVÝwåwÝVÝ6å6å—åØå¸å¸å—å·å¸å¸åØå·å¸åØå¸å—ÝwåØåØå·å—Üõåwå·å—å—å—åØå—å—åvå·å·å6åvå—åvåVåwå—åwåVÝ6åVåVåvåVåwåvåwåVåwåwå—å—åvåwå—Ývå—å—å—å6ÝVÝVå—åvÝvÝvåVÝVÝVåVÝ6åVÝå—å·å—åVÝ—å¸å·å·åØåØåØå·å¸å¸åØÝVå¸å¸åØåvå—åØåùåøåØå—åØåøåØåØå·åøåØåØå·åùåøåØå·å·å·åwåwåØå¸å6åwå¸å·åwåwå—å¸åVåWå—å—åVÝVåwå—å—å—åwå·åwåwåwå—å—å—å—å—åVå—å—å—åwå—å·å—å—å—å—åvåwå—åØå¸åØåØå·åØåØå¸å¸åØåøå·åØåØåØåØåØåøåøå¸åØåøåØå—åØåØå—å·å¸åØå·å·å·åwÝwåwå—å—å—åwå·å—ÝVåwÝ—å—åvÝVåwåwÜõÝ6ÝVåvÝåVåvÝVåVåwåVåvå—åVåwå—åVåwåwåvåwåWåVåwÝVåwåVåwåVåwÝVå6åVå·åvåwå—å—å—å·åwå—åwå—å¸å—å¸å¸åØÝwåØå—å·åØå—åwå—åØåwå—å¸å¸åwå—åwå—å·å¸å¸å¸å—å¸åØå—åøåØÝwåwå—å—åwåVå¸å—åVåVåwåwå—åwåwÝVåVåwSCN0"
+
+length		=        0xd0
+mdl0-offset	=  0xfffffdd8
+index		=           0
+id		=           0
+flags		=       0x39f
+padding		=           0           0
+
+parent		=           0  ""
+child		=           0  ""
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       0.000       0.000       0.000
+minimum		=      -0.500       0.000      -0.500
+maximum		=       0.500       0.000       0.500
+
+trans-matrix-x  =       1.000       0.000       0.000       0.000
+trans-matrix-y  =       0.000       1.000       0.000       0.000
+trans-matrix-z  =       0.000       0.000       1.000       0.000
+
+inv-matrix-x    =       1.000      -0.000       0.000       0.000
+inv-matrix-y    =      -0.000       1.000      -0.000       0.000
+inv-matrix-z    =       0.000      -0.000       1.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-2]
+# MDL.verticies.00, MDL file offset 0xc60, BRRES file offset 0xd40
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    80
+@NAME        = "åwåVåVåVåwåVåvåvÝ6Ý6ÝVåvåVÝ6åwåVå6Ý6Ý6åVåvåwÝ5åVåvåwå¸å·åVåwå¸å—å—åwå—ÝVå—å—å—åvå¸åØåØå¸å¸åøå¸å¸å—åØåØåøå¸åØåùå·å¸å¸å—å—åØå¸å—åwåØåØå·Ý5å¸åØå¸ÝVåwÝVåvå—åvÝ6ÝåVÝVå—å6åwÝVåwÝVåwå6å6åå6å—åVå6Ý6å—åvåWÝ6åVåVåVåwåwåvåwåvåVåvå—å—åwåwåVå—íØå6å6å—å—åÙå·å¸å—å¸å—åwå—å¸åØå—å·å¸å·å¸å—åwåVÝVåwåwåvåwåwåVåVåVå—åVåwåVÝVÝVåvå6åwÝVå6ÜõÝ6åVåvå6Ý6ÝÝÝ6ÜõÝ6å—åVÝÝåVÝVå6ÝÜõÜõå5Üõå6åVÝ6åVåVÝÝ6ÝVåwåvåwåwåwåVåVåVå—åwåvå—å¸å—å·åØå·å¸å¸å—å¸åØå—å·å¸åØå—å¸å—åwå—å—å—åwå—å—å—åwå¸å—å—å—åvåwå6åVåvåVå6åVåVåVåwåwåVåVåVåVåwå—å—å6åVå—åwÝ6åwÝ6åVÝ6åwåvåvåwåVåVÝÝ6åVå—å6Ýåwå—åVå6å6ÝVå—å—å·å¸å—å—åwåVÝwå·åVÝ6å—å—åwå¸å—åØåØå·å—å—åwåøåùå¸Ývå·å¸åØå¸å—åØåØåØå·åwåvå·å—åwåwå·å¸å·å—åØå¸å—åVåwÝVÝVÝVå—Ý6ÝVÝ6åvÝÝå6å6å6Ý6åVÝ6åVåVå—Ý6Ýå6Ý6Ý6Ý5Ý6Ý6Ý6ÝÝVåwåØå—å—å¸ÝVåwå—å¸åvåVåwå¸å—åwåwå˜å¸å¸å·å—åØåØåØå·å—åØåØå—åØå—å¸å—å—åVåwåVåwåwå—åwåwåwå—åVåwå—åvå6åwå6å6ååVÝÝåVÝ6ÝÝÜõåVÝå6Ýå6åVåVÝ6åWåVÝ6ÝåVå6åVÝÝÝåVå6Ý6åwå—å¸Ý6Ý6å—å¸Ý6Ý6åwåwå6å6åVå—åØåØå¸åØå¸å¸å—å¸åØå—å¸å·åØå·å—å—å·å¸å·å—å¸å·åwåwå¸ÝVå—å·å¸å¸åvå—åwå6Üõå6å—åVÝ5åVå—å6ÜÔÝ6åwåVåå5å—åwå—å—åwåvåwåwåVÝåVåvå—åwå—åvåVÝVå—å—å—åVå—åVåVåVåvÝVÝåwåVåvå—å—Ýwå·å—å—Ýwå·å—å—å—åØå—å¸å·å—å—å—åØåùåØå·åùåØåØåØåùåØå¸åØåØå¸åøå—å¸åvå—å—å—åVå—ÝVÝ6åVå¸ÝVÝ6åVÝVåVå6å5åVåvå6åwåvÝ6åVåwÝåVåVÝ6Ýå6å6åvåwåwåwåwåwåwåVåvåvÝVåwåwåwåwå¸å—åvåVå¸íØåwå6å—åØå—åwå—å¸å—å¸å—å—å¸å¸å·å¸å¸å¸å·å¸å·å¸å¸å¸åwåvåVåVåØå—åVåVå·åVå6å6åvåVå6ÜõÝ6åVÝÜõÜõÝ5ÜõÜ´ååVå6åå6å6ååwÝå6å6å6åVå6å6Ýå6åVåVåVå6åVåVåVÝ6ÝÝ6åvÝåvåVåwå6å6Ý6å—å6åVåVåvå—åwå—å¸å—å—å¸åØå¸å—å—å˜å—å·å—å—åØåØå—åVå¸å—å·åwåØå¸å—å—åØå—åwåvÝåVåVå6åVåvåvå6å—åvåwåwåVåVåwåwåwåvå—å—Ý6å6åvå—åVåVåwåwå—åwåVÝ6Ý5Ý6å—å—åVå6ÝVåVå6å6åVåwå6åVåVåwå—å—åwå·åwå—åwåØåvåwå—å¸å·åwåØåØå·åØåùå·å¸åØåØå¸åØå—å—å¸å·åØå¸åØå—å—åVåVå¸å—å—å—å¸å·å¸å—åøåØå—åwå6åVå6Üõå—åVå5å5å6Ýå6åVÝÝÜõåvåvå—å6åVåVÝÝåVå6Ý6åVÝ6åVå—å—åVåVÝwå·å—ÝVåwå—å¸Ý6å—å¸åØÝ6åvÝvå—å¸åØå·å—å¸åØå¸å·åØåØåØå—å—åøå·å—å—å·åwå—å·å—åwå—å—åwÝVåwå—å—å—åwåVå6å6å6åwåVåVÝå—åwåwåwå—ÝVå6åwÝ6åwåVÝVÝ6å—åvåVÝåVåwå—å6Ý6åwå—åVå6åwå—åVå6åVå—åwåVåwåwåwåwåVåvå¸å¸å—å¸åØå¸å·å¸å¸å¸åØå¸å¸åØåØå¸å—åvåwåVå¸å—åvÝå¸å¸åwåwå¸å¸å—åvåVå—åVåVå—å—åVåvåwåwåvåwÝÝ6ÝÝ6åwåwåwåVåwå—åvåvå6åwåvåwååVåvå—å6åwå—åvåVå—å—å—åwåwå—åwå—åwå—åwå—å—å¸åØå·í¸å¸åØå—å—å·åØåwå—å·å—å¸åøåùíøåùåØå¸å¸åøå—å¸åØå¸åØåØå¸å—å—å—å—å¸åwåwåwå·å—åVåVå—åVÝå6åVåVåVåVå6å6åwåwå—åvåVå6å·åVåwåVåwåwåwåVå—åVÝ6Ý6åvåVåVåvåVåvåwåwåVå—å—å¸åVå—å—å¸åwå—å—å¸åVåwåVå—åØåØå—åvå·å¸å—åwÝwå¸å·å¸å—å·åØåØå·å—å·åVå—å—åwåwå—åwåVÝVå˜åwåwåVÝåvÝVåVå6ÝVåwåVÝ6Ý6åVåwåVåVåVåwå6Ý6åvåVÝåVå6åwåVå—å—åwåVåvÝ6åwå6åVå—åwå—åVå—å¸å—åVåwå¸åwåVåwå—å·å·å·åØå—å·å—å¸å—å¸åØåØåØåØåØåùåØå—åwåVåØåØåvåvåØå·å—åwåøåØå—å—Üõå6å6åVåVå6åVåvåVå6å6Ý6åvåwåVåVåvÝ6åwåvåwå6å—åVåvåWåwå—åwåwåVåvåVåVÝVåwåVåVåwåvå—åVåwåvå—åwåwå—åwå—å·å—åVå—å·å·åwå—å—å·å—åwå—å¸å¸åùå¸å—å¸å—å¸å¸åØå—å¸å¸å¸å¸å—å—å—å—åVåVå¸å¸åwåVåØåØå—åVå¸å¸åwÝ6åVÝ6Ý6åWÝ5ÝVåVåVÝ6åWåwå—Ý6ÝVÝ6åvåwåwå—åVå—å—åVÝ6åVÝ6å6åVåVåVåVå·Ý6åVåVå—å6å—í¸å¸åVå—å¸åØå—å¸åvå¸å¸å¸åØåØå—åùå·å·å¸å¸åØå—å¸å—å·å—å·å—å—å6å—å¸å—åVåwå·å—åwåwÝVåwÝVÝVÝVåVåwÝ6Ý6å6å—åVÝ6åwåVåvÝVå—å—Ý6Ý6åvåwå6åVå—åwÝ6å—åwåwÝåvå·åwåwåvå—å—åVåWåvåwåVåWåVåwÝ6ÝVåVåwå—å¸å·åØå¸åØå—å¸å—å¸å¸å¸å¸åØå·åwíùåØå—åwåùå·å—åwåØå¸å—ÝVå—å·ÝVåwåvåVåVåwå—åVåVÝ6å—åVÝ6Ý6åvåVåVåVåvåVåwåVåVå—åwå—åVå—åvå—åVåVåVå6åvåwåVåwå—åwåVåwå—åVå—å—åwåvÝvå·åwåWåØíøå·åØåøåøå·å—åØåØíØåVå¸åØå¸åØåØå¸åØåØåØå·å¸å—å—å·å·å¸å¸å—åØå·åvÝå¸å—å—å6å¸å—åVåwå·å—åVåVåVå—åwåVåVå—åvåvåVåwÝVåVåwåVå6Ý6åwå6å6åwåVåVåWåwåVåVå—åwåVåvåwåVåVå—å·åØåVå—å¸åØåwå—å—å—åvå—å—å—åØå—å—å·åØåwå—å¸åØå¸å—å¸å¸åØåØåØå¸åVÝ6åwå—å—åvåwåwå—åwåVåwå—å—ÝVÝ6ÝVåVåVå6åVå6åVåwåwåVå6åVåwå6åVÜõÝ6å—ÝVåVåVÝ6ÝVåwåwÝ6ÝVåVåwåwåwå6åwåwå—åVåwåwå—åVåWåVå—åwåwåwå·åØåØå¸åØå—å—åØåùåØå¸å·å¸å·åøå¸å—åØåØå—åVåØå—å—åwåØå¸å—å—å¸å¸å—å—åwåvåVåvåwåVåVåVå—åwÝåVåwåVÝÝ6åVåVåvåvåVå·å—åwÝ6åVåVåwåVåwåwå—åVåVå—å—å—å—å—å—å¸å—å—å¸åwÝVå—å·å—å—å¸åøåwåwåØíøå—åwåØåøå—å—å—å¸åØå¸å¸å¸åØåØå—å¸å¸å—åØå·å¸ÝwÝwå¸å·åwåwåVåØå·å—åVå¸åwÝVåwå·å—åvÝVåwåvÝ5åVåwåwå6å6åwåwÝåVåwåVÝ6åwåwåwåVÝÝ6åwåVåvÝ6åVåwåwåVåVå6åvÝ6Ý6åwå·åVåwå—å—å—åwå—å—åVåwåwå¸å¸å·å—å·åwå¸å—å—å·å—å·åØåØåØåØåØåwåwåvÝå—Ý6åwåwå—åVå·å—å—åWå—åwåwåVå6åVåvåwå—å—ÝVÝVå—åwåWåVåVå¸åwå—åwåwå—ÝVåVÝ6åwåVÝ6Ý6å—åvÝ6Ý6å—å·å—å¸åwå·åwå—åwåVå—å—åwåVåwåØå—Ý—Ý—íùå¸å—å—åØå—å—å¸å¸å·åwå¸å—å¸å¸åwåwå¸å·å—å—åØå—å—å—å¸åØå·å—å—å—åvåVå—å·åwåVåwåwåVÝVåwåVåvå—åVåwåwåvå—åwåvåvå—åwåwåVåwåwåVåwåwÝVåvå·åwåwåwåvå·å—åwåwåwåwåwå¸å—å¸å·å—å—å¸å¸å¸å—å¸å¸å¸å·å—å¸å·å¸å—å—å—åØå¸å˜å¸åØå¸íØå—å¸åøå·íùå—å—åvÝVåøåØåVÝVåØåøå—åVåØå¸å·åwåwåwÝ6å—ÝVå—å—åwÝ6åVåvåVåVåVÝVÝ6å—åwåvåwå·å·åwÝVåwå¸å—ÝvÝVå¸å—ÝVåwå—å·å¸ÝVåØå·åØÝVå—å—å·åVåwå¸å—åØåØåØåØåØåØå¸å¸åøåøå·åwå¸åØå—å—å·å—åwå—å¸å¸å—å—å—å¸å·å—Ýwå¸å¸åwåVåwåVåwåwÝvåwÝ6å—ÝVÝÝ6å—Ý6åvåVåwÝ6Ý6åVåVåVåVåVÝ6åVåwÝVÝÝ6Ý6ÝVå—å6ÝVå—Ý6Ý6åVÝ6å6åVåwå—Ý6åVåVå¸å·å—åØåØå—å·å·åØå—å—å—å¸å¸åwÝwå¸åØåØå—åVå¸å·ÝVå—å¸åØå—åwåøåØå¸å—åwÝ6åwåwå—åvÝ6Ý6å—åVå6åVåwåVåvÝ6Ý6åwåVåwåVåvåVåVåwåwåwå—í˜å—å—å—åvåwåwåwå—ÝVÝVåwåwåwåwåwå6Ý6å—åwå—å6å—å·åvåwåØå¸åwå—åØåØåwå·å—å·å·åØå·åøå—åØåØå¸å—å¸åøå—íØå¸åØå¸å¸å—å·ÝVå·å¸åwåVå·å·å—åwå·å—íØå¸åwåwÝ5Ôóåwå—åVÝUå—å¸åVåwå—å¸å¸å—åWå·åVÝVåwå·åVÝVåwåwåwå—åwåwÝ6åwå—åwå·å—å—å—å¸å—åwå¸åØå·å·å·åØå¸å¸å¸íøåØå—åwåøåØå·å¸å—åØíøíøå¸åùå—å¸ÝVåVå—å—åwåVå·åwåvåwåØå¸å—åwåwåwåVåVåVÝvÝÝ6åVÝVÝÝ6åVÝ6åVåwÝ6Ý6åVåVåVå6å6åwåwå6ÝÝ6å—åVå6åwåVåwå—åwåwåVå—å—åVåVå—å¸ÝVÝ6åwå—å—åØå—å¸å¸åØåØåØåøåøåùåØå—å·íùåøå¸Ý—å—ÝVå·å—ÝVÝVå¸å·åwåvå¸å—åvåvåwåVåVÝVåwå—åwÝ6åVÝVÝ5ÝVåwåVÝVåwåwåwå—åwåVåwåwå—åwåwå—åwåwå—åwÝVåwåwåVåVå¸å—åVå—åwåwåVå—ÝVåWåVåvåwå˜å—å¸í¸åwå¸åØå—å¸åØåØåVåØåøåøå—åwåØíøÝVå—åØå¸å—åØíùåØåøåØåøíùåØíùå¸å—åøåØå·å—å—å¸íØå—åØåØåøå—å—åwåwå—å—å—åVå—åwåwÝ6åvåWå—å—åwå—å—åwåVåwå—å—åwå·å·å—åwå—å·å—åVå—å¸åØíøÝVå—åØå¸å—åØíøå—å—å—åØåØîåØåØåøåùåùåØå·åØåùåøåØåøåøåØåØåØåØå—åVå¸åøåvåVå—åØå—å—å¸åØåØå¸åwåvåVå—åwåwÝVåwåwåwåVÝ6å¸åwåVÝ6å—åwåwåwåwå—åvåvåWåVå—åVåwåwå—åwåwÝVÝVå—ÝVÝ6ÝVå—ÜõÝåvåwÜõåVå—å—å·å·å—åØåøåØå—åØåØåØå¸åØå¸åøåØå¸å¸å—åvåwå¸å—å—åwåøå—å—åvåØåØåvÝVåwÝVÝ6åVÝVÝ6åwåVÝVåVåVåvåVåwå6åVå—å—åwåVåwåVå—å·åwå—åwåwå—åVåwåwåvåwå·å—åVåVå—å—åwåvÝ6åwíØå—åví¸å—å—åØîå¸å—åØåøåØå¸å¸åøå—å—å—å·åøå¸åØíùåøåØå¸åØåùîåøåØåùåøå¸å·åøå¸å—åwåØå·åwÝVåØå—åwåwå—å¸å—å—å—åwåwåvå—åwåVåwÝwåwÝVåwå—åvåvåwåvåwåwå—åwÝVÝvå—åVåwåVåwåwå—åVåwåwå—å·åØå—å¸å—å·å—å·å¸å¸å¸åØåØåØå¸åØåøåØåØåùåØå¸íøåØåØå—åØå¸åøå¸åØåØå—å—åØå¸å·å—å¸å—å—å—å¸å¸å—åwå—å—åwÝVå—ÝVåVÝ6åwÝVÝ6Ý6åwåwåwå—ÝVå—åvåwåVåvåwå—åVÝVÝWÝ6å—åvåVÝ6å6åwå¸å—åVå—å—å—åVåwÝwå—ÝVÝVÝ6ÝvåØåøå·å¸åØåøå¸åØåØåùåøåØåØåØåØåØå¸å¸åvåVåØå—å—åwå¸å—å·å¸åØåØå¸å—åVåwÝåwå—åvåwåVå—åVåwåvåwåwå—åwå—å—åVåvåvåVå—å—åwåvå—å—å—åVåVåwå—å—å¸å—åVÝwåØå—åvåwåwå·åvå—ÝVå¸åwå—åØåØåwå¸åØåØå—å—å¸åùå¸å¸å·åØåØåØå¸åØåØæåØåØåùåØîåøåùåØå¸åùå¸åøå—å—å¸å·å—å—å·åwå—åvåØåwå·åwå—å—åVÝVåvå—å—Ý6åVå—åwåVÝVÝVåvåwåvå—å—å·Ý6å—åvÝwÝ5ÝVåVÝwÝVåwåVå—åØåØå¸åØå·å¸åøåøÝ—å—åØåØå—å—åØåØåøåØåøåùåØåùæîåøåØíùå—åØåØÝ—å—å¸åØå—åvåØå¸å¸å—åwå—å—åwå—å—Ý—å—åVÝVÝVÝ6å—åVÝ6åwåwåvå—å—åwåwå·å—ÝVåwåwå—åVå—ÝVÝ6ÝVÝVåwåVÝ5Ý6Ý6ÝVÝVÝ6ÝVåwÝ6åVåVå·ÝÝ6å—åØå6å6åwå—å—åØåØåøåØåØåØå¸å¸å·å¸å¸å·å·å¸åØåØåØå¸åwåØå¸åwå—å—å¸åvÝ6å¸å—å—Ý6å—åVÝVåwåvÝ5åVåVÝVåVå—å—åvÝ6ÝVÝVå¸åwåVå—åwåwå—å—åwåwåwåwåØå—åwåwÝ6åvå—åwÝVåwåwÝVåwåVåvåwå—å—åvåwå—å¸åØåØå—å—å¸åøå—å—å·å¸íØåØåøåøåØå¸å˜åØåùåøåøåøåøåøåøíùåøåØåØåùåØå—åØå—åØå¸å·åVå¸åØå·ÝVåùåøå·ÝvÝVÝ6åwåVÝ5åVÝVÝVåVåwÝ6å—åvåwÝ6åwåwå·å·Ýwå¸å¸åwÝwåVÝwå—å—å—å—åVåwå—å—å¸åøÝwå—å¸å¸å—åwå¸åØå·å·å·å¸åØå¸å—åØå¸åØå·åØåØå—åwå¸å·îåØå·å—å¸å·å—åØåwå—åwå¸å—å—å—ÝvÝwå—å·åwÝvÝVåVåWÝvÝ6åVå—åVåVåwå—å—åvÝ6åwåvå—åwåwåvåwåwåwåvÝVåwåVåvåwåwåwåVÝVÝVÝVå6åwå—åvåVå¸å¸åwåwå¸å·å—Ýwå¸å¸å¸ÝwåØå¸å·Ýwå¸å·å—å¸åØå—å¸åØå—åwå¸åØå¸åVå¸åØå¸å—å¸å·Ý6å—ÝVåvåVåVÝVå—åVåVåwåwåVå6åwåVåVÝ6å—åwå—å·ÝVåVåwå—åwÝ6åVå—å—åvå5åVå—å—åwåVå¸åwÝVå—Ý6ÝWå—åvåVÝVå—å—å·å¸åøåØå—åwÝ—å—åwåwåvåøåwå—åØåùå¸åøæåØåØåùåØåØíùåùæåøåùåùåØåøåØåØå·åwåØåøå·åwå·å·åwåwå·å·å—åwåvåwåVåvåwå—åvå6åwå—å—åVå·å—å·å—ÝVåvåwå—åVåwå—ÝVåwå—åwåVå—å·åVåwå—å¸åØå—ÝVå—åØå·åVå—å¸åØå—å¸åøåøåØî9åøåØåøåØåØå·íøåØåØå¸åØåùåøåØåØÝwåvåwåØåwå—å—å¸å·å·å—å¸Ýwå·åwåwå—å—Ý6å—å—å—åwÝVå—å—åwåVåwåwåwÝ6åvåVÝ6åwåwåVÝåwåwåwåVåwåvå—å—å—å—å—å—åwå—åØå·åvÝVÝwåwÝVÝ6å6å—åØå¸å¸å—å·å¸å¸åØå·å¸åØå¸å—ÝwåØåØå·å—Üõåwå·å—å—å—åØå—å—åvå·å·å6åvå—åvåVåwå—åwåVÝ6åVåVåvåVåwåvåwåVåwåwå—å—åvåwå—Ývå—å—å—å6ÝVÝVå—åvÝvÝvåVÝVÝVåVÝ6åVÝå—å·å—åVÝ—å¸å·å·åØåØåØå·å¸å¸åØÝVå¸å¸åØåvå—åØåùåøåØå—åØåøåØåØå·åøåØåØå·åùåøåØå·å·å·åwåwåØå¸å6åwå¸å·åwåwå—å¸åVåWå—å—åVÝVåwå—å—å—åwå·åwåwåwå—å—å—å—å—åVå—å—å—åwå—å·å—å—å—å—åvåwå—åØå¸åØåØå·åØåØå¸å¸åØåøå·åØåØåØåØåØåøåøå¸åØåøåØå—åØåØå—å·å¸åØå·å·å·åwÝwåwå—å—å—åwå·å—ÝVåwÝ—å—åvÝVåwåwÜõÝ6ÝVåvÝåVåvÝVåVåwåVåvå—åVåwå—åVåwåwåvåwåWåVåwÝVåwåVåwåVåwÝVå6åVå·åvåwå—å—å—å·åwå—åwå—å¸å—å¸å¸åØÝwåØå—å·åØå—åwå—åØåwå—å¸å¸åwå—åwå—å·å¸å¸å¸å—å¸åØå—åøåØÝwåwå—å—åwåVå¸å—åVåVåwåwå—åwåwÝVåVåwSCN0"
+
+length		=        0x80
+mdl0-offset	=  0xfffff3a0
+data-offset	=        0x40
+index		=           0
+has-bounds	=           1
+format		=           4
+r_shift		=           0
+stride		=          12
+n_vertex	=         0x4 =      4
+minimum		=      -0.500       0.000      -0.500
+maximum		=       0.500       0.000       0.500
+
+v      -0.500       0.000      -0.500
+v       0.500       0.000      -0.500
+v       0.500       0.000       0.500
+v      -0.500       0.000       0.500
+
+#
+###############################################################################
+
+[SECTION-3]
+# MDL.normals.00, MDL file offset 0xce0, BRRES file offset 0xdc0
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    90
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  0 40  ff ff f3 20   0  0  0 20   0  0  0 f0  :...@... ... ....:
+   10:   0  0  0  0   0  0  0  0   0  0  0  4   0  c  0  1  :................:
+   20:   0  0  0  0  3f 80  0  0   0  0  0  0   0  0  0  0  :....?...........:
+   30:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+
+#
+###############################################################################
+
+[SECTION-5]
+# MDL.t-coord.00, MDL file offset 0xd20, BRRES file offset 0xe00
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =   100
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  0 60  ff ff f2 e0   0  0  0 40   0  0  0 64  :...`.......@...d:
+   10:   0  0  0  0   0  0  0  1   0  0  0  4   0  8  0  4  :................:
+   20:   0  0  0  0   0  0  0  0  3f 80  0  0  3f 80  0  0  :........?...?...:
+   30:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   40:   0  0  0  0   0  0  0  0  3f 80  0  0   0  0  0  0  :........?.......:
+   50:  3f 80  0  0  3f 80  0  0   0  0  0  0  3f 80  0  0  :?...?.......?...:
+
+#
+###############################################################################
+
+[SECTION-8]
+# MDL.materials.00, MDL file offset 0x2f8, BRRES file offset 0x3d8
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    50
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  5 e8  ff ff fd  8   0  0  a a0   0  0  0  0  :................:
+   10:   0  0  0  0   1  2  2  0   0  0  0  2   1  0  0  0  :................:
+   20:   0  0  0  0  ff ff ff ff   0  0  5 e8   0  0  0  1  :................:
+   30:   0  0  4 18   0  0  0  0   0  0  0  0   0  0  4 68  :...............h:
+   40:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   50:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   60:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   70:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   80:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   90:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   a0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   b0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   e0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  100:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  110:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  120:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  130:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  140:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  150:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  160:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  170:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  180:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  190:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1a0:   0  0  0  0   0  0  0  0   0  0  0  f   0  0  0  1  :................:
+  1b0:  3f 80  0  0  3f 80  0  0   0  0  0  0   0  0  0  0  :?...?...........:
+  1c0:   0  0  0  0  3f 80  0  0  3f 80  0  0   0  0  0  0  :....?...?.......:
+  1d0:   0  0  0  0   0  0  0  0  3f 80  0  0  3f 80  0  0  :........?...?...:
+  1e0:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  1f0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  200:  3f 80  0  0  3f 80  0  0   0  0  0  0   0  0  0  0  :?...?...........:
+  210:   0  0  0  0  3f 80  0  0  3f 80  0  0   0  0  0  0  :....?...?.......:
+  220:   0  0  0  0   0  0  0  0  3f 80  0  0  3f 80  0  0  :........?...?...:
+  230:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  240:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  250:  ff ff  0  1  3f 80  0  0   0  0  0  0   0  0  0  0  :....?...........:
+  260:   0  0  0  0   0  0  0  0  3f 80  0  0   0  0  0  0  :........?.......:
+  270:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  280:   0  0  0  0  ff ff  0  1  3f 80  0  0   0  0  0  0  :........?.......:
+  290:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  2a0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  2b0:  3f 80  0  0   0  0  0  0  ff ff  0  1  3f 80  0  0  :?...........?...:
+  2c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  2d0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  2e0:   0  0  0  0  3f 80  0  0   0  0  0  0  ff ff  0  1  :....?...........:
+  2f0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  300:   0  0  0  0  3f 80  0  0   0  0  0  0   0  0  0  0  :....?...........:
+  310:   0  0  0  0   0  0  0  0  3f 80  0  0   0  0  0  0  :........?.......:
+  320:  ff ff  0  1  3f 80  0  0   0  0  0  0   0  0  0  0  :....?...........:
+  330:   0  0  0  0   0  0  0  0  3f 80  0  0   0  0  0  0  :........?.......:
+  340:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  350:   0  0  0  0  ff ff  0  1  3f 80  0  0   0  0  0  0  :........?.......:
+  360:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  370:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  380:  3f 80  0  0   0  0  0  0  ff ff  0  1  3f 80  0  0  :?...........?...:
+  390:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  3a0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  3b0:   0  0  0  0  3f 80  0  0   0  0  0  0  ff ff  0  1  :....?...........:
+  3c0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  3d0:   0  0  0  0  3f 80  0  0   0  0  0  0   0  0  0  0  :....?...........:
+  3e0:   0  0  0  0   0  0  0  0  3f 80  0  0   0  0  0  0  :........?.......:
+  3f0:   0  0  0 3f  ff ff ff ff  4c 4c 4c  0   0  0  7  2  :...?....LLL.....:
+  400:   0  0  7  0   0  0  0 3f  ff ff ff ff   0  0  0  0  :.......?........:
+  410:   0  0  2  2   0  0  2  0   0  0  6 a8   0  0  0  0  :................:
+  420:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  430:   0  0  0  0   0  0  0  0   0  0  0  1   0  0  0  1  :................:
+  440:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  450:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  460:   0  0  0  0   0  0  0  0  61 f3 3f  0   0 61 40  0  :........a.?..a@.:
+  470:   0 17 61 fe   0 ff e3 61  41  0 34 a0  61 42  0  0  :..a....aA.4.aB..:
+  480:   0  0  0  0   0  0  0  0  61 e2  0  0   0 61 e3  0  :........a....a..:
+  490:   0  0 61 e3   0  0  0 61  e3  0  0  0  61 e4  0  0  :..a....a....a...:
+  4a0:   0 61 e5  0   0  0 61 e5   0  0  0 61  e5  0  0  0  :.a....a....a....:
+  4b0:  61 e6  0  0   0 61 e7  0   0  0 61 e7   0  0  0 61  :a....a....a....a:
+  4c0:  e7  0  0  0   0  0  0  0  61 e0 80  0   0 61 e1 80  :........a....a..:
+  4d0:   0  0 61 e2  80  0  0 61  e3 80  0  0  61 e4 80  0  :..a....a....a...:
+  4e0:   0 61 e5 80   0  0 61 e6  80  0  0 61  e7 80  0  0  :.a....a....a....:
+  4f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  500:   0  0  0  0   0  0  0  0  61 25  0  0   0 61 26  0  :........a%...a&.:
+  510:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  520:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  530:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  540:   0  0  0  0   0  0  0  0  10  0  0 10  40  0  0 52  :............@..R:
+  550:  80 10  0  0  10 50  0  0   0  0  0  0   0  0  0  0  :.....P..........:
+  560:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  570:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  580:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  590:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  5a0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  5b0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  5c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  5d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  5e0:   0  0  0  0   0  0  0  0   /                        :........:
+
+#
+###############################################################################
+
+[SECTION-9]
+# MDL.mat-nodes.00, MDL file offset 0x8e0, BRRES file offset 0x9c0
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    60
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  2  0  ff ff f7 20   0  0  0  0   2  0  0  0  :....... ........:
+   10:   0 ff ff ff  ff ff ff ff   0  0  0  0   0  0  0  0  :................:
+   20:  61 fe  0  0   f 61 f6  0   0  4 61 fe   0  0  f 61  :a....a....a....a:
+   30:  f7  0  0  e  61 fe  0  0   f 61 f8  0   0  0 61 fe  :....a....a....a.:
+   40:   0  0  f 61  f9  0  0  c  61 fe  0  0   f 61 fa  0  :...a....a....a..:
+   50:   0  5 61 fe   0  0  f 61  fb  0  0  d  61 fe  0  0  :..a....a....a...:
+   60:   f 61 fc  0   0  a 61 fe   0  0  f 61  fd  0  0  e  :.a....a....a....:
+   70:  61 27 ff ff  ff  0  0  0   0  0  0  0   0  0  0  0  :a'..............:
+   80:  61 fe ff ff  f0 61 f6 e3  38 c0 61 28   b f0 40 61  :a....a..8.a(..@a:
+   90:  c0  8 f8 af  61 c2  8 af  f0 61 c1  8  f2 f0 61 c3  :....a....a....a.:
+   a0:   8 ff 80 61  10  0  0  0  61 11  0  0   0  0  0  0  :...a....a.......:
+   b0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   e0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  100:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  110:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  120:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  130:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  140:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  150:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  160:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  170:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  180:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  190:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1a0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1b0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1e0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+
+#
+###############################################################################
+
+[SECTION-10]
+# MDL.objects.00, MDL file offset 0xae0, BRRES file offset 0xbc0
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    70
+@NAME        = "ÝVåvåVÝ6åwåVå6Ý6Ý6åVåvåwÝ5åVåvåwå¸å·åVåwå¸å—å—åwå—ÝVå—å—å—åvå¸åØåØå¸å¸åøå¸å¸å—åØåØåøå¸åØåùå·å¸å¸å—å—åØå¸å—åwåØåØå·Ý5å¸åØå¸ÝVåwÝVåvå—åvÝ6ÝåVÝVå—å6åwÝVåwÝVåwå6å6åå6å—åVå6Ý6å—åvåWÝ6åVåVåVåwåwåvåwåvåVåvå—å—åwåwåVå—íØå6å6å—å—åÙå·å¸å—å¸å—åwå—å¸åØå—å·å¸å·å¸å—åwåVÝVåwåwåvåwåwåVåVåVå—åVåwåVÝVÝVåvå6åwÝVå6ÜõÝ6åVåvå6Ý6ÝÝÝ6ÜõÝ6å—åVÝÝåVÝVå6ÝÜõÜõå5Üõå6åVÝ6åVåVÝÝ6ÝVåwåvåwåwåwåVåVåVå—åwåvå—å¸å—å·åØå·å¸å¸å—å¸åØå—å·å¸åØå—å¸å—åwå—å—å—åwå—å—å—åwå¸å—å—å—åvåwå6åVåvåVå6åVåVåVåwåwåVåVåVåVåwå—å—å6åVå—åwÝ6åwÝ6åVÝ6åwåvåvåwåVåVÝÝ6åVå—å6Ýåwå—åVå6å6ÝVå—å—å·å¸å—å—åwåVÝwå·åVÝ6å—å—åwå¸å—åØåØå·å—å—åwåøåùå¸Ývå·å¸åØå¸å—åØåØåØå·åwåvå·å—åwåwå·å¸å·å—åØå¸å—åVåwÝVÝVÝVå—Ý6ÝVÝ6åvÝÝå6å6å6Ý6åVÝ6åVåVå—Ý6Ýå6Ý6Ý6Ý5Ý6Ý6Ý6ÝÝVåwåØå—å—å¸ÝVåwå—å¸åvåVåwå¸å—åwåwå˜å¸å¸å·å—åØåØåØå·å—åØåØå—åØå—å¸å—å—åVåwåVåwåwå—åwåwåwå—åVåwå—åvå6åwå6å6ååVÝÝåVÝ6ÝÝÜõåVÝå6Ýå6åVåVÝ6åWåVÝ6ÝåVå6åVÝÝÝåVå6Ý6åwå—å¸Ý6Ý6å—å¸Ý6Ý6åwåwå6å6åVå—åØåØå¸åØå¸å¸å—å¸åØå—å¸å·åØå·å—å—å·å¸å·å—å¸å·åwåwå¸ÝVå—å·å¸å¸åvå—åwå6Üõå6å—åVÝ5åVå—å6ÜÔÝ6åwåVåå5å—åwå—å—åwåvåwåwåVÝåVåvå—åwå—åvåVÝVå—å—å—åVå—åVåVåVåvÝVÝåwåVåvå—å—Ýwå·å—å—Ýwå·å—å—å—åØå—å¸å·å—å—å—åØåùåØå·åùåØåØåØåùåØå¸åØåØå¸åøå—å¸åvå—å—å—åVå—ÝVÝ6åVå¸ÝVÝ6åVÝVåVå6å5åVåvå6åwåvÝ6åVåwÝåVåVÝ6Ýå6å6åvåwåwåwåwåwåwåVåvåvÝVåwåwåwåwå¸å—åvåVå¸íØåwå6å—åØå—åwå—å¸å—å¸å—å—å¸å¸å·å¸å¸å¸å·å¸å·å¸å¸å¸åwåvåVåVåØå—åVåVå·åVå6å6åvåVå6ÜõÝ6åVÝÜõÜõÝ5ÜõÜ´ååVå6åå6å6ååwÝå6å6å6åVå6å6Ýå6åVåVåVå6åVåVåVÝ6ÝÝ6åvÝåvåVåwå6å6Ý6å—å6åVåVåvå—åwå—å¸å—å—å¸åØå¸å—å—å˜å—å·å—å—åØåØå—åVå¸å—å·åwåØå¸å—å—åØå—åwåvÝåVåVå6åVåvåvå6å—åvåwåwåVåVåwåwåwåvå—å—Ý6å6åvå—åVåVåwåwå—åwåVÝ6Ý5Ý6å—å—åVå6ÝVåVå6å6åVåwå6åVåVåwå—å—åwå·åwå—åwåØåvåwå—å¸å·åwåØåØå·åØåùå·å¸åØåØå¸åØå—å—å¸å·åØå¸åØå—å—åVåVå¸å—å—å—å¸å·å¸å—åøåØå—åwå6åVå6Üõå—åVå5å5å6Ýå6åVÝÝÜõåvåvå—å6åVåVÝÝåVå6Ý6åVÝ6åVå—å—åVåVÝwå·å—ÝVåwå—å¸Ý6å—å¸åØÝ6åvÝvå—å¸åØå·å—å¸åØå¸å·åØåØåØå—å—åøå·å—å—å·åwå—å·å—åwå—å—åwÝVåwå—å—å—åwåVå6å6å6åwåVåVÝå—åwåwåwå—ÝVå6åwÝ6åwåVÝVÝ6å—åvåVÝåVåwå—å6Ý6åwå—åVå6åwå—åVå6åVå—åwåVåwåwåwåwåVåvå¸å¸å—å¸åØå¸å·å¸å¸å¸åØå¸å¸åØåØå¸å—åvåwåVå¸å—åvÝå¸å¸åwåwå¸å¸å—åvåVå—åVåVå—å—åVåvåwåwåvåwÝÝ6ÝÝ6åwåwåwåVåwå—åvåvå6åwåvåwååVåvå—å6åwå—åvåVå—å—å—åwåwå—åwå—åwå—åwå—å—å¸åØå·í¸å¸åØå—å—å·åØåwå—å·å—å¸åøåùíøåùåØå¸å¸åøå—å¸åØå¸åØåØå¸å—å—å—å—å¸åwåwåwå·å—åVåVå—åVÝå6åVåVåVåVå6å6åwåwå—åvåVå6å·åVåwåVåwåwåwåVå—åVÝ6Ý6åvåVåVåvåVåvåwåwåVå—å—å¸åVå—å—å¸åwå—å—å¸åVåwåVå—åØåØå—åvå·å¸å—åwÝwå¸å·å¸å—å·åØåØå·å—å·åVå—å—åwåwå—åwåVÝVå˜åwåwåVÝåvÝVåVå6ÝVåwåVÝ6Ý6åVåwåVåVåVåwå6Ý6åvåVÝåVå6åwåVå—å—åwåVåvÝ6åwå6åVå—åwå—åVå—å¸å—åVåwå¸åwåVåwå—å·å·å·åØå—å·å—å¸å—å¸åØåØåØåØåØåùåØå—åwåVåØåØåvåvåØå·å—åwåøåØå—å—Üõå6å6åVåVå6åVåvåVå6å6Ý6åvåwåVåVåvÝ6åwåvåwå6å—åVåvåWåwå—åwåwåVåvåVåVÝVåwåVåVåwåvå—åVåwåvå—åwåwå—åwå—å·å—åVå—å·å·åwå—å—å·å—åwå—å¸å¸åùå¸å—å¸å—å¸å¸åØå—å¸å¸å¸å¸å—å—å—å—åVåVå¸å¸åwåVåØåØå—åVå¸å¸åwÝ6åVÝ6Ý6åWÝ5ÝVåVåVÝ6åWåwå—Ý6ÝVÝ6åvåwåwå—åVå—å—åVÝ6åVÝ6å6åVåVåVåVå·Ý6åVåVå—å6å—í¸å¸åVå—å¸åØå—å¸åvå¸å¸å¸åØåØå—åùå·å·å¸å¸åØå—å¸å—å·å—å·å—å—å6å—å¸å—åVåwå·å—åwåwÝVåwÝVÝVÝVåVåwÝ6Ý6å6å—åVÝ6åwåVåvÝVå—å—Ý6Ý6åvåwå6åVå—åwÝ6å—åwåwÝåvå·åwåwåvå—å—åVåWåvåwåVåWåVåwÝ6ÝVåVåwå—å¸å·åØå¸åØå—å¸å—å¸å¸å¸å¸åØå·åwíùåØå—åwåùå·å—åwåØå¸å—ÝVå—å·ÝVåwåvåVåVåwå—åVåVÝ6å—åVÝ6Ý6åvåVåVåVåvåVåwåVåVå—åwå—åVå—åvå—åVåVåVå6åvåwåVåwå—åwåVåwå—åVå—å—åwåvÝvå·åwåWåØíøå·åØåøåøå·å—åØåØíØåVå¸åØå¸åØåØå¸åØåØåØå·å¸å—å—å·å·å¸å¸å—åØå·åvÝå¸å—å—å6å¸å—åVåwå·å—åVåVåVå—åwåVåVå—åvåvåVåwÝVåVåwåVå6Ý6åwå6å6åwåVåVåWåwåVåVå—åwåVåvåwåVåVå—å·åØåVå—å¸åØåwå—å—å—åvå—å—å—åØå—å—å·åØåwå—å¸åØå¸å—å¸å¸åØåØåØå¸åVÝ6åwå—å—åvåwåwå—åwåVåwå—å—ÝVÝ6ÝVåVåVå6åVå6åVåwåwåVå6åVåwå6åVÜõÝ6å—ÝVåVåVÝ6ÝVåwåwÝ6ÝVåVåwåwåwå6åwåwå—åVåwåwå—åVåWåVå—åwåwåwå·åØåØå¸åØå—å—åØåùåØå¸å·å¸å·åøå¸å—åØåØå—åVåØå—å—åwåØå¸å—å—å¸å¸å—å—åwåvåVåvåwåVåVåVå—åwÝåVåwåVÝÝ6åVåVåvåvåVå·å—åwÝ6åVåVåwåVåwåwå—åVåVå—å—å—å—å—å—å¸å—å—å¸åwÝVå—å·å—å—å¸åøåwåwåØíøå—åwåØåøå—å—å—å¸åØå¸å¸å¸åØåØå—å¸å¸å—åØå·å¸ÝwÝwå¸å·åwåwåVåØå·å—åVå¸åwÝVåwå·å—åvÝVåwåvÝ5åVåwåwå6å6åwåwÝåVåwåVÝ6åwåwåwåVÝÝ6åwåVåvÝ6åVåwåwåVåVå6åvÝ6Ý6åwå·åVåwå—å—å—åwå—å—åVåwåwå¸å¸å·å—å·åwå¸å—å—å·å—å·åØåØåØåØåØåwåwåvÝå—Ý6åwåwå—åVå·å—å—åWå—åwåwåVå6åVåvåwå—å—ÝVÝVå—åwåWåVåVå¸åwå—åwåwå—ÝVåVÝ6åwåVÝ6Ý6å—åvÝ6Ý6å—å·å—å¸åwå·åwå—åwåVå—å—åwåVåwåØå—Ý—Ý—íùå¸å—å—åØå—å—å¸å¸å·åwå¸å—å¸å¸åwåwå¸å·å—å—åØå—å—å—å¸åØå·å—å—å—åvåVå—å·åwåVåwåwåVÝVåwåVåvå—åVåwåwåvå—åwåvåvå—åwåwåVåwåwåVåwåwÝVåvå·åwåwåwåvå·å—åwåwåwåwåwå¸å—å¸å·å—å—å¸å¸å¸å—å¸å¸å¸å·å—å¸å·å¸å—å—å—åØå¸å˜å¸åØå¸íØå—å¸åøå·íùå—å—åvÝVåøåØåVÝVåØåøå—åVåØå¸å·åwåwåwÝ6å—ÝVå—å—åwÝ6åVåvåVåVåVÝVÝ6å—åwåvåwå·å·åwÝVåwå¸å—ÝvÝVå¸å—ÝVåwå—å·å¸ÝVåØå·åØÝVå—å—å·åVåwå¸å—åØåØåØåØåØåØå¸å¸åøåøå·åwå¸åØå—å—å·å—åwå—å¸å¸å—å—å—å¸å·å—Ýwå¸å¸åwåVåwåVåwåwÝvåwÝ6å—ÝVÝÝ6å—Ý6åvåVåwÝ6Ý6åVåVåVåVåVÝ6åVåwÝVÝÝ6Ý6ÝVå—å6ÝVå—Ý6Ý6åVÝ6å6åVåwå—Ý6åVåVå¸å·å—åØåØå—å·å·åØå—å—å—å¸å¸åwÝwå¸åØåØå—åVå¸å·ÝVå—å¸åØå—åwåøåØå¸å—åwÝ6åwåwå—åvÝ6Ý6å—åVå6åVåwåVåvÝ6Ý6åwåVåwåVåvåVåVåwåwåwå—í˜å—å—å—åvåwåwåwå—ÝVÝVåwåwåwåwåwå6Ý6å—åwå—å6å—å·åvåwåØå¸åwå—åØåØåwå·å—å·å·åØå·åøå—åØåØå¸å—å¸åøå—íØå¸åØå¸å¸å—å·ÝVå·å¸åwåVå·å·å—åwå·å—íØå¸åwåwÝ5Ôóåwå—åVÝUå—å¸åVåwå—å¸å¸å—åWå·åVÝVåwå·åVÝVåwåwåwå—åwåwÝ6åwå—åwå·å—å—å—å¸å—åwå¸åØå·å·å·åØå¸å¸å¸íøåØå—åwåøåØå·å¸å—åØíøíøå¸åùå—å¸ÝVåVå—å—åwåVå·åwåvåwåØå¸å—åwåwåwåVåVåVÝvÝÝ6åVÝVÝÝ6åVÝ6åVåwÝ6Ý6åVåVåVå6å6åwåwå6ÝÝ6å—åVå6åwåVåwå—åwåwåVå—å—åVåVå—å¸ÝVÝ6åwå—å—åØå—å¸å¸åØåØåØåøåøåùåØå—å·íùåøå¸Ý—å—ÝVå·å—ÝVÝVå¸å·åwåvå¸å—åvåvåwåVåVÝVåwå—åwÝ6åVÝVÝ5ÝVåwåVÝVåwåwåwå—åwåVåwåwå—åwåwå—åwåwå—åwÝVåwåwåVåVå¸å—åVå—åwåwåVå—ÝVåWåVåvåwå˜å—å¸í¸åwå¸åØå—å¸åØåØåVåØåøåøå—åwåØíøÝVå—åØå¸å—åØíùåØåøåØåøíùåØíùå¸å—åøåØå·å—å—å¸íØå—åØåØåøå—å—åwåwå—å—å—åVå—åwåwÝ6åvåWå—å—åwå—å—åwåVåwå—å—åwå·å·å—åwå—å·å—åVå—å¸åØíøÝVå—åØå¸å—åØíøå—å—å—åØåØîåØåØåøåùåùåØå·åØåùåøåØåøåøåØåØåØåØå—åVå¸åøåvåVå—åØå—å—å¸åØåØå¸åwåvåVå—åwåwÝVåwåwåwåVÝ6å¸åwåVÝ6å—åwåwåwåwå—åvåvåWåVå—åVåwåwå—åwåwÝVÝVå—ÝVÝ6ÝVå—ÜõÝåvåwÜõåVå—å—å·å·å—åØåøåØå—åØåØåØå¸åØå¸åøåØå¸å¸å—åvåwå¸å—å—åwåøå—å—åvåØåØåvÝVåwÝVÝ6åVÝVÝ6åwåVÝVåVåVåvåVåwå6åVå—å—åwåVåwåVå—å·åwå—åwåwå—åVåwåwåvåwå·å—åVåVå—å—åwåvÝ6åwíØå—åví¸å—å—åØîå¸å—åØåøåØå¸å¸åøå—å—å—å·åøå¸åØíùåøåØå¸åØåùîåøåØåùåøå¸å·åøå¸å—åwåØå·åwÝVåØå—åwåwå—å¸å—å—å—åwåwåvå—åwåVåwÝwåwÝVåwå—åvåvåwåvåwåwå—åwÝVÝvå—åVåwåVåwåwå—åVåwåwå—å·åØå—å¸å—å·å—å·å¸å¸å¸åØåØåØå¸åØåøåØåØåùåØå¸íøåØåØå—åØå¸åøå¸åØåØå—å—åØå¸å·å—å¸å—å—å—å¸å¸å—åwå—å—åwÝVå—ÝVåVÝ6åwÝVÝ6Ý6åwåwåwå—ÝVå—åvåwåVåvåwå—åVÝVÝWÝ6å—åvåVÝ6å6åwå¸å—åVå—å—å—åVåwÝwå—ÝVÝVÝ6ÝvåØåøå·å¸åØåøå¸åØåØåùåøåØåØåØåØåØå¸å¸åvåVåØå—å—åwå¸å—å·å¸åØåØå¸å—åVåwÝåwå—åvåwåVå—åVåwåvåwåwå—åwå—å—åVåvåvåVå—å—åwåvå—å—å—åVåVåwå—å—å¸å—åVÝwåØå—åvåwåwå·åvå—ÝVå¸åwå—åØåØåwå¸åØåØå—å—å¸åùå¸å¸å·åØåØåØå¸åØåØæåØåØåùåØîåøåùåØå¸åùå¸åøå—å—å¸å·å—å—å·åwå—åvåØåwå·åwå—å—åVÝVåvå—å—Ý6åVå—åwåVÝVÝVåvåwåvå—å—å·Ý6å—åvÝwÝ5ÝVåVÝwÝVåwåVå—åØåØå¸åØå·å¸åøåøÝ—å—åØåØå—å—åØåØåøåØåøåùåØåùæîåøåØíùå—åØåØÝ—å—å¸åØå—åvåØå¸å¸å—åwå—å—åwå—å—Ý—å—åVÝVÝVÝ6å—åVÝ6åwåwåvå—å—åwåwå·å—ÝVåwåwå—åVå—ÝVÝ6ÝVÝVåwåVÝ5Ý6Ý6ÝVÝVÝ6ÝVåwÝ6åVåVå·ÝÝ6å—åØå6å6åwå—å—åØåØåøåØåØåØå¸å¸å·å¸å¸å·å·å¸åØåØåØå¸åwåØå¸åwå—å—å¸åvÝ6å¸å—å—Ý6å—åVÝVåwåvÝ5åVåVÝVåVå—å—åvÝ6ÝVÝVå¸åwåVå—åwåwå—å—åwåwåwåwåØå—åwåwÝ6åvå—åwÝVåwåwÝVåwåVåvåwå—å—åvåwå—å¸åØåØå—å—å¸åøå—å—å·å¸íØåØåøåøåØå¸å˜åØåùåøåøåøåøåøåøíùåøåØåØåùåØå—åØå—åØå¸å·åVå¸åØå·ÝVåùåøå·ÝvÝVÝ6åwåVÝ5åVÝVÝVåVåwÝ6å—åvåwÝ6åwåwå·å·Ýwå¸å¸åwÝwåVÝwå—å—å—å—åVåwå—å—å¸åøÝwå—å¸å¸å—åwå¸åØå·å·å·å¸åØå¸å—åØå¸åØå·åØåØå—åwå¸å·îåØå·å—å¸å·å—åØåwå—åwå¸å—å—å—ÝvÝwå—å·åwÝvÝVåVåWÝvÝ6åVå—åVåVåwå—å—åvÝ6åwåvå—åwåwåvåwåwåwåvÝVåwåVåvåwåwåwåVÝVÝVÝVå6åwå—åvåVå¸å¸åwåwå¸å·å—Ýwå¸å¸å¸ÝwåØå¸å·Ýwå¸å·å—å¸åØå—å¸åØå—åwå¸åØå¸åVå¸åØå¸å—å¸å·Ý6å—ÝVåvåVåVÝVå—åVåVåwåwåVå6åwåVåVÝ6å—åwå—å·ÝVåVåwå—åwÝ6åVå—å—åvå5åVå—å—åwåVå¸åwÝVå—Ý6ÝWå—åvåVÝVå—å—å·å¸åøåØå—åwÝ—å—åwåwåvåøåwå—åØåùå¸åøæåØåØåùåØåØíùåùæåøåùåùåØåøåØåØå·åwåØåøå·åwå·å·åwåwå·å·å—åwåvåwåVåvåwå—åvå6åwå—å—åVå·å—å·å—ÝVåvåwå—åVåwå—ÝVåwå—åwåVå—å·åVåwå—å¸åØå—ÝVå—åØå·åVå—å¸åØå—å¸åøåøåØî9åøåØåøåØåØå·íøåØåØå¸åØåùåøåØåØÝwåvåwåØåwå—å—å¸å·å·å—å¸Ýwå·åwåwå—å—Ý6å—å—å—åwÝVå—å—åwåVåwåwåwÝ6åvåVÝ6åwåwåVÝåwåwåwåVåwåvå—å—å—å—å—å—åwå—åØå·åvÝVÝwåwÝVÝ6å6å—åØå¸å¸å—å·å¸å¸åØå·å¸åØå¸å—ÝwåØåØå·å—Üõåwå·å—å—å—åØå—å—åvå·å·å6åvå—åvåVåwå—åwåVÝ6åVåVåvåVåwåvåwåVåwåwå—å—åvåwå—Ývå—å—å—å6ÝVÝVå—åvÝvÝvåVÝVÝVåVÝ6åVÝå—å·å—åVÝ—å¸å·å·åØåØåØå·å¸å¸åØÝVå¸å¸åØåvå—åØåùåøåØå—åØåøåØåØå·åøåØåØå·åùåøåØå·å·å·åwåwåØå¸å6åwå¸å·åwåwå—å¸åVåWå—å—åVÝVåwå—å—å—åwå·åwåwåwå—å—å—å—å—åVå—å—å—åwå—å·å—å—å—å—åvåwå—åØå¸åØåØå·åØåØå¸å¸åØåøå·åØåØåØåØåØåøåøå¸åØåøåØå—åØåØå—å·å¸åØå·å·å·åwÝwåwå—å—å—åwå·å—ÝVåwÝ—å—åvÝVåwåwÜõÝ6ÝVåvÝåVåvÝVåVåwåVåvå—åVåwå—åVåwåwåvåwåWåVåwÝVåwåVåwåVåwÝVå6åVå·åvåwå—å—å—å·åwå—åwå—å¸å—å¸å¸åØÝwåØå—å·åØå—åwå—åØåwå—å¸å¸åwå—åwå—å·å¸å¸å¸å—å¸åØå—åøåØÝwåwå—å—åwåVå¸å—åVåVåwåwå—åwåwÝVåVåwSCN0"
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  1 80  ff ff f5 20   0  0  0  0   0  0 14  0  :....... ........:
+   10:   0  0  0  2   0  0  0 14   0  0  0 e0   0  0  0 80  :................:
+   20:   0  0  0 68   0  0  0 20   0  0  0 20   0  0  1 3c  :...h... ... ...<:
+   30:   0  0 26  0   0  0  0  0   0  0  3  4   0  0  0  0  :..&.............:
+   40:   0  0  0  4   0  0  0  2   0  0  0  0  ff ff ff ff  :................:
+   50:   0  0 ff ff  ff ff ff ff  ff ff ff ff  ff ff ff ff  :................:
+   60:  ff ff ff ff   0  0  0 68   0  0  0  0   0  0  0  0  :.......h........:
+   70:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   80:   0  0  0  0   0  0  0  0   0  0  8 50   0  0 14  0  :...........P....:
+   90:   8 60  0  0   0  2 10  0   0 10  8  0   0  0 14  0  :.`..............:
+   a0:   8 70 41 37  70  9  8 80  c8 24 12  9   8 90  4 82  :.pA7p....$......:
+   b0:  41 20  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :A ..............:
+   c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   e0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  100:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  110:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  120:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  130:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  140:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  150:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  160:  98  0  4  3   0  3  0  0   0  2  0  2   1  0  1  0  :................:
+  170:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+
+#
+###############################################################################
+
+[SECTION-11]
+# MDL.t-links.00, MDL file offset 0x20c, BRRES file offset 0x2ec
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    10
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  0  1   0  0  0 ec   0  0  5  4   /           :............:
+
+#
+###############################################################################
+
+[END]
+# This section is ignored.
+

@@ -1,0 +1,8 @@
+Textures(NW4R)
+cloth_fitness_shoe
+pc2_shoe
+pc2_shoes_a
+shoes_wii_01
+shoes_wii_31
+shoes_wii_61
+shoes_wii_67

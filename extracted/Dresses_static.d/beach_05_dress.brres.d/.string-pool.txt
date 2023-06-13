@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material235
+NodeTree
+Textures(NW4R)
+beach_05_dress
+beach_05_dress_beach_wii_05_dress__Material235
+beach_wii_05_dress
+polygon0

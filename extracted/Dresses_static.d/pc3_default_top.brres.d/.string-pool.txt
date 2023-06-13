@@ -1,0 +1,13 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material2
+NodeTree
+Scene_Material
+Textures(NW4R)
+pc3_cloth_top
+pc3_default_top
+pc3_default_top__Scene_Material
+pc3_default_top_top__Material2
+polygon0
+polygon1

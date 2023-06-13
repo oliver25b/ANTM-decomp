@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Textures(NW4R)
+m_under_wii_03_bottom
+polygon0
+under_03_bottom
+under_03_bottom_cloth__m_under_wii_03_bottom
+under_wii_03_bottom

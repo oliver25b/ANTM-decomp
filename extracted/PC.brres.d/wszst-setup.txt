@@ -1,0 +1,556 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# The internal archive format (U8, WU8, BRRES, BREFF or BREFT):
+archive-format = BRRES
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = BRRES
+
+# An archive format related version number (-1: unknown or not relevant)
+version = -1
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 0
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x5c0
+max-data-offset = 0x4d5140
+
+# The calculated alignment of all files:
+data-align = 0x20
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./.string-pool.bin
+./.string-pool.txt
+./3DModels(NW4R)/CatwalkExpert.d
+./3DModels(NW4R)/CatwalkExpert.txt
+./3DModels(NW4R)/Driver.d
+./3DModels(NW4R)/Driver.txt
+./3DModels(NW4R)/FitnessCoach.d
+./3DModels(NW4R)/FitnessCoach.txt
+./3DModels(NW4R)/Gardener.d
+./3DModels(NW4R)/Gardener.txt
+./3DModels(NW4R)/MakeupHairExpert.d
+./3DModels(NW4R)/MakeupHairExpert.txt
+./3DModels(NW4R)/PC.d
+./3DModels(NW4R)/PC.txt
+./3DModels(NW4R)/Photographer.d
+./3DModels(NW4R)/Photographer.txt
+./3DModels(NW4R)/ShopKeeper.d
+./3DModels(NW4R)/ShopKeeper.txt
+./3DModels(NW4R)/Stylist.d
+./3DModels(NW4R)/Stylist.txt
+./3DModels(NW4R)/boyfriend_01.d
+./3DModels(NW4R)/boyfriend_01.txt
+./3DModels(NW4R)/boyfriend_02.d
+./3DModels(NW4R)/boyfriend_02.txt
+./3DModels(NW4R)/boyfriend_03.d
+./3DModels(NW4R)/boyfriend_03.txt
+./3DModels(NW4R)/boyfriend_04.d
+./3DModels(NW4R)/boyfriend_04.txt
+./3DModels(NW4R)/guest_model_01.d
+./3DModels(NW4R)/guest_model_01.txt
+./3DModels(NW4R)/guest_model_02.d
+./3DModels(NW4R)/guest_model_02.txt
+./3DModels(NW4R)/guest_model_03.d
+./3DModels(NW4R)/guest_model_03.txt
+./Textures(NW4R)/catwalkexpert_body.d
+./Textures(NW4R)/catwalkexpert_body.png
+./Textures(NW4R)/catwalkexpert_clothes.d
+./Textures(NW4R)/catwalkexpert_clothes.mm1.png
+./Textures(NW4R)/catwalkexpert_clothes.mm2.png
+./Textures(NW4R)/catwalkexpert_clothes.mm3.png
+./Textures(NW4R)/catwalkexpert_clothes.png
+./Textures(NW4R)/catwalkexpert_hair.d
+./Textures(NW4R)/catwalkexpert_hair.png
+./Textures(NW4R)/driver_body.d
+./Textures(NW4R)/driver_body.png
+./Textures(NW4R)/driver_clothes.d
+./Textures(NW4R)/driver_clothes.mm1.png
+./Textures(NW4R)/driver_clothes.mm2.png
+./Textures(NW4R)/driver_clothes.mm3.png
+./Textures(NW4R)/driver_clothes.png
+./Textures(NW4R)/driver_sunglasses.d
+./Textures(NW4R)/driver_sunglasses.png
+./Textures(NW4R)/driver_sunglasses_glass.d
+./Textures(NW4R)/driver_sunglasses_glass.png
+./Textures(NW4R)/envMap.d
+./Textures(NW4R)/envMap.png
+./Textures(NW4R)/fitnesscoach_body.d
+./Textures(NW4R)/fitnesscoach_body.png
+./Textures(NW4R)/fitnesscoach_clothes.d
+./Textures(NW4R)/fitnesscoach_clothes.mm1.png
+./Textures(NW4R)/fitnesscoach_clothes.mm2.png
+./Textures(NW4R)/fitnesscoach_clothes.mm3.png
+./Textures(NW4R)/fitnesscoach_clothes.png
+./Textures(NW4R)/fitnesscoach_eyes.d
+./Textures(NW4R)/fitnesscoach_eyes.png
+./Textures(NW4R)/fitnesscoach_hair.d
+./Textures(NW4R)/fitnesscoach_hair.png
+./Textures(NW4R)/gardener_body.d
+./Textures(NW4R)/gardener_body.png
+./Textures(NW4R)/gardener_clothes.d
+./Textures(NW4R)/gardener_clothes.mm1.png
+./Textures(NW4R)/gardener_clothes.mm2.png
+./Textures(NW4R)/gardener_clothes.mm3.png
+./Textures(NW4R)/gardener_clothes.png
+./Textures(NW4R)/gardener_eye.d
+./Textures(NW4R)/gardener_eye.png
+./Textures(NW4R)/gardener_hair.d
+./Textures(NW4R)/gardener_hair.png
+./Textures(NW4R)/guestmodell01_body.d
+./Textures(NW4R)/guestmodell01_body.png
+./Textures(NW4R)/guestmodell01_clothes.d
+./Textures(NW4R)/guestmodell01_clothes.mm1.png
+./Textures(NW4R)/guestmodell01_clothes.mm2.png
+./Textures(NW4R)/guestmodell01_clothes.mm3.png
+./Textures(NW4R)/guestmodell01_clothes.png
+./Textures(NW4R)/guestmodell01_hair.d
+./Textures(NW4R)/guestmodell01_hair.png
+./Textures(NW4R)/guestmodell02_body.d
+./Textures(NW4R)/guestmodell02_body.png
+./Textures(NW4R)/guestmodell02_clothes.d
+./Textures(NW4R)/guestmodell02_clothes.mm1.png
+./Textures(NW4R)/guestmodell02_clothes.mm2.png
+./Textures(NW4R)/guestmodell02_clothes.mm3.png
+./Textures(NW4R)/guestmodell02_clothes.png
+./Textures(NW4R)/guestmodell02_glass.d
+./Textures(NW4R)/guestmodell02_glass.mm1.png
+./Textures(NW4R)/guestmodell02_glass.mm2.png
+./Textures(NW4R)/guestmodell02_glass.mm3.png
+./Textures(NW4R)/guestmodell02_glass.png
+./Textures(NW4R)/guestmodell02_hair.d
+./Textures(NW4R)/guestmodell02_hair.png
+./Textures(NW4R)/guestmodell03_body.d
+./Textures(NW4R)/guestmodell03_body.png
+./Textures(NW4R)/guestmodell03_clothes.d
+./Textures(NW4R)/guestmodell03_clothes.mm1.png
+./Textures(NW4R)/guestmodell03_clothes.mm2.png
+./Textures(NW4R)/guestmodell03_clothes.mm3.png
+./Textures(NW4R)/guestmodell03_clothes.png
+./Textures(NW4R)/makeup_expert_body.d
+./Textures(NW4R)/makeup_expert_body.png
+./Textures(NW4R)/makeup_expert_clothes.d
+./Textures(NW4R)/makeup_expert_clothes.mm1.png
+./Textures(NW4R)/makeup_expert_clothes.mm2.png
+./Textures(NW4R)/makeup_expert_clothes.mm3.png
+./Textures(NW4R)/makeup_expert_clothes.png
+./Textures(NW4R)/makeup_expert_eye.d
+./Textures(NW4R)/makeup_expert_eye.png
+./Textures(NW4R)/makeup_expert_hair.d
+./Textures(NW4R)/makeup_expert_hair.png
+./Textures(NW4R)/pc1_bottom.d
+./Textures(NW4R)/pc1_bottom.png
+./Textures(NW4R)/pc1_eye.d
+./Textures(NW4R)/pc1_eye.png
+./Textures(NW4R)/pc1_hair.d
+./Textures(NW4R)/pc1_hair.png
+./Textures(NW4R)/pc1_head.d
+./Textures(NW4R)/pc1_head.png
+./Textures(NW4R)/pc1_top.d
+./Textures(NW4R)/pc1_top.png
+./Textures(NW4R)/pc2_bottom.d
+./Textures(NW4R)/pc2_bottom.png
+./Textures(NW4R)/pc2_eye.d
+./Textures(NW4R)/pc2_eye.png
+./Textures(NW4R)/pc2_eyelash.d
+./Textures(NW4R)/pc2_eyelash.mm1.png
+./Textures(NW4R)/pc2_eyelash.mm2.png
+./Textures(NW4R)/pc2_eyelash.png
+./Textures(NW4R)/pc2_head.d
+./Textures(NW4R)/pc2_head.png
+./Textures(NW4R)/pc2_shoes_a.d
+./Textures(NW4R)/pc2_shoes_a.mm1.png
+./Textures(NW4R)/pc2_shoes_a.mm2.png
+./Textures(NW4R)/pc2_shoes_a.mm3.png
+./Textures(NW4R)/pc2_shoes_a.png
+./Textures(NW4R)/pc2_top.d
+./Textures(NW4R)/pc2_top.png
+./Textures(NW4R)/pc3_bottom.d
+./Textures(NW4R)/pc3_bottom.png
+./Textures(NW4R)/pc3_head.d
+./Textures(NW4R)/pc3_head.png
+./Textures(NW4R)/pc3_top.d
+./Textures(NW4R)/pc3_top.png
+./Textures(NW4R)/pc4_bottom.d
+./Textures(NW4R)/pc4_bottom.png
+./Textures(NW4R)/pc4_head.d
+./Textures(NW4R)/pc4_head.png
+./Textures(NW4R)/pc4_top.d
+./Textures(NW4R)/pc4_top.png
+./Textures(NW4R)/photographer_body.d
+./Textures(NW4R)/photographer_body.png
+./Textures(NW4R)/photographer_clothes.d
+./Textures(NW4R)/photographer_clothes.mm1.png
+./Textures(NW4R)/photographer_clothes.mm2.png
+./Textures(NW4R)/photographer_clothes.mm3.png
+./Textures(NW4R)/photographer_clothes.png
+./Textures(NW4R)/shopkeeper_body.d
+./Textures(NW4R)/shopkeeper_body.png
+./Textures(NW4R)/shopkeeper_clothes.d
+./Textures(NW4R)/shopkeeper_clothes.mm1.png
+./Textures(NW4R)/shopkeeper_clothes.mm2.png
+./Textures(NW4R)/shopkeeper_clothes.mm3.png
+./Textures(NW4R)/shopkeeper_clothes.png
+./Textures(NW4R)/shopkeeper_eye.d
+./Textures(NW4R)/shopkeeper_eye.png
+./Textures(NW4R)/shopkeeper_hair.d
+./Textures(NW4R)/shopkeeper_hair.png
+./Textures(NW4R)/snood_makeup.d
+./Textures(NW4R)/snood_makeup.png
+./Textures(NW4R)/stylist_cloth_dress.d
+./Textures(NW4R)/stylist_cloth_dress.mm1.png
+./Textures(NW4R)/stylist_cloth_dress.mm2.png
+./Textures(NW4R)/stylist_cloth_dress.mm3.png
+./Textures(NW4R)/stylist_cloth_dress.png
+./Textures(NW4R)/topmodell_boyfriend01_body.d
+./Textures(NW4R)/topmodell_boyfriend01_body.png
+./Textures(NW4R)/topmodell_boyfriend01_cloth.d
+./Textures(NW4R)/topmodell_boyfriend01_cloth.mm1.png
+./Textures(NW4R)/topmodell_boyfriend01_cloth.mm2.png
+./Textures(NW4R)/topmodell_boyfriend01_cloth.mm3.png
+./Textures(NW4R)/topmodell_boyfriend01_cloth.png
+./Textures(NW4R)/topmodell_boyfriend01_eye.d
+./Textures(NW4R)/topmodell_boyfriend01_eye.png
+./Textures(NW4R)/topmodell_boyfriend01_hair.d
+./Textures(NW4R)/topmodell_boyfriend01_hair.png
+./Textures(NW4R)/topmodell_boyfriend02_body.d
+./Textures(NW4R)/topmodell_boyfriend02_body.png
+./Textures(NW4R)/topmodell_boyfriend02_cloth.d
+./Textures(NW4R)/topmodell_boyfriend02_cloth.mm1.png
+./Textures(NW4R)/topmodell_boyfriend02_cloth.mm2.png
+./Textures(NW4R)/topmodell_boyfriend02_cloth.mm3.png
+./Textures(NW4R)/topmodell_boyfriend02_cloth.png
+./Textures(NW4R)/topmodell_boyfriend02_eye.d
+./Textures(NW4R)/topmodell_boyfriend02_eye.png
+./Textures(NW4R)/topmodell_boyfriend02_hair.d
+./Textures(NW4R)/topmodell_boyfriend02_hair.png
+./Textures(NW4R)/topmodell_boyfriend03_body.d
+./Textures(NW4R)/topmodell_boyfriend03_body.png
+./Textures(NW4R)/topmodell_boyfriend03_cloth.d
+./Textures(NW4R)/topmodell_boyfriend03_cloth.mm1.png
+./Textures(NW4R)/topmodell_boyfriend03_cloth.mm2.png
+./Textures(NW4R)/topmodell_boyfriend03_cloth.mm3.png
+./Textures(NW4R)/topmodell_boyfriend03_cloth.png
+./Textures(NW4R)/topmodell_boyfriend04_body.d
+./Textures(NW4R)/topmodell_boyfriend04_body.png
+./Textures(NW4R)/topmodell_boyfriend04_cloth.d
+./Textures(NW4R)/topmodell_boyfriend04_cloth.mm1.png
+./Textures(NW4R)/topmodell_boyfriend04_cloth.mm2.png
+./Textures(NW4R)/topmodell_boyfriend04_cloth.mm3.png
+./Textures(NW4R)/topmodell_boyfriend04_cloth.png
+./Textures(NW4R)/topmodell_fashiondesigner02_glass.d
+./Textures(NW4R)/topmodell_fashiondesigner02_glass.mm1.png
+./Textures(NW4R)/topmodell_fashiondesigner02_glass.mm2.png
+./Textures(NW4R)/topmodell_fashiondesigner02_glass.mm3.png
+./Textures(NW4R)/topmodell_fashiondesigner02_glass.png
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+MDL		= ./3DModels(NW4R)/CatwalkExpert
+MDL		= ./3DModels(NW4R)/Driver
+MDL		= ./3DModels(NW4R)/FitnessCoach
+MDL		= ./3DModels(NW4R)/Gardener
+MDL		= ./3DModels(NW4R)/MakeupHairExpert
+MDL		= ./3DModels(NW4R)/PC
+MDL		= ./3DModels(NW4R)/Photographer
+MDL		= ./3DModels(NW4R)/ShopKeeper
+MDL		= ./3DModels(NW4R)/Stylist
+MDL		= ./3DModels(NW4R)/boyfriend_01
+MDL		= ./3DModels(NW4R)/boyfriend_02
+MDL		= ./3DModels(NW4R)/boyfriend_03
+MDL		= ./3DModels(NW4R)/boyfriend_04
+MDL		= ./3DModels(NW4R)/guest_model_01
+MDL		= ./3DModels(NW4R)/guest_model_02
+MDL		= ./3DModels(NW4R)/guest_model_03
+TEX,CMPR,1	= ./Textures(NW4R)/catwalkexpert_body
+TEX,CMPR,4	= ./Textures(NW4R)/catwalkexpert_clothes
+TEX,RGB5A3,1	= ./Textures(NW4R)/catwalkexpert_hair
+TEX,CMPR,1	= ./Textures(NW4R)/driver_body
+TEX,CMPR,4	= ./Textures(NW4R)/driver_clothes
+TEX,CMPR,1	= ./Textures(NW4R)/driver_sunglasses
+TEX,CMPR,1	= ./Textures(NW4R)/driver_sunglasses_glass
+TEX,CMPR,1	= ./Textures(NW4R)/envMap
+TEX,CMPR,1	= ./Textures(NW4R)/fitnesscoach_body
+TEX,CMPR,4	= ./Textures(NW4R)/fitnesscoach_clothes
+TEX,CMPR,1	= ./Textures(NW4R)/fitnesscoach_eyes
+TEX,RGB5A3,1	= ./Textures(NW4R)/fitnesscoach_hair
+TEX,CMPR,1	= ./Textures(NW4R)/gardener_body
+TEX,CMPR,4	= ./Textures(NW4R)/gardener_clothes
+TEX,CMPR,1	= ./Textures(NW4R)/gardener_eye
+TEX,RGB5A3,1	= ./Textures(NW4R)/gardener_hair
+TEX,CMPR,1	= ./Textures(NW4R)/guestmodell01_body
+TEX,CMPR,4	= ./Textures(NW4R)/guestmodell01_clothes
+TEX,CMPR,1	= ./Textures(NW4R)/guestmodell01_hair
+TEX,CMPR,1	= ./Textures(NW4R)/guestmodell02_body
+TEX,CMPR,4	= ./Textures(NW4R)/guestmodell02_clothes
+TEX,CMPR,4	= ./Textures(NW4R)/guestmodell02_glass
+TEX,RGB5A3,1	= ./Textures(NW4R)/guestmodell02_hair
+TEX,CMPR,1	= ./Textures(NW4R)/guestmodell03_body
+TEX,CMPR,4	= ./Textures(NW4R)/guestmodell03_clothes
+TEX,CMPR,1	= ./Textures(NW4R)/makeup_expert_body
+TEX,CMPR,4	= ./Textures(NW4R)/makeup_expert_clothes
+TEX,CMPR,1	= ./Textures(NW4R)/makeup_expert_eye
+TEX,RGB5A3,1	= ./Textures(NW4R)/makeup_expert_hair
+TEX,CMPR,1	= ./Textures(NW4R)/pc1_bottom
+TEX,CMPR,1	= ./Textures(NW4R)/pc1_eye
+TEX,RGB5A3,1	= ./Textures(NW4R)/pc1_hair
+TEX,CMPR,1	= ./Textures(NW4R)/pc1_head
+TEX,CMPR,1	= ./Textures(NW4R)/pc1_top
+TEX,CMPR,1	= ./Textures(NW4R)/pc2_bottom
+TEX,CMPR,1	= ./Textures(NW4R)/pc2_eye
+TEX,RGBA32,3	= ./Textures(NW4R)/pc2_eyelash
+TEX,CMPR,1	= ./Textures(NW4R)/pc2_head
+TEX,CMPR,4	= ./Textures(NW4R)/pc2_shoes_a
+TEX,CMPR,1	= ./Textures(NW4R)/pc2_top
+TEX,CMPR,1	= ./Textures(NW4R)/pc3_bottom
+TEX,CMPR,1	= ./Textures(NW4R)/pc3_head
+TEX,CMPR,1	= ./Textures(NW4R)/pc3_top
+TEX,CMPR,1	= ./Textures(NW4R)/pc4_bottom
+TEX,CMPR,1	= ./Textures(NW4R)/pc4_head
+TEX,CMPR,1	= ./Textures(NW4R)/pc4_top
+TEX,CMPR,1	= ./Textures(NW4R)/photographer_body
+TEX,CMPR,4	= ./Textures(NW4R)/photographer_clothes
+TEX,CMPR,1	= ./Textures(NW4R)/shopkeeper_body
+TEX,CMPR,4	= ./Textures(NW4R)/shopkeeper_clothes
+TEX,CMPR,1	= ./Textures(NW4R)/shopkeeper_eye
+TEX,RGB5A3,1	= ./Textures(NW4R)/shopkeeper_hair
+TEX,CMPR,1	= ./Textures(NW4R)/snood_makeup
+TEX,CMPR,4	= ./Textures(NW4R)/stylist_cloth_dress
+TEX,CMPR,1	= ./Textures(NW4R)/topmodell_boyfriend01_body
+TEX,CMPR,4	= ./Textures(NW4R)/topmodell_boyfriend01_cloth
+TEX,CMPR,1	= ./Textures(NW4R)/topmodell_boyfriend01_eye
+TEX,CMPR,1	= ./Textures(NW4R)/topmodell_boyfriend01_hair
+TEX,CMPR,1	= ./Textures(NW4R)/topmodell_boyfriend02_body
+TEX,CMPR,4	= ./Textures(NW4R)/topmodell_boyfriend02_cloth
+TEX,CMPR,1	= ./Textures(NW4R)/topmodell_boyfriend02_eye
+TEX,RGB5A3,1	= ./Textures(NW4R)/topmodell_boyfriend02_hair
+TEX,CMPR,1	= ./Textures(NW4R)/topmodell_boyfriend03_body
+TEX,CMPR,4	= ./Textures(NW4R)/topmodell_boyfriend03_cloth
+TEX,CMPR,1	= ./Textures(NW4R)/topmodell_boyfriend04_body
+TEX,CMPR,4	= ./Textures(NW4R)/topmodell_boyfriend04_cloth
+TEX,CMPR,4	= ./Textures(NW4R)/topmodell_fashiondesigner02_glass
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but not U8) this list will be used to sort the found
+# files. For archives with directory support (all but not PACK) it is very
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./3DModels(NW4R)/
+     0x5c0	= ./3DModels(NW4R)/boyfriend_01
+   0x18ba0	= ./3DModels(NW4R)/boyfriend_02
+   0x322a0	= ./3DModels(NW4R)/boyfriend_03
+   0x4cf00	= ./3DModels(NW4R)/boyfriend_04
+   0x66180	= ./3DModels(NW4R)/CatwalkExpert
+   0x871e0	= ./3DModels(NW4R)/Driver
+   0xa15e0	= ./3DModels(NW4R)/FitnessCoach
+   0xbc400	= ./3DModels(NW4R)/Gardener
+   0xd5d80	= ./3DModels(NW4R)/guest_model_01
+   0xef5e0	= ./3DModels(NW4R)/guest_model_02
+  0x109920	= ./3DModels(NW4R)/guest_model_03
+  0x1203a0	= ./3DModels(NW4R)/MakeupHairExpert
+  0x13f9a0	= ./3DModels(NW4R)/PC
+  0x2317e0	= ./3DModels(NW4R)/Photographer
+  0x249180	= ./3DModels(NW4R)/ShopKeeper
+  0x2690e0	= ./3DModels(NW4R)/Stylist
+		= ./Textures(NW4R)/
+  0x28eaa0	= ./Textures(NW4R)/catwalkexpert_body
+  0x296ae0	= ./Textures(NW4R)/catwalkexpert_clothes
+  0x2a1520	= ./Textures(NW4R)/catwalkexpert_hair
+  0x2a9560	= ./Textures(NW4R)/driver_body
+  0x2b15a0	= ./Textures(NW4R)/driver_clothes
+  0x2bbfe0	= ./Textures(NW4R)/driver_sunglasses
+  0x2bc820	= ./Textures(NW4R)/driver_sunglasses_glass
+  0x2bd060	= ./Textures(NW4R)/envMap
+  0x2bf0a0	= ./Textures(NW4R)/fitnesscoach_body
+  0x2c70e0	= ./Textures(NW4R)/fitnesscoach_clothes
+  0x2d1b20	= ./Textures(NW4R)/fitnesscoach_eyes
+  0x2d2360	= ./Textures(NW4R)/fitnesscoach_hair
+  0x2da3a0	= ./Textures(NW4R)/gardener_body
+  0x2e23e0	= ./Textures(NW4R)/gardener_clothes
+  0x2ece20	= ./Textures(NW4R)/gardener_eye
+  0x2ed660	= ./Textures(NW4R)/gardener_hair
+  0x2f56a0	= ./Textures(NW4R)/guestmodell01_body
+  0x2fd6e0	= ./Textures(NW4R)/guestmodell01_clothes
+  0x308120	= ./Textures(NW4R)/guestmodell01_hair
+  0x30a160	= ./Textures(NW4R)/guestmodell02_body
+  0x3121a0	= ./Textures(NW4R)/guestmodell02_clothes
+  0x31cbe0	= ./Textures(NW4R)/guestmodell02_glass
+  0x31d6c0	= ./Textures(NW4R)/guestmodell02_hair
+  0x325700	= ./Textures(NW4R)/guestmodell03_body
+  0x32d740	= ./Textures(NW4R)/guestmodell03_clothes
+  0x338180	= ./Textures(NW4R)/makeup_expert_body
+  0x3401c0	= ./Textures(NW4R)/makeup_expert_clothes
+  0x34ac00	= ./Textures(NW4R)/makeup_expert_eye
+  0x34cc40	= ./Textures(NW4R)/makeup_expert_hair
+  0x354c80	= ./Textures(NW4R)/pc1_bottom
+  0x35ccc0	= ./Textures(NW4R)/pc1_eye
+  0x35ed00	= ./Textures(NW4R)/pc1_hair
+  0x37ed40	= ./Textures(NW4R)/pc1_head
+  0x39ed80	= ./Textures(NW4R)/pc1_top
+  0x3a6dc0	= ./Textures(NW4R)/pc2_bottom
+  0x3aee00	= ./Textures(NW4R)/pc2_eye
+  0x3b0e40	= ./Textures(NW4R)/pc2_eyelash
+  0x3bb680	= ./Textures(NW4R)/pc2_head
+  0x3db6c0	= ./Textures(NW4R)/pc2_shoes_a
+  0x3dc1a0	= ./Textures(NW4R)/pc2_top
+  0x3e41e0	= ./Textures(NW4R)/pc3_bottom
+  0x3ec220	= ./Textures(NW4R)/pc3_head
+  0x40c260	= ./Textures(NW4R)/pc3_top
+  0x4142a0	= ./Textures(NW4R)/pc4_bottom
+  0x41c2e0	= ./Textures(NW4R)/pc4_head
+  0x43c320	= ./Textures(NW4R)/pc4_top
+  0x444360	= ./Textures(NW4R)/photographer_body
+  0x44c3a0	= ./Textures(NW4R)/photographer_clothes
+  0x456de0	= ./Textures(NW4R)/shopkeeper_body
+  0x45ee20	= ./Textures(NW4R)/shopkeeper_clothes
+  0x469860	= ./Textures(NW4R)/shopkeeper_eye
+  0x46a0a0	= ./Textures(NW4R)/shopkeeper_hair
+  0x4720e0	= ./Textures(NW4R)/snood_makeup
+  0x474120	= ./Textures(NW4R)/stylist_cloth_dress
+  0x47eb60	= ./Textures(NW4R)/topmodell_boyfriend01_body
+  0x486ba0	= ./Textures(NW4R)/topmodell_boyfriend01_cloth
+  0x4915e0	= ./Textures(NW4R)/topmodell_boyfriend01_eye
+  0x491e20	= ./Textures(NW4R)/topmodell_boyfriend01_hair
+  0x493e60	= ./Textures(NW4R)/topmodell_boyfriend02_body
+  0x49bea0	= ./Textures(NW4R)/topmodell_boyfriend02_cloth
+  0x4a68e0	= ./Textures(NW4R)/topmodell_boyfriend02_eye
+  0x4a7120	= ./Textures(NW4R)/topmodell_boyfriend02_hair
+  0x4af160	= ./Textures(NW4R)/topmodell_boyfriend03_body
+  0x4b71a0	= ./Textures(NW4R)/topmodell_boyfriend03_cloth
+  0x4c1be0	= ./Textures(NW4R)/topmodell_boyfriend04_body
+  0x4c9c20	= ./Textures(NW4R)/topmodell_boyfriend04_cloth
+  0x4d4660	= ./Textures(NW4R)/topmodell_fashiondesigner02_glass
+  0x4d5140	= ./.string-pool.bin
+
+#------------------------------------------------------------------------------
+

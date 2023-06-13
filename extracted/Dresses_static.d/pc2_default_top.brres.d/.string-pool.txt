@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material124
+NodeTree
+Textures(NW4R)
+pc2_cloth_top
+pc2_default_top
+pc2_default_top_pc2_cloth_top__Material124
+polygon0

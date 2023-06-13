@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material70
+NodeTree
+Textures(NW4R)
+pc2_shoes_a
+polygon0
+shoes
+shoes__Material70

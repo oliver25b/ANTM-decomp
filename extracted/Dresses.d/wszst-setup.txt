@@ -1,0 +1,1262 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# The internal archive format (U8, WU8, BRRES, BREFF or BREFT):
+archive-format = U8
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = U8
+
+# An archive format related version number (-1: unknown or not relevant)
+version = -1
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 0
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x0
+max-data-offset = 0x1c1b540
+
+# The calculated alignment of all files:
+data-align = 0x40
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./Shirt4.brres.d
+./Shirt5.brres.d
+./beach_01_bottom.brres.d
+./beach_01_dress.brres.d
+./beach_01_top.brres.d
+./beach_02_bottom.brres.d
+./beach_02_dress.brres.d
+./beach_02_top.brres.d
+./beach_03_bottom.brres.d
+./beach_03_dress.brres.d
+./beach_03_top.brres.d
+./beach_04_bottom.brres.d
+./beach_04_dress.brres.d
+./beach_04_top.brres.d
+./beach_05_bottom.brres.d
+./beach_05_dress.brres.d
+./beach_05_top.brres.d
+./beach_06_bottom.brres.d
+./beach_06_dress.brres.d
+./beach_06_top.brres.d
+./beach_07_bottom.brres.d
+./beach_07_top.brres.d
+./beach_08_bottom.brres.d
+./beach_08_top.brres.d
+./beach_09_bottom.brres.d
+./beach_09_top.brres.d
+./beach_10_bottom.brres.d
+./beach_10_top.brres.d
+./casual_01_bottom.brres.d
+./casual_01_dress.brres.d
+./casual_01_top.brres.d
+./casual_02_bottom.brres.d
+./casual_02_dress.brres.d
+./casual_02_top.brres.d
+./casual_03_bottom.brres.d
+./casual_03_dress.brres.d
+./casual_03_top.brres.d
+./casual_04_bottom.brres.d
+./casual_04_top.brres.d
+./casual_05_bottom.brres.d
+./casual_05_top.brres.d
+./casual_06_bottom.brres.d
+./casual_06_top.brres.d
+./casual_07_bottom.brres.d
+./casual_07_top.brres.d
+./casual_08_bottom.brres.d
+./casual_08_top.brres.d
+./casual_09_bottom.brres.d
+./casual_09_top.brres.d
+./casual_10_bottom.brres.d
+./casual_10_top.brres.d
+./casual_11_bottom.brres.d
+./comp1_default_dress.brres.d
+./comp2_default_bottom.brres.d
+./comp2_default_top.brres.d
+./comp3_default_dress.brres.d
+./comp4_default_dress.brres.d
+./comp5_default_dress.brres.d
+./comp6_default_dress.brres.d
+./comp7_default_dress.brres.d
+./course.kcl.d
+./course.kcl.flag
+./course.kcl.mtl
+./course.kcl.obj
+./course.kmp.d
+./course.kmp.txt
+./course.lex.txt
+./default_shoes.brres.d
+./ethno_01_bottom.brres.d
+./ethno_01_dress.brres.d
+./ethno_01_top.brres.d
+./ethno_02_bottom.brres.d
+./ethno_02_dress.brres.d
+./ethno_02_top.brres.d
+./ethno_03_bottom.brres.d
+./ethno_03_dress.brres.d
+./ethno_03_top.brres.d
+./ethno_04_bottom.brres.d
+./ethno_04_dress.brres.d
+./ethno_04_top.brres.d
+./ethno_05_bottom.brres.d
+./ethno_05_dress.brres.d
+./ethno_05_top.brres.d
+./ethno_06_bottom.brres.d
+./ethno_06_dress.brres.d
+./ethno_06_top.brres.d
+./ethno_07_bottom.brres.d
+./ethno_07_dress.brres.d
+./ethno_08_bottom.brres.d
+./ethno_08_dress.brres.d
+./hat_01.brres.d
+./hat_02.brres.d
+./hat_03.brres.d
+./hat_04.brres.d
+./hat_05.brres.d
+./hat_06.brres.d
+./hat_07.brres.d
+./hat_08.brres.d
+./hat_09.brres.d
+./hat_10.brres.d
+./hat_11.brres.d
+./hat_12.brres.d
+./hat_13.brres.d
+./hat_14.brres.d
+./hat_15.brres.d
+./hat_16.brres.d
+./hat_17.brres.d
+./lingerie_01_bottom.brres.d
+./lingerie_01_top.brres.d
+./pc1_default_dress.brres.d
+./pc2_default_bottom.brres.d
+./pc2_default_top.brres.d
+./pc3_default_bottom.brres.d
+./pc3_default_top.brres.d
+./pc4_default_bottom.brres.d
+./pc4_default_top.brres.d
+./pc_dressing_gown.brres.d
+./pc_training_bottom.brres.d
+./pc_training_shoes.brres.d
+./pc_training_top.brres.d
+./red_dress_01.brres.d
+./red_dress_02.brres.d
+./red_dress_03.brres.d
+./red_dress_04.brres.d
+./red_dress_05.brres.d
+./red_dress_06.brres.d
+./red_dress_07.brres.d
+./red_dress_08.brres.d
+./red_dress_09.brres.d
+./red_dress_10.brres.d
+./red_dress_11.brres.d
+./red_dress_12.brres.d
+./red_dress_13.brres.d
+./red_dress_14.brres.d
+./red_dress_15.brres.d
+./red_dress_16.brres.d
+./retro_01_bottom.brres.d
+./retro_01_dress.brres.d
+./retro_01_top.brres.d
+./retro_02_bottom.brres.d
+./retro_02_dress.brres.d
+./retro_02_top.brres.d
+./retro_03_bottom.brres.d
+./retro_03_dress.brres.d
+./retro_03_top.brres.d
+./retro_04_bottom.brres.d
+./retro_04_dress.brres.d
+./retro_04_top.brres.d
+./retro_05_bottom.brres.d
+./retro_05_dress.brres.d
+./retro_05_top.brres.d
+./retro_06_bottom.brres.d
+./retro_06_dress.brres.d
+./retro_06_top.brres.d
+./retro_07_bottom.brres.d
+./retro_07_dress.brres.d
+./retro_07_top.brres.d
+./retro_08_dress.brres.d
+./retro_08_top.brres.d
+./retro_09_dress.brres.d
+./retro_09_top.brres.d
+./romantic_01_bottom.brres.d
+./romantic_01_dress.brres.d
+./romantic_01_top.brres.d
+./romantic_02_bottom.brres.d
+./romantic_02_dress.brres.d
+./romantic_02_top.brres.d
+./romantic_03_dress.brres.d
+./romantic_03_top.brres.d
+./romantic_04_dress.brres.d
+./romantic_04_top.brres.d
+./romantic_05_dress.brres.d
+./romantic_06_dress.brres.d
+./seasona_01_bottom.brres.d
+./seasona_01_dress.brres.d
+./seasona_01_top.brres.d
+./seasona_02_bottom.brres.d
+./seasona_02_dress.brres.d
+./seasona_02_top.brres.d
+./seasona_03_top.brres.d
+./seasona_04_top.brres.d
+./seasons_01_bottom.brres.d
+./seasons_01_dress.brres.d
+./seasons_01_top.brres.d
+./seasons_02_bottom.brres.d
+./seasons_02_dress.brres.d
+./seasons_02_top.brres.d
+./seasons_03_bottom.brres.d
+./seasons_03_dress.brres.d
+./seasons_03_top.brres.d
+./seasons_04_dress.brres.d
+./seasons_04_top.brres.d
+./seasons_05_top.brres.d
+./seasons_06_top.brres.d
+./seasonsp_01_bottom.brres.d
+./seasonsp_01_dress.brres.d
+./seasonsp_01_top.brres.d
+./seasonsp_02_bottom.brres.d
+./seasonsp_02_dress.brres.d
+./seasonsp_02_top.brres.d
+./seasonsp_03_bottom.brres.d
+./seasonsp_03_top.brres.d
+./seasonsp_04_top.brres.d
+./seasonw_01_bottom.brres.d
+./seasonw_01_dress.brres.d
+./seasonw_01_top.brres.d
+./seasonw_02_bottom.brres.d
+./seasonw_02_dress.brres.d
+./seasonw_02_top.brres.d
+./seasonw_03_top.brres.d
+./seasonw_04_top.brres.d
+./shoes_01.brres.d
+./shoes_02.brres.d
+./shoes_03.brres.d
+./shoes_04.brres.d
+./shoes_05.brres.d
+./shoes_06.brres.d
+./shoes_07.brres.d
+./shoes_08.brres.d
+./shoes_09.brres.d
+./shoes_10.brres.d
+./shoes_11.brres.d
+./shoes_12.brres.d
+./shoes_13.brres.d
+./shoes_14.brres.d
+./shoes_15.brres.d
+./shoes_16.brres.d
+./shoes_17.brres.d
+./shoes_18.brres.d
+./shoes_19.brres.d
+./shoes_20.brres.d
+./shoes_21.brres.d
+./shoes_22.brres.d
+./shoes_23.brres.d
+./shoes_24.brres.d
+./shoes_25.brres.d
+./shoes_26.brres.d
+./shoes_27.brres.d
+./shoes_28.brres.d
+./shoes_29.brres.d
+./shoes_30.brres.d
+./shoes_31.brres.d
+./shoes_32.brres.d
+./shoes_33.brres.d
+./shoes_34.brres.d
+./shoes_35.brres.d
+./shoes_36.brres.d
+./shoes_37.brres.d
+./shoes_38.brres.d
+./shoes_39.brres.d
+./shoes_40.brres.d
+./shoes_41.brres.d
+./shoes_42.brres.d
+./shoes_43.brres.d
+./shoes_44.brres.d
+./shoes_45.brres.d
+./shoes_46.brres.d
+./shoes_47.brres.d
+./shoes_48.brres.d
+./shoes_49.brres.d
+./shoes_50.brres.d
+./shoes_51.brres.d
+./shoes_52.brres.d
+./shoes_53.brres.d
+./shoes_54.brres.d
+./shoes_55.brres.d
+./shoes_56.brres.d
+./shoes_57.brres.d
+./shoes_58.brres.d
+./shoes_59.brres.d
+./shoes_60.brres.d
+./shoes_61.brres.d
+./shoes_62.brres.d
+./shoes_63.brres.d
+./shoes_64.brres.d
+./shoes_65.brres.d
+./shoes_66.brres.d
+./shoes_67.brres.d
+./shoes_68.brres.d
+./shoes_69.brres.d
+./shoes_none.brres.d
+./sunglasses_01.brres.d
+./sunglasses_02.brres.d
+./sunglasses_03.brres.d
+./sunglasses_04.brres.d
+./sunglasses_05.brres.d
+./sunglasses_06.brres.d
+./sunglasses_07.brres.d
+./sunglasses_08.brres.d
+./sunglasses_09.brres.d
+./sunglasses_10.brres.d
+./sunglasses_11.brres.d
+./sunglasses_12.brres.d
+./sunglasses_13.brres.d
+./sunglasses_14.brres.d
+./sunglasses_15.brres.d
+./sunglasses_16.brres.d
+./sunglasses_17.brres.d
+./sunglasses_18.brres.d
+./travel_01_bottom.brres.d
+./travel_01_dress.brres.d
+./travel_01_top.brres.d
+./travel_02_bottom.brres.d
+./travel_02_dress.brres.d
+./travel_02_top.brres.d
+./travel_03_bottom.brres.d
+./travel_03_dress.brres.d
+./travel_03_top.brres.d
+./travel_04_bottom.brres.d
+./travel_04_dress.brres.d
+./travel_04_top.brres.d
+./travel_05_bottom.brres.d
+./travel_05_dress.brres.d
+./travel_05_top.brres.d
+./travel_06_dress.brres.d
+./travel_06_top.brres.d
+./travel_07_dress.brres.d
+./travel_07_top.brres.d
+./travel_08_dress.brres.d
+./travel_08_top.brres.d
+./travel_09_top.brres.d
+./travel_10_top.brres.d
+./travel_11_top.brres.d
+./under_01_bottom.brres.d
+./under_01_dress.brres.d
+./under_01_top.brres.d
+./under_02_bottom.brres.d
+./under_02_dress.brres.d
+./under_02_top.brres.d
+./under_03_bottom.brres.d
+./under_03_dress.brres.d
+./under_03_top.brres.d
+./under_04_bottom.brres.d
+./under_04_dress.brres.d
+./under_04_top.brres.d
+./under_05_bottom.brres.d
+./under_05_dress.brres.d
+./under_05_top.brres.d
+./under_06_bottom.brres.d
+./under_06_dress.brres.d
+./under_06_top.brres.d
+./under_07_dress.brres.d
+./under_07_top.brres.d
+./under_08_dress.brres.d
+./under_08_top.brres.d
+./under_09_top.brres.d
+./under_10_top.brres.d
+./working_01_bottom.brres.d
+./working_01_dress.brres.d
+./working_01_top.brres.d
+./working_02_bottom.brres.d
+./working_02_dress.brres.d
+./working_02_top.brres.d
+./working_03_bottom.brres.d
+./working_03_dress.brres.d
+./working_03_top.brres.d
+./working_04_bottom.brres.d
+./working_04_dress.brres.d
+./working_04_top.brres.d
+./working_05_bottom.brres.d
+./working_05_dress.brres.d
+./working_05_top.brres.d
+./working_06_bottom.brres.d
+./working_06_dress.brres.d
+./working_06_top.brres.d
+./working_07_dress.brres.d
+./working_07_top.brres.d
+./working_08_top.brres.d
+./working_09_top.brres.d
+./working_10_top.brres.d
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+KCL		= ./course.kcl
+KMP		= ./course.kmp
+LEX		= ./course.lex
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+./Shirt4.brres
+./Shirt5.brres
+./beach_01_bottom.brres
+./beach_01_dress.brres
+./beach_01_top.brres
+./beach_02_bottom.brres
+./beach_02_dress.brres
+./beach_02_top.brres
+./beach_03_bottom.brres
+./beach_03_dress.brres
+./beach_03_top.brres
+./beach_04_bottom.brres
+./beach_04_dress.brres
+./beach_04_top.brres
+./beach_05_bottom.brres
+./beach_05_dress.brres
+./beach_05_top.brres
+./beach_06_bottom.brres
+./beach_06_dress.brres
+./beach_06_top.brres
+./beach_07_bottom.brres
+./beach_07_top.brres
+./beach_08_bottom.brres
+./beach_08_top.brres
+./beach_09_bottom.brres
+./beach_09_top.brres
+./beach_10_bottom.brres
+./beach_10_top.brres
+./casual_01_bottom.brres
+./casual_01_dress.brres
+./casual_01_top.brres
+./casual_02_bottom.brres
+./casual_02_dress.brres
+./casual_02_top.brres
+./casual_03_bottom.brres
+./casual_03_dress.brres
+./casual_03_top.brres
+./casual_04_bottom.brres
+./casual_04_top.brres
+./casual_05_bottom.brres
+./casual_05_top.brres
+./casual_06_bottom.brres
+./casual_06_top.brres
+./casual_07_bottom.brres
+./casual_07_top.brres
+./casual_08_bottom.brres
+./casual_08_top.brres
+./casual_09_bottom.brres
+./casual_09_top.brres
+./casual_10_bottom.brres
+./casual_10_top.brres
+./casual_11_bottom.brres
+./comp1_default_dress.brres
+./comp2_default_bottom.brres
+./comp2_default_top.brres
+./comp3_default_dress.brres
+./comp4_default_dress.brres
+./comp5_default_dress.brres
+./comp6_default_dress.brres
+./comp7_default_dress.brres
+./default_shoes.brres
+./ethno_01_bottom.brres
+./ethno_01_dress.brres
+./ethno_01_top.brres
+./ethno_02_bottom.brres
+./ethno_02_dress.brres
+./ethno_02_top.brres
+./ethno_03_bottom.brres
+./ethno_03_dress.brres
+./ethno_03_top.brres
+./ethno_04_bottom.brres
+./ethno_04_dress.brres
+./ethno_04_top.brres
+./ethno_05_bottom.brres
+./ethno_05_dress.brres
+./ethno_05_top.brres
+./ethno_06_bottom.brres
+./ethno_06_dress.brres
+./ethno_06_top.brres
+./ethno_07_bottom.brres
+./ethno_07_dress.brres
+./ethno_08_bottom.brres
+./ethno_08_dress.brres
+./hat_01.brres
+./hat_02.brres
+./hat_03.brres
+./hat_04.brres
+./hat_05.brres
+./hat_06.brres
+./hat_07.brres
+./hat_08.brres
+./hat_09.brres
+./hat_10.brres
+./hat_11.brres
+./hat_12.brres
+./hat_13.brres
+./hat_14.brres
+./hat_15.brres
+./hat_16.brres
+./hat_17.brres
+./lingerie_01_bottom.brres
+./lingerie_01_top.brres
+./pc1_default_dress.brres
+./pc2_default_bottom.brres
+./pc2_default_top.brres
+./pc3_default_bottom.brres
+./pc3_default_top.brres
+./pc4_default_bottom.brres
+./pc4_default_top.brres
+./pc_dressing_gown.brres
+./pc_training_bottom.brres
+./pc_training_shoes.brres
+./pc_training_top.brres
+./red_dress_01.brres
+./red_dress_02.brres
+./red_dress_03.brres
+./red_dress_04.brres
+./red_dress_05.brres
+./red_dress_06.brres
+./red_dress_07.brres
+./red_dress_08.brres
+./red_dress_09.brres
+./red_dress_10.brres
+./red_dress_11.brres
+./red_dress_12.brres
+./red_dress_13.brres
+./red_dress_14.brres
+./red_dress_15.brres
+./red_dress_16.brres
+./retro_01_bottom.brres
+./retro_01_dress.brres
+./retro_01_top.brres
+./retro_02_bottom.brres
+./retro_02_dress.brres
+./retro_02_top.brres
+./retro_03_bottom.brres
+./retro_03_dress.brres
+./retro_03_top.brres
+./retro_04_bottom.brres
+./retro_04_dress.brres
+./retro_04_top.brres
+./retro_05_bottom.brres
+./retro_05_dress.brres
+./retro_05_top.brres
+./retro_06_bottom.brres
+./retro_06_dress.brres
+./retro_06_top.brres
+./retro_07_bottom.brres
+./retro_07_dress.brres
+./retro_07_top.brres
+./retro_08_dress.brres
+./retro_08_top.brres
+./retro_09_dress.brres
+./retro_09_top.brres
+./romantic_01_bottom.brres
+./romantic_01_dress.brres
+./romantic_01_top.brres
+./romantic_02_bottom.brres
+./romantic_02_dress.brres
+./romantic_02_top.brres
+./romantic_03_dress.brres
+./romantic_03_top.brres
+./romantic_04_dress.brres
+./romantic_04_top.brres
+./romantic_05_dress.brres
+./romantic_06_dress.brres
+./seasona_01_bottom.brres
+./seasona_01_dress.brres
+./seasona_01_top.brres
+./seasona_02_bottom.brres
+./seasona_02_dress.brres
+./seasona_02_top.brres
+./seasona_03_top.brres
+./seasona_04_top.brres
+./seasons_01_bottom.brres
+./seasons_01_dress.brres
+./seasons_01_top.brres
+./seasons_02_bottom.brres
+./seasons_02_dress.brres
+./seasons_02_top.brres
+./seasons_03_bottom.brres
+./seasons_03_dress.brres
+./seasons_03_top.brres
+./seasons_04_dress.brres
+./seasons_04_top.brres
+./seasons_05_top.brres
+./seasons_06_top.brres
+./seasonsp_01_bottom.brres
+./seasonsp_01_dress.brres
+./seasonsp_01_top.brres
+./seasonsp_02_bottom.brres
+./seasonsp_02_dress.brres
+./seasonsp_02_top.brres
+./seasonsp_03_bottom.brres
+./seasonsp_03_top.brres
+./seasonsp_04_top.brres
+./seasonw_01_bottom.brres
+./seasonw_01_dress.brres
+./seasonw_01_top.brres
+./seasonw_02_bottom.brres
+./seasonw_02_dress.brres
+./seasonw_02_top.brres
+./seasonw_03_top.brres
+./seasonw_04_top.brres
+./shoes_01.brres
+./shoes_02.brres
+./shoes_03.brres
+./shoes_04.brres
+./shoes_05.brres
+./shoes_06.brres
+./shoes_07.brres
+./shoes_08.brres
+./shoes_09.brres
+./shoes_10.brres
+./shoes_11.brres
+./shoes_12.brres
+./shoes_13.brres
+./shoes_14.brres
+./shoes_15.brres
+./shoes_16.brres
+./shoes_17.brres
+./shoes_18.brres
+./shoes_19.brres
+./shoes_20.brres
+./shoes_21.brres
+./shoes_22.brres
+./shoes_23.brres
+./shoes_24.brres
+./shoes_25.brres
+./shoes_26.brres
+./shoes_27.brres
+./shoes_28.brres
+./shoes_29.brres
+./shoes_30.brres
+./shoes_31.brres
+./shoes_32.brres
+./shoes_33.brres
+./shoes_34.brres
+./shoes_35.brres
+./shoes_36.brres
+./shoes_37.brres
+./shoes_38.brres
+./shoes_39.brres
+./shoes_40.brres
+./shoes_41.brres
+./shoes_42.brres
+./shoes_43.brres
+./shoes_44.brres
+./shoes_45.brres
+./shoes_46.brres
+./shoes_47.brres
+./shoes_48.brres
+./shoes_49.brres
+./shoes_50.brres
+./shoes_51.brres
+./shoes_52.brres
+./shoes_53.brres
+./shoes_54.brres
+./shoes_55.brres
+./shoes_56.brres
+./shoes_57.brres
+./shoes_58.brres
+./shoes_59.brres
+./shoes_60.brres
+./shoes_61.brres
+./shoes_62.brres
+./shoes_63.brres
+./shoes_64.brres
+./shoes_65.brres
+./shoes_66.brres
+./shoes_67.brres
+./shoes_68.brres
+./shoes_69.brres
+./shoes_none.brres
+./sunglasses_01.brres
+./sunglasses_02.brres
+./sunglasses_03.brres
+./sunglasses_04.brres
+./sunglasses_05.brres
+./sunglasses_06.brres
+./sunglasses_07.brres
+./sunglasses_08.brres
+./sunglasses_09.brres
+./sunglasses_10.brres
+./sunglasses_11.brres
+./sunglasses_12.brres
+./sunglasses_13.brres
+./sunglasses_14.brres
+./sunglasses_15.brres
+./sunglasses_16.brres
+./sunglasses_17.brres
+./sunglasses_18.brres
+./travel_01_bottom.brres
+./travel_01_dress.brres
+./travel_01_top.brres
+./travel_02_bottom.brres
+./travel_02_dress.brres
+./travel_02_top.brres
+./travel_03_bottom.brres
+./travel_03_dress.brres
+./travel_03_top.brres
+./travel_04_bottom.brres
+./travel_04_dress.brres
+./travel_04_top.brres
+./travel_05_bottom.brres
+./travel_05_dress.brres
+./travel_05_top.brres
+./travel_06_dress.brres
+./travel_06_top.brres
+./travel_07_dress.brres
+./travel_07_top.brres
+./travel_08_dress.brres
+./travel_08_top.brres
+./travel_09_top.brres
+./travel_10_top.brres
+./travel_11_top.brres
+./under_01_bottom.brres
+./under_01_dress.brres
+./under_01_top.brres
+./under_02_bottom.brres
+./under_02_dress.brres
+./under_02_top.brres
+./under_03_bottom.brres
+./under_03_dress.brres
+./under_03_top.brres
+./under_04_bottom.brres
+./under_04_dress.brres
+./under_04_top.brres
+./under_05_bottom.brres
+./under_05_dress.brres
+./under_05_top.brres
+./under_06_bottom.brres
+./under_06_dress.brres
+./under_06_top.brres
+./under_07_dress.brres
+./under_07_top.brres
+./under_08_dress.brres
+./under_08_top.brres
+./under_09_top.brres
+./under_10_top.brres
+./working_01_bottom.brres
+./working_01_dress.brres
+./working_01_top.brres
+./working_02_bottom.brres
+./working_02_dress.brres
+./working_02_top.brres
+./working_03_bottom.brres
+./working_03_dress.brres
+./working_03_top.brres
+./working_04_bottom.brres
+./working_04_dress.brres
+./working_04_top.brres
+./working_05_bottom.brres
+./working_05_dress.brres
+./working_05_top.brres
+./working_06_bottom.brres
+./working_06_dress.brres
+./working_06_top.brres
+./working_07_dress.brres
+./working_07_top.brres
+./working_08_top.brres
+./working_09_top.brres
+./working_10_top.brres
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but not U8) this list will be used to sort the found
+# files. For archives with directory support (all but not PACK) it is very
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+    0x2d40	= ./beach_01_bottom.brres
+    0xd8c0	= ./beach_01_dress.brres
+   0x242c0	= ./beach_01_top.brres
+   0x35fc0	= ./beach_02_bottom.brres
+   0x41140	= ./beach_02_dress.brres
+   0x570c0	= ./beach_02_top.brres
+   0x68ec0	= ./beach_03_bottom.brres
+   0x73fc0	= ./beach_03_dress.brres
+   0x89f40	= ./beach_03_top.brres
+   0x9c3c0	= ./beach_04_bottom.brres
+   0xa74c0	= ./beach_04_dress.brres
+   0xbcb40	= ./beach_04_top.brres
+   0xceec0	= ./beach_05_bottom.brres
+   0xda040	= ./beach_05_dress.brres
+   0xef540	= ./beach_05_top.brres
+  0x1005c0	= ./beach_06_bottom.brres
+  0x10b940	= ./beach_06_dress.brres
+  0x1211c0	= ./beach_06_top.brres
+  0x133240	= ./beach_07_bottom.brres
+  0x13e540	= ./beach_07_top.brres
+  0x1505c0	= ./beach_08_bottom.brres
+  0x15ee40	= ./beach_08_top.brres
+  0x1704c0	= ./beach_09_bottom.brres
+  0x17b340	= ./beach_09_top.brres
+  0x18c5c0	= ./beach_10_bottom.brres
+  0x196bc0	= ./beach_10_top.brres
+  0x1a7e40	= ./casual_01_bottom.brres
+  0x1ba540	= ./casual_01_dress.brres
+  0x1d7a40	= ./casual_01_top.brres
+  0x1f06c0	= ./casual_02_bottom.brres
+  0x203040	= ./casual_02_dress.brres
+  0x220240	= ./casual_02_top.brres
+  0x23a6c0	= ./casual_03_bottom.brres
+  0x24e740	= ./casual_03_dress.brres
+  0x26d540	= ./casual_03_top.brres
+  0x2857c0	= ./casual_04_bottom.brres
+  0x2995c0	= ./casual_04_top.brres
+  0x2b47c0	= ./casual_05_bottom.brres
+  0x2c75c0	= ./casual_05_top.brres
+  0x2e27c0	= ./casual_06_bottom.brres
+  0x2f6640	= ./casual_06_top.brres
+  0x3110c0	= ./casual_07_bottom.brres
+  0x3257c0	= ./casual_07_top.brres
+  0x340940	= ./casual_08_bottom.brres
+  0x34b4c0	= ./casual_08_top.brres
+  0x365e40	= ./casual_09_bottom.brres
+  0x36f240	= ./casual_09_top.brres
+  0x389940	= ./casual_10_bottom.brres
+  0x39af40	= ./casual_10_top.brres
+  0x3aaf40	= ./casual_11_bottom.brres
+  0x3bd6c0	= ./comp1_default_dress.brres
+  0x3d9340	= ./comp2_default_bottom.brres
+  0x3eaa40	= ./comp2_default_top.brres
+  0x403e40	= ./comp3_default_dress.brres
+  0x41fac0	= ./comp4_default_dress.brres
+  0x43c440	= ./comp5_default_dress.brres
+  0x458dc0	= ./comp6_default_dress.brres
+  0x475740	= ./comp7_default_dress.brres
+  0x491f40	= ./default_shoes.brres
+  0x49c7c0	= ./ethno_01_bottom.brres
+  0x4ae840	= ./ethno_01_dress.brres
+  0x4ce1c0	= ./ethno_01_top.brres
+  0x4ea4c0	= ./ethno_02_bottom.brres
+  0x4fc540	= ./ethno_02_dress.brres
+  0x51bec0	= ./ethno_02_top.brres
+  0x538140	= ./ethno_03_bottom.brres
+  0x54c1c0	= ./ethno_03_dress.brres
+  0x567a40	= ./ethno_03_top.brres
+  0x582dc0	= ./ethno_04_bottom.brres
+  0x596ac0	= ./ethno_04_dress.brres
+  0x5b2340	= ./ethno_04_top.brres
+  0x5cd5c0	= ./ethno_05_bottom.brres
+  0x5e12c0	= ./ethno_05_dress.brres
+  0x5ffa40	= ./ethno_05_top.brres
+  0x61c5c0	= ./ethno_06_bottom.brres
+  0x62edc0	= ./ethno_06_dress.brres
+  0x64d540	= ./ethno_06_top.brres
+  0x66a0c0	= ./ethno_07_bottom.brres
+  0x67c8c0	= ./ethno_07_dress.brres
+  0x698b40	= ./ethno_08_bottom.brres
+  0x6ab340	= ./ethno_08_dress.brres
+  0x6c75c0	= ./hat_01.brres
+  0x6cc1c0	= ./hat_02.brres
+  0x6d0940	= ./hat_03.brres
+  0x6d50c0	= ./hat_04.brres
+  0x6db6c0	= ./hat_05.brres
+  0x6e1a40	= ./hat_06.brres
+  0x6e7dc0	= ./hat_07.brres
+  0x6edbc0	= ./hat_08.brres
+  0x6f4040	= ./hat_09.brres
+  0x6fa4c0	= ./hat_10.brres
+  0x7009c0	= ./hat_11.brres
+  0x7070c0	= ./hat_12.brres
+  0x70eb40	= ./hat_13.brres
+  0x714f40	= ./hat_14.brres
+  0x71b5c0	= ./hat_15.brres
+  0x722340	= ./hat_16.brres
+  0x7298c0	= ./hat_17.brres
+  0x730e40	= ./lingerie_01_bottom.brres
+  0x73aac0	= ./lingerie_01_top.brres
+  0x74b4c0	= ./pc1_default_dress.brres
+  0x767140	= ./pc2_default_bottom.brres
+  0x778840	= ./pc2_default_top.brres
+  0x7901c0	= ./pc3_default_bottom.brres
+  0x7a2440	= ./pc3_default_top.brres
+  0x7bb940	= ./pc4_default_bottom.brres
+  0x7ccd40	= ./pc4_default_top.brres
+  0x7e4cc0	= ./pc_dressing_gown.brres
+  0x81c4c0	= ./pc_training_bottom.brres
+  0x825cc0	= ./pc_training_shoes.brres
+  0x82f640	= ./pc_training_top.brres
+  0x83fe40	= ./red_dress_01.brres
+  0x85df40	= ./red_dress_02.brres
+  0x87c4c0	= ./red_dress_03.brres
+  0x89aa40	= ./red_dress_04.brres
+  0x8baec0	= ./red_dress_05.brres
+  0x8db340	= ./red_dress_06.brres
+  0x8f6ec0	= ./red_dress_07.brres
+  0x912a40	= ./red_dress_08.brres
+  0x931640	= ./red_dress_09.brres
+  0x950240	= ./red_dress_10.brres
+  0x971ec0	= ./red_dress_11.brres
+  0x993b40	= ./red_dress_12.brres
+  0x9b47c0	= ./red_dress_13.brres
+  0x9d5440	= ./red_dress_14.brres
+  0x9f33c0	= ./red_dress_15.brres
+  0xa11340	= ./red_dress_16.brres
+  0xa2f840	= ./retro_01_bottom.brres
+  0xa41ac0	= ./retro_01_dress.brres
+  0xa632c0	= ./retro_01_top.brres
+  0xa7fdc0	= ./retro_02_bottom.brres
+  0xa92940	= ./retro_02_dress.brres
+  0xab4140	= ./retro_02_top.brres
+  0xad0c40	= ./retro_03_bottom.brres
+  0xae69c0	= ./retro_03_dress.brres
+  0xb0aa40	= ./retro_03_top.brres
+  0xb268c0	= ./retro_04_bottom.brres
+  0xb385c0	= ./retro_04_dress.brres
+  0xb5c640	= ./retro_04_top.brres
+  0xb7aec0	= ./retro_05_bottom.brres
+  0xb8cbc0	= ./retro_05_dress.brres
+  0xbadc40	= ./retro_05_top.brres
+  0xbc8440	= ./retro_06_bottom.brres
+  0xbdb440	= ./retro_06_dress.brres
+  0xbf9bc0	= ./retro_06_top.brres
+  0xc14140	= ./retro_07_bottom.brres
+  0xc27140	= ./retro_07_dress.brres
+  0xc458c0	= ./retro_07_top.brres
+  0xc5fe40	= ./retro_08_dress.brres
+  0xc7edc0	= ./retro_08_top.brres
+  0xc993c0	= ./retro_09_dress.brres
+  0xcb8640	= ./retro_09_top.brres
+  0xcd2c40	= ./romantic_01_bottom.brres
+  0xcddb40	= ./romantic_01_dress.brres
+  0xcfd6c0	= ./romantic_01_top.brres
+  0xd10c40	= ./romantic_02_bottom.brres
+  0xd1bb40	= ./romantic_02_dress.brres
+  0xd39cc0	= ./romantic_02_top.brres
+  0xd4d140	= ./romantic_03_dress.brres
+  0xd642c0	= ./romantic_03_top.brres
+  0xd771c0	= ./romantic_04_dress.brres
+  0xd95740	= ./romantic_04_top.brres
+  0xda8640	= ./romantic_05_dress.brres
+  0xdc7fc0	= ./romantic_06_dress.brres
+  0xde92c0	= ./seasona_01_bottom.brres
+  0xdf4d40	= ./seasona_01_dress.brres
+  0xe173c0	= ./seasona_01_top.brres
+  0xe2c740	= ./seasona_02_bottom.brres
+  0xe381c0	= ./seasona_02_dress.brres
+  0xe5a840	= ./seasona_02_top.brres
+  0xe6fbc0	= ./seasona_03_top.brres
+  0xe836c0	= ./seasona_04_top.brres
+  0xe971c0	= ./seasonsp_01_bottom.brres
+  0xea1dc0	= ./seasonsp_01_dress.brres
+  0xec18c0	= ./seasonsp_01_top.brres
+  0xee0340	= ./seasonsp_02_bottom.brres
+  0xeeaec0	= ./seasonsp_02_dress.brres
+  0xf0a9c0	= ./seasonsp_02_top.brres
+  0xf29440	= ./seasonsp_03_bottom.brres
+  0xf33fc0	= ./seasonsp_03_top.brres
+  0xf46740	= ./seasonsp_04_top.brres
+  0xf58ec0	= ./seasons_01_bottom.brres
+  0xf639c0	= ./seasons_01_dress.brres
+  0xf82840	= ./seasons_01_top.brres
+  0xf944c0	= ./seasons_02_bottom.brres
+  0xf9efc0	= ./seasons_02_dress.brres
+  0xfbde40	= ./seasons_02_top.brres
+  0xfcfa40	= ./seasons_03_bottom.brres
+  0xfda540	= ./seasons_03_dress.brres
+  0xff9bc0	= ./seasons_03_top.brres
+ 0x100ba40	= ./seasons_04_dress.brres
+ 0x102b0c0	= ./seasons_04_top.brres
+ 0x103cf40	= ./seasons_05_top.brres
+ 0x1050540	= ./seasons_06_top.brres
+ 0x1063b40	= ./seasonw_01_bottom.brres
+ 0x106e240	= ./seasonw_01_dress.brres
+ 0x108ff40	= ./seasonw_01_top.brres
+ 0x10a48c0	= ./seasonw_02_bottom.brres
+ 0x10aefc0	= ./seasonw_02_dress.brres
+ 0x10d0c40	= ./seasonw_02_top.brres
+ 0x10e55c0	= ./seasonw_03_top.brres
+ 0x10fd540	= ./seasonw_04_top.brres
+ 0x11154c0	= ./Shirt4.brres
+ 0x111bd40	= ./Shirt5.brres
+ 0x1122940	= ./shoes_01.brres
+ 0x112dec0	= ./shoes_02.brres
+ 0x1139440	= ./shoes_03.brres
+ 0x11449c0	= ./shoes_04.brres
+ 0x114fdc0	= ./shoes_05.brres
+ 0x115b1c0	= ./shoes_06.brres
+ 0x11665c0	= ./shoes_07.brres
+ 0x1171940	= ./shoes_08.brres
+ 0x117ccc0	= ./shoes_09.brres
+ 0x1188cc0	= ./shoes_10.brres
+ 0x1194cc0	= ./shoes_11.brres
+ 0x119ffc0	= ./shoes_12.brres
+ 0x11ab2c0	= ./shoes_13.brres
+ 0x11b6b40	= ./shoes_14.brres
+ 0x11c23c0	= ./shoes_15.brres
+ 0x11ce240	= ./shoes_16.brres
+ 0x11da0c0	= ./shoes_17.brres
+ 0x11e6940	= ./shoes_18.brres
+ 0x11f31c0	= ./shoes_19.brres
+ 0x11ff4c0	= ./shoes_20.brres
+ 0x120b7c0	= ./shoes_21.brres
+ 0x1216840	= ./shoes_22.brres
+ 0x12218c0	= ./shoes_23.brres
+ 0x122d540	= ./shoes_24.brres
+ 0x12391c0	= ./shoes_25.brres
+ 0x1246840	= ./shoes_26.brres
+ 0x1253ec0	= ./shoes_27.brres
+ 0x1261940	= ./shoes_28.brres
+ 0x126f3c0	= ./shoes_29.brres
+ 0x127d6c0	= ./shoes_30.brres
+ 0x128b9c0	= ./shoes_31.brres
+ 0x1298840	= ./shoes_32.brres
+ 0x12a56c0	= ./shoes_33.brres
+ 0x12b1a40	= ./shoes_34.brres
+ 0x12bddc0	= ./shoes_35.brres
+ 0x12c8e40	= ./shoes_36.brres
+ 0x12d3e40	= ./shoes_37.brres
+ 0x12e07c0	= ./shoes_38.brres
+ 0x12ed140	= ./shoes_39.brres
+ 0x12f7e40	= ./shoes_40.brres
+ 0x1302b40	= ./shoes_41.brres
+ 0x130e640	= ./shoes_42.brres
+ 0x131a140	= ./shoes_43.brres
+ 0x1326c40	= ./shoes_44.brres
+ 0x1333740	= ./shoes_45.brres
+ 0x1340240	= ./shoes_46.brres
+ 0x134cd40	= ./shoes_47.brres
+ 0x135a340	= ./shoes_48.brres
+ 0x1367940	= ./shoes_49.brres
+ 0x1372c40	= ./shoes_50.brres
+ 0x137df40	= ./shoes_51.brres
+ 0x138b940	= ./shoes_52.brres
+ 0x1399340	= ./shoes_53.brres
+ 0x13a6d40	= ./shoes_54.brres
+ 0x13b4740	= ./shoes_55.brres
+ 0x13bf840	= ./shoes_56.brres
+ 0x13ca940	= ./shoes_57.brres
+ 0x13d62c0	= ./shoes_58.brres
+ 0x13e1c40	= ./shoes_59.brres
+ 0x13ed7c0	= ./shoes_60.brres
+ 0x13f9340	= ./shoes_61.brres
+ 0x1405540	= ./shoes_62.brres
+ 0x1411740	= ./shoes_63.brres
+ 0x141cec0	= ./shoes_64.brres
+ 0x1428640	= ./shoes_65.brres
+ 0x14343c0	= ./shoes_66.brres
+ 0x1440140	= ./shoes_67.brres
+ 0x144a740	= ./shoes_68.brres
+ 0x1454bc0	= ./shoes_69.brres
+ 0x145f7c0	= ./shoes_none.brres
+ 0x1465540	= ./sunglasses_01.brres
+ 0x146a540	= ./sunglasses_02.brres
+ 0x146f740	= ./sunglasses_03.brres
+ 0x1475440	= ./sunglasses_04.brres
+ 0x147b0c0	= ./sunglasses_05.brres
+ 0x1480f40	= ./sunglasses_06.brres
+ 0x14870c0	= ./sunglasses_07.brres
+ 0x148d3c0	= ./sunglasses_08.brres
+ 0x1492ac0	= ./sunglasses_09.brres
+ 0x1498840	= ./sunglasses_10.brres
+ 0x149e6c0	= ./sunglasses_11.brres
+ 0x14a4dc0	= ./sunglasses_12.brres
+ 0x14aab40	= ./sunglasses_13.brres
+ 0x14b12c0	= ./sunglasses_14.brres
+ 0x14b74c0	= ./sunglasses_15.brres
+ 0x14bd540	= ./sunglasses_16.brres
+ 0x14c3640	= ./sunglasses_17.brres
+ 0x14c8dc0	= ./sunglasses_18.brres
+ 0x14ce9c0	= ./travel_01_bottom.brres
+ 0x14e02c0	= ./travel_01_dress.brres
+ 0x14fc4c0	= ./travel_01_top.brres
+ 0x1516340	= ./travel_02_bottom.brres
+ 0x1525240	= ./travel_02_dress.brres
+ 0x1541440	= ./travel_02_top.brres
+ 0x155b440	= ./travel_03_bottom.brres
+ 0x156a340	= ./travel_03_dress.brres
+ 0x15865c0	= ./travel_03_top.brres
+ 0x15a1340	= ./travel_04_bottom.brres
+ 0x15b2fc0	= ./travel_04_dress.brres
+ 0x15cf240	= ./travel_04_top.brres
+ 0x15ea0c0	= ./travel_05_bottom.brres
+ 0x15f9340	= ./travel_05_dress.brres
+ 0x1617a40	= ./travel_05_top.brres
+ 0x16323c0	= ./travel_06_dress.brres
+ 0x1650ac0	= ./travel_06_top.brres
+ 0x166b440	= ./travel_07_dress.brres
+ 0x1688e40	= ./travel_07_top.brres
+ 0x16a1ec0	= ./travel_08_dress.brres
+ 0x16bf8c0	= ./travel_08_top.brres
+ 0x16d8940	= ./travel_09_top.brres
+ 0x16f19c0	= ./travel_10_top.brres
+ 0x170a940	= ./travel_11_top.brres
+ 0x17231c0	= ./under_01_bottom.brres
+ 0x1734bc0	= ./under_01_dress.brres
+ 0x1753240	= ./under_01_top.brres
+ 0x176bec0	= ./under_02_bottom.brres
+ 0x177d8c0	= ./under_02_dress.brres
+ 0x179bf40	= ./under_02_top.brres
+ 0x17b4bc0	= ./under_03_bottom.brres
+ 0x17c9240	= ./under_03_dress.brres
+ 0x17e7240	= ./under_03_top.brres
+ 0x1801f40	= ./under_04_bottom.brres
+ 0x1815b40	= ./under_04_dress.brres
+ 0x1833b40	= ./under_04_top.brres
+ 0x184ea40	= ./under_05_bottom.brres
+ 0x18622c0	= ./under_05_dress.brres
+ 0x18806c0	= ./under_05_top.brres
+ 0x189adc0	= ./under_06_bottom.brres
+ 0x18ac940	= ./under_06_dress.brres
+ 0x18cad40	= ./under_06_top.brres
+ 0x18e5440	= ./under_07_dress.brres
+ 0x1901040	= ./under_07_top.brres
+ 0x191c0c0	= ./under_08_dress.brres
+ 0x1937cc0	= ./under_08_top.brres
+ 0x1952d40	= ./under_09_top.brres
+ 0x196fa40	= ./under_10_top.brres
+ 0x198adc0	= ./working_01_bottom.brres
+ 0x199e4c0	= ./working_01_dress.brres
+ 0x19c2ec0	= ./working_01_top.brres
+ 0x19de240	= ./working_02_bottom.brres
+ 0x19f1940	= ./working_02_dress.brres
+ 0x1a16340	= ./working_02_top.brres
+ 0x1a317c0	= ./working_03_bottom.brres
+ 0x1a44ec0	= ./working_03_dress.brres
+ 0x1a69fc0	= ./working_03_top.brres
+ 0x1a857c0	= ./working_04_bottom.brres
+ 0x1a9a2c0	= ./working_04_dress.brres
+ 0x1abf3c0	= ./working_04_top.brres
+ 0x1adac40	= ./working_05_bottom.brres
+ 0x1aef740	= ./working_05_dress.brres
+ 0x1b14840	= ./working_05_top.brres
+ 0x1b32d40	= ./working_06_bottom.brres
+ 0x1b47840	= ./working_06_dress.brres
+ 0x1b66640	= ./working_06_top.brres
+ 0x1b84b40	= ./working_07_dress.brres
+ 0x1ba3940	= ./working_07_top.brres
+ 0x1bc1e40	= ./working_08_top.brres
+ 0x1bdfb40	= ./working_09_top.brres
+ 0x1bfd840	= ./working_10_top.brres
+
+#------------------------------------------------------------------------------
+

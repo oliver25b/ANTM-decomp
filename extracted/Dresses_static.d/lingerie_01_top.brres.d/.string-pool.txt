@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material183
+NodeTree
+Textures(NW4R)
+lingerie_01_top
+lingerie_01_top_lingerie_wii_01_top__Material183
+lingerie_wii_01_top
+polygon0

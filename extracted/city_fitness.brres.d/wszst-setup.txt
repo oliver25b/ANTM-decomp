@@ -1,0 +1,1623 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# The internal archive format (U8, WU8, BRRES, BREFF or BREFT):
+archive-format = BRRES
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = BRRES
+
+# An archive format related version number (-1: unknown or not relevant)
+version = -1
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 0
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x1420
+max-data-offset = 0xccb940
+
+# The calculated alignment of all files:
+data-align = 0x20
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./.string-pool.bin
+./.string-pool.txt
+./3DModels(NW4R)/city_base.d
+./3DModels(NW4R)/city_base.txt
+./3DModels(NW4R)/city_building1.d
+./3DModels(NW4R)/city_building1.txt
+./3DModels(NW4R)/city_catwalkout.d
+./3DModels(NW4R)/city_catwalkout.txt
+./3DModels(NW4R)/city_fittnes.d
+./3DModels(NW4R)/city_fittnes.txt
+./3DModels(NW4R)/city_innerstreet.d
+./3DModels(NW4R)/city_innerstreet.txt
+./3DModels(NW4R)/city_outside.d
+./3DModels(NW4R)/city_outside.txt
+./3DModels(NW4R)/city_park.d
+./3DModels(NW4R)/city_park.txt
+./3DModels(NW4R)/city_shop.d
+./3DModels(NW4R)/city_shop.txt
+./3DModels(NW4R)/city_street1.d
+./3DModels(NW4R)/city_street1.txt
+./3DModels(NW4R)/city_street2.d
+./3DModels(NW4R)/city_street2.txt
+./Textures(NW4R)/Back_grassLightingMap.d
+./Textures(NW4R)/Back_grassLightingMap.png
+./Textures(NW4R)/Bar_paveingLightingMap.d
+./Textures(NW4R)/Bar_paveingLightingMap.png
+./Textures(NW4R)/Bay_10LightingMap.d
+./Textures(NW4R)/Bay_10LightingMap.png
+./Textures(NW4R)/Bay_11LightingMap.d
+./Textures(NW4R)/Bay_11LightingMap.png
+./Textures(NW4R)/Bay_11aLightingMap.d
+./Textures(NW4R)/Bay_11aLightingMap.png
+./Textures(NW4R)/Bay_15LightingMap.d
+./Textures(NW4R)/Bay_15LightingMap.png
+./Textures(NW4R)/Bay_16LightingMap.d
+./Textures(NW4R)/Bay_16LightingMap.png
+./Textures(NW4R)/Bay_17LightingMap.d
+./Textures(NW4R)/Bay_17LightingMap.png
+./Textures(NW4R)/Bay_18LightingMap.d
+./Textures(NW4R)/Bay_18LightingMap.png
+./Textures(NW4R)/BeachSideStone.d
+./Textures(NW4R)/BeachSideStone.mm1.png
+./Textures(NW4R)/BeachSideStone.mm2.png
+./Textures(NW4R)/BeachSideStone.png
+./Textures(NW4R)/Box01LightingMap.d
+./Textures(NW4R)/Box01LightingMap.png
+./Textures(NW4R)/Box02_walkcatoutLightingMap.d
+./Textures(NW4R)/Box02_walkcatoutLightingMap.png
+./Textures(NW4R)/Box04Steve_1LightingMap.d
+./Textures(NW4R)/Box04Steve_1LightingMap.png
+./Textures(NW4R)/Box08LightingMap.d
+./Textures(NW4R)/Box08LightingMap.png
+./Textures(NW4R)/Box09LightingMap.d
+./Textures(NW4R)/Box09LightingMap.png
+./Textures(NW4R)/Brick_2.d
+./Textures(NW4R)/Brick_2.mm1.png
+./Textures(NW4R)/Brick_2.mm2.png
+./Textures(NW4R)/Brick_2.png
+./Textures(NW4R)/Building_1_grassLightingMap.d
+./Textures(NW4R)/Building_1_grassLightingMap.png
+./Textures(NW4R)/Building_one_groundLightingMap.d
+./Textures(NW4R)/Building_one_groundLightingMap.png
+./Textures(NW4R)/Coloured_clothes.d
+./Textures(NW4R)/Coloured_clothes.png
+./Textures(NW4R)/Curb.d
+./Textures(NW4R)/Curb.png
+./Textures(NW4R)/Embedded_light.d
+./Textures(NW4R)/Embedded_light.png
+./Textures(NW4R)/Fakeceiling2LightingMap.d
+./Textures(NW4R)/Fakeceiling2LightingMap.png
+./Textures(NW4R)/FakeceilingLightingMap.d
+./Textures(NW4R)/FakeceilingLightingMap.png
+./Textures(NW4R)/GRass01LightingMap.d
+./Textures(NW4R)/GRass01LightingMap.png
+./Textures(NW4R)/GYM_Poster.d
+./Textures(NW4R)/GYM_Poster.png
+./Textures(NW4R)/Glass_stripes02.d
+./Textures(NW4R)/Glass_stripes02.png
+./Textures(NW4R)/Grass.d
+./Textures(NW4R)/Grass.mm1.png
+./Textures(NW4R)/Grass.mm2.png
+./Textures(NW4R)/Grass.png
+./Textures(NW4R)/Grass_02LightingMap.d
+./Textures(NW4R)/Grass_02LightingMap.png
+./Textures(NW4R)/Grass_03LightingMap.d
+./Textures(NW4R)/Grass_03LightingMap.png
+./Textures(NW4R)/Gravel.d
+./Textures(NW4R)/Gravel.mm1.png
+./Textures(NW4R)/Gravel.mm2.png
+./Textures(NW4R)/Gravel.png
+./Textures(NW4R)/HealthMagazine.d
+./Textures(NW4R)/HealthMagazine.png
+./Textures(NW4R)/Indoor_Plants.d
+./Textures(NW4R)/Indoor_Plants.png
+./Textures(NW4R)/Jumpers_snapshot.d
+./Textures(NW4R)/Jumpers_snapshot.png
+./Textures(NW4R)/LightProps.d
+./Textures(NW4R)/LightProps.png
+./Textures(NW4R)/Marble_10_tile.d
+./Textures(NW4R)/Marble_10_tile.png
+./Textures(NW4R)/Marble_6.d
+./Textures(NW4R)/Marble_6.mm1.png
+./Textures(NW4R)/Marble_6.mm2.png
+./Textures(NW4R)/Marble_6.png
+./Textures(NW4R)/Metals.d
+./Textures(NW4R)/Metals.png
+./Textures(NW4R)/Monitor_kb.d
+./Textures(NW4R)/Monitor_kb.png
+./Textures(NW4R)/NEWbuilding_01.d
+./Textures(NW4R)/NEWbuilding_01.mm1.png
+./Textures(NW4R)/NEWbuilding_01.mm2.png
+./Textures(NW4R)/NEWbuilding_01.png
+./Textures(NW4R)/NEWbuilding_02.d
+./Textures(NW4R)/NEWbuilding_02.mm1.png
+./Textures(NW4R)/NEWbuilding_02.mm2.png
+./Textures(NW4R)/NEWbuilding_02.png
+./Textures(NW4R)/NEWbuilding_03.d
+./Textures(NW4R)/NEWbuilding_03.mm1.png
+./Textures(NW4R)/NEWbuilding_03.mm2.png
+./Textures(NW4R)/NEWbuilding_03.png
+./Textures(NW4R)/NEWbuilding_04.d
+./Textures(NW4R)/NEWbuilding_04.mm1.png
+./Textures(NW4R)/NEWbuilding_04.mm2.png
+./Textures(NW4R)/NEWbuilding_04.png
+./Textures(NW4R)/NEWbuilding_05.d
+./Textures(NW4R)/NEWbuilding_05.mm1.png
+./Textures(NW4R)/NEWbuilding_05.mm2.png
+./Textures(NW4R)/NEWbuilding_05.png
+./Textures(NW4R)/NEWbuilding_06.d
+./Textures(NW4R)/NEWbuilding_06.mm1.png
+./Textures(NW4R)/NEWbuilding_06.mm2.png
+./Textures(NW4R)/NEWbuilding_06.mm3.png
+./Textures(NW4R)/NEWbuilding_06.png
+./Textures(NW4R)/NEWbuilding_07.d
+./Textures(NW4R)/NEWbuilding_07.png
+./Textures(NW4R)/NEWbuilding_08.d
+./Textures(NW4R)/NEWbuilding_08.mm1.png
+./Textures(NW4R)/NEWbuilding_08.mm2.png
+./Textures(NW4R)/NEWbuilding_08.png
+./Textures(NW4R)/NEWbuilding_09.d
+./Textures(NW4R)/NEWbuilding_09.mm1.png
+./Textures(NW4R)/NEWbuilding_09.mm2.png
+./Textures(NW4R)/NEWbuilding_09.png
+./Textures(NW4R)/NEWbuilding_26.d
+./Textures(NW4R)/NEWbuilding_26.mm1.png
+./Textures(NW4R)/NEWbuilding_26.mm2.png
+./Textures(NW4R)/NEWbuilding_26.png
+./Textures(NW4R)/NEWbuilding_35.d
+./Textures(NW4R)/NEWbuilding_35.mm1.png
+./Textures(NW4R)/NEWbuilding_35.mm2.png
+./Textures(NW4R)/NEWbuilding_35.png
+./Textures(NW4R)/NEWbuilding_36.d
+./Textures(NW4R)/NEWbuilding_36.mm1.png
+./Textures(NW4R)/NEWbuilding_36.mm2.png
+./Textures(NW4R)/NEWbuilding_36.png
+./Textures(NW4R)/NEWbuilding_37.d
+./Textures(NW4R)/NEWbuilding_37.mm1.png
+./Textures(NW4R)/NEWbuilding_37.mm2.png
+./Textures(NW4R)/NEWbuilding_37.png
+./Textures(NW4R)/NEWbuilding_38.d
+./Textures(NW4R)/NEWbuilding_38.mm1.png
+./Textures(NW4R)/NEWbuilding_38.mm2.png
+./Textures(NW4R)/NEWbuilding_38.png
+./Textures(NW4R)/NEWbuilding_40.d
+./Textures(NW4R)/NEWbuilding_40.mm1.png
+./Textures(NW4R)/NEWbuilding_40.mm2.png
+./Textures(NW4R)/NEWbuilding_40.png
+./Textures(NW4R)/NEWbuilding_42.d
+./Textures(NW4R)/NEWbuilding_42.png
+./Textures(NW4R)/NEWbuilding_48.d
+./Textures(NW4R)/NEWbuilding_48.mm1.png
+./Textures(NW4R)/NEWbuilding_48.mm2.png
+./Textures(NW4R)/NEWbuilding_48.png
+./Textures(NW4R)/NEWbuilding_49.d
+./Textures(NW4R)/NEWbuilding_49.mm1.png
+./Textures(NW4R)/NEWbuilding_49.mm2.png
+./Textures(NW4R)/NEWbuilding_49.png
+./Textures(NW4R)/NEWbuilding_50.d
+./Textures(NW4R)/NEWbuilding_50.mm1.png
+./Textures(NW4R)/NEWbuilding_50.mm2.png
+./Textures(NW4R)/NEWbuilding_50.png
+./Textures(NW4R)/NEWbuilding_51.d
+./Textures(NW4R)/NEWbuilding_51.mm1.png
+./Textures(NW4R)/NEWbuilding_51.mm2.png
+./Textures(NW4R)/NEWbuilding_51.png
+./Textures(NW4R)/NEWbuilding_52.d
+./Textures(NW4R)/NEWbuilding_52.mm1.png
+./Textures(NW4R)/NEWbuilding_52.mm2.png
+./Textures(NW4R)/NEWbuilding_52.png
+./Textures(NW4R)/NEWbuilding_53.d
+./Textures(NW4R)/NEWbuilding_53.mm1.png
+./Textures(NW4R)/NEWbuilding_53.mm2.png
+./Textures(NW4R)/NEWbuilding_53.png
+./Textures(NW4R)/NEWbuilding_54.d
+./Textures(NW4R)/NEWbuilding_54.mm1.png
+./Textures(NW4R)/NEWbuilding_54.mm2.png
+./Textures(NW4R)/NEWbuilding_54.png
+./Textures(NW4R)/NEWbuilding_57.d
+./Textures(NW4R)/NEWbuilding_57.mm1.png
+./Textures(NW4R)/NEWbuilding_57.mm2.png
+./Textures(NW4R)/NEWbuilding_57.png
+./Textures(NW4R)/NEWbuilding_58.d
+./Textures(NW4R)/NEWbuilding_58.mm1.png
+./Textures(NW4R)/NEWbuilding_58.mm2.png
+./Textures(NW4R)/NEWbuilding_58.png
+./Textures(NW4R)/NEWbuilding_61.d
+./Textures(NW4R)/NEWbuilding_61.mm1.png
+./Textures(NW4R)/NEWbuilding_61.mm2.png
+./Textures(NW4R)/NEWbuilding_61.png
+./Textures(NW4R)/NEWbuilding_63.d
+./Textures(NW4R)/NEWbuilding_63.mm1.png
+./Textures(NW4R)/NEWbuilding_63.mm2.png
+./Textures(NW4R)/NEWbuilding_63.png
+./Textures(NW4R)/NEWbuilding_64.d
+./Textures(NW4R)/NEWbuilding_64.mm1.png
+./Textures(NW4R)/NEWbuilding_64.mm2.png
+./Textures(NW4R)/NEWbuilding_64.png
+./Textures(NW4R)/NEWbuilding_65ALPHA.d
+./Textures(NW4R)/NEWbuilding_65ALPHA.png
+./Textures(NW4R)/NEWbuilding_65ALPHA02.d
+./Textures(NW4R)/NEWbuilding_65ALPHA02.png
+./Textures(NW4R)/NEWbuilding_67.d
+./Textures(NW4R)/NEWbuilding_67.mm1.png
+./Textures(NW4R)/NEWbuilding_67.mm2.png
+./Textures(NW4R)/NEWbuilding_67.png
+./Textures(NW4R)/NEWbuilding_71.d
+./Textures(NW4R)/NEWbuilding_71.mm1.png
+./Textures(NW4R)/NEWbuilding_71.mm2.png
+./Textures(NW4R)/NEWbuilding_71.png
+./Textures(NW4R)/NEWbuilding_72.d
+./Textures(NW4R)/NEWbuilding_72.mm1.png
+./Textures(NW4R)/NEWbuilding_72.mm2.png
+./Textures(NW4R)/NEWbuilding_72.png
+./Textures(NW4R)/NEWbuilding_74.d
+./Textures(NW4R)/NEWbuilding_74.mm1.png
+./Textures(NW4R)/NEWbuilding_74.mm2.png
+./Textures(NW4R)/NEWbuilding_74.png
+./Textures(NW4R)/NEWbuilding_75.d
+./Textures(NW4R)/NEWbuilding_75.mm1.png
+./Textures(NW4R)/NEWbuilding_75.mm2.png
+./Textures(NW4R)/NEWbuilding_75.png
+./Textures(NW4R)/NEWbuilding_76.d
+./Textures(NW4R)/NEWbuilding_76.png
+./Textures(NW4R)/NEWbuilding_77.d
+./Textures(NW4R)/NEWbuilding_77.mm1.png
+./Textures(NW4R)/NEWbuilding_77.mm2.png
+./Textures(NW4R)/NEWbuilding_77.png
+./Textures(NW4R)/NEWbuilding_78.d
+./Textures(NW4R)/NEWbuilding_78.mm1.png
+./Textures(NW4R)/NEWbuilding_78.mm2.png
+./Textures(NW4R)/NEWbuilding_78.png
+./Textures(NW4R)/NEWbuilding_80.d
+./Textures(NW4R)/NEWbuilding_80.png
+./Textures(NW4R)/NEWbuilding_81.d
+./Textures(NW4R)/NEWbuilding_81.mm1.png
+./Textures(NW4R)/NEWbuilding_81.mm2.png
+./Textures(NW4R)/NEWbuilding_81.png
+./Textures(NW4R)/NEWbuilding_83.d
+./Textures(NW4R)/NEWbuilding_83.mm1.png
+./Textures(NW4R)/NEWbuilding_83.mm2.png
+./Textures(NW4R)/NEWbuilding_83.png
+./Textures(NW4R)/NEWbuilding_84.d
+./Textures(NW4R)/NEWbuilding_84.mm1.png
+./Textures(NW4R)/NEWbuilding_84.mm2.png
+./Textures(NW4R)/NEWbuilding_84.png
+./Textures(NW4R)/NEWbuilding_85.d
+./Textures(NW4R)/NEWbuilding_85.mm1.png
+./Textures(NW4R)/NEWbuilding_85.mm2.png
+./Textures(NW4R)/NEWbuilding_85.png
+./Textures(NW4R)/NEWbuilding_86.d
+./Textures(NW4R)/NEWbuilding_86.mm1.png
+./Textures(NW4R)/NEWbuilding_86.mm2.png
+./Textures(NW4R)/NEWbuilding_86.png
+./Textures(NW4R)/NEWbuilding_87.d
+./Textures(NW4R)/NEWbuilding_87.mm1.png
+./Textures(NW4R)/NEWbuilding_87.mm2.png
+./Textures(NW4R)/NEWbuilding_87.png
+./Textures(NW4R)/NEWbuilding_88.d
+./Textures(NW4R)/NEWbuilding_88.mm1.png
+./Textures(NW4R)/NEWbuilding_88.mm2.png
+./Textures(NW4R)/NEWbuilding_88.png
+./Textures(NW4R)/NEWbuilding_91.d
+./Textures(NW4R)/NEWbuilding_91.mm1.png
+./Textures(NW4R)/NEWbuilding_91.mm2.png
+./Textures(NW4R)/NEWbuilding_91.png
+./Textures(NW4R)/NEWfc_stone.d
+./Textures(NW4R)/NEWfc_stone.png
+./Textures(NW4R)/Object06LightingMap.d
+./Textures(NW4R)/Object06LightingMap.png
+./Textures(NW4R)/Object11LightingMap.d
+./Textures(NW4R)/Object11LightingMap.png
+./Textures(NW4R)/Object12LightingMap.d
+./Textures(NW4R)/Object12LightingMap.png
+./Textures(NW4R)/Object13LightingMap.d
+./Textures(NW4R)/Object13LightingMap.png
+./Textures(NW4R)/Object14glassLightingMap.d
+./Textures(NW4R)/Object14glassLightingMap.png
+./Textures(NW4R)/Object18fitnessLightingMap.d
+./Textures(NW4R)/Object18fitnessLightingMap.png
+./Textures(NW4R)/Object38LightingMap.d
+./Textures(NW4R)/Object38LightingMap.png
+./Textures(NW4R)/Object39LightingMap.d
+./Textures(NW4R)/Object39LightingMap.png
+./Textures(NW4R)/Pear_wall01.d
+./Textures(NW4R)/Pear_wall01.png
+./Textures(NW4R)/Plant_01.d
+./Textures(NW4R)/Plant_01.png
+./Textures(NW4R)/Planter.d
+./Textures(NW4R)/Planter.png
+./Textures(NW4R)/ProteinPowder.d
+./Textures(NW4R)/ProteinPowder.png
+./Textures(NW4R)/RoadSidePaving.d
+./Textures(NW4R)/RoadSidePaving.mm1.png
+./Textures(NW4R)/RoadSidePaving.mm2.png
+./Textures(NW4R)/RoadSidePaving.png
+./Textures(NW4R)/Street_1_curb01LightingMap.d
+./Textures(NW4R)/Street_1_curb01LightingMap.png
+./Textures(NW4R)/Studio_roof.d
+./Textures(NW4R)/Studio_roof.mm1.png
+./Textures(NW4R)/Studio_roof.mm2.png
+./Textures(NW4R)/Studio_roof.png
+./Textures(NW4R)/Tiles.d
+./Textures(NW4R)/Tiles.mm1.png
+./Textures(NW4R)/Tiles.mm2.png
+./Textures(NW4R)/Tiles.png
+./Textures(NW4R)/WaterLightingMap.d
+./Textures(NW4R)/WaterLightingMap.png
+./Textures(NW4R)/Wooden_floor_tile.d
+./Textures(NW4R)/Wooden_floor_tile.mm1.png
+./Textures(NW4R)/Wooden_floor_tile.mm2.png
+./Textures(NW4R)/Wooden_floor_tile.png
+./Textures(NW4R)/armchair01LightingMap.d
+./Textures(NW4R)/armchair01LightingMap.png
+./Textures(NW4R)/armchairs_LightingMap.d
+./Textures(NW4R)/armchairs_LightingMap.png
+./Textures(NW4R)/bar_rugLightingMap.d
+./Textures(NW4R)/bar_rugLightingMap.png
+./Textures(NW4R)/bar_wallLightingMap.d
+./Textures(NW4R)/bar_wallLightingMap.png
+./Textures(NW4R)/base_furniture.d
+./Textures(NW4R)/base_furniture.png
+./Textures(NW4R)/base_furniture2.d
+./Textures(NW4R)/base_furniture2.png
+./Textures(NW4R)/base_groundlightingmap2.d
+./Textures(NW4R)/base_groundlightingmap2.png
+./Textures(NW4R)/bay_01LightingMap.d
+./Textures(NW4R)/bay_01LightingMap.png
+./Textures(NW4R)/black_plastic_.d
+./Textures(NW4R)/black_plastic_.png
+./Textures(NW4R)/building_01_1lightingmap.d
+./Textures(NW4R)/building_01_1lightingmap.png
+./Textures(NW4R)/building_02_1blightingmap.d
+./Textures(NW4R)/building_02_1blightingmap.png
+./Textures(NW4R)/building_02_1cLightingMap.d
+./Textures(NW4R)/building_02_1cLightingMap.png
+./Textures(NW4R)/building_02_1lightingmap.d
+./Textures(NW4R)/building_02_1lightingmap.png
+./Textures(NW4R)/building_03_lightingmap.d
+./Textures(NW4R)/building_03_lightingmap.png
+./Textures(NW4R)/building_04LightingMap.d
+./Textures(NW4R)/building_04LightingMap.png
+./Textures(NW4R)/building_05_20LightingMap.d
+./Textures(NW4R)/building_05_20LightingMap.png
+./Textures(NW4R)/building_06_1LightingMap.d
+./Textures(NW4R)/building_06_1LightingMap.png
+./Textures(NW4R)/building_07_1LightingMap.d
+./Textures(NW4R)/building_07_1LightingMap.png
+./Textures(NW4R)/building_08_1blightingmap.d
+./Textures(NW4R)/building_08_1blightingmap.png
+./Textures(NW4R)/building_08_1clightingmap.d
+./Textures(NW4R)/building_08_1clightingmap.png
+./Textures(NW4R)/building_08_1dLightingMap.d
+./Textures(NW4R)/building_08_1dLightingMap.png
+./Textures(NW4R)/building_08_1lightingmap.d
+./Textures(NW4R)/building_08_1lightingmap.png
+./Textures(NW4R)/building_09LightingMap.d
+./Textures(NW4R)/building_09LightingMap.png
+./Textures(NW4R)/building_10LightingMap.d
+./Textures(NW4R)/building_10LightingMap.png
+./Textures(NW4R)/building_11LightingMap.d
+./Textures(NW4R)/building_11LightingMap.png
+./Textures(NW4R)/building_13_1lightingmap.d
+./Textures(NW4R)/building_13_1lightingmap.png
+./Textures(NW4R)/building_15_1blightingmap.d
+./Textures(NW4R)/building_15_1blightingmap.png
+./Textures(NW4R)/building_15_1clightingmap.d
+./Textures(NW4R)/building_15_1clightingmap.png
+./Textures(NW4R)/building_15_1dlightingmap.d
+./Textures(NW4R)/building_15_1dlightingmap.png
+./Textures(NW4R)/building_15_1eLightingMap.d
+./Textures(NW4R)/building_15_1eLightingMap.png
+./Textures(NW4R)/building_15_1lightingmap.d
+./Textures(NW4R)/building_15_1lightingmap.png
+./Textures(NW4R)/building_16lightingmap.d
+./Textures(NW4R)/building_16lightingmap.png
+./Textures(NW4R)/building_23LightingMap.d
+./Textures(NW4R)/building_23LightingMap.png
+./Textures(NW4R)/cardio_plastic_a.d
+./Textures(NW4R)/cardio_plastic_a.png
+./Textures(NW4R)/cardio_plastic_b.d
+./Textures(NW4R)/cardio_plastic_b.png
+./Textures(NW4R)/cardio_tubes_metal.d
+./Textures(NW4R)/cardio_tubes_metal.png
+./Textures(NW4R)/carpet.d
+./Textures(NW4R)/carpet.png
+./Textures(NW4R)/carpet02.d
+./Textures(NW4R)/carpet02.png
+./Textures(NW4R)/carpet_fitnessLightingMap.d
+./Textures(NW4R)/carpet_fitnessLightingMap.png
+./Textures(NW4R)/catwalk01.d
+./Textures(NW4R)/catwalk01.png
+./Textures(NW4R)/catwalkwall.d
+./Textures(NW4R)/catwalkwall.png
+./Textures(NW4R)/catwalkwall02.d
+./Textures(NW4R)/catwalkwall02.png
+./Textures(NW4R)/catwalkwall03.d
+./Textures(NW4R)/catwalkwall03.png
+./Textures(NW4R)/ceiling03LightingMap.d
+./Textures(NW4R)/ceiling03LightingMap.png
+./Textures(NW4R)/ceilinglightingmap.d
+./Textures(NW4R)/ceilinglightingmap.png
+./Textures(NW4R)/chrome.d
+./Textures(NW4R)/chrome.png
+./Textures(NW4R)/city_catwalkout_polygon23LightingMap.d
+./Textures(NW4R)/city_catwalkout_polygon23LightingMap.png
+./Textures(NW4R)/city_catwalkout_polygon25LightingMap.d
+./Textures(NW4R)/city_catwalkout_polygon25LightingMap.png
+./Textures(NW4R)/city_catwalkout_polygon4LightingMap.d
+./Textures(NW4R)/city_catwalkout_polygon4LightingMap.png
+./Textures(NW4R)/city_shop_polygon210LightingMap.d
+./Textures(NW4R)/city_shop_polygon210LightingMap.png
+./Textures(NW4R)/city_street2_polygon106LightingMap.d
+./Textures(NW4R)/city_street2_polygon106LightingMap.png
+./Textures(NW4R)/city_street2_polygon172LightingMap.d
+./Textures(NW4R)/city_street2_polygon172LightingMap.png
+./Textures(NW4R)/city_street2_polygon316LightingMap.d
+./Textures(NW4R)/city_street2_polygon316LightingMap.png
+./Textures(NW4R)/city_street2_polygon31LightingMap.d
+./Textures(NW4R)/city_street2_polygon31LightingMap.png
+./Textures(NW4R)/city_street2_polygon530LightingMap.d
+./Textures(NW4R)/city_street2_polygon530LightingMap.png
+./Textures(NW4R)/city_street2_polygon531LightingMap.d
+./Textures(NW4R)/city_street2_polygon531LightingMap.png
+./Textures(NW4R)/cloth_folded_ba.d
+./Textures(NW4R)/cloth_folded_ba.png
+./Textures(NW4R)/cloth_folded_bb.d
+./Textures(NW4R)/cloth_folded_bb.png
+./Textures(NW4R)/cloth_folded_bc.d
+./Textures(NW4R)/cloth_folded_bc.png
+./Textures(NW4R)/cloth_folded_bd.d
+./Textures(NW4R)/cloth_folded_bd.png
+./Textures(NW4R)/cloth_skin_large_a_wii.d
+./Textures(NW4R)/cloth_skin_large_a_wii.png
+./Textures(NW4R)/cloth_skin_large_b_wii.d
+./Textures(NW4R)/cloth_skin_large_b_wii.png
+./Textures(NW4R)/cloth_skin_light_a_wii.d
+./Textures(NW4R)/cloth_skin_light_a_wii.png
+./Textures(NW4R)/clothes_b.d
+./Textures(NW4R)/clothes_b.png
+./Textures(NW4R)/clothes_e_wii.d
+./Textures(NW4R)/clothes_e_wii.png
+./Textures(NW4R)/clothes_folded_c.d
+./Textures(NW4R)/clothes_folded_c.png
+./Textures(NW4R)/clothes_folded_d.d
+./Textures(NW4R)/clothes_folded_d.png
+./Textures(NW4R)/clothes_folded_f.d
+./Textures(NW4R)/clothes_folded_f.png
+./Textures(NW4R)/clothes_hang_a.d
+./Textures(NW4R)/clothes_hang_a.png
+./Textures(NW4R)/clothes_hang_b.d
+./Textures(NW4R)/clothes_hang_b.png
+./Textures(NW4R)/clothes_hang_c.d
+./Textures(NW4R)/clothes_hang_c.png
+./Textures(NW4R)/clothes_hang_d.d
+./Textures(NW4R)/clothes_hang_d.png
+./Textures(NW4R)/clothes_hang_e.d
+./Textures(NW4R)/clothes_hang_e.png
+./Textures(NW4R)/clothes_hang_h.d
+./Textures(NW4R)/clothes_hang_h.png
+./Textures(NW4R)/computer_a.d
+./Textures(NW4R)/computer_a.png
+./Textures(NW4R)/concretefloor005a.d
+./Textures(NW4R)/concretefloor005a.png
+./Textures(NW4R)/cw_board01.d
+./Textures(NW4R)/cw_board01.png
+./Textures(NW4R)/cw_metal_alpha.d
+./Textures(NW4R)/cw_metal_alpha.mm1.png
+./Textures(NW4R)/cw_metal_alpha.mm2.png
+./Textures(NW4R)/cw_metal_alpha.png
+./Textures(NW4R)/darkgray.d
+./Textures(NW4R)/darkgray.png
+./Textures(NW4R)/door02.d
+./Textures(NW4R)/door02.mm1.png
+./Textures(NW4R)/door02.mm2.png
+./Textures(NW4R)/door02.png
+./Textures(NW4R)/door02s8.d
+./Textures(NW4R)/door02s8.mm1.png
+./Textures(NW4R)/door02s8.mm2.png
+./Textures(NW4R)/door02s8.png
+./Textures(NW4R)/door05.d
+./Textures(NW4R)/door05.png
+./Textures(NW4R)/drink_a.d
+./Textures(NW4R)/drink_a.png
+./Textures(NW4R)/edging_stone.d
+./Textures(NW4R)/edging_stone.mm1.png
+./Textures(NW4R)/edging_stone.mm2.png
+./Textures(NW4R)/edging_stone.png
+./Textures(NW4R)/edging_stone_2.d
+./Textures(NW4R)/edging_stone_2.mm1.png
+./Textures(NW4R)/edging_stone_2.mm2.png
+./Textures(NW4R)/edging_stone_2.png
+./Textures(NW4R)/energy_drink.d
+./Textures(NW4R)/energy_drink.png
+./Textures(NW4R)/fabric.d
+./Textures(NW4R)/fabric.png
+./Textures(NW4R)/fastfood_fridge_a.d
+./Textures(NW4R)/fastfood_fridge_a.png
+./Textures(NW4R)/fastfood_molino_a.d
+./Textures(NW4R)/fastfood_molino_a.png
+./Textures(NW4R)/fc_metal_tube.d
+./Textures(NW4R)/fc_metal_tube.png
+./Textures(NW4R)/fc_metal_tube_bulb.d
+./Textures(NW4R)/fc_metal_tube_bulb.png
+./Textures(NW4R)/fc_park_blackstone.d
+./Textures(NW4R)/fc_park_blackstone.png
+./Textures(NW4R)/fiber_glass.d
+./Textures(NW4R)/fiber_glass.png
+./Textures(NW4R)/fintenss_wall_grd.d
+./Textures(NW4R)/fintenss_wall_grd.png
+./Textures(NW4R)/fitnes_stone_up.d
+./Textures(NW4R)/fitnes_stone_up.png
+./Textures(NW4R)/fitnes_stone_white__.d
+./Textures(NW4R)/fitnes_stone_white__.png
+./Textures(NW4R)/fitnes_wood.d
+./Textures(NW4R)/fitnes_wood.mm1.png
+./Textures(NW4R)/fitnes_wood.mm2.png
+./Textures(NW4R)/fitnes_wood.png
+./Textures(NW4R)/flagstone3.d
+./Textures(NW4R)/flagstone3.mm1.png
+./Textures(NW4R)/flagstone3.mm2.png
+./Textures(NW4R)/flagstone3.png
+./Textures(NW4R)/floor05LightingMap.d
+./Textures(NW4R)/floor05LightingMap.png
+./Textures(NW4R)/floor_1LightingMap.d
+./Textures(NW4R)/floor_1LightingMap.png
+./Textures(NW4R)/footpath01LightingMap.d
+./Textures(NW4R)/footpath01LightingMap.png
+./Textures(NW4R)/fridge.d
+./Textures(NW4R)/fridge.png
+./Textures(NW4R)/fullblack.d
+./Textures(NW4R)/fullblack.png
+./Textures(NW4R)/fullyellow.d
+./Textures(NW4R)/fullyellow.png
+./Textures(NW4R)/glassLightingMap.d
+./Textures(NW4R)/glassLightingMap.png
+./Textures(NW4R)/gravel_small.d
+./Textures(NW4R)/gravel_small.mm1.png
+./Textures(NW4R)/gravel_small.mm2.png
+./Textures(NW4R)/gravel_small.png
+./Textures(NW4R)/grey.d
+./Textures(NW4R)/grey.png
+./Textures(NW4R)/gym_floorLightingMap.d
+./Textures(NW4R)/gym_floorLightingMap.png
+./Textures(NW4R)/leaf.d
+./Textures(NW4R)/leaf.mm1.png
+./Textures(NW4R)/leaf.mm2.png
+./Textures(NW4R)/leaf.mm3.png
+./Textures(NW4R)/leaf.png
+./Textures(NW4R)/leatherfastfood.d
+./Textures(NW4R)/leatherfastfood.png
+./Textures(NW4R)/limo_main.d
+./Textures(NW4R)/limo_main.png
+./Textures(NW4R)/limo_windows.d
+./Textures(NW4R)/limo_windows.png
+./Textures(NW4R)/livingroom_wall.d
+./Textures(NW4R)/livingroom_wall.mm1.png
+./Textures(NW4R)/livingroom_wall.mm2.png
+./Textures(NW4R)/livingroom_wall.png
+./Textures(NW4R)/lmbuilding_05_20LightingMap.d
+./Textures(NW4R)/lmbuilding_05_20LightingMap.png
+./Textures(NW4R)/magasine_c_wii.d
+./Textures(NW4R)/magasine_c_wii.png
+./Textures(NW4R)/marble05.d
+./Textures(NW4R)/marble05.png
+./Textures(NW4R)/marble1.d
+./Textures(NW4R)/marble1.mm1.png
+./Textures(NW4R)/marble1.mm2.png
+./Textures(NW4R)/marble1.png
+./Textures(NW4R)/marble2.d
+./Textures(NW4R)/marble2.mm1.png
+./Textures(NW4R)/marble2.mm2.png
+./Textures(NW4R)/marble2.png
+./Textures(NW4R)/marble_walls_.d
+./Textures(NW4R)/marble_walls_.mm1.png
+./Textures(NW4R)/marble_walls_.mm2.png
+./Textures(NW4R)/marble_walls_.png
+./Textures(NW4R)/mat_.d
+./Textures(NW4R)/mat_.png
+./Textures(NW4R)/metal.d
+./Textures(NW4R)/metal.png
+./Textures(NW4R)/metal05.d
+./Textures(NW4R)/metal05.png
+./Textures(NW4R)/metal052.d
+./Textures(NW4R)/metal052.png
+./Textures(NW4R)/mirror05.d
+./Textures(NW4R)/mirror05.png
+./Textures(NW4R)/mixer.d
+./Textures(NW4R)/mixer.png
+./Textures(NW4R)/newbuilding_21.d
+./Textures(NW4R)/newbuilding_21.mm1.png
+./Textures(NW4R)/newbuilding_21.mm2.png
+./Textures(NW4R)/newbuilding_21.png
+./Textures(NW4R)/newbuilding_23.d
+./Textures(NW4R)/newbuilding_23.mm1.png
+./Textures(NW4R)/newbuilding_23.mm2.png
+./Textures(NW4R)/newbuilding_23.png
+./Textures(NW4R)/newbuilding_24.d
+./Textures(NW4R)/newbuilding_24.mm1.png
+./Textures(NW4R)/newbuilding_24.mm2.png
+./Textures(NW4R)/newbuilding_24.png
+./Textures(NW4R)/newbuilding_25.d
+./Textures(NW4R)/newbuilding_25.mm1.png
+./Textures(NW4R)/newbuilding_25.mm2.png
+./Textures(NW4R)/newbuilding_25.png
+./Textures(NW4R)/newbuilding_27.d
+./Textures(NW4R)/newbuilding_27.mm1.png
+./Textures(NW4R)/newbuilding_27.mm2.png
+./Textures(NW4R)/newbuilding_27.png
+./Textures(NW4R)/newbuilding_28.d
+./Textures(NW4R)/newbuilding_28.mm1.png
+./Textures(NW4R)/newbuilding_28.mm2.png
+./Textures(NW4R)/newbuilding_28.png
+./Textures(NW4R)/newbuilding_29.d
+./Textures(NW4R)/newbuilding_29.mm1.png
+./Textures(NW4R)/newbuilding_29.mm2.png
+./Textures(NW4R)/newbuilding_29.png
+./Textures(NW4R)/newbuilding_30.d
+./Textures(NW4R)/newbuilding_30.mm1.png
+./Textures(NW4R)/newbuilding_30.mm2.png
+./Textures(NW4R)/newbuilding_30.png
+./Textures(NW4R)/newbuilding_31.d
+./Textures(NW4R)/newbuilding_31.mm1.png
+./Textures(NW4R)/newbuilding_31.mm2.png
+./Textures(NW4R)/newbuilding_31.png
+./Textures(NW4R)/newbuilding_32.d
+./Textures(NW4R)/newbuilding_32.mm1.png
+./Textures(NW4R)/newbuilding_32.mm2.png
+./Textures(NW4R)/newbuilding_32.png
+./Textures(NW4R)/newbuilding_33.d
+./Textures(NW4R)/newbuilding_33.mm1.png
+./Textures(NW4R)/newbuilding_33.mm2.png
+./Textures(NW4R)/newbuilding_33.png
+./Textures(NW4R)/newbuilding_41.d
+./Textures(NW4R)/newbuilding_41.mm1.png
+./Textures(NW4R)/newbuilding_41.mm2.png
+./Textures(NW4R)/newbuilding_41.png
+./Textures(NW4R)/newbuilding_43.d
+./Textures(NW4R)/newbuilding_43.mm1.png
+./Textures(NW4R)/newbuilding_43.mm2.png
+./Textures(NW4R)/newbuilding_43.png
+./Textures(NW4R)/newbuilding_44.d
+./Textures(NW4R)/newbuilding_44.mm1.png
+./Textures(NW4R)/newbuilding_44.mm2.png
+./Textures(NW4R)/newbuilding_44.png
+./Textures(NW4R)/newbuilding_45.d
+./Textures(NW4R)/newbuilding_45.mm1.png
+./Textures(NW4R)/newbuilding_45.mm2.png
+./Textures(NW4R)/newbuilding_45.png
+./Textures(NW4R)/newbuilding_68.d
+./Textures(NW4R)/newbuilding_68.mm1.png
+./Textures(NW4R)/newbuilding_68.mm2.png
+./Textures(NW4R)/newbuilding_68.png
+./Textures(NW4R)/newbuilding_82.d
+./Textures(NW4R)/newbuilding_82.mm1.png
+./Textures(NW4R)/newbuilding_82.mm2.png
+./Textures(NW4R)/newbuilding_82.png
+./Textures(NW4R)/newbuilding_89.d
+./Textures(NW4R)/newbuilding_89.mm1.png
+./Textures(NW4R)/newbuilding_89.mm2.png
+./Textures(NW4R)/newbuilding_89.png
+./Textures(NW4R)/newbuilding_90.d
+./Textures(NW4R)/newbuilding_90.mm1.png
+./Textures(NW4R)/newbuilding_90.mm2.png
+./Textures(NW4R)/newbuilding_90.png
+./Textures(NW4R)/newbuilding_92alpha.d
+./Textures(NW4R)/newbuilding_92alpha.png
+./Textures(NW4R)/objbuilding_12_1lightingmap.d
+./Textures(NW4R)/objbuilding_12_1lightingmap.png
+./Textures(NW4R)/objbuilding_14_1lightingmap.d
+./Textures(NW4R)/objbuilding_14_1lightingmap.png
+./Textures(NW4R)/palm_tree.d
+./Textures(NW4R)/palm_tree.png
+./Textures(NW4R)/park_wallLightingMap.d
+./Textures(NW4R)/park_wallLightingMap.png
+./Textures(NW4R)/pasted__city_base_polygon01LightingMap.d
+./Textures(NW4R)/pasted__city_base_polygon01LightingMap.png
+./Textures(NW4R)/pasted__city_building1_polygon68LightingMap.d
+./Textures(NW4R)/pasted__city_building1_polygon68LightingMap.png
+./Textures(NW4R)/pasted__city_catwalkout_polygon14lightingmap.d
+./Textures(NW4R)/pasted__city_catwalkout_polygon14lightingmap.png
+./Textures(NW4R)/pasted__city_park_polygon7LightingMap.d
+./Textures(NW4R)/pasted__city_park_polygon7LightingMap.png
+./Textures(NW4R)/pasted__city_parklightingmap.d
+./Textures(NW4R)/pasted__city_parklightingmap.png
+./Textures(NW4R)/pasted__city_street1_polygon0sd1LightingMap.d
+./Textures(NW4R)/pasted__city_street1_polygon0sd1LightingMap.png
+./Textures(NW4R)/pasted__city_street2_polygon04LightingMap.d
+./Textures(NW4R)/pasted__city_street2_polygon04LightingMap.png
+./Textures(NW4R)/pasted__city_street2_polygon142LightingMap.d
+./Textures(NW4R)/pasted__city_street2_polygon142LightingMap.png
+./Textures(NW4R)/pasted__city_stresset1_polygon02LightingMap.d
+./Textures(NW4R)/pasted__city_stresset1_polygon02LightingMap.png
+./Textures(NW4R)/pasted__floorlightingmap.d
+./Textures(NW4R)/pasted__floorlightingmap.png
+./Textures(NW4R)/pathlightingmap.d
+./Textures(NW4R)/pathlightingmap.png
+./Textures(NW4R)/pave1.d
+./Textures(NW4R)/pave1.mm1.png
+./Textures(NW4R)/pave1.mm2.png
+./Textures(NW4R)/pave1.mm3.png
+./Textures(NW4R)/pave1.png
+./Textures(NW4R)/pioneer.d
+./Textures(NW4R)/pioneer.png
+./Textures(NW4R)/plant_02.d
+./Textures(NW4R)/plant_02.png
+./Textures(NW4R)/polySurface07_shopLightingMap.d
+./Textures(NW4R)/polySurface07_shopLightingMap.png
+./Textures(NW4R)/polySurface123LightingMap.d
+./Textures(NW4R)/polySurface123LightingMap.png
+./Textures(NW4R)/polySurface256LightingMap.d
+./Textures(NW4R)/polySurface256LightingMap.png
+./Textures(NW4R)/polySurface293LightingMap.d
+./Textures(NW4R)/polySurface293LightingMap.png
+./Textures(NW4R)/polySurface305LightingMap.d
+./Textures(NW4R)/polySurface305LightingMap.png
+./Textures(NW4R)/polySurface312LightingMap.d
+./Textures(NW4R)/polySurface312LightingMap.png
+./Textures(NW4R)/polySurface90LightingMap.d
+./Textures(NW4R)/polySurface90LightingMap.png
+./Textures(NW4R)/polySurface91LightingMap.d
+./Textures(NW4R)/polySurface91LightingMap.png
+./Textures(NW4R)/polysurface128lightingmap.d
+./Textures(NW4R)/polysurface128lightingmap.png
+./Textures(NW4R)/road.d
+./Textures(NW4R)/road.mm1.png
+./Textures(NW4R)/road.mm2.png
+./Textures(NW4R)/road.png
+./Textures(NW4R)/sand.d
+./Textures(NW4R)/sand.mm1.png
+./Textures(NW4R)/sand.mm2.png
+./Textures(NW4R)/sand.png
+./Textures(NW4R)/shoe_floorLightingMap.d
+./Textures(NW4R)/shoe_floorLightingMap.png
+./Textures(NW4R)/speaker.d
+./Textures(NW4R)/speaker.png
+./Textures(NW4R)/spinning_metal_a.d
+./Textures(NW4R)/spinning_metal_a.png
+./Textures(NW4R)/spinning_tubes_a.d
+./Textures(NW4R)/spinning_tubes_a.png
+./Textures(NW4R)/stairsLightingMap.d
+./Textures(NW4R)/stairsLightingMap.png
+./Textures(NW4R)/steve_1LightingMap.d
+./Textures(NW4R)/steve_1LightingMap.png
+./Textures(NW4R)/streetsign.d
+./Textures(NW4R)/streetsign.mm1.png
+./Textures(NW4R)/streetsign.mm2.png
+./Textures(NW4R)/streetsign.png
+./Textures(NW4R)/tile2.d
+./Textures(NW4R)/tile2.mm1.png
+./Textures(NW4R)/tile2.mm2.png
+./Textures(NW4R)/tile2.png
+./Textures(NW4R)/vase_chinese.d
+./Textures(NW4R)/vase_chinese.png
+./Textures(NW4R)/wallLightingMap.d
+./Textures(NW4R)/wallLightingMap.png
+./Textures(NW4R)/wall_base.d
+./Textures(NW4R)/wall_base.png
+./Textures(NW4R)/wall_hotel.d
+./Textures(NW4R)/wall_hotel.mm1.png
+./Textures(NW4R)/wall_hotel.mm2.png
+./Textures(NW4R)/wall_hotel.png
+./Textures(NW4R)/wall_inLightingMap.d
+./Textures(NW4R)/wall_inLightingMap.png
+./Textures(NW4R)/wall_outside.d
+./Textures(NW4R)/wall_outside.mm1.png
+./Textures(NW4R)/wall_outside.mm2.png
+./Textures(NW4R)/wall_outside.png
+./Textures(NW4R)/wall_tileable_1.d
+./Textures(NW4R)/wall_tileable_1.png
+./Textures(NW4R)/wallbrick.d
+./Textures(NW4R)/wallbrick.mm1.png
+./Textures(NW4R)/wallbrick.mm2.png
+./Textures(NW4R)/wallbrick.png
+./Textures(NW4R)/wallbrick02.d
+./Textures(NW4R)/wallbrick02.mm1.png
+./Textures(NW4R)/wallbrick02.mm2.png
+./Textures(NW4R)/wallbrick02.png
+./Textures(NW4R)/water.d
+./Textures(NW4R)/water.mm1.png
+./Textures(NW4R)/water.mm2.png
+./Textures(NW4R)/water.png
+./Textures(NW4R)/white.d
+./Textures(NW4R)/white.png
+./Textures(NW4R)/white_marble.d
+./Textures(NW4R)/white_marble.mm1.png
+./Textures(NW4R)/white_marble.mm2.png
+./Textures(NW4R)/white_marble.png
+./Textures(NW4R)/white_marble02.d
+./Textures(NW4R)/white_marble02.mm1.png
+./Textures(NW4R)/white_marble02.mm2.png
+./Textures(NW4R)/white_marble02.png
+./Textures(NW4R)/wiindows_shopLightingMap.d
+./Textures(NW4R)/wiindows_shopLightingMap.png
+./Textures(NW4R)/window02.d
+./Textures(NW4R)/window02.mm1.png
+./Textures(NW4R)/window02.mm2.png
+./Textures(NW4R)/window02.png
+./Textures(NW4R)/window_3.d
+./Textures(NW4R)/window_3.mm1.png
+./Textures(NW4R)/window_3.mm2.png
+./Textures(NW4R)/window_3.png
+./Textures(NW4R)/windows01.d
+./Textures(NW4R)/windows01.mm1.png
+./Textures(NW4R)/windows01.mm2.png
+./Textures(NW4R)/windows01.png
+./Textures(NW4R)/wood_floor_brown_a.d
+./Textures(NW4R)/wood_floor_brown_a.mm1.png
+./Textures(NW4R)/wood_floor_brown_a.mm2.png
+./Textures(NW4R)/wood_floor_brown_a.png
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+MDL		= ./3DModels(NW4R)/city_base
+MDL		= ./3DModels(NW4R)/city_building1
+MDL		= ./3DModels(NW4R)/city_catwalkout
+MDL		= ./3DModels(NW4R)/city_fittnes
+MDL		= ./3DModels(NW4R)/city_innerstreet
+MDL		= ./3DModels(NW4R)/city_outside
+MDL		= ./3DModels(NW4R)/city_park
+MDL		= ./3DModels(NW4R)/city_shop
+MDL		= ./3DModels(NW4R)/city_street1
+MDL		= ./3DModels(NW4R)/city_street2
+TEX,CMPR,1	= ./Textures(NW4R)/Back_grassLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Bar_paveingLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Bay_10LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Bay_11LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Bay_11aLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Bay_15LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Bay_16LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Bay_17LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Bay_18LightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/BeachSideStone
+TEX,CMPR,1	= ./Textures(NW4R)/Box01LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Box02_walkcatoutLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Box04Steve_1LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Box08LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Box09LightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/Brick_2
+TEX,CMPR,1	= ./Textures(NW4R)/Building_1_grassLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Building_one_groundLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Coloured_clothes
+TEX,CMPR,1	= ./Textures(NW4R)/Curb
+TEX,RGB5A3,1	= ./Textures(NW4R)/Embedded_light
+TEX,CMPR,1	= ./Textures(NW4R)/Fakeceiling2LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/FakeceilingLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/GRass01LightingMap
+TEX,RGB565,1	= ./Textures(NW4R)/GYM_Poster
+TEX,IA8,1	= ./Textures(NW4R)/Glass_stripes02
+TEX,CMPR,3	= ./Textures(NW4R)/Grass
+TEX,CMPR,1	= ./Textures(NW4R)/Grass_02LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Grass_03LightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/Gravel
+TEX,CMPR,1	= ./Textures(NW4R)/HealthMagazine
+TEX,RGB5A3,1	= ./Textures(NW4R)/Indoor_Plants
+TEX,CMPR,1	= ./Textures(NW4R)/Jumpers_snapshot
+TEX,CMPR,1	= ./Textures(NW4R)/LightProps
+TEX,CMPR,1	= ./Textures(NW4R)/Marble_10_tile
+TEX,CMPR,3	= ./Textures(NW4R)/Marble_6
+TEX,CMPR,1	= ./Textures(NW4R)/Metals
+TEX,CMPR,1	= ./Textures(NW4R)/Monitor_kb
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_01
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_02
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_03
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_04
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_05
+TEX,RGB5A3,4	= ./Textures(NW4R)/NEWbuilding_06
+TEX,CMPR,1	= ./Textures(NW4R)/NEWbuilding_07
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_08
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_09
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_26
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_35
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_36
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_37
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_38
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_40
+TEX,CMPR,1	= ./Textures(NW4R)/NEWbuilding_42
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_48
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_49
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_50
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_51
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_52
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_53
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_54
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_57
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_58
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_61
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_63
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_64
+TEX,CMPR,1	= ./Textures(NW4R)/NEWbuilding_65ALPHA
+TEX,CMPR,1	= ./Textures(NW4R)/NEWbuilding_65ALPHA02
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_67
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_71
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_72
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_74
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_75
+TEX,CMPR,1	= ./Textures(NW4R)/NEWbuilding_76
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_77
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_78
+TEX,CMPR,1	= ./Textures(NW4R)/NEWbuilding_80
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_81
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_83
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_84
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_85
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_86
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_87
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_88
+TEX,CMPR,3	= ./Textures(NW4R)/NEWbuilding_91
+TEX,CMPR,1	= ./Textures(NW4R)/NEWfc_stone
+TEX,CMPR,1	= ./Textures(NW4R)/Object06LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object11LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object12LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object13LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object14glassLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object18fitnessLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object38LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object39LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Pear_wall01
+TEX,RGB5A3,1	= ./Textures(NW4R)/Plant_01
+TEX,RGB5A3,1	= ./Textures(NW4R)/Planter
+TEX,CMPR,1	= ./Textures(NW4R)/ProteinPowder
+TEX,CMPR,3	= ./Textures(NW4R)/RoadSidePaving
+TEX,CMPR,1	= ./Textures(NW4R)/Street_1_curb01LightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/Studio_roof
+TEX,CMPR,3	= ./Textures(NW4R)/Tiles
+TEX,CMPR,1	= ./Textures(NW4R)/WaterLightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/Wooden_floor_tile
+TEX,CMPR,1	= ./Textures(NW4R)/armchair01LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/armchairs_LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/bar_rugLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/bar_wallLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/base_furniture
+TEX,CMPR,1	= ./Textures(NW4R)/base_furniture2
+TEX,CMPR,1	= ./Textures(NW4R)/base_groundlightingmap2
+TEX,CMPR,1	= ./Textures(NW4R)/bay_01LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/black_plastic_
+TEX,CMPR,1	= ./Textures(NW4R)/building_01_1lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_02_1blightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_02_1cLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_02_1lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_03_lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_04LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_05_20LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_06_1LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_07_1LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_08_1blightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_08_1clightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_08_1dLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_08_1lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_09LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_10LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_11LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_13_1lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_15_1blightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_15_1clightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_15_1dlightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_15_1eLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/building_15_1lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_16lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/building_23LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/cardio_plastic_a
+TEX,CMPR,1	= ./Textures(NW4R)/cardio_plastic_b
+TEX,CMPR,1	= ./Textures(NW4R)/cardio_tubes_metal
+TEX,CMPR,1	= ./Textures(NW4R)/carpet
+TEX,CMPR,1	= ./Textures(NW4R)/carpet02
+TEX,CMPR,1	= ./Textures(NW4R)/carpet_fitnessLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/catwalk01
+TEX,CMPR,1	= ./Textures(NW4R)/catwalkwall
+TEX,CMPR,1	= ./Textures(NW4R)/catwalkwall02
+TEX,CMPR,1	= ./Textures(NW4R)/catwalkwall03
+TEX,CMPR,1	= ./Textures(NW4R)/ceiling03LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/ceilinglightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/chrome
+TEX,CMPR,1	= ./Textures(NW4R)/city_catwalkout_polygon23LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/city_catwalkout_polygon25LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/city_catwalkout_polygon4LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/city_shop_polygon210LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/city_street2_polygon106LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/city_street2_polygon172LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/city_street2_polygon316LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/city_street2_polygon31LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/city_street2_polygon530LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/city_street2_polygon531LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_folded_ba
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_folded_bb
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_folded_bc
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_folded_bd
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_skin_large_a_wii
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_skin_large_b_wii
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_skin_light_a_wii
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_b
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_e_wii
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_folded_c
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_folded_d
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_folded_f
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_a
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_b
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_c
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_d
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_e
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_h
+TEX,CMPR,1	= ./Textures(NW4R)/computer_a
+TEX,CMPR,1	= ./Textures(NW4R)/concretefloor005a
+TEX,CMPR,1	= ./Textures(NW4R)/cw_board01
+TEX,RGB5A3,3	= ./Textures(NW4R)/cw_metal_alpha
+TEX,CMPR,1	= ./Textures(NW4R)/darkgray
+TEX,CMPR,3	= ./Textures(NW4R)/door02
+TEX,CMPR,3	= ./Textures(NW4R)/door02s8
+TEX,CMPR,1	= ./Textures(NW4R)/door05
+TEX,CMPR,1	= ./Textures(NW4R)/drink_a
+TEX,CMPR,3	= ./Textures(NW4R)/edging_stone
+TEX,CMPR,3	= ./Textures(NW4R)/edging_stone_2
+TEX,CMPR,1	= ./Textures(NW4R)/energy_drink
+TEX,CMPR,1	= ./Textures(NW4R)/fabric
+TEX,CMPR,1	= ./Textures(NW4R)/fastfood_fridge_a
+TEX,CMPR,1	= ./Textures(NW4R)/fastfood_molino_a
+TEX,CMPR,1	= ./Textures(NW4R)/fc_metal_tube
+TEX,CMPR,1	= ./Textures(NW4R)/fc_metal_tube_bulb
+TEX,CMPR,1	= ./Textures(NW4R)/fc_park_blackstone
+TEX,CMPR,1	= ./Textures(NW4R)/fiber_glass
+TEX,CMPR,1	= ./Textures(NW4R)/fintenss_wall_grd
+TEX,CMPR,1	= ./Textures(NW4R)/fitnes_stone_up
+TEX,CMPR,1	= ./Textures(NW4R)/fitnes_stone_white__
+TEX,CMPR,3	= ./Textures(NW4R)/fitnes_wood
+TEX,CMPR,3	= ./Textures(NW4R)/flagstone3
+TEX,CMPR,1	= ./Textures(NW4R)/floor05LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/floor_1LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/footpath01LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/fridge
+TEX,CMPR,1	= ./Textures(NW4R)/fullblack
+TEX,CMPR,1	= ./Textures(NW4R)/fullyellow
+TEX,CMPR,1	= ./Textures(NW4R)/glassLightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/gravel_small
+TEX,CMPR,1	= ./Textures(NW4R)/grey
+TEX,CMPR,1	= ./Textures(NW4R)/gym_floorLightingMap
+TEX,CMPR,4	= ./Textures(NW4R)/leaf
+TEX,CMPR,1	= ./Textures(NW4R)/leatherfastfood
+TEX,CMPR,1	= ./Textures(NW4R)/limo_main
+TEX,CMPR,1	= ./Textures(NW4R)/limo_windows
+TEX,CMPR,3	= ./Textures(NW4R)/livingroom_wall
+TEX,CMPR,1	= ./Textures(NW4R)/lmbuilding_05_20LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/magasine_c_wii
+TEX,CMPR,1	= ./Textures(NW4R)/marble05
+TEX,CMPR,3	= ./Textures(NW4R)/marble1
+TEX,CMPR,3	= ./Textures(NW4R)/marble2
+TEX,CMPR,3	= ./Textures(NW4R)/marble_walls_
+TEX,CMPR,1	= ./Textures(NW4R)/mat_
+TEX,CMPR,1	= ./Textures(NW4R)/metal
+TEX,CMPR,1	= ./Textures(NW4R)/metal05
+TEX,CMPR,1	= ./Textures(NW4R)/metal052
+TEX,CMPR,1	= ./Textures(NW4R)/mirror05
+TEX,CMPR,1	= ./Textures(NW4R)/mixer
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_21
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_23
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_24
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_25
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_27
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_28
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_29
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_30
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_31
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_32
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_33
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_41
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_43
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_44
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_45
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_68
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_82
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_89
+TEX,CMPR,3	= ./Textures(NW4R)/newbuilding_90
+TEX,CMPR,1	= ./Textures(NW4R)/newbuilding_92alpha
+TEX,CMPR,1	= ./Textures(NW4R)/objbuilding_12_1lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/objbuilding_14_1lightingmap
+TEX,RGB5A3,1	= ./Textures(NW4R)/palm_tree
+TEX,CMPR,1	= ./Textures(NW4R)/park_wallLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__city_base_polygon01LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__city_building1_polygon68LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__city_catwalkout_polygon14lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__city_park_polygon7LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__city_parklightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__city_street1_polygon0sd1LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__city_street2_polygon04LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__city_street2_polygon142LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__city_stresset1_polygon02LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/pasted__floorlightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/pathlightingmap
+TEX,CMPR,4	= ./Textures(NW4R)/pave1
+TEX,CMPR,1	= ./Textures(NW4R)/pioneer
+TEX,RGB5A3,1	= ./Textures(NW4R)/plant_02
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface07_shopLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface123LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface256LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface293LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface305LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface312LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface90LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface91LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polysurface128lightingmap
+TEX,CMPR,3	= ./Textures(NW4R)/road
+TEX,CMPR,3	= ./Textures(NW4R)/sand
+TEX,CMPR,1	= ./Textures(NW4R)/shoe_floorLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/speaker
+TEX,CMPR,1	= ./Textures(NW4R)/spinning_metal_a
+TEX,CMPR,1	= ./Textures(NW4R)/spinning_tubes_a
+TEX,CMPR,1	= ./Textures(NW4R)/stairsLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/steve_1LightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/streetsign
+TEX,CMPR,3	= ./Textures(NW4R)/tile2
+TEX,CMPR,1	= ./Textures(NW4R)/vase_chinese
+TEX,CMPR,1	= ./Textures(NW4R)/wallLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/wall_base
+TEX,CMPR,3	= ./Textures(NW4R)/wall_hotel
+TEX,CMPR,1	= ./Textures(NW4R)/wall_inLightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/wall_outside
+TEX,CMPR,1	= ./Textures(NW4R)/wall_tileable_1
+TEX,CMPR,3	= ./Textures(NW4R)/wallbrick
+TEX,CMPR,3	= ./Textures(NW4R)/wallbrick02
+TEX,CMPR,3	= ./Textures(NW4R)/water
+TEX,CMPR,1	= ./Textures(NW4R)/white
+TEX,CMPR,3	= ./Textures(NW4R)/white_marble
+TEX,CMPR,3	= ./Textures(NW4R)/white_marble02
+TEX,CMPR,1	= ./Textures(NW4R)/wiindows_shopLightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/window02
+TEX,CMPR,3	= ./Textures(NW4R)/window_3
+TEX,CMPR,3	= ./Textures(NW4R)/windows01
+TEX,CMPR,3	= ./Textures(NW4R)/wood_floor_brown_a
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but not U8) this list will be used to sort the found
+# files. For archives with directory support (all but not PACK) it is very
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./3DModels(NW4R)/
+    0x1420	= ./3DModels(NW4R)/city_base
+   0x48d40	= ./3DModels(NW4R)/city_building1
+   0xa37a0	= ./3DModels(NW4R)/city_catwalkout
+   0xfd360	= ./3DModels(NW4R)/city_fittnes
+  0x167ec0	= ./3DModels(NW4R)/city_innerstreet
+  0x188b60	= ./3DModels(NW4R)/city_outside
+  0x18c100	= ./3DModels(NW4R)/city_park
+  0x1e3160	= ./3DModels(NW4R)/city_shop
+  0x233560	= ./3DModels(NW4R)/city_street1
+  0x2912c0	= ./3DModels(NW4R)/city_street2
+		= ./Textures(NW4R)/
+  0x3679c0	= ./Textures(NW4R)/armchair01LightingMap
+  0x36fa00	= ./Textures(NW4R)/armchairs_LightingMap
+  0x377a40	= ./Textures(NW4R)/Back_grassLightingMap
+  0x37fa80	= ./Textures(NW4R)/Bar_paveingLightingMap
+  0x387ac0	= ./Textures(NW4R)/bar_rugLightingMap
+  0x38fb00	= ./Textures(NW4R)/bar_wallLightingMap
+  0x397b40	= ./Textures(NW4R)/base_furniture
+  0x399b80	= ./Textures(NW4R)/base_furniture2
+  0x3a1bc0	= ./Textures(NW4R)/base_groundlightingmap2
+  0x3a9c00	= ./Textures(NW4R)/bay_01LightingMap
+  0x3b1c40	= ./Textures(NW4R)/Bay_10LightingMap
+  0x3b9c80	= ./Textures(NW4R)/Bay_11aLightingMap
+  0x3c1cc0	= ./Textures(NW4R)/Bay_11LightingMap
+  0x3c9d00	= ./Textures(NW4R)/Bay_15LightingMap
+  0x3d1d40	= ./Textures(NW4R)/Bay_16LightingMap
+  0x3d9d80	= ./Textures(NW4R)/Bay_17LightingMap
+  0x3e1dc0	= ./Textures(NW4R)/Bay_18LightingMap
+  0x3e9e00	= ./Textures(NW4R)/BeachSideStone
+  0x3f4640	= ./Textures(NW4R)/black_plastic_
+  0x3f6680	= ./Textures(NW4R)/Box01LightingMap
+  0x3fe6c0	= ./Textures(NW4R)/Box02_walkcatoutLightingMap
+  0x406700	= ./Textures(NW4R)/Box04Steve_1LightingMap
+  0x40e740	= ./Textures(NW4R)/Box08LightingMap
+  0x416780	= ./Textures(NW4R)/Box09LightingMap
+  0x41e7c0	= ./Textures(NW4R)/Brick_2
+  0x429000	= ./Textures(NW4R)/building_01_1lightingmap
+  0x431040	= ./Textures(NW4R)/building_02_1blightingmap
+  0x439080	= ./Textures(NW4R)/building_02_1cLightingMap
+  0x4410c0	= ./Textures(NW4R)/building_02_1lightingmap
+  0x449100	= ./Textures(NW4R)/building_03_lightingmap
+  0x451140	= ./Textures(NW4R)/building_04LightingMap
+  0x459180	= ./Textures(NW4R)/building_05_20LightingMap
+  0x4611c0	= ./Textures(NW4R)/building_06_1LightingMap
+  0x469200	= ./Textures(NW4R)/building_07_1LightingMap
+  0x471240	= ./Textures(NW4R)/building_08_1blightingmap
+  0x479280	= ./Textures(NW4R)/building_08_1clightingmap
+  0x4812c0	= ./Textures(NW4R)/building_08_1dLightingMap
+  0x489300	= ./Textures(NW4R)/building_08_1lightingmap
+  0x491340	= ./Textures(NW4R)/building_09LightingMap
+  0x499380	= ./Textures(NW4R)/Building_1_grassLightingMap
+  0x4a13c0	= ./Textures(NW4R)/building_10LightingMap
+  0x4a9400	= ./Textures(NW4R)/building_11LightingMap
+  0x4b1440	= ./Textures(NW4R)/building_13_1lightingmap
+  0x4b9480	= ./Textures(NW4R)/building_15_1blightingmap
+  0x4c14c0	= ./Textures(NW4R)/building_15_1clightingmap
+  0x4c9500	= ./Textures(NW4R)/building_15_1dlightingmap
+  0x4d1540	= ./Textures(NW4R)/building_15_1eLightingMap
+  0x4d9580	= ./Textures(NW4R)/building_15_1lightingmap
+  0x4e15c0	= ./Textures(NW4R)/building_16lightingmap
+  0x4e9600	= ./Textures(NW4R)/building_23LightingMap
+  0x4f1640	= ./Textures(NW4R)/Building_one_groundLightingMap
+  0x4f9680	= ./Textures(NW4R)/cardio_plastic_a
+  0x5016c0	= ./Textures(NW4R)/cardio_plastic_b
+  0x509700	= ./Textures(NW4R)/cardio_tubes_metal
+  0x509f40	= ./Textures(NW4R)/carpet
+  0x50bf80	= ./Textures(NW4R)/carpet_fitnessLightingMap
+  0x513fc0	= ./Textures(NW4R)/carpet02
+  0x516000	= ./Textures(NW4R)/catwalk01
+  0x51a040	= ./Textures(NW4R)/catwalkwall
+  0x522080	= ./Textures(NW4R)/catwalkwall02
+  0x52a0c0	= ./Textures(NW4R)/catwalkwall03
+  0x532100	= ./Textures(NW4R)/ceiling03LightingMap
+  0x53a140	= ./Textures(NW4R)/ceilinglightingmap
+  0x542180	= ./Textures(NW4R)/chrome
+  0x54a1c0	= ./Textures(NW4R)/city_catwalkout_polygon23LightingMap
+  0x552200	= ./Textures(NW4R)/city_catwalkout_polygon25LightingMap
+  0x55a240	= ./Textures(NW4R)/city_catwalkout_polygon4LightingMap
+  0x562280	= ./Textures(NW4R)/city_shop_polygon210LightingMap
+  0x56a2c0	= ./Textures(NW4R)/city_street2_polygon106LightingMap
+  0x572300	= ./Textures(NW4R)/city_street2_polygon172LightingMap
+  0x57a340	= ./Textures(NW4R)/city_street2_polygon316LightingMap
+  0x582380	= ./Textures(NW4R)/city_street2_polygon31LightingMap
+  0x58a3c0	= ./Textures(NW4R)/city_street2_polygon530LightingMap
+  0x592400	= ./Textures(NW4R)/city_street2_polygon531LightingMap
+  0x59a440	= ./Textures(NW4R)/cloth_folded_ba
+  0x59a4a0	= ./Textures(NW4R)/cloth_folded_bb
+  0x59a500	= ./Textures(NW4R)/cloth_folded_bc
+  0x59a560	= ./Textures(NW4R)/cloth_folded_bd
+  0x59a5c0	= ./Textures(NW4R)/cloth_skin_large_a_wii
+  0x59c600	= ./Textures(NW4R)/cloth_skin_large_b_wii
+  0x5a4640	= ./Textures(NW4R)/cloth_skin_light_a_wii
+  0x5a6680	= ./Textures(NW4R)/clothes_b
+  0x5ae6c0	= ./Textures(NW4R)/clothes_e_wii
+  0x5b0700	= ./Textures(NW4R)/clothes_folded_c
+  0x5b2740	= ./Textures(NW4R)/clothes_folded_d
+  0x5b4780	= ./Textures(NW4R)/clothes_folded_f
+  0x5b67c0	= ./Textures(NW4R)/clothes_hang_a
+  0x5be800	= ./Textures(NW4R)/clothes_hang_b
+  0x5c6840	= ./Textures(NW4R)/clothes_hang_c
+  0x5ce880	= ./Textures(NW4R)/clothes_hang_d
+  0x5d68c0	= ./Textures(NW4R)/clothes_hang_e
+  0x5de900	= ./Textures(NW4R)/clothes_hang_h
+  0x5e6940	= ./Textures(NW4R)/Coloured_clothes
+  0x5ee980	= ./Textures(NW4R)/computer_a
+  0x5ef1c0	= ./Textures(NW4R)/concretefloor005a
+  0x5f7200	= ./Textures(NW4R)/Curb
+  0x5ff240	= ./Textures(NW4R)/cw_board01
+  0x607280	= ./Textures(NW4R)/cw_metal_alpha
+  0x609cc0	= ./Textures(NW4R)/darkgray
+  0x609d80	= ./Textures(NW4R)/door02
+  0x6145c0	= ./Textures(NW4R)/door02s8
+  0x61ee00	= ./Textures(NW4R)/door05
+  0x622e40	= ./Textures(NW4R)/drink_a
+  0x624e80	= ./Textures(NW4R)/edging_stone
+  0x62f6c0	= ./Textures(NW4R)/edging_stone_2
+  0x639f00	= ./Textures(NW4R)/Embedded_light
+  0x63bf40	= ./Textures(NW4R)/energy_drink
+  0x63c000	= ./Textures(NW4R)/fabric
+  0x63e040	= ./Textures(NW4R)/Fakeceiling2LightingMap
+  0x646080	= ./Textures(NW4R)/FakeceilingLightingMap
+  0x64e0c0	= ./Textures(NW4R)/fastfood_fridge_a
+  0x656100	= ./Textures(NW4R)/fastfood_molino_a
+  0x65e140	= ./Textures(NW4R)/fc_metal_tube
+  0x662180	= ./Textures(NW4R)/fc_metal_tube_bulb
+  0x6641c0	= ./Textures(NW4R)/fc_park_blackstone
+  0x666200	= ./Textures(NW4R)/fiber_glass
+  0x66e240	= ./Textures(NW4R)/fintenss_wall_grd
+  0x676280	= ./Textures(NW4R)/fitnes_stone_up
+  0x67e2c0	= ./Textures(NW4R)/fitnes_stone_white__
+  0x686300	= ./Textures(NW4R)/fitnes_wood
+  0x690b40	= ./Textures(NW4R)/flagstone3
+  0x69b380	= ./Textures(NW4R)/floor_1LightingMap
+  0x6a33c0	= ./Textures(NW4R)/floor05LightingMap
+  0x6ab400	= ./Textures(NW4R)/footpath01LightingMap
+  0x6b3440	= ./Textures(NW4R)/fridge
+  0x6bb480	= ./Textures(NW4R)/fullblack
+  0x6bb6c0	= ./Textures(NW4R)/fullyellow
+  0x6bb900	= ./Textures(NW4R)/Glass_stripes02
+  0x6db940	= ./Textures(NW4R)/glassLightingMap
+  0x6e3980	= ./Textures(NW4R)/Grass
+  0x6ee1c0	= ./Textures(NW4R)/Grass_02LightingMap
+  0x6f6200	= ./Textures(NW4R)/Grass_03LightingMap
+  0x6fe240	= ./Textures(NW4R)/GRass01LightingMap
+  0x706280	= ./Textures(NW4R)/Gravel
+  0x710ac0	= ./Textures(NW4R)/gravel_small
+  0x71b300	= ./Textures(NW4R)/grey
+  0x71b3c0	= ./Textures(NW4R)/gym_floorLightingMap
+  0x723400	= ./Textures(NW4R)/GYM_Poster
+  0x72b440	= ./Textures(NW4R)/HealthMagazine
+  0x72bc80	= ./Textures(NW4R)/Indoor_Plants
+  0x733cc0	= ./Textures(NW4R)/Jumpers_snapshot
+  0x735d00	= ./Textures(NW4R)/leaf
+  0x73b240	= ./Textures(NW4R)/leatherfastfood
+  0x73d280	= ./Textures(NW4R)/LightProps
+  0x7452c0	= ./Textures(NW4R)/limo_main
+  0x765300	= ./Textures(NW4R)/limo_windows
+  0x767340	= ./Textures(NW4R)/livingroom_wall
+  0x771b80	= ./Textures(NW4R)/lmbuilding_05_20LightingMap
+  0x779bc0	= ./Textures(NW4R)/magasine_c_wii
+  0x77a400	= ./Textures(NW4R)/Marble_10_tile
+  0x782440	= ./Textures(NW4R)/Marble_6
+  0x78cc80	= ./Textures(NW4R)/marble_walls_
+  0x7974c0	= ./Textures(NW4R)/marble05
+  0x799500	= ./Textures(NW4R)/marble1
+  0x7a3d40	= ./Textures(NW4R)/marble2
+  0x7ae580	= ./Textures(NW4R)/mat_
+  0x7b65c0	= ./Textures(NW4R)/metal
+  0x7b8600	= ./Textures(NW4R)/metal05
+  0x7ba640	= ./Textures(NW4R)/metal052
+  0x7bc680	= ./Textures(NW4R)/Metals
+  0x7c46c0	= ./Textures(NW4R)/mirror05
+  0x7cc700	= ./Textures(NW4R)/mixer
+  0x7ce740	= ./Textures(NW4R)/Monitor_kb
+  0x7d0780	= ./Textures(NW4R)/NEWbuilding_01
+  0x7dafc0	= ./Textures(NW4R)/NEWbuilding_02
+  0x7e5800	= ./Textures(NW4R)/NEWbuilding_03
+  0x7f0040	= ./Textures(NW4R)/NEWbuilding_04
+  0x7fa880	= ./Textures(NW4R)/NEWbuilding_05
+  0x8050c0	= ./Textures(NW4R)/NEWbuilding_06
+  0x82f900	= ./Textures(NW4R)/NEWbuilding_07
+  0x837940	= ./Textures(NW4R)/NEWbuilding_08
+  0x842180	= ./Textures(NW4R)/NEWbuilding_09
+  0x84c9c0	= ./Textures(NW4R)/newbuilding_21
+  0x857200	= ./Textures(NW4R)/newbuilding_23
+  0x861a40	= ./Textures(NW4R)/newbuilding_24
+  0x864480	= ./Textures(NW4R)/newbuilding_25
+  0x86ecc0	= ./Textures(NW4R)/NEWbuilding_26
+  0x879500	= ./Textures(NW4R)/newbuilding_27
+  0x883d40	= ./Textures(NW4R)/newbuilding_28
+  0x88e580	= ./Textures(NW4R)/newbuilding_29
+  0x898dc0	= ./Textures(NW4R)/newbuilding_30
+  0x89b800	= ./Textures(NW4R)/newbuilding_31
+  0x8a6040	= ./Textures(NW4R)/newbuilding_32
+  0x8b0880	= ./Textures(NW4R)/newbuilding_33
+  0x8bb0c0	= ./Textures(NW4R)/NEWbuilding_35
+  0x8c5900	= ./Textures(NW4R)/NEWbuilding_36
+  0x8d0140	= ./Textures(NW4R)/NEWbuilding_37
+  0x8da980	= ./Textures(NW4R)/NEWbuilding_38
+  0x8e51c0	= ./Textures(NW4R)/NEWbuilding_40
+  0x8efa00	= ./Textures(NW4R)/newbuilding_41
+  0x8fa240	= ./Textures(NW4R)/NEWbuilding_42
+  0x902280	= ./Textures(NW4R)/newbuilding_43
+  0x90cac0	= ./Textures(NW4R)/newbuilding_44
+  0x917300	= ./Textures(NW4R)/newbuilding_45
+  0x921b40	= ./Textures(NW4R)/NEWbuilding_48
+  0x92c380	= ./Textures(NW4R)/NEWbuilding_49
+  0x9317c0	= ./Textures(NW4R)/NEWbuilding_50
+  0x93c000	= ./Textures(NW4R)/NEWbuilding_51
+  0x946840	= ./Textures(NW4R)/NEWbuilding_52
+  0x951080	= ./Textures(NW4R)/NEWbuilding_53
+  0x95b8c0	= ./Textures(NW4R)/NEWbuilding_54
+  0x966100	= ./Textures(NW4R)/NEWbuilding_57
+  0x970940	= ./Textures(NW4R)/NEWbuilding_58
+  0x97b180	= ./Textures(NW4R)/NEWbuilding_61
+  0x9859c0	= ./Textures(NW4R)/NEWbuilding_63
+  0x990200	= ./Textures(NW4R)/NEWbuilding_64
+  0x99aa40	= ./Textures(NW4R)/NEWbuilding_65ALPHA
+  0x9a2a80	= ./Textures(NW4R)/NEWbuilding_65ALPHA02
+  0x9a4ac0	= ./Textures(NW4R)/NEWbuilding_67
+  0x9af300	= ./Textures(NW4R)/newbuilding_68
+  0x9b9b40	= ./Textures(NW4R)/NEWbuilding_71
+  0x9c4380	= ./Textures(NW4R)/NEWbuilding_72
+  0x9cebc0	= ./Textures(NW4R)/NEWbuilding_74
+  0x9d9400	= ./Textures(NW4R)/NEWbuilding_75
+  0x9e3c40	= ./Textures(NW4R)/NEWbuilding_76
+  0x9e5c80	= ./Textures(NW4R)/NEWbuilding_77
+  0x9f04c0	= ./Textures(NW4R)/NEWbuilding_78
+  0x9fad00	= ./Textures(NW4R)/NEWbuilding_80
+  0x9fed40	= ./Textures(NW4R)/NEWbuilding_81
+  0xa09580	= ./Textures(NW4R)/newbuilding_82
+  0xa13dc0	= ./Textures(NW4R)/NEWbuilding_83
+  0xa1e600	= ./Textures(NW4R)/NEWbuilding_84
+  0xa28e40	= ./Textures(NW4R)/NEWbuilding_85
+  0xa33680	= ./Textures(NW4R)/NEWbuilding_86
+  0xa3dec0	= ./Textures(NW4R)/NEWbuilding_87
+  0xa48700	= ./Textures(NW4R)/NEWbuilding_88
+  0xa52f40	= ./Textures(NW4R)/newbuilding_89
+  0xa5d780	= ./Textures(NW4R)/newbuilding_90
+  0xa67fc0	= ./Textures(NW4R)/NEWbuilding_91
+  0xa72800	= ./Textures(NW4R)/newbuilding_92alpha
+  0xa73040	= ./Textures(NW4R)/NEWfc_stone
+  0xa75080	= ./Textures(NW4R)/objbuilding_12_1lightingmap
+  0xa7d0c0	= ./Textures(NW4R)/objbuilding_14_1lightingmap
+  0xa85100	= ./Textures(NW4R)/Object06LightingMap
+  0xa8d140	= ./Textures(NW4R)/Object11LightingMap
+  0xa95180	= ./Textures(NW4R)/Object12LightingMap
+  0xa9d1c0	= ./Textures(NW4R)/Object13LightingMap
+  0xaa5200	= ./Textures(NW4R)/Object14glassLightingMap
+  0xaad240	= ./Textures(NW4R)/Object18fitnessLightingMap
+  0xab5280	= ./Textures(NW4R)/Object38LightingMap
+  0xabd2c0	= ./Textures(NW4R)/Object39LightingMap
+  0xac5300	= ./Textures(NW4R)/palm_tree
+  0xacd340	= ./Textures(NW4R)/park_wallLightingMap
+  0xad5380	= ./Textures(NW4R)/pasted__city_base_polygon01LightingMap
+  0xadd3c0	= ./Textures(NW4R)/pasted__city_building1_polygon68LightingMap
+  0xae5400	= ./Textures(NW4R)/pasted__city_catwalkout_polygon14lightingmap
+  0xaed440	= ./Textures(NW4R)/pasted__city_park_polygon7LightingMap
+  0xaf5480	= ./Textures(NW4R)/pasted__city_parklightingmap
+  0xafd4c0	= ./Textures(NW4R)/pasted__city_street1_polygon0sd1LightingMap
+  0xb05500	= ./Textures(NW4R)/pasted__city_street2_polygon04LightingMap
+  0xb0d540	= ./Textures(NW4R)/pasted__city_street2_polygon142LightingMap
+  0xb15580	= ./Textures(NW4R)/pasted__city_stresset1_polygon02LightingMap
+  0xb1d5c0	= ./Textures(NW4R)/pasted__floorlightingmap
+  0xb25600	= ./Textures(NW4R)/pathlightingmap
+  0xb2d640	= ./Textures(NW4R)/pave1
+  0xb38080	= ./Textures(NW4R)/Pear_wall01
+  0xb400c0	= ./Textures(NW4R)/pioneer
+  0xb42100	= ./Textures(NW4R)/Plant_01
+  0xb4a140	= ./Textures(NW4R)/plant_02
+  0xb6a180	= ./Textures(NW4R)/Planter
+  0xb721c0	= ./Textures(NW4R)/polySurface07_shopLightingMap
+  0xb7a200	= ./Textures(NW4R)/polySurface123LightingMap
+  0xb82240	= ./Textures(NW4R)/polysurface128lightingmap
+  0xb8a280	= ./Textures(NW4R)/polySurface256LightingMap
+  0xb922c0	= ./Textures(NW4R)/polySurface293LightingMap
+  0xb9a300	= ./Textures(NW4R)/polySurface305LightingMap
+  0xba2340	= ./Textures(NW4R)/polySurface312LightingMap
+  0xbaa380	= ./Textures(NW4R)/polySurface90LightingMap
+  0xbb23c0	= ./Textures(NW4R)/polySurface91LightingMap
+  0xbba400	= ./Textures(NW4R)/ProteinPowder
+  0xbbac40	= ./Textures(NW4R)/road
+  0xbc5480	= ./Textures(NW4R)/RoadSidePaving
+  0xbcfcc0	= ./Textures(NW4R)/sand
+  0xbda500	= ./Textures(NW4R)/shoe_floorLightingMap
+  0xbe2540	= ./Textures(NW4R)/speaker
+  0xbea580	= ./Textures(NW4R)/spinning_metal_a
+  0xbec5c0	= ./Textures(NW4R)/spinning_tubes_a
+  0xbee600	= ./Textures(NW4R)/stairsLightingMap
+  0xbf6640	= ./Textures(NW4R)/steve_1LightingMap
+  0xbfe680	= ./Textures(NW4R)/Street_1_curb01LightingMap
+  0xc066c0	= ./Textures(NW4R)/streetsign
+  0xc09100	= ./Textures(NW4R)/Studio_roof
+  0xc13940	= ./Textures(NW4R)/tile2
+  0xc16380	= ./Textures(NW4R)/Tiles
+  0xc20bc0	= ./Textures(NW4R)/vase_chinese
+  0xc24c00	= ./Textures(NW4R)/wall_base
+  0xc25440	= ./Textures(NW4R)/wall_hotel
+  0xc2fc80	= ./Textures(NW4R)/wall_inLightingMap
+  0xc37cc0	= ./Textures(NW4R)/wall_outside
+  0xc42500	= ./Textures(NW4R)/wall_tileable_1
+  0xc4a540	= ./Textures(NW4R)/wallbrick
+  0xc54d80	= ./Textures(NW4R)/wallbrick02
+  0xc5f5c0	= ./Textures(NW4R)/wallLightingMap
+  0xc67600	= ./Textures(NW4R)/water
+  0xc71e40	= ./Textures(NW4R)/WaterLightingMap
+  0xc79e80	= ./Textures(NW4R)/white
+  0xc79f40	= ./Textures(NW4R)/white_marble
+  0xc84780	= ./Textures(NW4R)/white_marble02
+  0xc8efc0	= ./Textures(NW4R)/wiindows_shopLightingMap
+  0xc97000	= ./Textures(NW4R)/window_3
+  0xca1840	= ./Textures(NW4R)/window02
+  0xcac080	= ./Textures(NW4R)/windows01
+  0xcb68c0	= ./Textures(NW4R)/wood_floor_brown_a
+  0xcc1100	= ./Textures(NW4R)/Wooden_floor_tile
+  0xccb940	= ./.string-pool.bin
+
+#------------------------------------------------------------------------------
+

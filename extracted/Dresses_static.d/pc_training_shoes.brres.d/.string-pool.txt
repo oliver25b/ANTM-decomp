@@ -1,0 +1,13 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material130
+NodeTree
+Scene_Material
+Textures(NW4R)
+cloth_fitness_shoe
+pc_training_shoes
+pc_training_shoes__Scene_Material
+pc_training_shoes_cloth_fitness_shoe__Material130
+polygon0
+polygon1

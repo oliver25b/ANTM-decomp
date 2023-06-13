@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Textures(NW4R)
+m_working_wii_08_top
+polygon0
+working_08_top
+working_08_top_working_wii_08_top__m_working_wii_08_top
+working_wii_08_top

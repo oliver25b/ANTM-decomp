@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material223
+NodeTree
+Textures(NW4R)
+polygon0
+seasonw_04_top
+seasonw_04_top_seasonw_wii_04_top__Material223
+seasonw_wii_04_top

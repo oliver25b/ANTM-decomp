@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material290
+NodeTree
+Textures(NW4R)
+polygon0
+seasona_01_dress
+seasona_01_dress_seasona_wii_01_dress__Material290
+seasona_wii_01_dress

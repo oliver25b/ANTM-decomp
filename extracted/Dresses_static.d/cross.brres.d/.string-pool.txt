@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawXlu
+Material__25
+NodeTree
+Plane01
+Plane01__Material__25
+Textures(NW4R)
+cross
+polygon0

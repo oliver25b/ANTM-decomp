@@ -1,0 +1,9 @@
+#0
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Textures(NW4R)
+polygon0
+retro_05_top
+retro_05_top_retro_wii_05_top_AUTO__retro_wii_05_top
+retro_wii_05_top

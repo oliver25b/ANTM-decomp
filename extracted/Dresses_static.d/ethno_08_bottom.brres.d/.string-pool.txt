@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material103
+NodeTree
+Textures(NW4R)
+ethno_08_bottom
+ethno_08_bottom_ethno_wii_08_bottom__Material103
+ethno_wii_08_bottom
+polygon0

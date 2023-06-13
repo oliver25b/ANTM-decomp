@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Textures(NW4R)
+_20_-_Default4
+pc2_skirt_a
+polygon0
+skirt
+skirt___20_-_Default4

@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material49
+NodeTree
+Shirt5
+Shirt5__Material49
+Textures(NW4R)
+pc2_shirt_a
+polygon0

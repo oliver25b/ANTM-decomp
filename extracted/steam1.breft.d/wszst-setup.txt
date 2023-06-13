@@ -1,0 +1,444 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# Name of the object:
+object-name = sample
+
+# The internal archive format (U8, WU8, BRRES, BREFF or BREFT):
+archive-format = BREFT
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = BREFT
+
+# An archive format related version number (-1: unknown or not relevant)
+version = 9
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 0
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x0
+max-data-offset = 0xce760
+
+# The calculated alignment of all files:
+data-align = 0x10
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./files/#1_2.d
+./files/#1_2.png
+./files/#3.d
+./files/#3.png
+./files/Indirect02.d
+./files/Indirect02.png
+./files/Indirect03.d
+./files/Indirect03.png
+./files/arrow.d
+./files/arrow.png
+./files/asterism.d
+./files/asterism.png
+./files/bubble.d
+./files/bubble.png
+./files/corona_warp.d
+./files/corona_warp.png
+./files/def_tex1.d
+./files/def_tex1.png
+./files/fire01.d
+./files/fire01.png
+./files/fire02.d
+./files/fire02.png
+./files/fire03.d
+./files/fire03.png
+./files/fish.d
+./files/fish.png
+./files/inner_space.d
+./files/inner_space.png
+./files/land_surface.d
+./files/land_surface.png
+./files/land_surface_warp.d
+./files/land_surface_warp.png
+./files/moon_surface.d
+./files/moon_surface.png
+./files/number_0.d
+./files/number_0.png
+./files/number_1.d
+./files/number_1.png
+./files/number_2.d
+./files/number_2.png
+./files/number_3.d
+./files/number_3.png
+./files/number_4.d
+./files/number_4.png
+./files/number_5.d
+./files/number_5.png
+./files/number_6.d
+./files/number_6.png
+./files/number_7.d
+./files/number_7.png
+./files/number_8.d
+./files/number_8.png
+./files/number_9.d
+./files/number_9.png
+./files/pc_bb_batblur4.d
+./files/pc_bb_batblur4.png
+./files/pc_box_dmgline02.d
+./files/pc_box_dmgline02.png
+./files/pc_box_hit06.d
+./files/pc_box_hit06.png
+./files/pc_clr_kira01.d
+./files/pc_clr_kira01.png
+./files/pc_clr_stardust01.d
+./files/pc_clr_stardust01.png
+./files/pc_fsh_drop01.d
+./files/pc_fsh_drop01.png
+./files/pc_fsh_ripple_bl01.d
+./files/pc_fsh_ripple_bl01.png
+./files/pc_fsh_ripple_st01.d
+./files/pc_fsh_ripple_st01.png
+./files/pc_fsh_water01.d
+./files/pc_fsh_water01.png
+./files/pc_gen_ball1.d
+./files/pc_gen_ball1.png
+./files/pc_gen_glow1.d
+./files/pc_gen_glow1.png
+./files/pc_gen_glow2.d
+./files/pc_gen_glow2.png
+./files/pc_gen_glow3.d
+./files/pc_gen_glow3.png
+./files/pc_gen_grad_v1.d
+./files/pc_gen_grad_v1.png
+./files/pc_gen_smokereal1.d
+./files/pc_gen_smokereal1.png
+./files/pc_gen_smokesmpl1.d
+./files/pc_gen_smokesmpl1.png
+./files/pc_glf_sand01.d
+./files/pc_glf_sand01.png
+./files/pc_hky_neonstick.d
+./files/pc_hky_neonstick.png
+./files/pc_pm_glow2nega.d
+./files/pc_pm_glow2nega.png
+./files/pc_pm_hamonmask01.d
+./files/pc_pm_hamonmask01.png
+./files/pc_pm_indhamon02.d
+./files/pc_pm_indhamon02.png
+./files/pc_pm_rainbow01.d
+./files/pc_pm_rainbow01.png
+./files/pc_pm_riinggrad01.d
+./files/pc_pm_riinggrad01.png
+./files/pc_pm_startbg3.d
+./files/pc_pm_startbg3.png
+./files/pc_sht_cursor1.d
+./files/pc_sht_cursor1.png
+./files/pc_sht_cursor1sd.d
+./files/pc_sht_cursor1sd.png
+./files/pc_sht_hahen1.d
+./files/pc_sht_hahen1.png
+./files/pc_sht_targ_mono1.d
+./files/pc_sht_targ_mono1.png
+./files/pc_tnk_smoke3.d
+./files/pc_tnk_smoke3.png
+./files/pc_tns_note02.d
+./files/pc_tns_note02.png
+./files/real_leaf_i8.d
+./files/real_leaf_i8.png
+./files/ring.d
+./files/ring.png
+./files/separate.d
+./files/separate.png
+./files/shadow1.d
+./files/shadow1.png
+./files/shadow2.d
+./files/shadow2.png
+./files/smoke01_i4.d
+./files/smoke01_i4.png
+./files/smoke02_i4.d
+./files/smoke02_i4.png
+./files/smoke03_i4.d
+./files/smoke03_i4.png
+./files/smoke_large.d
+./files/smoke_large.png
+./files/star.d
+./files/star.png
+./files/sun_face.d
+./files/sun_face.png
+./header.bin.d
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+BREFT,I8,1	= ./files/#1_2
+BREFT,I8,1	= ./files/#3
+BREFT,IA8,1	= ./files/Indirect02
+BREFT,IA8,1	= ./files/Indirect03
+BREFT,IA8,1	= ./files/arrow
+BREFT,I4,1	= ./files/asterism
+BREFT,I8,1	= ./files/bubble
+BREFT,I8,1	= ./files/corona_warp
+BREFT,I4,1	= ./files/def_tex1
+BREFT,I4,1	= ./files/fire01
+BREFT,I4,1	= ./files/fire02
+BREFT,I4,1	= ./files/fire03
+BREFT,I4,1	= ./files/fish
+BREFT,I8,1	= ./files/inner_space
+BREFT,RGB5A3,1	= ./files/land_surface
+BREFT,IA8,1	= ./files/land_surface_warp
+BREFT,IA8,1	= ./files/moon_surface
+BREFT,I4,1	= ./files/number_0
+BREFT,I4,1	= ./files/number_1
+BREFT,I4,1	= ./files/number_2
+BREFT,I4,1	= ./files/number_3
+BREFT,I4,1	= ./files/number_4
+BREFT,I4,1	= ./files/number_5
+BREFT,I4,1	= ./files/number_6
+BREFT,I4,1	= ./files/number_7
+BREFT,I4,1	= ./files/number_8
+BREFT,I4,1	= ./files/number_9
+BREFT,IA8,1	= ./files/pc_bb_batblur4
+BREFT,I8,1	= ./files/pc_box_dmgline02
+BREFT,IA8,1	= ./files/pc_box_hit06
+BREFT,IA8,1	= ./files/pc_clr_kira01
+BREFT,I8,1	= ./files/pc_clr_stardust01
+BREFT,IA8,1	= ./files/pc_fsh_drop01
+BREFT,I8,1	= ./files/pc_fsh_ripple_bl01
+BREFT,I8,1	= ./files/pc_fsh_ripple_st01
+BREFT,IA8,1	= ./files/pc_fsh_water01
+BREFT,IA8,1	= ./files/pc_gen_ball1
+BREFT,I8,1	= ./files/pc_gen_glow1
+BREFT,I8,1	= ./files/pc_gen_glow2
+BREFT,IA8,1	= ./files/pc_gen_glow3
+BREFT,I8,1	= ./files/pc_gen_grad_v1
+BREFT,IA8,1	= ./files/pc_gen_smokereal1
+BREFT,IA8,1	= ./files/pc_gen_smokesmpl1
+BREFT,IA8,1	= ./files/pc_glf_sand01
+BREFT,IA8,1	= ./files/pc_hky_neonstick
+BREFT,I8,1	= ./files/pc_pm_glow2nega
+BREFT,I8,1	= ./files/pc_pm_hamonmask01
+BREFT,IA8,1	= ./files/pc_pm_indhamon02
+BREFT,RGB565,1	= ./files/pc_pm_rainbow01
+BREFT,I8,1	= ./files/pc_pm_riinggrad01
+BREFT,I8,1	= ./files/pc_pm_startbg3
+BREFT,IA8,1	= ./files/pc_sht_cursor1
+BREFT,I8,1	= ./files/pc_sht_cursor1sd
+BREFT,IA8,1	= ./files/pc_sht_hahen1
+BREFT,I8,1	= ./files/pc_sht_targ_mono1
+BREFT,IA8,1	= ./files/pc_tnk_smoke3
+BREFT,IA8,1	= ./files/pc_tns_note02
+BREFT,I8,1	= ./files/real_leaf_i8
+BREFT,I4,1	= ./files/ring
+BREFT,I8,1	= ./files/separate
+BREFT,IA8,1	= ./files/shadow1
+BREFT,IA8,1	= ./files/shadow2
+BREFT,I4,1	= ./files/smoke01_i4
+BREFT,I4,1	= ./files/smoke02_i4
+BREFT,I4,1	= ./files/smoke03_i4
+BREFT,I4,1	= ./files/smoke_large
+BREFT,I8,1	= ./files/star
+BREFT,IA8,1	= ./files/sun_face
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+./header.bin
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but not U8) this list will be used to sort the found
+# files. For archives with directory support (all but not PACK) it is very
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./header.bin
+      0x10	= ./root.bin
+      0x60	= ./file-list.bin
+		= ./files/
+     0x660	= ./files/pc_tnk_smoke3
+    0x2680	= ./files/pc_box_hit06
+    0x66a0	= ./files/pc_gen_smokesmpl1
+    0x86c0	= ./files/pc_gen_ball1
+    0x8ee0	= ./files/pc_gen_glow3
+    0x9700	= ./files/pc_tns_note02
+    0x9f20	= ./files/pc_glf_sand01
+    0xbf40	= ./files/pc_box_dmgline02
+    0xc760	= ./files/pc_bb_batblur4
+    0xcf80	= ./files/pc_gen_glow1
+    0xd3a0	= ./files/pc_gen_smokereal1
+    0xdbc0	= ./files/pc_sht_hahen1
+    0xe3e0	= ./files/pc_sht_targ_mono1
+    0xe500	= ./files/pc_gen_grad_v1
+    0xe5a0	= ./files/pc_sht_cursor1
+    0xedc0	= ./files/pc_sht_cursor1sd
+    0xf1e0	= ./files/pc_gen_glow2
+    0xf600	= ./files/pc_pm_riinggrad01
+    0xf720	= ./files/pc_pm_rainbow01
+    0xf940	= ./files/pc_clr_kira01
+   0x10160	= ./files/pc_clr_stardust01
+   0x10580	= ./files/pc_pm_startbg3
+   0x213a0	= ./files/pc_pm_glow2nega
+   0x223c0	= ./files/pc_pm_hamonmask01
+   0x227e0	= ./files/pc_pm_indhamon02
+   0x24800	= ./files/pc_hky_neonstick
+   0x25020	= ./files/pc_fsh_ripple_st01
+   0x25840	= ./files/pc_fsh_water01
+   0x27860	= ./files/pc_fsh_drop01
+   0x28080	= ./files/pc_fsh_ripple_bl01
+   0x290a0	= ./files/land_surface
+   0x490c0	= ./files/shadow1
+   0x510e0	= ./files/shadow2
+   0x59100	= ./files/land_surface_warp
+   0x61120	= ./files/inner_space
+   0x71140	= ./files/moon_surface
+   0x91160	= ./files/sun_face
+   0xb1180	= ./files/corona_warp
+   0xb51a0	= ./files/fish
+   0xb55c0	= ./files/def_tex1
+   0xb5660	= ./files/fire01
+   0xb5880	= ./files/fire02
+   0xb5aa0	= ./files/fire03
+   0xb5cc0	= ./files/smoke01_i4
+   0xb5ee0	= ./files/smoke02_i4
+   0xb6100	= ./files/smoke03_i4
+   0xb6320	= ./files/smoke_large
+   0xb88c0	= ./files/separate
+   0xb8ce0	= ./files/asterism
+   0xb8f00	= ./files/number_0
+   0xb9120	= ./files/number_1
+   0xb9340	= ./files/number_2
+   0xb9560	= ./files/number_3
+   0xb9780	= ./files/number_4
+   0xb99a0	= ./files/number_5
+   0xb9bc0	= ./files/number_6
+   0xb9de0	= ./files/number_7
+   0xba000	= ./files/number_8
+   0xba220	= ./files/number_9
+   0xba440	= ./files/arrow
+   0xc2460	= ./files/bubble
+   0xc3480	= ./files/ring
+   0xc36a0	= ./files/real_leaf_i8
+   0xc76c0	= ./files/Indirect02
+   0xc7ee0	= ./files/Indirect03
+   0xc9f00	= ./files/star
+   0xcdf20	= ./files/#1_2
+   0xce340	= ./files/#3
+
+#------------------------------------------------------------------------------
+

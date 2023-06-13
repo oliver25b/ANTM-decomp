@@ -1,0 +1,12 @@
+#0
+#1
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Textures(NW4R)
+polygon0
+polygon1
+retro_07_bottom
+retro_07_bottom_Bottom__retro_wii_07_bottom
+retro_07_bottom__retro_wii_07_bottom
+retro_wii_07_bottom

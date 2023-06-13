@@ -1,0 +1,2122 @@
+#MDL  <<<  The first 4 characters '#MDL' are the magic for a MDL text file.
+#     <<<  Don't remove them!
+#
+###############################################################################
+#
+# This is a textual representation of a MDL file used in Nintendos "Mario Kart
+# Wii". "Wiimms SZS Tools" may convert binary (raw) and text MDL files in both
+# directions in the near future. The text parser supports variables, C like
+# expressions and nested IF-THEN-ELSE structures.
+#
+# Info about the general parser syntax and semantics:
+#   * https://szs.wiimm.de/doc/syntax
+#
+# Info about the MDL text syntax and semantics:
+#   * https://szs.wiimm.de/doc/mdl/syntax
+#
+# Reference list of MDL parser functions:
+#   * https://szs.wiimm.de/doc/mdl/func
+#
+# Info about the MDL file format:
+#   * https://szs.wiimm.de/r/wiki/MDL0
+#
+# Hint:
+#   Set one of the options --no-header (-H) or --brief (-B) while decoding
+#   to suppress this large syntax info. The --brief option will also disable
+#   info parts in the different sections.
+
+#
+###############################################################################
+
+[SETUP]
+# This is the general setup and info section. Some parameters are preceeded by
+# a hash ('#') to signal the informative only status. The scanning starts
+# always with this section.
+
+# Identify the tool and version, that have written this file:
+TOOL     = wszst
+SYSTEM   = x86_64
+VERSION  = 2.33a
+REVISION = 8773
+DATE     = 2023-01-14
+
+# The MDL name & version and the number of sections
+@MDL-NAME    = ""
+@MDL-VERSION = 11
+@N-SECTIONS  = 14
+
+
+#
+###############################################################################
+
+[HEADER]
+# MDL header
+@REVISION = 8773
+
+HEAD-LEN    =       0x40
+OFFSET      = 0xffffffb4
+UNKNOWN-08  =        0x1
+UNKNOWN-0c  =        0x1
+N-VERTEX    =        324
+N-FACE      =        238
+UNKNOWN-18  =          0
+N-BONE      =          1
+UNKNOWN-20  =        0x1
+UNKNOWN-08  =        0x1
+BONE-OFFSET =       0x40
+MIN         =      -1.553      15.679      -1.906
+MAX         =       1.553      17.406       1.828
+
+
+#
+###############################################################################
+
+[BONE-TABLE]
+@REVISION = 8773
+
+# N = 34
+      27
+       0
+       1
+       2
+       3
+       4
+       5
+       6
+       7
+       8
+       9
+      10
+      11
+      12
+      13
+      14
+      15
+      16
+      17
+      18
+      19
+      20
+      21
+      22
+      23
+      24
+      25
+      26
+      28
+      29
+      30
+      31
+      32
+      33
+
+#
+###############################################################################
+
+[SECTION-0]
+# MDL.draw-list.00, MDL file offset 0x4ac, BRRES file offset 0x6f458c
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    20
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   2  0  0  0   0  2  0  1   0  1  2  0   2  0  1  2  :................:
+   10:   0  3  0  3   2  0  4  0   4  2  0  5   0  5  2  0  :................:
+   20:   6  0  6  2   0  7  0  7   2  0  8  0   8  2  0  9  :................:
+   30:   0  9  2  0   a  0  4  2   0  b  0  b   2  0  c  0  :................:
+   40:   c  2  0  d   0  d  2  0   e  0  e  2   0  f  0  f  :................:
+   50:   2  0 10  0   4  2  0 11   0 11  2  0  12  0 12  2  :................:
+   60:   0 13  0 13   2  0 14  0  14  2  0 15   0 15  2  0  :................:
+   70:  16  0 16  2   0 17  0 17   2  0 18  0  18  2  0 19  :................:
+   80:   0 19  2  0  1a  0 14  2   0 1b  0 1b   2  0 1c  0  :................:
+   90:  14  2  0 1d   0 1c  2  0  1e  0 1d  2   0 1f  0 1e  :................:
+   a0:   2  0 20  0  1f  2  0 21   0 20  1  /               :.. ....!. .:
+
+#
+###############################################################################
+
+[SECTION-0]
+# MDL.draw-list.01, MDL file offset 0x557, BRRES file offset 0x6f4637
+@REVISION    =  8773
+@ENTRY-INDEX =     1
+@SORT-INDEX  =    30
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   4  0  0  0   0  0  1  0   1  /                     :.........:
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.00, MDL file offset 0x560, BRRES file offset 0x6f4640
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    40
+@NAME        = "{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+
+length		=        0xd0
+mdl0-offset	=  0xfffffaa0
+index		=           0
+id		=         0x1
+flags		=       0x19f
+padding		=           0           0
+
+parent		=           0  ""
+child		=        0xd0  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       0.000       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       1.000       0.000       0.000       0.000
+trans-matrix-y  =       0.000       1.000       0.000       0.000
+trans-matrix-z  =       0.000       0.000       1.000       0.000
+
+inv-matrix-x    =       1.000      -0.000       0.000       0.000
+inv-matrix-y    =      -0.000       1.000      -0.000       0.000
+inv-matrix-z    =       0.000      -0.000       1.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.01, MDL file offset 0x630, BRRES file offset 0x6f4710
+@REVISION    =  8773
+@ENTRY-INDEX =     1
+@SORT-INDEX  =    50
+@NAME        = "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff9d0
+index		=         0x1
+id		=         0x2
+flags		=       0x19f
+padding		=           0           0
+
+parent		=  0xffffff30  "{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+child		=           0  ""
+next		=        0xd0  "÷|QAÿÿ@"
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       0.000       0.000       0.000
+minimum		=      -1.553      15.679      -1.906
+maximum		=       1.553      17.406       1.828
+
+trans-matrix-x  =       1.000       0.000       0.000       0.000
+trans-matrix-y  =       0.000       1.000       0.000       0.000
+trans-matrix-z  =       0.000       0.000       1.000       0.000
+
+inv-matrix-x    =       1.000      -0.000       0.000       0.000
+inv-matrix-y    =      -0.000       1.000      -0.000       0.000
+inv-matrix-z    =       0.000      -0.000       1.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.02, MDL file offset 0x700, BRRES file offset 0x6f47e0
+@REVISION    =  8773
+@ENTRY-INDEX =     2
+@SORT-INDEX  =    60
+@NAME        = "÷|QAÿÿ@"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff900
+index		=         0x2
+id		=         0x3
+flags		=        0x9f
+padding		=           0           0
+
+parent		=  0xfffffe60  "{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+child		=        0xd0  "ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+next		=           0  ""
+prev		=  0xffffff30  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       0.000       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       1.000       0.000       0.000       0.000
+trans-matrix-y  =       0.000       1.000       0.000       0.000
+trans-matrix-z  =       0.000       0.000       1.000       0.000
+
+inv-matrix-x    =       1.000      -0.000       0.000       0.000
+inv-matrix-y    =      -0.000       1.000      -0.000       0.000
+inv-matrix-z    =       0.000      -0.000       1.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.03, MDL file offset 0x7d0, BRRES file offset 0x6f48b0
+@REVISION    =  8773
+@ENTRY-INDEX =     3
+@SORT-INDEX  =    70
+@NAME        = "ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff830
+index		=         0x3
+id		=         0x4
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "÷|QAÿÿ@"
+child		=        0xd0  "ªªªª÷QAÿÿÿô÷|IBÿô@"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000     -90.000       0.000
+translation	=       0.000       9.914      -0.454
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.000       0.000      -1.000       0.000
+trans-matrix-y  =       0.000       1.000       0.000       9.914
+trans-matrix-z  =       1.000       0.000       0.000      -0.454
+
+inv-matrix-x    =       0.000      -0.000       1.000       0.454
+inv-matrix-y    =      -0.000       1.000      -0.000      -9.914
+inv-matrix-z    =      -1.000      -0.000       0.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.04, MDL file offset 0x8a0, BRRES file offset 0x6f4980
+@REVISION    =  8773
+@ENTRY-INDEX =     4
+@SORT-INDEX  =    80
+@NAME        = "ªªªª÷QAÿÿÿô÷|IBÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff760
+index		=         0x4
+id		=         0x5
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+child		=        0xd0  "ÿô@"
+next		=       0x4e0  " ¢‚ªªªª¢ý±*"
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=     -90.088       2.779     -91.824
+translation	=      -0.042       0.018      -0.769
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.048       0.999       0.002       0.769
+trans-matrix-y  =      -0.998       0.048      -0.032       9.932
+trans-matrix-z  =      -0.032       0.000       0.999      -0.496
+
+inv-matrix-x    =       0.048      -0.998      -0.032       9.863
+inv-matrix-y    =       0.999       0.049       0.000      -1.250
+inv-matrix-z    =       0.002      -0.032       1.000       0.810
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.05, MDL file offset 0x970, BRRES file offset 0x6f4a50
+@REVISION    =  8773
+@ENTRY-INDEX =     5
+@SORT-INDEX  =    90
+@NAME        = "ÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff690
+index		=         0x5
+id		=         0x6
+flags		=        0x9c
+padding		=           0           0
+
+parent		=  0xffffff30  "ªªªª÷QAÿÿÿô÷|IBÿô@"
+child		=        0xd0  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       2.621       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.048       0.999       0.002       0.896
+trans-matrix-y  =      -0.998       0.048      -0.032       7.316
+trans-matrix-z  =      -0.032       0.000       0.999      -0.579
+
+inv-matrix-x    =       0.048      -0.998      -0.032       7.242
+inv-matrix-y    =       0.999       0.049       0.000      -1.250
+inv-matrix-z    =       0.002      -0.032       1.000       0.810
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.06, MDL file offset 0xa40, BRRES file offset 0x6f4b20
+@REVISION    =  8773
+@ENTRY-INDEX =     6
+@SORT-INDEX  =   100
+@NAME        = "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff5c0
+index		=         0x6
+id		=         0x7
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "ÿô@"
+child		=        0xd0  "{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       2.995       0.249
+translation	=       2.040       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.053       0.999       0.004       0.995
+trans-matrix-y  =      -0.995       0.053      -0.084       5.280
+trans-matrix-z  =      -0.084       0.000       0.996      -0.644
+
+inv-matrix-x    =       0.053      -0.995      -0.084       5.148
+inv-matrix-y    =       0.999       0.053       0.000      -1.273
+inv-matrix-z    =       0.004      -0.084       0.997       1.081
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.07, MDL file offset 0xb10, BRRES file offset 0x6f4bf0
+@REVISION    =  8773
+@ENTRY-INDEX =     7
+@SORT-INDEX  =   110
+@NAME        = "{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff4f0
+index		=         0x7
+id		=         0x8
+flags		=        0x9c
+padding		=           0           0
+
+parent		=  0xffffff30  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+child		=        0xd0  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       2.027       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.053       0.999       0.004       1.102
+trans-matrix-y  =      -0.995       0.053      -0.084       3.263
+trans-matrix-z  =      -0.084       0.000       0.996      -0.815
+
+inv-matrix-x    =       0.053      -0.995      -0.084       3.121
+inv-matrix-y    =       0.999       0.053       0.000      -1.273
+inv-matrix-z    =       0.004      -0.084       0.997       1.081
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.08, MDL file offset 0xbe0, BRRES file offset 0x6f4cc0
+@REVISION    =  8773
+@ENTRY-INDEX =     8
+@SORT-INDEX  =   120
+@NAME        = "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff420
+index		=         0x8
+id		=         0x9
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+child		=        0xd0  "{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000     -35.418       5.140
+translation	=       1.617       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.118       0.990      -0.079       1.187
+trans-matrix-y  =      -0.852       0.142       0.503       1.654
+trans-matrix-z  =       0.509       0.008       0.860      -0.950
+
+inv-matrix-x    =       0.118      -0.853       0.509       1.754
+inv-matrix-y    =       0.990       0.142       0.008      -1.402
+inv-matrix-z    =      -0.079       0.503       0.861       0.079
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.09, MDL file offset 0xcb0, BRRES file offset 0x6f4d90
+@REVISION    =  8773
+@ENTRY-INDEX =     9
+@SORT-INDEX  =   130
+@NAME        = "{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff350
+index		=         0x9
+id		=         0xa
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+child		=           0  ""
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000     -35.906      14.334
+translation	=       1.513       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.245       0.930      -0.275       1.366
+trans-matrix-y  =      -0.345       0.348       0.871       0.364
+trans-matrix-z  =       0.906      -0.119       0.406      -0.180
+
+inv-matrix-x    =       0.245      -0.346       0.906      -0.046
+inv-matrix-y    =       0.930       0.348      -0.119      -1.418
+inv-matrix-z    =      -0.275       0.872       0.407       0.131
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.10, MDL file offset 0xd80, BRRES file offset 0x6f4e60
+@REVISION    =  8773
+@ENTRY-INDEX =    10
+@SORT-INDEX  =   140
+@NAME        = " ¢‚ªªªª¢ý±*"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff280
+index		=         0xa
+id		=         0xb
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xfffffa50  "ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+child		=        0xd0  " ¢‚ªªªª ¢‚ªªªª¢ý±ªª
+"
+next		=       0x4e0  "ªª
+"
+prev		=  0xfffffb20  "ªªªª÷QAÿÿÿô÷|IBÿô@"
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=      90.088      -2.779     -91.824
+translation	=      -0.042       0.018       0.769
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.048      -0.999       0.002      -0.769
+trans-matrix-y  =      -0.998       0.048       0.032       9.932
+trans-matrix-z  =      -0.032       0.000      -0.999      -0.496
+
+inv-matrix-x    =      -0.048      -0.998      -0.032       9.863
+inv-matrix-y    =      -0.999       0.049       0.000      -1.250
+inv-matrix-z    =       0.002       0.032      -1.000      -0.810
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.11, MDL file offset 0xe50, BRRES file offset 0x6f4f30
+@REVISION    =  8773
+@ENTRY-INDEX =    11
+@SORT-INDEX  =   150
+@NAME        = " ¢‚ªªªª ¢‚ªªªª¢ý±ªª
+"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff1b0
+index		=         0xb
+id		=         0xc
+flags		=        0x9c
+padding		=           0           0
+
+parent		=  0xffffff30  " ¢‚ªªªª¢ý±*"
+child		=        0xd0  "÷| ¡"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       2.621       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.048      -0.999       0.002      -0.896
+trans-matrix-y  =      -0.998       0.048       0.032       7.316
+trans-matrix-z  =      -0.032       0.000      -0.999      -0.579
+
+inv-matrix-x    =      -0.048      -0.998      -0.032       7.242
+inv-matrix-y    =      -0.999       0.049       0.000      -1.250
+inv-matrix-z    =       0.002       0.032      -1.000      -0.810
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.12, MDL file offset 0xf20, BRRES file offset 0x6f5000
+@REVISION    =  8773
+@ENTRY-INDEX =    12
+@SORT-INDEX  =   160
+@NAME        = "÷| ¡"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff0e0
+index		=         0xc
+id		=         0xd
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  " ¢‚ªªªª ¢‚ªªªª¢ý±ªª
+"
+child		=        0xd0  "{)›*ªªªª÷|IC"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000      -2.995       0.249
+translation	=       2.040       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.053      -0.999       0.004      -0.995
+trans-matrix-y  =      -0.995       0.053       0.084       5.280
+trans-matrix-z  =      -0.084       0.000      -0.996      -0.644
+
+inv-matrix-x    =      -0.053      -0.995      -0.084       5.148
+inv-matrix-y    =      -0.999       0.053       0.000      -1.273
+inv-matrix-z    =       0.004       0.084      -0.997      -1.081
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.13, MDL file offset 0xff0, BRRES file offset 0x6f50d0
+@REVISION    =  8773
+@ENTRY-INDEX =    13
+@SORT-INDEX  =   170
+@NAME        = "{)›*ªªªª÷|IC"
+
+length		=        0xd0
+mdl0-offset	=  0xfffff010
+index		=         0xd
+id		=         0xe
+flags		=        0x9c
+padding		=           0           0
+
+parent		=  0xffffff30  "÷| ¡"
+child		=        0xd0  "û"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       2.027       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.053      -0.999       0.004      -1.102
+trans-matrix-y  =      -0.995       0.053       0.084       3.263
+trans-matrix-z  =      -0.084       0.000      -0.996      -0.815
+
+inv-matrix-x    =      -0.053      -0.995      -0.084       3.121
+inv-matrix-y    =      -0.999       0.053       0.000      -1.273
+inv-matrix-z    =       0.004       0.084      -0.997      -1.081
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.14, MDL file offset 0x10c0, BRRES file offset 0x6f51a0
+@REVISION    =  8773
+@ENTRY-INDEX =    14
+@SORT-INDEX  =   180
+@NAME        = "û"
+
+length		=        0xd0
+mdl0-offset	=  0xffffef40
+index		=         0xe
+id		=         0xf
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "{)›*ªªªª÷|IC"
+child		=        0xd0  "ÿÛ8Áýýý= ¢‚ªªªª ¢‚ªªªª¢ý±*"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000      35.418       5.140
+translation	=       1.617       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.118      -0.990      -0.079      -1.187
+trans-matrix-y  =      -0.852       0.142      -0.503       1.654
+trans-matrix-z  =       0.509       0.008      -0.860      -0.950
+
+inv-matrix-x    =      -0.118      -0.853       0.509       1.754
+inv-matrix-y    =      -0.990       0.142       0.008      -1.402
+inv-matrix-z    =      -0.079      -0.503      -0.861      -0.079
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.15, MDL file offset 0x1190, BRRES file offset 0x6f5270
+@REVISION    =  8773
+@ENTRY-INDEX =    15
+@SORT-INDEX  =   190
+@NAME        = "ÿÛ8Áýýý= ¢‚ªªªª ¢‚ªªªª¢ý±*"
+
+length		=        0xd0
+mdl0-offset	=  0xffffee70
+index		=         0xf
+id		=        0x10
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "û"
+child		=           0  ""
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000      35.906      14.334
+translation	=       1.513       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.245      -0.930      -0.275      -1.366
+trans-matrix-y  =      -0.345       0.348      -0.871       0.364
+trans-matrix-z  =       0.906      -0.119      -0.406      -0.180
+
+inv-matrix-x    =      -0.245      -0.346       0.906      -0.046
+inv-matrix-y    =      -0.930       0.348      -0.119      -1.418
+inv-matrix-z    =      -0.275      -0.872      -0.407      -0.131
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.16, MDL file offset 0x1260, BRRES file offset 0x6f5340
+@REVISION    =  8773
+@ENTRY-INDEX =    16
+@SORT-INDEX  =   200
+@NAME        = "ªª
+"
+
+length		=        0xd0
+mdl0-offset	=  0xffffeda0
+index		=        0x10
+id		=        0x11
+flags		=        0x9a
+padding		=           0           0
+
+parent		=  0xfffff570  "ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+child		=        0xd0  " ¢‚ªªªª¢ý±
+"
+next		=           0  ""
+prev		=  0xfffffb20  " ¢‚ªªªª¢ý±*"
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000      85.706
+translation	=       0.000       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.000       0.000      -1.000       0.000
+trans-matrix-y  =       0.997       0.075       0.000       9.914
+trans-matrix-z  =       0.075      -0.997       0.000      -0.454
+
+inv-matrix-x    =       0.000       0.997       0.075      -9.852
+inv-matrix-y    =      -0.000       0.075      -0.997      -1.195
+inv-matrix-z    =      -1.000       0.000       0.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.17, MDL file offset 0x1330, BRRES file offset 0x6f5410
+@REVISION    =  8773
+@ENTRY-INDEX =    17
+@SORT-INDEX  =   210
+@NAME        = " ¢‚ªªªª¢ý±
+"
+
+length		=        0xd0
+mdl0-offset	=  0xffffecd0
+index		=        0x11
+id		=        0x12
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "ªª
+"
+child		=        0xd0  "
+"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       3.089
+translation	=       1.371       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.000       0.000      -1.000       0.000
+trans-matrix-y  =       1.000       0.021       0.000      11.281
+trans-matrix-z  =       0.021      -1.000       0.000      -0.351
+
+inv-matrix-x    =       0.000       1.000       0.021     -11.272
+inv-matrix-y    =      -0.000       0.021      -1.000      -0.588
+inv-matrix-z    =      -1.000       0.000       0.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.18, MDL file offset 0x1400, BRRES file offset 0x6f54e0
+@REVISION    =  8773
+@ENTRY-INDEX =    18
+@SORT-INDEX  =   220
+@NAME        = "
+"
+
+length		=        0xd0
+mdl0-offset	=  0xffffec00
+index		=        0x12
+id		=        0x13
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  " ¢‚ªªªª¢ý±
+"
+child		=        0xd0  "{)›*ªªªª¢ý±ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       2.775
+translation	=       1.266       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.000       0.000      -1.000       0.000
+trans-matrix-y  =       1.000      -0.027       0.000      12.547
+trans-matrix-z  =      -0.027      -1.000       0.000      -0.325
+
+inv-matrix-x    =       0.000       1.000      -0.027     -12.552
+inv-matrix-y    =      -0.000      -0.027      -1.000       0.019
+inv-matrix-z    =      -1.000      -0.000      -0.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.19, MDL file offset 0x14d0, BRRES file offset 0x6f55b0
+@REVISION    =  8773
+@ENTRY-INDEX =    19
+@SORT-INDEX  =   230
+@NAME        = "{)›*ªªªª¢ý±ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+
+length		=        0xd0
+mdl0-offset	=  0xffffeb30
+index		=        0x13
+id		=        0x14
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "
+"
+child		=        0xd0  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000      -3.550
+translation	=       1.220       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.000       0.000      -1.000       0.000
+trans-matrix-y  =       0.999       0.035       0.000      13.766
+trans-matrix-z  =       0.035      -0.999       0.000      -0.358
+
+inv-matrix-x    =       0.000       1.000       0.035     -13.748
+inv-matrix-y    =      -0.000       0.035      -1.000      -0.834
+inv-matrix-z    =      -1.000       0.000       0.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.20, MDL file offset 0x15a0, BRRES file offset 0x6f5680
+@REVISION    =  8773
+@ENTRY-INDEX =    20
+@SORT-INDEX  =   240
+@NAME        = "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xffffea60
+index		=        0x14
+id		=        0x15
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "{)›*ªªªª¢ý±ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+child		=        0xd0  ""
+next		=       0x4e0  "ÿÕ"
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=    -103.010      74.352     176.238
+translation	=       0.976       0.250      -0.266
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.963       0.263       0.061       0.266
+trans-matrix-y  =      -0.268       0.956       0.118      14.751
+trans-matrix-z  =      -0.027      -0.130       0.991      -0.574
+
+inv-matrix-x    =       0.963      -0.268      -0.027       3.688
+inv-matrix-y    =       0.263       0.956      -0.130     -14.251
+inv-matrix-z    =       0.061       0.118       0.991      -1.191
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.21, MDL file offset 0x1670, BRRES file offset 0x6f5750
+@REVISION    =  8773
+@ENTRY-INDEX =    21
+@SORT-INDEX  =   250
+@NAME        = ""
+
+length		=        0xd0
+mdl0-offset	=  0xffffe990
+index		=        0x15
+id		=        0x16
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+child		=        0xd0  ""
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000     -38.762
+translation	=       1.134       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.586       0.808       0.061       1.358
+trans-matrix-y  =      -0.808       0.577       0.118      14.446
+trans-matrix-z  =       0.060      -0.118       0.991      -0.605
+
+inv-matrix-x    =       0.586      -0.808       0.060      10.915
+inv-matrix-y    =       0.808       0.578      -0.118      -9.514
+inv-matrix-z    =       0.061       0.118       0.991      -1.191
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.22, MDL file offset 0x1740, BRRES file offset 0x6f5820
+@REVISION    =  8773
+@ENTRY-INDEX =    22
+@SORT-INDEX  =   260
+@NAME        = ""
+
+length		=        0xd0
+mdl0-offset	=  0xffffe8c0
+index		=        0x16
+id		=        0x17
+flags		=        0x9c
+padding		=           0           0
+
+parent		=  0xffffff30  ""
+child		=        0xd0  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       1.495       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.586       0.808       0.061       2.234
+trans-matrix-y  =      -0.808       0.577       0.118      13.239
+trans-matrix-z  =       0.060      -0.118       0.991      -0.514
+
+inv-matrix-x    =       0.586      -0.808       0.060       9.420
+inv-matrix-y    =       0.808       0.578      -0.118      -9.514
+inv-matrix-z    =       0.061       0.118       0.991      -1.191
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.23, MDL file offset 0x1810, BRRES file offset 0x6f58f0
+@REVISION    =  8773
+@ENTRY-INDEX =    23
+@SORT-INDEX  =   270
+@NAME        = "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xffffe7f0
+index		=        0x17
+id		=        0x18
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  ""
+child		=        0xd0  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000     -15.698      -1.978
+translation	=       1.203       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.554       0.827      -0.093       2.939
+trans-matrix-y  =      -0.764       0.549       0.337      12.268
+trans-matrix-z  =       0.330      -0.116       0.936      -0.442
+
+inv-matrix-x    =       0.554      -0.765       0.330       7.901
+inv-matrix-y    =       0.828       0.549      -0.116      -9.225
+inv-matrix-z    =      -0.093       0.338       0.937      -3.458
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.24, MDL file offset 0x18e0, BRRES file offset 0x6f59c0
+@REVISION    =  8773
+@ENTRY-INDEX =    24
+@SORT-INDEX  =   280
+@NAME        = "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xffffe720
+index		=        0x18
+id		=        0x19
+flags		=        0x9c
+padding		=           0           0
+
+parent		=  0xffffff30  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+child		=        0xd0  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000       0.000
+translation	=       1.280       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.554       0.827      -0.093       3.647
+trans-matrix-y  =      -0.764       0.549       0.337      11.291
+trans-matrix-z  =       0.330      -0.116       0.936      -0.019
+
+inv-matrix-x    =       0.554      -0.765       0.330       6.621
+inv-matrix-y    =       0.828       0.549      -0.116      -9.225
+inv-matrix-z    =      -0.093       0.338       0.937      -3.458
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.25, MDL file offset 0x19b0, BRRES file offset 0x6f5a90
+@REVISION    =  8773
+@ENTRY-INDEX =    25
+@SORT-INDEX  =   290
+@NAME        = "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+
+length		=        0xd0
+mdl0-offset	=  0xffffe650
+index		=        0x19
+id		=        0x1a
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+child		=           0  ""
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000      -7.619       0.876
+translation	=       1.150       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.549       0.819      -0.167       4.284
+trans-matrix-y  =      -0.704       0.561       0.435      10.412
+trans-matrix-z  =       0.450      -0.121       0.885       0.361
+
+inv-matrix-x    =       0.549      -0.705       0.450       4.825
+inv-matrix-y    =       0.819       0.561      -0.121      -9.308
+inv-matrix-z    =      -0.167       0.435       0.885      -4.134
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.26, MDL file offset 0x1a80, BRRES file offset 0x6f5b60
+@REVISION    =  8773
+@ENTRY-INDEX =    26
+@SORT-INDEX  =   300
+@NAME        = "ÿÕ"
+
+length		=        0xd0
+mdl0-offset	=  0xffffe580
+index		=        0x1a
+id		=        0x1b
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xfffffa50  "{)›*ªªªª¢ý±ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+child		=        0xd0  ""
+next		=       0x1a0  "ÿÿ"
+prev		=  0xfffffb20  "ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷QAÿÿÿô÷|IBÿô@"
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000      -2.016
+translation	=       1.185       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.000       0.000      -1.000       0.000
+trans-matrix-y  =       0.997       0.070       0.000      14.951
+trans-matrix-z  =       0.070      -0.997       0.000      -0.317
+
+inv-matrix-x    =       0.000       0.998       0.070     -14.895
+inv-matrix-y    =      -0.000       0.070      -0.998      -1.359
+inv-matrix-z    =      -1.000       0.000       0.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.27, MDL file offset 0x1b50, BRRES file offset 0x6f5c30
+@REVISION    =  8773
+@ENTRY-INDEX =    27
+@SORT-INDEX  =   310
+@NAME        = ""
+
+length		=        0xd0
+mdl0-offset	=  0xffffe4b0
+index		=        0x1b
+id		=           0
+flags		=       0x298
+padding		=           0           0
+
+parent		=  0xffffff30  "ÿÕ"
+child		=           0  ""
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000      -2.165
+translation	=       0.925       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =       0.000       0.000      -1.000       0.000
+trans-matrix-y  =       0.994       0.107       0.000      15.873
+trans-matrix-z  =       0.107      -0.994       0.000      -0.253
+
+inv-matrix-x    =       0.000       0.995       0.107     -15.759
+inv-matrix-y    =      -0.000       0.107      -0.995      -1.955
+inv-matrix-z    =      -1.000       0.000       0.000       0.000
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.28, MDL file offset 0x1c20, BRRES file offset 0x6f5d00
+@REVISION    =  8773
+@ENTRY-INDEX =    28
+@SORT-INDEX  =   320
+@NAME        = "ÿÿ"
+
+length		=        0xd0
+mdl0-offset	=  0xffffe3e0
+index		=        0x1c
+id		=        0x1c
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xfffff8b0  "{)›*ªªªª¢ý±ªª
+{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+child		=        0xd0  "÷œPàÿ"
+next		=           0  ""
+prev		=  0xfffffe60  "ÿÕ"
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=     -76.990     -74.352     176.238
+translation	=       0.976       0.250       0.266
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.963       0.263      -0.061      -0.266
+trans-matrix-y  =      -0.268      -0.956       0.118      14.751
+trans-matrix-z  =      -0.027       0.130       0.991      -0.574
+
+inv-matrix-x    =      -0.963      -0.268      -0.027       3.688
+inv-matrix-y    =       0.263      -0.956       0.130      14.251
+inv-matrix-z    =      -0.061       0.118       0.991      -1.191
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.29, MDL file offset 0x1cf0, BRRES file offset 0x6f5dd0
+@REVISION    =  8773
+@ENTRY-INDEX =    29
+@SORT-INDEX  =   330
+@NAME        = "÷œPàÿ"
+
+length		=        0xd0
+mdl0-offset	=  0xffffe310
+index		=        0x1d
+id		=        0x1d
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "ÿÿ"
+child		=        0xd0  "A„¢UWw÷œ8 ÿ"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000       0.000      38.762
+translation	=       1.134       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.586       0.808      -0.061      -1.358
+trans-matrix-y  =      -0.808      -0.577       0.118      14.446
+trans-matrix-z  =       0.060       0.118       0.991      -0.605
+
+inv-matrix-x    =      -0.586      -0.808       0.060      10.915
+inv-matrix-y    =       0.808      -0.578       0.118       9.514
+inv-matrix-z    =      -0.061       0.118       0.991      -1.191
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.30, MDL file offset 0x1dc0, BRRES file offset 0x6f5ea0
+@REVISION    =  8773
+@ENTRY-INDEX =    30
+@SORT-INDEX  =   340
+@NAME        = "A„¢UWw÷œ8 ÿ"
+
+length		=        0xd0
+mdl0-offset	=  0xffffe240
+index		=        0x1e
+id		=        0x1e
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "÷œPàÿ"
+child		=        0xd0  "?÷ÿÿ÷œ@áÿ"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000      -0.279      -1.169
+translation	=       1.495       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.603       0.796      -0.058      -2.234
+trans-matrix-y  =      -0.795      -0.594       0.122      13.239
+trans-matrix-z  =       0.063       0.120       0.991      -0.514
+
+inv-matrix-x    =      -0.603      -0.796       0.063       9.219
+inv-matrix-y    =       0.796      -0.594       0.120       9.704
+inv-matrix-z    =      -0.058       0.122       0.991      -1.236
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.31, MDL file offset 0x1e90, BRRES file offset 0x6f5f70
+@REVISION    =  8773
+@ENTRY-INDEX =    31
+@SORT-INDEX  =   350
+@NAME        = "?÷ÿÿ÷œ@áÿ"
+
+length		=        0xd0
+mdl0-offset	=  0xffffe170
+index		=        0x1f
+id		=        0x1f
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "A„¢UWw÷œ8 ÿ"
+child		=        0xd0  " Â÷|"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000     -15.145       4.278
+translation	=       1.202       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.538       0.838       0.086      -2.959
+trans-matrix-y  =      -0.776      -0.533       0.336      12.284
+trans-matrix-z  =       0.328       0.115       0.937      -0.439
+
+inv-matrix-x    =      -0.538      -0.777       0.328       8.093
+inv-matrix-y    =       0.839      -0.533       0.115       9.079
+inv-matrix-z    =       0.086       0.337       0.938      -3.471
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.32, MDL file offset 0x1f60, BRRES file offset 0x6f6040
+@REVISION    =  8773
+@ENTRY-INDEX =    32
+@SORT-INDEX  =   360
+@NAME        = " Â÷|"
+
+length		=        0xd0
+mdl0-offset	=  0xffffe0a0
+index		=        0x20
+id		=        0x20
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  "?÷ÿÿ÷œ@áÿ"
+child		=        0xd0  ")íPªªª
+)#÷œUU"
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000      -0.710      -1.075
+translation	=       1.280       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.553       0.828       0.093      -3.647
+trans-matrix-y  =      -0.762      -0.547       0.346      11.291
+trans-matrix-z  =       0.337       0.121       0.933      -0.019
+
+inv-matrix-x    =      -0.553      -0.763       0.338       6.599
+inv-matrix-y    =       0.828      -0.548       0.121       9.206
+inv-matrix-z    =       0.093       0.346       0.934      -3.554
+
+
+#
+###############################################################################
+
+[SECTION-1]
+# MDL.bones.33, MDL file offset 0x2030, BRRES file offset 0x6f6110
+@REVISION    =  8773
+@ENTRY-INDEX =    33
+@SORT-INDEX  =   370
+@NAME        = ")íPªªª
+)#÷œUU"
+
+length		=        0xd0
+mdl0-offset	=  0xffffdfd0
+index		=        0x21
+id		=        0x21
+flags		=        0x98
+padding		=           0           0
+
+parent		=  0xffffff30  " Â÷|"
+child		=           0  ""
+next		=           0  ""
+prev		=           0  ""
+part2		=           0  ""
+
+scale		=       1.000       1.000       1.000
+rotation	=       0.000      -7.396      -0.850
+translation	=       1.154       0.000       0.000
+minimum		=       0.000       0.000       0.000
+maximum		=       0.000       0.000       0.000
+
+trans-matrix-x  =      -0.548       0.820       0.165      -4.285
+trans-matrix-y  =      -0.702      -0.558       0.440      10.412
+trans-matrix-z  =       0.453       0.126       0.882       0.370
+
+inv-matrix-x    =      -0.549      -0.704       0.453       4.808
+inv-matrix-y    =       0.820      -0.559       0.126       9.286
+inv-matrix-z    =       0.165       0.441       0.883      -4.208
+
+
+#
+###############################################################################
+
+[SECTION-2]
+# MDL.verticies.00, MDL file offset 0x2e80, BRRES file offset 0x6f6f60
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =   410
+@NAME        = "{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+
+length		=       0x6a0
+mdl0-offset	=  0xffffd180
+data-offset	=        0x40
+index		=           0
+has-bounds	=           1
+format		=           4
+r_shift		=           0
+stride		=          12
+n_vertex	=        0x86 =    134
+minimum		=      -0.367      -1.985      -1.553
+maximum		=       1.565       1.623       1.553
+
+v       0.475       0.854       0.000
+v       0.258       0.791       0.296
+v       0.272       0.879       0.219
+v       0.211       0.853       0.329
+v       0.195       0.784       0.605
+v       0.133       0.884       0.628
+v       0.141       0.828       0.752
+v      -0.117       1.010       1.094
+v      -0.137       1.078       0.887
+v       0.258       0.791      -0.296
+v       0.475       0.854       0.000
+v       0.272       0.879      -0.219
+v       0.211       0.853      -0.329
+v       0.133       0.884      -0.628
+v       0.195       0.784      -0.605
+v       0.141       0.828      -0.752
+v      -0.117       1.010      -1.094
+v      -0.137       1.078      -0.887
+v       0.582       0.986       0.001
+v       0.455       1.055       0.000
+v       0.506       0.940      -0.125
+v       0.345       0.937      -0.001
+v       0.425       0.922       0.132
+v       0.514       0.942       0.125
+v       0.414       0.923      -0.130
+v       0.223       0.973       0.000
+v       0.475       0.854       0.000
+v       0.349       0.953      -0.241
+v       0.556       0.992      -0.231
+v       0.369       0.951       0.244
+v       0.695       1.070       0.000
+v       0.569       0.995       0.230
+v       1.127       0.797       0.169
+v       0.731       0.856       0.258
+v       0.713       0.899       0.000
+v       1.115       0.825       0.000
+v       0.262       0.753       0.296
+v       0.241       0.802       0.000
+v       0.856      -1.616       1.005
+v       0.944      -0.828       0.447
+v       1.017      -0.999       0.200
+v       0.980      -1.917       0.451
+v       0.790      -1.106       1.350
+v       0.825      -0.552       0.600
+v       1.030      -1.028       0.000
+v       1.056      -1.958       0.000
+v       1.565      -0.218       0.000
+v       1.400      -0.694       0.000
+v       1.389      -0.668       0.174
+v       1.557      -0.202       0.114
+v       0.348      -0.382       1.527
+v       0.641      -0.127       0.678
+v       0.199       0.392       1.470
+v       0.393       0.448       0.672
+v       0.783       0.737       0.458
+v       0.321       0.616       0.526
+v      -0.175       0.966       1.185
+v       1.324      -0.519       0.389
+v       1.482      -0.026       0.298
+v       0.846       0.591       0.585
+v      -0.269       1.460       0.667
+v      -0.282       1.604       0.000
+v       1.441       0.376       0.000
+v       1.417       0.327       0.201
+v       1.333       0.522       0.156
+v       1.221      -0.280       0.522
+v       1.061       0.091       0.590
+v       1.299       0.602       0.000
+v       1.489       0.161       0.155
+v       1.346       0.269       0.387
+v       1.532       0.061       0.000
+v       1.183       0.652       0.355
+v       0.917      -1.945       0.459
+v       0.790      -1.640       1.023
+v       0.729      -1.124       1.374
+v       0.996      -1.985       0.000
+v       0.272      -0.394       1.553
+v       0.131       0.380       1.494
+v      -0.260       0.969       1.205
+v      -0.356       1.476       0.678
+v      -0.367       1.623       0.000
+v       0.902      -0.841       0.180
+v       0.917      -0.866       0.000
+v       0.829      -0.692       0.401
+v       0.718      -0.451       0.539
+v       0.529      -0.082       0.610
+v       0.297       0.407       0.602
+v       0.213       0.565       0.473
+v       0.155       0.697       0.266
+v       0.135       0.742       0.000
+v       1.066       0.197       0.000
+v       0.731       0.856      -0.258
+v       1.127       0.797      -0.169
+v       0.262       0.753      -0.296
+v       0.944      -0.828      -0.447
+v       0.856      -1.616      -1.005
+v       0.980      -1.917      -0.451
+v       1.017      -0.999      -0.200
+v       0.825      -0.552      -0.600
+v       0.790      -1.106      -1.350
+v       1.557      -0.202      -0.114
+v       1.389      -0.668      -0.174
+v       0.641      -0.127      -0.678
+v       0.348      -0.382      -1.527
+v       0.393       0.448      -0.672
+v       0.199       0.392      -1.470
+v       0.321       0.616      -0.526
+v       0.783       0.737      -0.458
+v      -0.175       0.966      -1.185
+v       1.482      -0.026      -0.298
+v       1.324      -0.519      -0.389
+v       0.846       0.591      -0.585
+v      -0.269       1.460      -0.667
+v       1.417       0.327      -0.201
+v       1.333       0.522      -0.156
+v       1.221      -0.280      -0.522
+v       1.061       0.091      -0.590
+v       1.489       0.161      -0.155
+v       1.346       0.269      -0.387
+v       1.183       0.652      -0.355
+v       0.917      -1.945      -0.459
+v       0.790      -1.640      -1.023
+v       0.729      -1.124      -1.374
+v       0.272      -0.394      -1.553
+v       0.131       0.380      -1.494
+v      -0.260       0.969      -1.205
+v      -0.356       1.476      -0.678
+v       0.902      -0.841      -0.180
+v       0.829      -0.692      -0.401
+v       0.718      -0.451      -0.539
+v       0.529      -0.082      -0.610
+v       0.297       0.407      -0.602
+v       0.213       0.565      -0.473
+v       0.155       0.697      -0.266
+
+#
+###############################################################################
+
+[SECTION-3]
+# MDL.normals.00, MDL file offset 0x3520, BRRES file offset 0x6f7600
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =   420
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  7 a0  ff ff ca e0   0  0  0 20   0  0  d b0  :........... ....:
+   10:   0  0  0  0   0  0  0  0   0  0  0  4   0  c  0 9e  :................:
+   20:  3f 30 f7 ba  3e d2 eb 81  3f 17 f9 c6  3f 4b 14 87  :?0..>...?...?K..:
+   30:  3e d8 b3 f6  3e e0 17 98  3f 3e 85 98  3e bd a6 a4  :>...>...?>..>...:
+   40:  3f  e 49 80  3f 55 ab 3b  3e d8 c0 48  3e b4 67 38  :?.I.?U.;>..H>.g8:
+   50:  3f 59 d3 24  3e fe 46 d0  3e 2f 76 e6  3f 4e c3 ca  :?Y.$>.F.>/v.?N..:
+   60:  3f  f b8 e5  3e 38 87 ec  3f 49 8b 2f  3f 16 d9 6a  :?...>8..?I./?..j:
+   70:  3e 39 ee  3  3f 34 d3 39  3f 2e 3b 79  3e 47 40 c4  :>9..?4.9?.;y>G@.:
+   80:  3f 4b 31 7f  3e d8 7c 20  be df e4 bd  3f 31 5c 53  :?K1.>.| ....?1\S:
+   90:  3e d2 57 c9  bf 17 b7 a6  3f 3e b3 ff  3e bd 58 86  :>.W.....?>..>.X.:
+   a0:  bf  e 25 53  3f 55 ab 3b  3e d8 c0 48  be b4 67 38  :..%S?U.;>..H..g8:
+   b0:  3f 4e c3 ca  3f  f b8 e5  be 38 87 ec  3f 59 d3 24  :?N..?....8..?Y.$:
+   c0:  3e fe 46 d0  be 2f 76 e6  3f 49 8b 2f  3f 16 d9 6a  :>.F../v.?I./?..j:
+   d0:  be 39 ee  3  3f 34 d3 39  3f 2e 3b 79  be 47 40 c4  :.9..?4.9?.;y.G@.:
+   e0:  3e d1 fa b9  3f 3f e5 54  bf  5  0 1d  be 29 91 79  :>...??.T.....).y:
+   f0:  3f 7c 76 4b  3b ab bc b2  3e 29 1d de  3f 42 57 75  :?|vK;...>)..?BWu:
+  100:  bf 21 2e b6  bf 3c 24 c4  3f 2d 7c b3  3c ca ff 6d  :.!...<$.?-|.<..m:
+  110:  be cc a3 62  3f 30  6 f2  3f 1b 2e 7b  3e d3 40 92  :...b?0..?..{>.@.:
+  120:  3f 43 8d  d  3e fe 13 f5  3e 22 8d 86  3f 44 9d  6  :?C..>...>"..?D..:
+  130:  3f 1e d5  6  be cd 3a 60  3f 34 29 8d  bf 16 28 dd  :?.....:`?4)...(.:
+  140:  be da c0 c6  bf 67 6f 4c  3c 52 52 48  3e 41 5b 14  :.....goL<RRH>A[.:
+  150:  bf 7b 64 d0  bb 41 db  1  bd fe 94 25  bf 70 5c cd  :.{d..A.....%.p\.:
+  160:  be a4 4e 94  3e eb 4a ed  bf 52 d8 d3  be aa 29 c7  :..N.>.J..R....).:
+  170:  bd d9 62  7  bf 70 37 3f  3e a8 73 bd  3f 33 31 90  :..b..p7?>.s.?31.:
+  180:  bf 36 ca 25  bc 6c 80 c7  3e f4 6e b1  bf 52 70 4c  :.6.%.l..>.n..RpL:
+  190:  3e 9e ee 31  bf 1b 4d 7b  3f 4b 7d 74  3c 3e ca ac  :>..1..M{?K}t<>..:
+  1a0:  be d1 fe 87  3f 61 df 22  3e 6c 6d 61  3d 5c c3 1a  :....?a.">lma=\..:
+  1b0:  3f 79 37 a0  3e 63 8e b0  3e 96  d 45  3f 74 c0 6a  :?y7.>c..>..E?t.j:
+  1c0:  bb f8 50 df  3d  f 37 76  3f 79 4a 2c  be 66 25 ea  :..P.=.7v?yJ,.f%.:
+  1d0:  be db 3d 4b  3f 60 dc 98  be 59 80 b2  3f  9 db ec  :..=K?`...Y..?...:
+  1e0:  3f 4f 5b 60  3e 6d c9 82  3c ec ef ed  3f 6f a4 e8  :?O[`>m..<...?o..:
+  1f0:  3e b3 76 b4  bc 1b 73 8e  3f 7f fd  d   0  0  0  0  :>.v...s.?.......:
+  200:  3f  2 21 64  3f 5c 75 71   0  0  0  0  be 30 4c 49  :?.!d?\uq.....0LI:
+  210:  3f 6a ae 6d  3e b8 96 78  be 4d ea 46  3f 7a c5 4c  :?j.m>..x.M.F?z.L:
+  220:   0  0  0  0  3f 4e 44 63  be a5 3c 79  3e fe 46 d0  :....?NDc..<y>.F.:
+  230:  3f 52 44  f  be 5e 69 6a  3f  7  7 3a  3f 62 ba 8c  :?RD..^ij?..:?b..:
+  240:  be b5 4a 80  3e 99 cc 75  3f 7b dd 44  3c ba 16 e8  :..J.>..u?{.D<...:
+  250:  3e 35 d6 39  3f 3f b7 c8  bb 3c 7b 46  3f 29 a5 55  :>5.9??...<{F?).U:
+  260:  3f 36 f9 23  3c e1 56 5c  3f 32 e7 e6  3f 6a a7 37  :?6.#<.V\?2..?j.7:
+  270:  be cc af 2d   0  0  0  0  3f 7f fb 48  3c 44 9b a6  :...-....?..H<D..:
+  280:   0  0  0  0  3f 7e 7d 13  bd de 35 3f   0  0  0  0  :....?~}...5?....:
+  290:  3f 55 8e 11  bf  d 2c bf   0  0  0  0  3f 4c 5d fb  :?U....,.....?L].:
+  2a0:  be fc 25 29  3e b1 7d f2  3f 79 36 82  bd 8e 35 83  :..%)>.}.?y6...5.:
+  2b0:  3e 5f 2c 73  3f 2b 27  3  3e 5c 12 ae  3f 36 40 96  :>_,s?+'.>\..?6@.:
+  2c0:  3f 1f  e c3  3e 45 19 bd  3f 42 71 bd  3f 1e  9 35  :?...>E..?Bq.?..5:
+  2d0:  3e df df 7f  3f 27 6c 8b  3f  8 af 4f  3e f6 fc df  :>...?'l.?..O>...:
+  2e0:  3f 31 c5 61  3d cc e3 de  3f 45 d1 b3  3f 20 75 f7  :?1.a=...?E..? u.:
+  2f0:  3e cc 19 7e  3f 40 84 d7  3f  6 61 9e  3f  9 e3 da  :>..~?@..?.a.?...:
+  300:  3f 25 ba a1  3f  a  b 5f  3f 27 7c aa  be a2 22 4f  :?%..?.._?'|..."O:
+  310:  3f 2f d1 9a  3f 55 9e c7  3d 23 63 b2  3f  c b4 af  :?/..?U..=#c.?...:
+  320:  3e 79 75 b0  3e e3 b4 f6  3f 5c a5  5  3f  f f5 41  :>yu.>...?\..?..A:
+  330:  3f 41 a9  0  3e aa f8 df  3f 52 45 2c  3f  a a0 99  :?A..>...?RE,?...:
+  340:  3e 37 84 66  3f 10 d2 b3  3f 53 19  d   0  0  0  0  :>7.f?...?S......:
+  350:  3f 54 40 29  3f  f 20 c9   0  0  0  0  3f 6a 7a c8  :?T@)?. .....?jz.:
+  360:  3e cd 7a 35   0  0  0  0  3f 61 3d fb  3e ba 6e 54  :>.z5....?a=.>.nT:
+  370:  3e 9c 5e b3  3f 57 ac 3f  3e fb d9  2  3e 61  2 bc  :>.^.?W.?>...>a..:
+  380:  3e fc  3 58  bd db 2a ae  3f 5d 26 a6  3e c1 c9 4f  :>..X..*.?]&.>..O:
+  390:  3d a7 a5 2b  3f 6c  6 d1  3f 4e ce  3  3f 16 e3 d6  :=..+?l..?N..?...:
+  3a0:   0  0  0  0  3f 6f dd ba  3e 87 9e 9d  3e 69 4f 27  :....?o..>...>iO':
+  3b0:  3f 38 e3 69  3e 84 27 e9  3f 24 46 30  3f 7b 90 b8  :?8.i>.'.?$F0?{..:
+  3c0:  3e 3d c6 a0   0  0  0  0  3f 14 ee e1  3f 18 fb 87  :>=......?...?...:
+  3d0:  3f  d 3f af  3e d2 a3 48  bf 59 2d ed  3e aa 9c 78  :?.?.>..H.Y-.>..x:
+  3e0:  3e d3 70 ac  bf 22 37 ac  3f 27 77 3a  3e c6 e6 97  :>.p.."7.?'w:>...:
+  3f0:  be 82 89 76  3f 62 af 25  3e d2 2a  b  bf 69 70 61  :...v?b.%>.*..ipa:
+  400:   0  0  0  0  3e a8 d6 6f  3d 68 93 32  3f 71 3e 2d  :....>..o=h.2?q>-:
+  410:  3e 88 d3 f2  3e af b9 5a  3f 66 83 1b  3e 55 2e f9  :>...>..Z?f..>U..:
+  420:  3f 23 2d 4d  3f 3d ea ff  3e 5c 3e 32  3f 5e 83 6f  :?#-M?=..>\>2?^.o:
+  430:  3e e3 f7 49  3e 5d 7d bf  3f 79 f0 91   0  0  0  0  :>..I>]}.?y......:
+  440:  bf 7a 8b 7e  3c ad 4b 27  be 51 25 57  bf 7b 93 9a  :.z.~<.K'.Q%W.{..:
+  450:  bd 8c 28 2c  be 30 1a 7a  bf 7f 8b 26  bd 74 7d 80  :..(,.0.z...&.t}.:
+  460:   0  0  0  0  bf 7f cc 7d  3d 22 58 4f   0  0  0  0  :.......}="XO....:
+  470:  bf 71 4a a1  bd 29 36 c6  be a9 bc 77  bf 7a 84 8c  :.qJ..)6....w.z..:
+  480:  bd cd ba d4  be 37 fa a0  bf 5c b9 99  be 54 12 8c  :.....7...\...T..:
+  490:  be ec b0 c0  bf 6d 62 7c  be 8c 22 46  be 82 c4 93  :.....mb|.."F....:
+  4a0:  bf 4b 3e 79  be a2 58 b4  bf  4 cf 9e  bf 62 62 ed  :.K>y..X......bb.:
+  4b0:  be b4 4a 84  be 9c f5 6f  bf 42 b5 a2  be fb db 1a  :..J....o.B......:
+  4c0:  be d8 f2 17  bf 5d c9 71  be e5 34 16  be 62 bb aa  :.....].q..4..b..:
+  4d0:  bf 31 f3 a5  bf 25 83 51  be a0 ee 28  bf 51 93 3e  :.1...%.Q...(.Q.>:
+  4e0:  bf  9 65 6f  be 51 3f 4b  bf 35 59 f7  bf 2d 69 4d  :..eo.Q?K.5Y..-iM:
+  4f0:  be 4b  5 b8  bf 5b 31 3c  be fc 1f 43  be 1f f7 59  :.K...[1<...C...Y:
+  500:  bf 34 e9 81  bf 35 20 5c   0  0  0  0  bf 5c a7 61  :.4...5 \.....\.a:
+  510:  bf  1 cc a7   0  0  0  0  bf 67 5f 2d  be db 1e 19  :.........g_-....:
+  520:   0  0  0  0  3c ec ef ed  3f 6f a4 e8  be b3 76 b4  :....<...?o....v.:
+  530:  3f  9 db ec  3f 4f 5b 60  be 6d c9 82  be 30 4c 49  :?...?O[`.m...0LI:
+  540:  3f 6a ae 6d  be b8 96 78  3f 52 44  f  be 5e 69 6a  :?j.m...x?RD..^ij:
+  550:  bf  7  7 3a  3f 4e 44 63  be a5 3c 79  be fe 46 d0  :...:?NDc..<y..F.:
+  560:  3f 7b dd 44  3c ba 16 e8  be 35 d6 39  3f 62 ba 8c  :?{.D<....5.9?b..:
+  570:  be b5 4a 80  be 99 cc 75  3f 36 f9 23  3c e1 56 5c  :..J....u?6.#<.V\:
+  580:  bf 32 e7 e6  3f 3f b7 c8  bb 3c 7b 46  bf 29 a5 55  :.2..??...<{F.).U:
+  590:  3f 79 36 82  bd 8e 35 83  be 5f 2c 73  3f 4c 5d fb  :?y6...5.._,s?L].:
+  5a0:  be fc 25 29  be b1 7d f2  3f 1f  e c3  3e 45 19 bd  :..%)..}.?...>E..:
+  5b0:  bf 42 71 bd  3f 2b 27  3  3e 5c 12 ae  bf 36 40 96  :.Bq.?+'.>\...6@.:
+  5c0:  3f  8 af 4f  3e f6 fc df  bf 31 c5 61  3f 1e  9 35  :?..O>....1.a?..5:
+  5d0:  3e df df 7f  bf 27 6c 8b  3e cc 19 7e  3f 40 84 d7  :>....'l.>..~?@..:
+  5e0:  bf  6 61 9e  3d cc e3 de  3f 45 d1 b3  bf 20 75 f7  :..a.=...?E... u.:
+  5f0:  3f  9 e3 da  3f 25 ba a1  bf  a  b 5f  3f 55 9e c7  :?...?%....._?U..:
+  600:  3d 23 63 b2  bf  c b4 af  3f 27 7c aa  be a2 22 4f  :=#c.....?'|..."O:
+  610:  bf 2f d1 9a  3e 79 75 b0  3e e3 b4 f6  bf 5c a5  5  :./..>yu.>....\..:
+  620:  3f 52 45 2c  3f  a a0 99  be 37 84 66  3f  f f5 41  :?RE,?....7.f?..A:
+  630:  3f 41 a9  0  be aa f8 df  3f 61 3d fb  3e ba 6e 54  :?A......?a=.>.nT:
+  640:  be 9c 5e b3  3f 57 ac 3f  3e fb d9  2  be 61  2 bc  :..^.?W.?>....a..:
+  650:  3e fc  3 58  bd db 2a ae  bf 5d 26 a6  3e c1 c9 4f  :>..X..*..]&.>..O:
+  660:  3d a7 a5 2b  bf 6c  6 d1  3f 6f dd ba  3e 87 9e 9d  :=..+.l..?o..>...:
+  670:  be 69 4f 27  3f 38 e3 69  3e 84 27 e9  bf 24 46 30  :.iO'?8.i>.'..$F0:
+  680:  3f 14 ee e1  3f 18 fb 87  bf  d 3f af  3e d2 a3 48  :?...?.....?.>..H:
+  690:  bf 59 2d ed  be aa 9c 78  3e d3 70 ac  bf 22 37 ac  :.Y-....x>.p.."7.:
+  6a0:  bf 27 77 3a  3e c6 e6 97  be 82 89 76  bf 62 af 25  :.'w:>......v.b.%:
+  6b0:  3e a8 d6 6f  3d 68 93 32  bf 71 3e 2d  3e 88 d3 f2  :>..o=h.2.q>->...:
+  6c0:  3e af b9 5a  bf 66 83 1b  3e 55 2e f9  3f 23 2d 4d  :>..Z.f..>U..?#-M:
+  6d0:  bf 3d ea ff  3e 5c 3e 32  3f 5e 83 6f  be e3 f7 49  :.=..>\>2?^.o...I:
+  6e0:  bf 7b 93 9a  bd 8c 28 2c  3e 30 1a 7a  bf 7a 8b 7e  :.{....(,>0.z.z.~:
+  6f0:  3c ad 4b 27  3e 51 25 57  bf 7a 84 8c  bd cd ba d4  :<.K'>Q%W.z......:
+  700:  3e 37 fa a0  bf 71 4a a1  bd 29 36 c6  3e a9 bc 77  :>7...qJ..)6.>..w:
+  710:  bf 6d 62 7c  be 8c 22 46  3e 82 c4 93  bf 5c b9 99  :.mb|.."F>....\..:
+  720:  be 54 12 8c  3e ec b0 c0  bf 62 62 ed  be b4 4a 84  :.T..>....bb...J.:
+  730:  3e 9c f5 6f  bf 4b 3e 79  be a2 58 b4  3f  4 cf 9e  :>..o.K>y..X.?...:
+  740:  bf 5d c9 71  be e5 34 16  3e 62 bb aa  bf 42 b5 a2  :.].q..4.>b...B..:
+  750:  be fb db 1a  3e d8 f2 17  bf 51 93 3e  bf  9 65 6f  :....>....Q.>..eo:
+  760:  3e 51 3f 4b  bf 31 f3 a5  bf 25 83 51  3e a0 ee 28  :>Q?K.1...%.Q>..(:
+  770:  bf 5b 31 3c  be fc 1f 43  3e 1f f7 59  bf 35 59 f7  :.[1<...C>..Y.5Y.:
+  780:  bf 2d 69 4d  3e 4b  5 b8   0  0  0  0   0  0  0  0  :.-iM>K..........:
+  790:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+
+#
+###############################################################################
+
+[SECTION-5]
+# MDL.t-coord.00, MDL file offset 0x3cc0, BRRES file offset 0x6f7da0
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =   430
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  3 c0  ff ff c3 40   0  0  0 40   0  0  3 c4  :.......@...@....:
+   10:   0  0  0  0   0  0  0  1   0  0  0  4   0  8  0 6f  :...............o:
+   20:  3b ec 6b cf  3c 16 9e 3d  3f 7e 9c aa  3f 7c  f aa  :;.k.<..=?~..?|..:
+   30:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   40:  3f 7d c6 b0  3e 8c 1c 3f  3f 76 39 e7  3e 2c 4e f9  :?}..>..??v9.>,N.:
+   50:  3f 6f e1 97  3e 57 ff de  3f 6c 2f 1f  3e 39 3d d9  :?o..>W..?l/.>9=.:
+   60:  3f 6e d5 39  3d aa e4 2a  3f 63  2 2e  3d dc c4 ac  :?n.9=..*?c..=...:
+   70:  3f 67 32 be  3d 5a d1  7  3f 48 1e cd  3c 16 9e 3d  :?g2.=Z..?H..<..=:
+   80:  3f 48 84 a5  3d 86 43 46  3e ed 83 84  3e c7 2d 1b  :?H..=.CF>...>.-.:
+   90:  3e ed 51 72  3e dc 2d 28  3e d6 1d 86  3e d6 7d 9a  :>.Qr>.-(>...>.}.:
+   a0:  3e ed 40 89  3e f4 17 ec  3f  2 f1 45  3e e5 f0 b3  :>.@.>...?..E>...:
+   b0:  3f  2 5c 3e  3e d5  6 dd  3e d5 35 eb  3e e8  a 5b  :?.\>>...>.5.>..[:
+   c0:  3e ed 5b cd  3f  4 b5 78  3e cc 44 bf  3f  d b9 41  :>.[.?..x>.D.?..A:
+   d0:  3e c0 60 9a  3e f2 f5 ba  3e a0 e7 58  3e de 2f 9d  :>.`.>...>..X>./.:
+   e0:  3e c2 57 86  3e cb b4 91  3f  d 6e 59  3e ef 61  2  :>.W.>...?.nY>.a.:
+   f0:  3f  b 3d 7d  3f  c 61 d8  3e c6  2 86  3e a7 a1 c2  :?.=}?.a.>...>...:
+  100:  3e ed 51 72  3e af ad f3  3f  c 1d f3  3e c9 34 f0  :>.Qr>...?...>.4.:
+  110:  3f 1a c6 8b  3e dc 65 c7  3f  9 73 b8  3e a5 2c 38  :?...>.e.?.s.>.,8:
+  120:  3f 3a 37 37  3f 30 10 e9  3f 34 80 52  3f 4f 6c 59  :?:77?0..?4.R?OlY:
+  130:  3f 4a 97 c0  3f 4f 6c 59  3f 4a 97 c0  3f 30 10 e9  :?J..?OlY?J..?0..:
+  140:  3f 34 80 52  3f 7c  f 99  3f 4a 97 c0  3f 7c  f 99  :?4.R?|..?J..?|..:
+  150:  3f 62 90 ac  3e 3a 44 c8  3f 2e e2 fc  3e b4  0 75  :?b..>:D.?...>..u:
+  160:  3f 3a c3 fc  3e da 35 f8  3f 77 73 8e  3e b3 23 9a  :?:..>.5.?ws.>.#.:
+  170:  3f 40 44 d0  3d 9e 3f bc  3f 1b c7 2e  3e 9c 38 f3  :?@D.=.?.?...>.8.:
+  180:  3f 3c d1 63  3e f9 5e 18  3f 7a b5 70  3e f9 3f 6c  :?<.c>.^.?z.p>.?l:
+  190:  3c a2 c4 50  3f 30 10 e9  3c a2 c4 50  3f 4f 6c 48  :<..P?0..<..P?OlH:
+  1a0:  3d c9 e4 d6  3f 4f 6c 59  3d 9f d5 88  3f 30 10 e9  :=...?OlY=...?0..:
+  1b0:  3f  d 1e 75  3c c5 3d 21  3e fc 8d 7e  3e 90 21 4b  :?..u<.=!>..~>.!K:
+  1c0:  3e b1 86 db  3d 2a c1  9  3e ac cd d9  3e 91 38 15  :>...=*..>...>.8.:
+  1d0:  3f 22 f3 3d  3f 4f 6c 59  3f 22 f3 3d  3f 7c  f 99  :?".=?OlY?".=?|..:
+  1e0:  3e 40 6d 50  3e  3 8b 8b  3e 95 a0 e0  3e a7 ea 81  :>@mP>...>...>...:
+  1f0:  3e 26 c5  9  3f 4f 6c 59  3e 45 6a 38  3f 30 10 e9  :>&..?OlY>Ej8?0..:
+  200:  3f  d ac 58  3f 4f 6c 59  3f  d ac 58  3f 7c  f 99  :?..X?OlY?..X?|..:
+  210:  3d 6b 9b 24  3e 92 5a ab  3e 82 99 b7  3e cb b7 95  :=k.$>.Z.>...>...:
+  220:  3c a3 74 79  3e f9 fa fd  3e 77 b2 cc  3e f9 c4 33  :<.ty>...>w..>..3:
+  230:  3e f7 93 14  3f  a 37  4  3e d0 b0 4b  3f 1d 95  3  :>...?.7.>..K?...:
+  240:  3f 11 7a 14  3f 1d 95  3  3e 78 f0 84  3f 4f 6c 59  :?.z.?...>x..?OlY:
+  250:  3e bf b4 1c  3f 4f 6c 59  3e bf b4 1c  3f 7c  f 99  :>...?OlY>...?|..:
+  260:  3f 4a 97 c0  3f  a 37  4  3f 24 ee f2  3f 1d 95  3  :?J..?.7.?$..?...:
+  270:  3f 4a 97 c0  3f 1d 95  3  3e 8d 49 95  3f  a 37  4  :?J..?...>.I.?.7.:
+  280:  3e 6e 19 76  3f 1d 95  3  3e aa ac b8  3f 1d 95  3  :>n.v?...>...?...:
+  290:  3e bf b4 1c  3f 30 10 e9  3c a2 c4 50  3f  a 37  4  :>...?0..<..P?.7.:
+  2a0:  3c a2 c4 50  3f 1d 95  3  3e 1b 99 d4  3f 1d 95  3  :<..P?...>...?...:
+  2b0:  3f 19 2c 6b  3f 30 10 e9  3c a2 c4 50  3f 7c  f 99  :?.,k?0..<..P?|..:
+  2c0:  3d c9 e4 d6  3f 7c  f 99  3e 78 f0 84  3f 7c  f 99  :=...?|..>x..?|..:
+  2d0:  3e 26 c5  9  3f 7c  f 99  3f 7a ef 2c  3e b0 e5 82  :>&..?|..?z.,>...:
+  2e0:  3f 65 87 f9  3e 30 4c  6  3f 42 5c f6  3d 83 77 9f  :?e..>0L.?B\.=.w.:
+  2f0:  3f 7e 42 d0  3e f9 3d b8  3f  d f8 90  3c 18 6b 9c  :?~B.>.=.?...<.k.:
+  300:  3e b1 cc 53  3c e3 c1  5  3e 3a 4b dc  3d ef a3 fd  :>..S<...>:K.=...:
+  310:  3d 3d 29 56  3e 8f  f bf  3b ec 6b cf  3e f9 fe 22  :==)V>...;.k.>..":
+  320:  3f 3d 8d 58  3e d8 6a b1  3f 3f a8 e7  3e f9 5c a7  :?=.X>.j.??..>.\.:
+  330:  3f 31 42 70  3e b0  3 68  3f 1d 74 1d  3e 96 dd 8b  :?1Bp>..h?.t.>...:
+  340:  3e fd ea 68  3e 8a 14  5  3e ad  5 4b  3e 8b 88  1  :>..h>...>..K>...:
+  350:  3e 93 2d  a  3e a3 39 e2  3e 7b e9 42  3e c9 15 59  :>.-.>.9.>{.B>..Y:
+  360:  3e 6d 43 4a  3e f9 c6 b0  3f 64  6 e2  3f 12 f5 56  :>mCJ>...?d..?..V:
+  370:  3f 4d db db  3f 45 ef 31  3f 6d 40 dd  3f 15 a7 e3  :?M..?E.1?m@.?...:
+  380:  3f 77 bd 7b  3f 20 99 8d  3f 7d 2b 3d  3f 30 ea d1  :?w.{? ..?}+=?0..:
+  390:  3f 7e 9c aa  3f 49 a6 a4  3f 7a eb 92  3f 69 6a 16  :?~..?I..?z..?ij.:
+  3a0:  3f 73 5c 6c  3f 73 46 cc  3f 67 ad d1  3f 7a 99 fa  :?s\l?sF.?g..?z..:
+  3b0:  3f 59 8f c5  3f 7c  f aa   0  0  0  0   0  0  0  0  :?Y..?|..........:
+
+#
+###############################################################################
+
+[SECTION-8]
+# MDL.materials.00, MDL file offset 0x2100, BRRES file offset 0x6f61e0
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =   380
+@NAME        = "÷|(ãÀ"
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  5 e0  ff ff df  0   0  0 20 70   0  0  0  0  :.......... p....:
+   10:   0  0  0  0   1  1  1  0   0  0  0  2   1  0  0  0  :................:
+   20:   0  0  0  0  ff ff ff ff   0  0  5 e0   0  0  0  1  :................:
+   30:   0  0  4 18   0  0  0  0   0  0  0  0   0  0  4 60  :...............`:
+   40:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   50:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   60:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   70:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   80:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   90:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   a0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   b0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   e0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  100:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  110:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  120:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  130:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  140:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  150:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  160:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  170:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  180:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  190:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1a0:   0  0  0  0   0  0  0  0   0  0  0  f   0  0  0  1  :................:
+  1b0:  3f 80  0  0  3f 80  0  0   0  0  0  0   0  0  0  0  :?...?...........:
+  1c0:   0  0  0  0  3f 80  0  0  3f 80  0  0   0  0  0  0  :....?...?.......:
+  1d0:   0  0  0  0   0  0  0  0  3f 80  0  0  3f 80  0  0  :........?...?...:
+  1e0:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  1f0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  200:  3f 80  0  0  3f 80  0  0   0  0  0  0   0  0  0  0  :?...?...........:
+  210:   0  0  0  0  3f 80  0  0  3f 80  0  0   0  0  0  0  :....?...?.......:
+  220:   0  0  0  0   0  0  0  0  3f 80  0  0  3f 80  0  0  :........?...?...:
+  230:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  240:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  250:  ff ff  0  1  3f 80  0  0   0  0  0  0   0  0  0  0  :....?...........:
+  260:   0  0  0  0   0  0  0  0  3f 80  0  0   0  0  0  0  :........?.......:
+  270:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  280:   0  0  0  0  ff ff  0  1  3f 80  0  0   0  0  0  0  :........?.......:
+  290:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  2a0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  2b0:  3f 80  0  0   0  0  0  0  ff ff  0  1  3f 80  0  0  :?...........?...:
+  2c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  2d0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  2e0:   0  0  0  0  3f 80  0  0   0  0  0  0  ff ff  0  1  :....?...........:
+  2f0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  300:   0  0  0  0  3f 80  0  0   0  0  0  0   0  0  0  0  :....?...........:
+  310:   0  0  0  0   0  0  0  0  3f 80  0  0   0  0  0  0  :........?.......:
+  320:  ff ff  0  1  3f 80  0  0   0  0  0  0   0  0  0  0  :....?...........:
+  330:   0  0  0  0   0  0  0  0  3f 80  0  0   0  0  0  0  :........?.......:
+  340:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  350:   0  0  0  0  ff ff  0  1  3f 80  0  0   0  0  0  0  :........?.......:
+  360:   0  0  0  0   0  0  0  0   0  0  0  0  3f 80  0  0  :............?...:
+  370:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  380:  3f 80  0  0   0  0  0  0  ff ff  0  1  3f 80  0  0  :?...........?...:
+  390:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  3a0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  3b0:   0  0  0  0  3f 80  0  0   0  0  0  0  ff ff  0  1  :....?...........:
+  3c0:  3f 80  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :?...............:
+  3d0:   0  0  0  0  3f 80  0  0   0  0  0  0   0  0  0  0  :....?...........:
+  3e0:   0  0  0  0   0  0  0  0  3f 80  0  0   0  0  0  0  :........?.......:
+  3f0:   0  0  0 3f  ff ff ff ff  4c 4c 4c  0   0  0  7  2  :...?....LLL.....:
+  400:   0  0  7  0   0  0  0  f   0  0  0 ff   0  0  0  0  :................:
+  410:   0  0  0  0   0  0  0  0   0  0 1d ac   0  0  0  0  :................:
+  420:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  430:   0  0  0  0   0  0  0  0   0  0  0  1   0  0  0  1  :................:
+  440:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  450:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  460:  61 f3 3f  0   0 61 40  0   0 17 61 fe   0 ff e3 61  :a.?..a@...a....a:
+  470:  41  0 34 a0  61 42  0  0   0  0  0  0   0  0  0  0  :A.4.aB..........:
+  480:  61 e2  0  0   0 61 e3  0   0  0 61 e3   0  0  0 61  :a....a....a....a:
+  490:  e3  0  0  0  61 e4  0  0   0 61 e5  0   0  0 61 e5  :....a....a....a.:
+  4a0:   0  0  0 61  e5  0  0  0  61 e6  0  0   0 61 e7  0  :...a....a....a..:
+  4b0:   0  0 61 e7   0  0  0 61  e7  0  0  0   0  0  0  0  :..a....a........:
+  4c0:  61 e0 80  0   0 61 e1 80   0  0 61 e2  80  0  0 61  :a....a....a....a:
+  4d0:  e3 80  0  0  61 e4 80  0   0 61 e5 80   0  0 61 e6  :....a....a....a.:
+  4e0:  80  0  0 61  e7 80  0  0   0  0  0  0   0  0  0  0  :...a............:
+  4f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  500:  61 25  0  0   0 61 26  0   0  0  0  0   0  0  0  0  :a%...a&.........:
+  510:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  520:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  530:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  540:  10  0  0 10  40  0  0 52  80 10  0  0  10 50  0  0  :....@..R.....P..:
+  550:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  560:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  570:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  580:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  590:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  5a0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  5b0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  5c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  5d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+
+#
+###############################################################################
+
+[SECTION-9]
+# MDL.mat-nodes.00, MDL file offset 0x26e0, BRRES file offset 0x6f67c0
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =   390
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  2  0  ff ff d9 20   0  0  0  0   1  0  0  0  :....... ........:
+   10:   0 ff ff ff  ff ff ff ff   0  0  0  0   0  0  0  0  :................:
+   20:  61 fe  0  0   f 61 f6  0   0  4 61 fe   0  0  f 61  :a....a....a....a:
+   30:  f7  0  0  e  61 fe  0  0   f 61 f8  0   0  0 61 fe  :....a....a....a.:
+   40:   0  0  f 61  f9  0  0  c  61 fe  0  0   f 61 fa  0  :...a....a....a..:
+   50:   0  5 61 fe   0  0  f 61  fb  0  0  d  61 fe  0  0  :..a....a....a...:
+   60:   f 61 fc  0   0  a 61 fe   0  0  f 61  fd  0  0  e  :.a....a....a....:
+   70:  61 27 ff ff  ff  0  0  0   0  0  0  0   0  0  0  0  :a'..............:
+   80:  61 fe ff ff  f0 61 f6  0  38 c0 61 28  3b f0 40 61  :a....a..8.a(;.@a:
+   90:  c0  8 f8 af   0  0  0  0   0 61 c1  8  f2 f0  0  0  :.........a......:
+   a0:   0  0  0 61  10  0  0  0   0  0  0  0   0  0  0  0  :...a............:
+   b0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   e0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  100:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  110:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  120:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  130:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  140:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  150:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  160:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  170:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  180:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  190:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1a0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1b0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1e0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  1f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+
+#
+###############################################################################
+
+[SECTION-10]
+# MDL.objects.00, MDL file offset 0x28e0, BRRES file offset 0x6f69c0
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =   400
+@NAME        = "{)›*ªªªª{)›*ªªªª{)›*ªªªª÷œPàÿÿðÀ‹)£"
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  5 a0  ff ff d7 20   0  0  0  0   0  0 14  0  :....... ........:
+   10:   0  0  0  2   0  0  0 14   0  0  0 e0   0  0  0 80  :................:
+   20:   0  0  0 68   0  0  4 40   0  0  4 40   0  0  1 3c  :...h...@...@...<:
+   30:   0  0 26  0   0  0  0  0   0  0 1a 20   0  0  0  0  :..&........ ....:
+   40:   0  0  1 44   0  0  0 ee   0  0  0  0  ff ff ff ff  :...D............:
+   50:   0  0 ff ff  ff ff ff ff  ff ff ff ff  ff ff ff ff  :................:
+   60:  ff ff ff ff   0  0  0 68   0  0  0  0   0  0  0  0  :.......h........:
+   70:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   80:   0  0  0  0   0  0  0  0   0  0  8 50   0  0 14  0  :...........P....:
+   90:   8 60  0  0   0  2 10  0   0 10  8  0   0  0 14  0  :.`..............:
+   a0:   8 70 41 37  70  9  8 80  c8 24 12  9   8 90  4 82  :.pA7p....$......:
+   b0:  41 20  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :A ..............:
+   c0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   d0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   e0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+   f0:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  100:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  110:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  120:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  130:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  140:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  150:   0  0  0  0   0  0  0  0   0  0  0  0   0  0  0  0  :................:
+  160:  98  0 22 25  44 3d 70 81  3a 5d 80 3b  6c 7c 34 6a  :.."%D=p.:].;l|4j:
+  170:  7a 35 69 79  30 68 78 31  67 77 2e 66  76 2f 63 73  :z5iy0hx1gw.fv/cs:
+  180:  26 62 72 27  5f 6f 22 5e  6e 23 60 70  25 61 71 24  :&br'_o"^n#`p%aq$:
+  190:  2d 32 29 2c  31 28 29 2e  25 28 2d 24  26 2b 22 27  :-2),1().%(-$&+"':
+  1a0:  2c 23 2a 2f  26 2b 30 27  32 37 2e 33  38 2f 34 39  :,#*/&+0'27.38/49:
+  1b0:  30 35 3a 31  38 3d 34 37  3c 35 3c 41  3a 24 42 3b  :05:18=47<5<A:$B;:
+  1c0:  3d 43 3c 25  44 3d 70 81  3a 98  0 22  7e 8f 5a 3d  :=C<%D=p.:.."~.Z=:
+  1d0:  43 3c 50 57  5b 3c 41 3a  4f 56 5a 38  3d 34 4e 55  :C<PW[<A:OVZ8=4NU:
+  1e0:  59 34 39 30  4d 54 58 32  37 2e 4c 53  57 2a 2f 26  :Y490MTX27.LSW*/&:
+  1f0:  4a 51 55 26  2b 22 49 50  54 29 4f 25  48 4f 53 2d  :JQU&+"IPT)O%HOS-:
+  200:  52 29 4b 52  56 60 89 25  78 89 53 5f  6f 22 79 8a  :R)KRV`.%x.S_o"y.:
+  210:  54 63 73 26  7a 8b 55 67  77 2e 7b 8c  57 69 79 30  :Tcs&z.Ugw.{.Wiy0:
+  220:  7c 8d 58 6c  7c 34 7d 8e  59 70 81 3a  7e 8f 5a 3d  :|.Xl|4}.Yp.:~.Z=:
+  230:  43 3c 98  0  22 50 69 3c  85 9d 63 7e  9c 3a 84 9b  :C<.."Pi<..c~.:..:
+  240:  62 7d 9a 34  83 99 61 7c  98 30 82 97  60 7b 96 2e  :b}.4..a|.0..`{..:
+  250:  81 95 5f 7a  94 26 80 93  5e 79 92 22  7f 91 5c 78  :.._z.&..^y."..\x:
+  260:  90 25 52 5b  5d 4b 5a 29  51 58 5c 48  59 25 53 5c  :.%R[]KZ)QX\HY%S\:
+  270:  5e 49 5d 22  54 5e 5f 4a  5f 26 55 60  60 4c 61 2e  :^I]"T^_J_&U``La.:
+  280:  56 62 61 4d  63 30 57 64  62 4e 65 34  58 66 63 4f  :VbaMc0WdbNe4XfcO:
+  290:  67 3a 59 68  64 50 69 3c  85 9d 63 98   0 20 62 72  :g:YhdPi<..c.. br:
+  2a0:  51 74 85 42  66 76 43 6f  7f 38 68 78  39 6b 7b 32  :Qt.BfvCo.8hx9k{2:
+  2b0:  6a 7a 33 5b  6b 1d 5d 6d  20 22 27 1e  25 2a 21 21  :jz3[k.]m "'.%*!!:
+  2c0:  26 1d 24 29  20 36 3b 32  37 3c 33 3b  40 38 35 3a  :&.$) 6;27<3;@85::
+  2d0:  39 42 49 42  33 38 43 41  48 41 2b 30  51 39 3e 36  :9BIB38CAHA+0Q9>6:
+  2e0:  27 2c 52 30  35 2c 28 2d  50 2f 34 2b  2c 31 4f 65  :',R05,(-P/4+,1Oe:
+  2f0:  75 2c 61 71  50 6e 7e 36  5e 6e 52 73  84 41 98  0  :u,aqPn~6^nRs.A..:
+  300:   e 1f 24 19  12 1f  9 1e  1f 18 14 20   b 1c 20 14  :..$........ .. .:
+  310:  18 21  f 1b  21 12 15 22   c 19 22 10  16 23  d 1d  :.!..!..".."..#..:
+  320:  23 15 17 24   e 1f 24 19  12 1f  9 98   0  9 65 75  :#..$..$.......eu:
+  330:  2c 2f 34 2b  64 74 2d 2e  33 2a 46 4d  4c 31 36 2d  :,/4+dt-.3*FML16-:
+  340:  3a 3f 37 39  3e 36 41 48  41 98  0  8  36 3b 32 21  ::?79>6AHA...6;2!:
+  350:  26 1d 47 4e  4e 20 25 1c  40 47 45 43  4a 46 3e 45  :&.GNN %.@GECJF>E:
+  360:  44 72 83 45  98  0  8 6e  7e 36 65 75  2c 6d 7d 37  :Dr.E...n~6eu,m}7:
+  370:  64 74 2d 75  86 4d 46 4d  4c 3e 45 4b  44 4b 4d 98  :dt-u.MFML>EKDKM.:
+  380:   0  7  7  7   7  8  7  8   6  6  6  5   5  5  4  4  :................:
+  390:   4  3  3  3   1  1  1 98   0  7 72 83  40 77 88 4e  :..........r.@w.N:
+  3a0:  76 87 4a 74  85 42 73 84  41 62 72 51  5e 6e 52 98  :v.Jt.Bs.AbrQ^nR.:
+  3b0:   0  6 21 26  1d 22 27 1e  20 25 1c 23  28 1f 43 4a  :..!&."'. %.#(.CJ:
+  3c0:  46 5c 6c 1c  98  0  6 72  83 45 43 4a  46 77 88 4e  :F\l....r.ECJFw.N:
+  3d0:  5c 6c 1c 6b  7b 32 5b 6b  1d 98  0  5   a  9  0  b  :\l.k{2[k........:
+  3e0:   a  2  9  8   1  c  b  3   d  c  5 98   0  5 71 82  :..............q.:
+  3f0:  49 76 87 4a  6d 7d 37 73  84 41 6e 7e  36 98  0  5  :Iv.Jm}7s.An~6...:
+  400:  39 3e 36 31  36 2d 30 35  2c 2e 33 2a  2f 34 2b 98  :9>616-05,.3*/4+.:
+  410:   0  5 3f 46  3f 45 4c 4a  47 4e 4e 3b  40 38 36 3b  :..?F?ELJGNN;@86;:
+  420:  32 98  0  5  3b 40 38 45  4c 4a 42 49  42 3a 3f 37  :2...;@8ELJBIB:?7:
+  430:  41 48 41 98   0  5 12 15   9 17 16  e  13 11  a 16  :AHA.............:
+  440:  14  d 15 13   c 98  0  5  11  f  8 10   f  7  d  c  :................:
+  450:   5  f  e  6   e  d  4 98   0  5 85 9d  6d 59 68 6e  :............mYhn:
+  460:  5a 6a 66 58  66 6d 57 64  6c 98  0  5  57 64 6c 56  :ZjfXfmWdl...WdlV:
+  470:  62 6b 5a 6a  66 55 60 6a  54 5e 69 98   0  5 15 13  :bkZjfU`jT^i.....:
+  480:   c 18 17  f  13 11  a 14  12  b 12 10   9 98  0  4  :................:
+  490:  3e 45 3e 72  83 40 71 82  3f 76 87 4a  98  0  4 3e  :>E>r.@q.?v.J...>:
+  4a0:  45 3e 3f 46  3f 40 47 40  47 4e 4e 98   0  4 85 9d  :E>?F?@G@GNN.....:
+  4b0:  6d 5a 6a 66  84 9b 6c 83  99 6b 98  0   4 83 99 6b  :mZjf..l..k.....k:
+  4c0:  5a 6a 66 82  97 6a 81 95  69 98  0  4  81 95 69 5a  :Zjf..j..i.....iZ:
+  4d0:  6a 66 80 93  68 7f 91 67  98  0  4 7f  91 67 5a 6a  :jf..h..g.....gZj:
+  4e0:  66 52 5b 65  51 58 67 98   0  4 22 27  1e 5b 6b 1d  :fR[eQXg..."'.[k.:
+  4f0:  23 28 1f 5c  6c 1c 98  0   4 54 5e 69  53 5c 68 5a  :#(.\l....T^iS\hZ:
+  500:  6a 66 51 58  67 98  0  4  3e 45 47 71  82 49 75 86  :jfQXg...>EGq.Iu.:
+  510:  48 6d 7d 37  98  0  4 3e  45 47 44 4b  48 3f 46 49  :Hm}7...>EGDKH?FI:
+  520:  45 4c 4a 98   0  4  0  0   0  1  1  1   2  2  2  3  :ELJ.............:
+  530:   3  3 98  0   4 74 85 42  77 88 4e 6f  7f 38 6b 7b  :.....t.Bw.No.8k{:
+  540:  32 90  0 1b  1b 1a 12 1a  19 13 1c 1b  14 19 18 10  :2...............:
+  550:  1a 19 11 1b  1a 12 1d 1c  15 1a 19 16  19 18 10 1e  :................:
+  560:  1d 18 1a 19  1b 1f 1e 19  1f 1e 19 1a  19 1a 1d 1c  :................:
+  570:  15 1c 1b 14  1a 19 17 1e  1d 18 44 4b  48 3a 3f 37  :..........DKH:?7:
+  580:  45 4c 4a 46  4d 4c 3a 3f  37 44 4b 4d   9  8  1  d  :ELJFML:?7DKM....:
+  590:   c  5  e  d   4  0  0  0   0  0  0  0   0  0  0  0  :................:
+
+#
+###############################################################################
+
+[SECTION-11]
+# MDL.t-links.00, MDL file offset 0x4a0, BRRES file offset 0x6f4580
+@REVISION    =  8773
+@ENTRY-INDEX =     0
+@SORT-INDEX  =    10
+@NAME        = ""
+
+$HEX # switch to hexdump modus
+#----+------------------------------------------------------+----------------+
+#addr:   data: bytes in hex  |  '(' expression ')'          : ASCII of data  :
+#----+------------------------------------------------------+----------------+
+    0:   0  0  0  1   0  0 1c 60   0  0 20 78   /           :.......`.. x:
+
+#
+###############################################################################
+
+[END]
+# This section is ignored.
+

@@ -1,0 +1,9 @@
+#0
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Textures(NW4R)
+polygon0
+retro_06_dress
+retro_06_dress_retro_wii_06_dress_AUTO__retro_wii_06_dress
+retro_wii_06_dress

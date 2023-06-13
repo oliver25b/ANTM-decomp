@@ -1,0 +1,5 @@
+Textures(NW4R)
+eyelash_01
+eyelash_02
+eyelash_03
+eyelash_04

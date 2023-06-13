@@ -1,0 +1,13 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material198
+NodeTree
+Scene_Material
+Textures(NW4R)
+polygon0
+polygon1
+seasons_02_bottom
+seasons_02_bottom__Scene_Material
+seasons_02_bottom_seasons_wii_02_bottom__Material198
+seasons_wii_02_bottom

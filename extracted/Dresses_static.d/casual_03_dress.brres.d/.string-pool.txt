@@ -1,0 +1,13 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material203
+NodeTree
+Scene_Material
+Textures(NW4R)
+casual_03_dress
+casual_03_dress__Scene_Material
+casual_03_dress_polymsh17__Material203
+casual_wii_03_dress
+polygon0
+polygon1

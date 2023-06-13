@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material167
+NodeTree
+Textures(NW4R)
+polygon0
+travel_07_top
+travel_07_top_travel_wii_07_top__Material167
+travel_wii_07_top

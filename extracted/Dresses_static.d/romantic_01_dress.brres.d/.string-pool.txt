@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material171
+NodeTree
+Textures(NW4R)
+polygon0
+romantic_01_dress
+romantic_01_dress_romantic_wii_01_dress__Material171
+romantic_wii_01_dress

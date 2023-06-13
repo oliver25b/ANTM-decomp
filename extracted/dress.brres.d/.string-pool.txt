@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material53
+NodeTree
+Textures(NW4R)
+dress
+dress_pc1_cloth_dress__Material53
+pc1_cloth_dress
+polygon0

@@ -1,0 +1,16 @@
+#0
+#1
+#2
+3DModels(NW4R)
+DrawOpa
+Material361
+NodeTree
+Textures(NW4R)
+polygon0
+polygon1
+polygon2
+shoes_25
+shoes_25_shoes_wii_25__Material367
+shoes_25_shoes_wii_25_csat_talp__Material361
+shoes_25_shoes_wii_25_inner__Material89
+shoes_wii_25

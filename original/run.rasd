@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nintendoware_snd version="1.1.0" platform="Revolution">
+  <head>
+    <create user="sp3ky" host="SPEKY" date="2008-11-14T11:18:19" />
+    <title>NintendoWare Animation Sound</title>
+    <generator name="NW4R AnimSoundMaker" version="2, 2, 1, 0" />
+  </head>
+  <body>
+    <anim_sound>
+      <frame_size>19</frame_size>
+      <event_array size="2">
+        <event>
+          <frame type="trigger">
+            <start type="frame">6</start>
+          </frame>
+          <sound>
+            <id type="name">WSD_walk_stone</id>
+          </sound>
+          <volume>1</volume>
+          <pitch>1</pitch>
+          <user_param>0</user_param>
+        </event>
+        <event>
+          <frame type="trigger">
+            <start type="frame">16</start>
+          </frame>
+          <sound>
+            <id type="name">WSD_walk_stone</id>
+          </sound>
+          <volume>1</volume>
+          <pitch>1</pitch>
+          <user_param>0</user_param>
+        </event>
+      </event_array>
+    </anim_sound>
+  </body>
+</nintendoware_snd>

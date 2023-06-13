@@ -1,0 +1,858 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# The internal archive format (U8, WU8, BRRES, BREFF or BREFT):
+archive-format = BRRES
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = BRRES
+
+# An archive format related version number (-1: unknown or not relevant)
+version = -1
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 0
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x6a0
+max-data-offset = 0x41d960
+
+# The calculated alignment of all files:
+data-align = 0x20
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./.string-pool.bin
+./.string-pool.txt
+./Textures(NW4R)/hair_01_a.d
+./Textures(NW4R)/hair_01_a.mm1.png
+./Textures(NW4R)/hair_01_a.mm2.png
+./Textures(NW4R)/hair_01_a.mm3.png
+./Textures(NW4R)/hair_01_a.png
+./Textures(NW4R)/hair_01_alpha.d
+./Textures(NW4R)/hair_01_alpha.mm1.png
+./Textures(NW4R)/hair_01_alpha.mm2.png
+./Textures(NW4R)/hair_01_alpha.png
+./Textures(NW4R)/hair_01_b.d
+./Textures(NW4R)/hair_01_b.mm1.png
+./Textures(NW4R)/hair_01_b.mm2.png
+./Textures(NW4R)/hair_01_b.mm3.png
+./Textures(NW4R)/hair_01_b.png
+./Textures(NW4R)/hair_01_c.d
+./Textures(NW4R)/hair_01_c.mm1.png
+./Textures(NW4R)/hair_01_c.mm2.png
+./Textures(NW4R)/hair_01_c.mm3.png
+./Textures(NW4R)/hair_01_c.png
+./Textures(NW4R)/hair_01_d.d
+./Textures(NW4R)/hair_01_d.mm1.png
+./Textures(NW4R)/hair_01_d.mm2.png
+./Textures(NW4R)/hair_01_d.mm3.png
+./Textures(NW4R)/hair_01_d.png
+./Textures(NW4R)/hair_01_e.d
+./Textures(NW4R)/hair_01_e.mm1.png
+./Textures(NW4R)/hair_01_e.mm2.png
+./Textures(NW4R)/hair_01_e.mm3.png
+./Textures(NW4R)/hair_01_e.png
+./Textures(NW4R)/hair_01_f.d
+./Textures(NW4R)/hair_01_f.mm1.png
+./Textures(NW4R)/hair_01_f.mm2.png
+./Textures(NW4R)/hair_01_f.mm3.png
+./Textures(NW4R)/hair_01_f.png
+./Textures(NW4R)/hair_01_g.d
+./Textures(NW4R)/hair_01_g.mm1.png
+./Textures(NW4R)/hair_01_g.mm2.png
+./Textures(NW4R)/hair_01_g.mm3.png
+./Textures(NW4R)/hair_01_g.png
+./Textures(NW4R)/hair_01_h.d
+./Textures(NW4R)/hair_01_h.mm1.png
+./Textures(NW4R)/hair_01_h.mm2.png
+./Textures(NW4R)/hair_01_h.mm3.png
+./Textures(NW4R)/hair_01_h.png
+./Textures(NW4R)/hair_01_i.d
+./Textures(NW4R)/hair_01_i.mm1.png
+./Textures(NW4R)/hair_01_i.mm2.png
+./Textures(NW4R)/hair_01_i.mm3.png
+./Textures(NW4R)/hair_01_i.png
+./Textures(NW4R)/hair_01_x.d
+./Textures(NW4R)/hair_01_x.mm1.png
+./Textures(NW4R)/hair_01_x.mm2.png
+./Textures(NW4R)/hair_01_x.mm3.png
+./Textures(NW4R)/hair_01_x.png
+./Textures(NW4R)/hair_02_a.d
+./Textures(NW4R)/hair_02_a.mm1.png
+./Textures(NW4R)/hair_02_a.mm2.png
+./Textures(NW4R)/hair_02_a.mm3.png
+./Textures(NW4R)/hair_02_a.png
+./Textures(NW4R)/hair_02_alpha.d
+./Textures(NW4R)/hair_02_alpha.mm1.png
+./Textures(NW4R)/hair_02_alpha.mm2.png
+./Textures(NW4R)/hair_02_alpha.png
+./Textures(NW4R)/hair_02_b.d
+./Textures(NW4R)/hair_02_b.mm1.png
+./Textures(NW4R)/hair_02_b.mm2.png
+./Textures(NW4R)/hair_02_b.mm3.png
+./Textures(NW4R)/hair_02_b.png
+./Textures(NW4R)/hair_02_c.d
+./Textures(NW4R)/hair_02_c.mm1.png
+./Textures(NW4R)/hair_02_c.mm2.png
+./Textures(NW4R)/hair_02_c.mm3.png
+./Textures(NW4R)/hair_02_c.png
+./Textures(NW4R)/hair_02_d.d
+./Textures(NW4R)/hair_02_d.mm1.png
+./Textures(NW4R)/hair_02_d.mm2.png
+./Textures(NW4R)/hair_02_d.mm3.png
+./Textures(NW4R)/hair_02_d.png
+./Textures(NW4R)/hair_02_e.d
+./Textures(NW4R)/hair_02_e.mm1.png
+./Textures(NW4R)/hair_02_e.mm2.png
+./Textures(NW4R)/hair_02_e.mm3.png
+./Textures(NW4R)/hair_02_e.png
+./Textures(NW4R)/hair_02_f.d
+./Textures(NW4R)/hair_02_f.mm1.png
+./Textures(NW4R)/hair_02_f.mm2.png
+./Textures(NW4R)/hair_02_f.mm3.png
+./Textures(NW4R)/hair_02_f.png
+./Textures(NW4R)/hair_02_g.d
+./Textures(NW4R)/hair_02_g.mm1.png
+./Textures(NW4R)/hair_02_g.mm2.png
+./Textures(NW4R)/hair_02_g.mm3.png
+./Textures(NW4R)/hair_02_g.png
+./Textures(NW4R)/hair_02_h.d
+./Textures(NW4R)/hair_02_h.mm1.png
+./Textures(NW4R)/hair_02_h.mm2.png
+./Textures(NW4R)/hair_02_h.mm3.png
+./Textures(NW4R)/hair_02_h.png
+./Textures(NW4R)/hair_02_i.d
+./Textures(NW4R)/hair_02_i.mm1.png
+./Textures(NW4R)/hair_02_i.mm2.png
+./Textures(NW4R)/hair_02_i.mm3.png
+./Textures(NW4R)/hair_02_i.png
+./Textures(NW4R)/hair_02_x.d
+./Textures(NW4R)/hair_02_x.mm1.png
+./Textures(NW4R)/hair_02_x.mm2.png
+./Textures(NW4R)/hair_02_x.mm3.png
+./Textures(NW4R)/hair_02_x.png
+./Textures(NW4R)/hair_03_a.d
+./Textures(NW4R)/hair_03_a.mm1.png
+./Textures(NW4R)/hair_03_a.mm2.png
+./Textures(NW4R)/hair_03_a.mm3.png
+./Textures(NW4R)/hair_03_a.png
+./Textures(NW4R)/hair_03_alpha.d
+./Textures(NW4R)/hair_03_alpha.mm1.png
+./Textures(NW4R)/hair_03_alpha.mm2.png
+./Textures(NW4R)/hair_03_alpha.mm3.png
+./Textures(NW4R)/hair_03_alpha.png
+./Textures(NW4R)/hair_03_b.d
+./Textures(NW4R)/hair_03_b.mm1.png
+./Textures(NW4R)/hair_03_b.mm2.png
+./Textures(NW4R)/hair_03_b.mm3.png
+./Textures(NW4R)/hair_03_b.png
+./Textures(NW4R)/hair_03_c.d
+./Textures(NW4R)/hair_03_c.mm1.png
+./Textures(NW4R)/hair_03_c.mm2.png
+./Textures(NW4R)/hair_03_c.mm3.png
+./Textures(NW4R)/hair_03_c.png
+./Textures(NW4R)/hair_03_d.d
+./Textures(NW4R)/hair_03_d.mm1.png
+./Textures(NW4R)/hair_03_d.mm2.png
+./Textures(NW4R)/hair_03_d.mm3.png
+./Textures(NW4R)/hair_03_d.png
+./Textures(NW4R)/hair_03_e.d
+./Textures(NW4R)/hair_03_e.mm1.png
+./Textures(NW4R)/hair_03_e.mm2.png
+./Textures(NW4R)/hair_03_e.mm3.png
+./Textures(NW4R)/hair_03_e.png
+./Textures(NW4R)/hair_03_f.d
+./Textures(NW4R)/hair_03_f.mm1.png
+./Textures(NW4R)/hair_03_f.mm2.png
+./Textures(NW4R)/hair_03_f.mm3.png
+./Textures(NW4R)/hair_03_f.png
+./Textures(NW4R)/hair_03_g.d
+./Textures(NW4R)/hair_03_g.mm1.png
+./Textures(NW4R)/hair_03_g.mm2.png
+./Textures(NW4R)/hair_03_g.mm3.png
+./Textures(NW4R)/hair_03_g.png
+./Textures(NW4R)/hair_03_h.d
+./Textures(NW4R)/hair_03_h.mm1.png
+./Textures(NW4R)/hair_03_h.mm2.png
+./Textures(NW4R)/hair_03_h.mm3.png
+./Textures(NW4R)/hair_03_h.png
+./Textures(NW4R)/hair_03_i.d
+./Textures(NW4R)/hair_03_i.mm1.png
+./Textures(NW4R)/hair_03_i.mm2.png
+./Textures(NW4R)/hair_03_i.mm3.png
+./Textures(NW4R)/hair_03_i.png
+./Textures(NW4R)/hair_03_x.d
+./Textures(NW4R)/hair_03_x.mm1.png
+./Textures(NW4R)/hair_03_x.mm2.png
+./Textures(NW4R)/hair_03_x.mm3.png
+./Textures(NW4R)/hair_03_x.png
+./Textures(NW4R)/hair_04_a.d
+./Textures(NW4R)/hair_04_a.mm1.png
+./Textures(NW4R)/hair_04_a.mm2.png
+./Textures(NW4R)/hair_04_a.mm3.png
+./Textures(NW4R)/hair_04_a.png
+./Textures(NW4R)/hair_04_alpha.d
+./Textures(NW4R)/hair_04_alpha.mm1.png
+./Textures(NW4R)/hair_04_alpha.mm2.png
+./Textures(NW4R)/hair_04_alpha.mm3.png
+./Textures(NW4R)/hair_04_alpha.png
+./Textures(NW4R)/hair_04_b.d
+./Textures(NW4R)/hair_04_b.mm1.png
+./Textures(NW4R)/hair_04_b.mm2.png
+./Textures(NW4R)/hair_04_b.mm3.png
+./Textures(NW4R)/hair_04_b.png
+./Textures(NW4R)/hair_04_c.d
+./Textures(NW4R)/hair_04_c.mm1.png
+./Textures(NW4R)/hair_04_c.mm2.png
+./Textures(NW4R)/hair_04_c.mm3.png
+./Textures(NW4R)/hair_04_c.png
+./Textures(NW4R)/hair_04_d.d
+./Textures(NW4R)/hair_04_d.mm1.png
+./Textures(NW4R)/hair_04_d.mm2.png
+./Textures(NW4R)/hair_04_d.mm3.png
+./Textures(NW4R)/hair_04_d.png
+./Textures(NW4R)/hair_04_e.d
+./Textures(NW4R)/hair_04_e.mm1.png
+./Textures(NW4R)/hair_04_e.mm2.png
+./Textures(NW4R)/hair_04_e.mm3.png
+./Textures(NW4R)/hair_04_e.png
+./Textures(NW4R)/hair_04_f.d
+./Textures(NW4R)/hair_04_f.mm1.png
+./Textures(NW4R)/hair_04_f.mm2.png
+./Textures(NW4R)/hair_04_f.mm3.png
+./Textures(NW4R)/hair_04_f.png
+./Textures(NW4R)/hair_04_g.d
+./Textures(NW4R)/hair_04_g.mm1.png
+./Textures(NW4R)/hair_04_g.mm2.png
+./Textures(NW4R)/hair_04_g.mm3.png
+./Textures(NW4R)/hair_04_g.png
+./Textures(NW4R)/hair_04_h.d
+./Textures(NW4R)/hair_04_h.mm1.png
+./Textures(NW4R)/hair_04_h.mm2.png
+./Textures(NW4R)/hair_04_h.mm3.png
+./Textures(NW4R)/hair_04_h.png
+./Textures(NW4R)/hair_04_i.d
+./Textures(NW4R)/hair_04_i.mm1.png
+./Textures(NW4R)/hair_04_i.mm2.png
+./Textures(NW4R)/hair_04_i.mm3.png
+./Textures(NW4R)/hair_04_i.png
+./Textures(NW4R)/hair_04_x.d
+./Textures(NW4R)/hair_04_x.mm1.png
+./Textures(NW4R)/hair_04_x.mm2.png
+./Textures(NW4R)/hair_04_x.mm3.png
+./Textures(NW4R)/hair_04_x.png
+./Textures(NW4R)/hair_05_a.d
+./Textures(NW4R)/hair_05_a.mm1.png
+./Textures(NW4R)/hair_05_a.mm2.png
+./Textures(NW4R)/hair_05_a.mm3.png
+./Textures(NW4R)/hair_05_a.png
+./Textures(NW4R)/hair_05_alpha.d
+./Textures(NW4R)/hair_05_alpha.mm1.png
+./Textures(NW4R)/hair_05_alpha.mm2.png
+./Textures(NW4R)/hair_05_alpha.mm3.png
+./Textures(NW4R)/hair_05_alpha.png
+./Textures(NW4R)/hair_05_b.d
+./Textures(NW4R)/hair_05_b.mm1.png
+./Textures(NW4R)/hair_05_b.mm2.png
+./Textures(NW4R)/hair_05_b.mm3.png
+./Textures(NW4R)/hair_05_b.png
+./Textures(NW4R)/hair_05_c.d
+./Textures(NW4R)/hair_05_c.mm1.png
+./Textures(NW4R)/hair_05_c.mm2.png
+./Textures(NW4R)/hair_05_c.mm3.png
+./Textures(NW4R)/hair_05_c.png
+./Textures(NW4R)/hair_05_d.d
+./Textures(NW4R)/hair_05_d.mm1.png
+./Textures(NW4R)/hair_05_d.mm2.png
+./Textures(NW4R)/hair_05_d.mm3.png
+./Textures(NW4R)/hair_05_d.png
+./Textures(NW4R)/hair_05_e.d
+./Textures(NW4R)/hair_05_e.mm1.png
+./Textures(NW4R)/hair_05_e.mm2.png
+./Textures(NW4R)/hair_05_e.mm3.png
+./Textures(NW4R)/hair_05_e.png
+./Textures(NW4R)/hair_05_f.d
+./Textures(NW4R)/hair_05_f.mm1.png
+./Textures(NW4R)/hair_05_f.mm2.png
+./Textures(NW4R)/hair_05_f.mm3.png
+./Textures(NW4R)/hair_05_f.png
+./Textures(NW4R)/hair_05_g.d
+./Textures(NW4R)/hair_05_g.mm1.png
+./Textures(NW4R)/hair_05_g.mm2.png
+./Textures(NW4R)/hair_05_g.mm3.png
+./Textures(NW4R)/hair_05_g.png
+./Textures(NW4R)/hair_05_h.d
+./Textures(NW4R)/hair_05_h.mm1.png
+./Textures(NW4R)/hair_05_h.mm2.png
+./Textures(NW4R)/hair_05_h.mm3.png
+./Textures(NW4R)/hair_05_h.png
+./Textures(NW4R)/hair_05_i.d
+./Textures(NW4R)/hair_05_i.mm1.png
+./Textures(NW4R)/hair_05_i.mm2.png
+./Textures(NW4R)/hair_05_i.mm3.png
+./Textures(NW4R)/hair_05_i.png
+./Textures(NW4R)/hair_05_x.d
+./Textures(NW4R)/hair_05_x.mm1.png
+./Textures(NW4R)/hair_05_x.mm2.png
+./Textures(NW4R)/hair_05_x.mm3.png
+./Textures(NW4R)/hair_05_x.png
+./Textures(NW4R)/hair_06_a.d
+./Textures(NW4R)/hair_06_a.mm1.png
+./Textures(NW4R)/hair_06_a.mm2.png
+./Textures(NW4R)/hair_06_a.mm3.png
+./Textures(NW4R)/hair_06_a.png
+./Textures(NW4R)/hair_06_alpha.d
+./Textures(NW4R)/hair_06_alpha.mm1.png
+./Textures(NW4R)/hair_06_alpha.mm2.png
+./Textures(NW4R)/hair_06_alpha.mm3.png
+./Textures(NW4R)/hair_06_alpha.png
+./Textures(NW4R)/hair_06_b.d
+./Textures(NW4R)/hair_06_b.mm1.png
+./Textures(NW4R)/hair_06_b.mm2.png
+./Textures(NW4R)/hair_06_b.mm3.png
+./Textures(NW4R)/hair_06_b.png
+./Textures(NW4R)/hair_06_c.d
+./Textures(NW4R)/hair_06_c.mm1.png
+./Textures(NW4R)/hair_06_c.mm2.png
+./Textures(NW4R)/hair_06_c.mm3.png
+./Textures(NW4R)/hair_06_c.png
+./Textures(NW4R)/hair_06_d.d
+./Textures(NW4R)/hair_06_d.mm1.png
+./Textures(NW4R)/hair_06_d.mm2.png
+./Textures(NW4R)/hair_06_d.mm3.png
+./Textures(NW4R)/hair_06_d.png
+./Textures(NW4R)/hair_06_e.d
+./Textures(NW4R)/hair_06_e.mm1.png
+./Textures(NW4R)/hair_06_e.mm2.png
+./Textures(NW4R)/hair_06_e.mm3.png
+./Textures(NW4R)/hair_06_e.png
+./Textures(NW4R)/hair_06_f.d
+./Textures(NW4R)/hair_06_f.mm1.png
+./Textures(NW4R)/hair_06_f.mm2.png
+./Textures(NW4R)/hair_06_f.mm3.png
+./Textures(NW4R)/hair_06_f.png
+./Textures(NW4R)/hair_06_g.d
+./Textures(NW4R)/hair_06_g.mm1.png
+./Textures(NW4R)/hair_06_g.mm2.png
+./Textures(NW4R)/hair_06_g.mm3.png
+./Textures(NW4R)/hair_06_g.png
+./Textures(NW4R)/hair_06_h.d
+./Textures(NW4R)/hair_06_h.mm1.png
+./Textures(NW4R)/hair_06_h.mm2.png
+./Textures(NW4R)/hair_06_h.mm3.png
+./Textures(NW4R)/hair_06_h.png
+./Textures(NW4R)/hair_06_i.d
+./Textures(NW4R)/hair_06_i.mm1.png
+./Textures(NW4R)/hair_06_i.mm2.png
+./Textures(NW4R)/hair_06_i.mm3.png
+./Textures(NW4R)/hair_06_i.png
+./Textures(NW4R)/hair_06_x.d
+./Textures(NW4R)/hair_06_x.mm1.png
+./Textures(NW4R)/hair_06_x.mm2.png
+./Textures(NW4R)/hair_06_x.mm3.png
+./Textures(NW4R)/hair_06_x.png
+./Textures(NW4R)/hair_07_a.d
+./Textures(NW4R)/hair_07_a.mm1.png
+./Textures(NW4R)/hair_07_a.mm2.png
+./Textures(NW4R)/hair_07_a.mm3.png
+./Textures(NW4R)/hair_07_a.png
+./Textures(NW4R)/hair_07_alpha.d
+./Textures(NW4R)/hair_07_alpha.mm1.png
+./Textures(NW4R)/hair_07_alpha.mm2.png
+./Textures(NW4R)/hair_07_alpha.mm3.png
+./Textures(NW4R)/hair_07_alpha.png
+./Textures(NW4R)/hair_07_b.d
+./Textures(NW4R)/hair_07_b.mm1.png
+./Textures(NW4R)/hair_07_b.mm2.png
+./Textures(NW4R)/hair_07_b.mm3.png
+./Textures(NW4R)/hair_07_b.png
+./Textures(NW4R)/hair_07_c.d
+./Textures(NW4R)/hair_07_c.mm1.png
+./Textures(NW4R)/hair_07_c.mm2.png
+./Textures(NW4R)/hair_07_c.mm3.png
+./Textures(NW4R)/hair_07_c.png
+./Textures(NW4R)/hair_07_d.d
+./Textures(NW4R)/hair_07_d.mm1.png
+./Textures(NW4R)/hair_07_d.mm2.png
+./Textures(NW4R)/hair_07_d.mm3.png
+./Textures(NW4R)/hair_07_d.png
+./Textures(NW4R)/hair_07_e.d
+./Textures(NW4R)/hair_07_e.mm1.png
+./Textures(NW4R)/hair_07_e.mm2.png
+./Textures(NW4R)/hair_07_e.mm3.png
+./Textures(NW4R)/hair_07_e.png
+./Textures(NW4R)/hair_07_f.d
+./Textures(NW4R)/hair_07_f.mm1.png
+./Textures(NW4R)/hair_07_f.mm2.png
+./Textures(NW4R)/hair_07_f.mm3.png
+./Textures(NW4R)/hair_07_f.png
+./Textures(NW4R)/hair_07_g.d
+./Textures(NW4R)/hair_07_g.mm1.png
+./Textures(NW4R)/hair_07_g.mm2.png
+./Textures(NW4R)/hair_07_g.mm3.png
+./Textures(NW4R)/hair_07_g.png
+./Textures(NW4R)/hair_07_h.d
+./Textures(NW4R)/hair_07_h.mm1.png
+./Textures(NW4R)/hair_07_h.mm2.png
+./Textures(NW4R)/hair_07_h.mm3.png
+./Textures(NW4R)/hair_07_h.png
+./Textures(NW4R)/hair_07_i.d
+./Textures(NW4R)/hair_07_i.mm1.png
+./Textures(NW4R)/hair_07_i.mm2.png
+./Textures(NW4R)/hair_07_i.mm3.png
+./Textures(NW4R)/hair_07_i.png
+./Textures(NW4R)/hair_07_x.d
+./Textures(NW4R)/hair_07_x.mm1.png
+./Textures(NW4R)/hair_07_x.mm2.png
+./Textures(NW4R)/hair_07_x.mm3.png
+./Textures(NW4R)/hair_07_x.png
+./Textures(NW4R)/hair_08_a.d
+./Textures(NW4R)/hair_08_a.mm1.png
+./Textures(NW4R)/hair_08_a.mm2.png
+./Textures(NW4R)/hair_08_a.mm3.png
+./Textures(NW4R)/hair_08_a.png
+./Textures(NW4R)/hair_08_alpha.d
+./Textures(NW4R)/hair_08_alpha.mm1.png
+./Textures(NW4R)/hair_08_alpha.mm2.png
+./Textures(NW4R)/hair_08_alpha.mm3.png
+./Textures(NW4R)/hair_08_alpha.png
+./Textures(NW4R)/hair_08_b.d
+./Textures(NW4R)/hair_08_b.mm1.png
+./Textures(NW4R)/hair_08_b.mm2.png
+./Textures(NW4R)/hair_08_b.mm3.png
+./Textures(NW4R)/hair_08_b.png
+./Textures(NW4R)/hair_08_c.d
+./Textures(NW4R)/hair_08_c.mm1.png
+./Textures(NW4R)/hair_08_c.mm2.png
+./Textures(NW4R)/hair_08_c.mm3.png
+./Textures(NW4R)/hair_08_c.png
+./Textures(NW4R)/hair_08_d.d
+./Textures(NW4R)/hair_08_d.mm1.png
+./Textures(NW4R)/hair_08_d.mm2.png
+./Textures(NW4R)/hair_08_d.mm3.png
+./Textures(NW4R)/hair_08_d.png
+./Textures(NW4R)/hair_08_e.d
+./Textures(NW4R)/hair_08_e.mm1.png
+./Textures(NW4R)/hair_08_e.mm2.png
+./Textures(NW4R)/hair_08_e.mm3.png
+./Textures(NW4R)/hair_08_e.png
+./Textures(NW4R)/hair_08_f.d
+./Textures(NW4R)/hair_08_f.mm1.png
+./Textures(NW4R)/hair_08_f.mm2.png
+./Textures(NW4R)/hair_08_f.mm3.png
+./Textures(NW4R)/hair_08_f.png
+./Textures(NW4R)/hair_08_g.d
+./Textures(NW4R)/hair_08_g.mm1.png
+./Textures(NW4R)/hair_08_g.mm2.png
+./Textures(NW4R)/hair_08_g.mm3.png
+./Textures(NW4R)/hair_08_g.png
+./Textures(NW4R)/hair_08_h.d
+./Textures(NW4R)/hair_08_h.mm1.png
+./Textures(NW4R)/hair_08_h.mm2.png
+./Textures(NW4R)/hair_08_h.mm3.png
+./Textures(NW4R)/hair_08_h.png
+./Textures(NW4R)/hair_08_i.d
+./Textures(NW4R)/hair_08_i.mm1.png
+./Textures(NW4R)/hair_08_i.mm2.png
+./Textures(NW4R)/hair_08_i.mm3.png
+./Textures(NW4R)/hair_08_i.png
+./Textures(NW4R)/hair_08_x.d
+./Textures(NW4R)/hair_08_x.mm1.png
+./Textures(NW4R)/hair_08_x.mm2.png
+./Textures(NW4R)/hair_08_x.mm3.png
+./Textures(NW4R)/hair_08_x.png
+./Textures(NW4R)/hair_09_a.d
+./Textures(NW4R)/hair_09_a.mm1.png
+./Textures(NW4R)/hair_09_a.mm2.png
+./Textures(NW4R)/hair_09_a.mm3.png
+./Textures(NW4R)/hair_09_a.png
+./Textures(NW4R)/hair_09_alpha.d
+./Textures(NW4R)/hair_09_alpha.mm1.png
+./Textures(NW4R)/hair_09_alpha.mm2.png
+./Textures(NW4R)/hair_09_alpha.mm3.png
+./Textures(NW4R)/hair_09_alpha.png
+./Textures(NW4R)/hair_09_b.d
+./Textures(NW4R)/hair_09_b.mm1.png
+./Textures(NW4R)/hair_09_b.mm2.png
+./Textures(NW4R)/hair_09_b.mm3.png
+./Textures(NW4R)/hair_09_b.png
+./Textures(NW4R)/hair_09_c.d
+./Textures(NW4R)/hair_09_c.mm1.png
+./Textures(NW4R)/hair_09_c.mm2.png
+./Textures(NW4R)/hair_09_c.mm3.png
+./Textures(NW4R)/hair_09_c.png
+./Textures(NW4R)/hair_09_d.d
+./Textures(NW4R)/hair_09_d.mm1.png
+./Textures(NW4R)/hair_09_d.mm2.png
+./Textures(NW4R)/hair_09_d.mm3.png
+./Textures(NW4R)/hair_09_d.png
+./Textures(NW4R)/hair_09_e.d
+./Textures(NW4R)/hair_09_e.mm1.png
+./Textures(NW4R)/hair_09_e.mm2.png
+./Textures(NW4R)/hair_09_e.mm3.png
+./Textures(NW4R)/hair_09_e.png
+./Textures(NW4R)/hair_09_f.d
+./Textures(NW4R)/hair_09_f.mm1.png
+./Textures(NW4R)/hair_09_f.mm2.png
+./Textures(NW4R)/hair_09_f.mm3.png
+./Textures(NW4R)/hair_09_f.png
+./Textures(NW4R)/hair_09_g.d
+./Textures(NW4R)/hair_09_g.mm1.png
+./Textures(NW4R)/hair_09_g.mm2.png
+./Textures(NW4R)/hair_09_g.mm3.png
+./Textures(NW4R)/hair_09_g.png
+./Textures(NW4R)/hair_09_h.d
+./Textures(NW4R)/hair_09_h.mm1.png
+./Textures(NW4R)/hair_09_h.mm2.png
+./Textures(NW4R)/hair_09_h.mm3.png
+./Textures(NW4R)/hair_09_h.png
+./Textures(NW4R)/hair_09_i.d
+./Textures(NW4R)/hair_09_i.mm1.png
+./Textures(NW4R)/hair_09_i.mm2.png
+./Textures(NW4R)/hair_09_i.mm3.png
+./Textures(NW4R)/hair_09_i.png
+./Textures(NW4R)/hair_09_x.d
+./Textures(NW4R)/hair_09_x.mm1.png
+./Textures(NW4R)/hair_09_x.mm2.png
+./Textures(NW4R)/hair_09_x.mm3.png
+./Textures(NW4R)/hair_09_x.png
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_a
+TEX,I4,3	= ./Textures(NW4R)/hair_01_alpha
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_b
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_c
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_d
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_e
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_f
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_g
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_h
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_i
+TEX,CMPR,4	= ./Textures(NW4R)/hair_01_x
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_a
+TEX,I4,3	= ./Textures(NW4R)/hair_02_alpha
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_b
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_c
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_d
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_e
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_f
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_g
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_h
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_i
+TEX,CMPR,4	= ./Textures(NW4R)/hair_02_x
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_a
+TEX,I4,4	= ./Textures(NW4R)/hair_03_alpha
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_b
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_c
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_d
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_e
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_f
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_g
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_h
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_i
+TEX,CMPR,4	= ./Textures(NW4R)/hair_03_x
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_a
+TEX,I4,4	= ./Textures(NW4R)/hair_04_alpha
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_b
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_c
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_d
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_e
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_f
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_g
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_h
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_i
+TEX,CMPR,4	= ./Textures(NW4R)/hair_04_x
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_a
+TEX,I4,4	= ./Textures(NW4R)/hair_05_alpha
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_b
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_c
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_d
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_e
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_f
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_g
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_h
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_i
+TEX,CMPR,4	= ./Textures(NW4R)/hair_05_x
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_a
+TEX,I4,4	= ./Textures(NW4R)/hair_06_alpha
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_b
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_c
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_d
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_e
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_f
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_g
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_h
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_i
+TEX,CMPR,4	= ./Textures(NW4R)/hair_06_x
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_a
+TEX,I4,4	= ./Textures(NW4R)/hair_07_alpha
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_b
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_c
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_d
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_e
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_f
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_g
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_h
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_i
+TEX,CMPR,4	= ./Textures(NW4R)/hair_07_x
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_a
+TEX,I4,4	= ./Textures(NW4R)/hair_08_alpha
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_b
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_c
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_d
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_e
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_f
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_g
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_h
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_i
+TEX,CMPR,4	= ./Textures(NW4R)/hair_08_x
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_a
+TEX,I4,4	= ./Textures(NW4R)/hair_09_alpha
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_b
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_c
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_d
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_e
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_f
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_g
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_h
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_i
+TEX,CMPR,4	= ./Textures(NW4R)/hair_09_x
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but not U8) this list will be used to sort the found
+# files. For archives with directory support (all but not PACK) it is very
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./Textures(NW4R)/
+     0x6a0	= ./Textures(NW4R)/hair_01_a
+    0xb0e0	= ./Textures(NW4R)/hair_01_alpha
+   0x15920	= ./Textures(NW4R)/hair_01_b
+   0x20360	= ./Textures(NW4R)/hair_01_c
+   0x2ada0	= ./Textures(NW4R)/hair_01_d
+   0x357e0	= ./Textures(NW4R)/hair_01_e
+   0x40220	= ./Textures(NW4R)/hair_01_f
+   0x4ac60	= ./Textures(NW4R)/hair_01_g
+   0x556a0	= ./Textures(NW4R)/hair_01_h
+   0x600e0	= ./Textures(NW4R)/hair_01_i
+   0x6ab20	= ./Textures(NW4R)/hair_01_x
+   0x75560	= ./Textures(NW4R)/hair_02_a
+   0x7ffa0	= ./Textures(NW4R)/hair_02_alpha
+   0x8a7e0	= ./Textures(NW4R)/hair_02_b
+   0x95220	= ./Textures(NW4R)/hair_02_c
+   0x9fc60	= ./Textures(NW4R)/hair_02_d
+   0xaa6a0	= ./Textures(NW4R)/hair_02_e
+   0xb50e0	= ./Textures(NW4R)/hair_02_f
+   0xbfb20	= ./Textures(NW4R)/hair_02_g
+   0xca560	= ./Textures(NW4R)/hair_02_h
+   0xd4fa0	= ./Textures(NW4R)/hair_02_i
+   0xdf9e0	= ./Textures(NW4R)/hair_02_x
+   0xea420	= ./Textures(NW4R)/hair_03_a
+   0xf4e60	= ./Textures(NW4R)/hair_03_alpha
+   0xff8a0	= ./Textures(NW4R)/hair_03_b
+  0x10a2e0	= ./Textures(NW4R)/hair_03_c
+  0x114d20	= ./Textures(NW4R)/hair_03_d
+  0x11f760	= ./Textures(NW4R)/hair_03_e
+  0x12a1a0	= ./Textures(NW4R)/hair_03_f
+  0x134be0	= ./Textures(NW4R)/hair_03_g
+  0x13f620	= ./Textures(NW4R)/hair_03_h
+  0x14a060	= ./Textures(NW4R)/hair_03_i
+  0x154aa0	= ./Textures(NW4R)/hair_03_x
+  0x15f4e0	= ./Textures(NW4R)/hair_04_a
+  0x169f20	= ./Textures(NW4R)/hair_04_alpha
+  0x174960	= ./Textures(NW4R)/hair_04_b
+  0x17f3a0	= ./Textures(NW4R)/hair_04_c
+  0x189de0	= ./Textures(NW4R)/hair_04_d
+  0x194820	= ./Textures(NW4R)/hair_04_e
+  0x19f260	= ./Textures(NW4R)/hair_04_f
+  0x1a9ca0	= ./Textures(NW4R)/hair_04_g
+  0x1b46e0	= ./Textures(NW4R)/hair_04_h
+  0x1bf120	= ./Textures(NW4R)/hair_04_i
+  0x1c9b60	= ./Textures(NW4R)/hair_04_x
+  0x1d45a0	= ./Textures(NW4R)/hair_05_a
+  0x1defe0	= ./Textures(NW4R)/hair_05_alpha
+  0x1e9a20	= ./Textures(NW4R)/hair_05_b
+  0x1f4460	= ./Textures(NW4R)/hair_05_c
+  0x1feea0	= ./Textures(NW4R)/hair_05_d
+  0x2098e0	= ./Textures(NW4R)/hair_05_e
+  0x214320	= ./Textures(NW4R)/hair_05_f
+  0x21ed60	= ./Textures(NW4R)/hair_05_g
+  0x2297a0	= ./Textures(NW4R)/hair_05_h
+  0x2341e0	= ./Textures(NW4R)/hair_05_i
+  0x23ec20	= ./Textures(NW4R)/hair_05_x
+  0x249660	= ./Textures(NW4R)/hair_06_a
+  0x2540a0	= ./Textures(NW4R)/hair_06_alpha
+  0x25eae0	= ./Textures(NW4R)/hair_06_b
+  0x269520	= ./Textures(NW4R)/hair_06_c
+  0x273f60	= ./Textures(NW4R)/hair_06_d
+  0x27e9a0	= ./Textures(NW4R)/hair_06_e
+  0x2893e0	= ./Textures(NW4R)/hair_06_f
+  0x293e20	= ./Textures(NW4R)/hair_06_g
+  0x29e860	= ./Textures(NW4R)/hair_06_h
+  0x2a92a0	= ./Textures(NW4R)/hair_06_i
+  0x2b3ce0	= ./Textures(NW4R)/hair_06_x
+  0x2be720	= ./Textures(NW4R)/hair_07_a
+  0x2c9160	= ./Textures(NW4R)/hair_07_alpha
+  0x2d3ba0	= ./Textures(NW4R)/hair_07_b
+  0x2de5e0	= ./Textures(NW4R)/hair_07_c
+  0x2e9020	= ./Textures(NW4R)/hair_07_d
+  0x2f3a60	= ./Textures(NW4R)/hair_07_e
+  0x2fe4a0	= ./Textures(NW4R)/hair_07_f
+  0x308ee0	= ./Textures(NW4R)/hair_07_g
+  0x313920	= ./Textures(NW4R)/hair_07_h
+  0x31e360	= ./Textures(NW4R)/hair_07_i
+  0x328da0	= ./Textures(NW4R)/hair_07_x
+  0x3337e0	= ./Textures(NW4R)/hair_08_a
+  0x33e220	= ./Textures(NW4R)/hair_08_alpha
+  0x348c60	= ./Textures(NW4R)/hair_08_b
+  0x3536a0	= ./Textures(NW4R)/hair_08_c
+  0x35e0e0	= ./Textures(NW4R)/hair_08_d
+  0x368b20	= ./Textures(NW4R)/hair_08_e
+  0x373560	= ./Textures(NW4R)/hair_08_f
+  0x37dfa0	= ./Textures(NW4R)/hair_08_g
+  0x3889e0	= ./Textures(NW4R)/hair_08_h
+  0x393420	= ./Textures(NW4R)/hair_08_i
+  0x39de60	= ./Textures(NW4R)/hair_08_x
+  0x3a88a0	= ./Textures(NW4R)/hair_09_a
+  0x3b32e0	= ./Textures(NW4R)/hair_09_alpha
+  0x3bdd20	= ./Textures(NW4R)/hair_09_b
+  0x3c8760	= ./Textures(NW4R)/hair_09_c
+  0x3d31a0	= ./Textures(NW4R)/hair_09_d
+  0x3ddbe0	= ./Textures(NW4R)/hair_09_e
+  0x3e8620	= ./Textures(NW4R)/hair_09_f
+  0x3f3060	= ./Textures(NW4R)/hair_09_g
+  0x3fdaa0	= ./Textures(NW4R)/hair_09_h
+  0x4084e0	= ./Textures(NW4R)/hair_09_i
+  0x412f20	= ./Textures(NW4R)/hair_09_x
+  0x41d960	= ./.string-pool.bin
+
+#------------------------------------------------------------------------------
+

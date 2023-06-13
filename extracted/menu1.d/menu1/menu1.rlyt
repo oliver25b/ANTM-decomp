@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4r_layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.2.0" xmlns="http://www.nintendo.co.jp/NW4R/LayoutEditor">
+  <head>
+    <create user="ktamas" host="KTAMASPC" date="2008-04-22T14:43:05.984375+02:00" source="" />
+    <title />
+    <comment />
+    <generator name="NW4R LayoutEditor Core" version="2007_07_00_000" />
+  </head>
+  <body>
+    <rlyt>
+      <paneSet>
+        <pane kind="TextBox" name="menu1_title">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <translate x="-219" y="209" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="185" y="38" />
+          <textBox font="sample">
+            <fontSize x="32" y="38" />
+            <text>[ MENU 1 ]</text>
+            <topColor r="255" g="255" b="255" a="255" />
+            <bottomColor r="255" g="255" b="255" a="255" />
+            <positionType x="Left" y="Top" />
+            <material name="menu1_title">
+              <blackColor r="0" g="0" b="0" />
+              <whiteColor r="255" g="255" b="255" />
+            </material>
+            <materialRevo name="menu1_title">
+              <channelControl channel="Color0" materialSource="Vertex" />
+              <channelControl channel="Alpha0" materialSource="Vertex" />
+              <matColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="0" g="0" b="0" a="0" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <tevStage colorChannel="Color0a0" texMap="-1" texCoordGen="-1" rasColSwap="0" texColSwap="0">
+                <color a="RasC" b="V0" c="V0" d="V0" konst="K0" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <alpha a="RasA" b="V0" c="V0" d="V0" konst="K0_a" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <indirect indStage="0" format="V8" bias="STU" matrix="Off" wrap_s="Off" wrap_t="Off" addPrev="false" utcLod="false" alpha="Off" />
+              </tevStage>
+              <alphaCompare comp0="Always" ref0="0" op="And" comp1="Always" ref1="0" />
+              <blendMode type="Blend" srcFactor="SrcAlpha" dstFactor="InvSrcAlpha" op="Copy" />
+            </materialRevo>
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="TextBox" name="menu1_1">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <translate x="-200" y="118" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="231" y="38" />
+          <textBox font="sample">
+            <fontSize x="32" y="38" />
+            <text>1-es menupont</text>
+            <topColor r="255" g="255" b="255" a="255" />
+            <bottomColor r="255" g="255" b="255" a="255" />
+            <positionType x="Left" y="Top" />
+            <material name="menu1_1">
+              <blackColor r="0" g="0" b="0" />
+              <whiteColor r="255" g="255" b="255" />
+            </material>
+            <materialRevo name="menu1_1">
+              <channelControl channel="Color0" materialSource="Vertex" />
+              <channelControl channel="Alpha0" materialSource="Vertex" />
+              <matColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="0" g="0" b="0" a="0" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <tevStage colorChannel="Color0a0" texMap="-1" texCoordGen="-1" rasColSwap="0" texColSwap="0">
+                <color a="RasC" b="V0" c="V0" d="V0" konst="K0" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <alpha a="RasA" b="V0" c="V0" d="V0" konst="K0_a" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <indirect indStage="0" format="V8" bias="STU" matrix="Off" wrap_s="Off" wrap_t="Off" addPrev="false" utcLod="false" alpha="Off" />
+              </tevStage>
+              <alphaCompare comp0="Always" ref0="0" op="And" comp1="Always" ref1="0" />
+              <blendMode type="Blend" srcFactor="SrcAlpha" dstFactor="InvSrcAlpha" op="Copy" />
+            </materialRevo>
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="TextBox" name="menu1_2">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <translate x="-200" y="57" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="231" y="38" />
+          <textBox font="sample">
+            <fontSize x="32" y="38" />
+            <text>2-es menupont</text>
+            <topColor r="255" g="255" b="255" a="255" />
+            <bottomColor r="255" g="255" b="255" a="255" />
+            <positionType x="Left" y="Top" />
+            <material name="menu1_2">
+              <blackColor r="0" g="0" b="0" />
+              <whiteColor r="255" g="255" b="255" />
+            </material>
+            <materialRevo name="menu1_2">
+              <channelControl channel="Color0" materialSource="Vertex" />
+              <channelControl channel="Alpha0" materialSource="Vertex" />
+              <matColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="0" g="0" b="0" a="0" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <tevStage colorChannel="Color0a0" texMap="-1" texCoordGen="-1" rasColSwap="0" texColSwap="0">
+                <color a="RasC" b="V0" c="V0" d="V0" konst="K0" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <alpha a="RasA" b="V0" c="V0" d="V0" konst="K0_a" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <indirect indStage="0" format="V8" bias="STU" matrix="Off" wrap_s="Off" wrap_t="Off" addPrev="false" utcLod="false" alpha="Off" />
+              </tevStage>
+              <alphaCompare comp0="Always" ref0="0" op="And" comp1="Always" ref1="0" />
+              <blendMode type="Blend" srcFactor="SrcAlpha" dstFactor="InvSrcAlpha" op="Copy" />
+            </materialRevo>
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="TextBox" name="menu1_3">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <translate x="-191" y="-49" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="249" y="38" />
+          <textBox font="sample">
+            <fontSize x="32" y="38" />
+            <text>Kovetkezo menu</text>
+            <topColor r="255" g="255" b="255" a="255" />
+            <bottomColor r="255" g="255" b="255" a="255" />
+            <positionType x="Left" y="Top" />
+            <material name="menu1_3">
+              <blackColor r="0" g="0" b="0" />
+              <whiteColor r="255" g="255" b="255" />
+            </material>
+            <materialRevo name="menu1_3">
+              <channelControl channel="Color0" materialSource="Vertex" />
+              <channelControl channel="Alpha0" materialSource="Vertex" />
+              <matColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="0" g="0" b="0" a="0" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <tevStage colorChannel="Color0a0" texMap="-1" texCoordGen="-1" rasColSwap="0" texColSwap="0">
+                <color a="RasC" b="V0" c="V0" d="V0" konst="K0" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <alpha a="RasA" b="V0" c="V0" d="V0" konst="K0_a" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <indirect indStage="0" format="V8" bias="STU" matrix="Off" wrap_s="Off" wrap_t="Off" addPrev="false" utcLod="false" alpha="Off" />
+              </tevStage>
+              <alphaCompare comp0="Always" ref0="0" op="And" comp1="Always" ref1="0" />
+              <blendMode type="Blend" srcFactor="SrcAlpha" dstFactor="InvSrcAlpha" op="Copy" />
+            </materialRevo>
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="Picture_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <translate x="17" y="88" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="64" y="64" />
+          <picture>
+            <vtxColLT r="255" g="255" b="255" a="255" />
+            <vtxColRT r="255" g="255" b="255" a="255" />
+            <vtxColLB r="255" g="255" b="255" a="255" />
+            <vtxColRB r="255" g="255" b="255" a="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="Picture_00">
+              <blackColor r="0" g="0" b="0" />
+              <whiteColor r="255" g="255" b="255" />
+              <texMap imageName="mark_3" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen func="Mtx2x4" srcParam="Tex0" matrix="0" />
+              <textureStage texMap="0" texCoordGen="0" />
+              <texBlendRatio color="255" />
+            </material>
+            <materialRevo name="Picture_00">
+              <channelControl channel="Color0" materialSource="Vertex" />
+              <channelControl channel="Alpha0" materialSource="Vertex" />
+              <matColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="0" g="0" b="0" a="0" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <texMap imageName="mark_3" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen func="Mtx2x4" srcParam="Tex0" matrix="0" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <tevStage colorChannel="Color0a0" texMap="-1" texCoordGen="-1" rasColSwap="0" texColSwap="0">
+                <color a="RasC" b="V0" c="V0" d="V0" konst="K0" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <alpha a="RasA" b="V0" c="V0" d="V0" konst="K0_a" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <indirect indStage="0" format="V8" bias="STU" matrix="Off" wrap_s="Off" wrap_t="Off" addPrev="false" utcLod="false" alpha="Off" />
+              </tevStage>
+              <alphaCompare comp0="Always" ref0="0" op="And" comp1="Always" ref1="0" />
+              <blendMode type="Blend" srcFactor="SrcAlpha" dstFactor="InvSrcAlpha" op="Copy" />
+            </materialRevo>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="Picture_01">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <translate x="17" y="9" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="64" y="64" />
+          <picture>
+            <vtxColLT r="255" g="255" b="255" a="255" />
+            <vtxColRT r="255" g="255" b="255" a="255" />
+            <vtxColLB r="255" g="255" b="255" a="255" />
+            <vtxColRB r="255" g="255" b="255" a="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="Picture_01">
+              <blackColor r="0" g="0" b="0" />
+              <whiteColor r="255" g="255" b="255" />
+              <texMap imageName="mark_4" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen func="Mtx2x4" srcParam="Tex0" matrix="0" />
+              <textureStage texMap="0" texCoordGen="0" />
+              <texBlendRatio color="255" />
+            </material>
+            <materialRevo name="Picture_01">
+              <channelControl channel="Color0" materialSource="Vertex" />
+              <channelControl channel="Alpha0" materialSource="Vertex" />
+              <matColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="0" g="0" b="0" a="0" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <texMap imageName="mark_4" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen func="Mtx2x4" srcParam="Tex0" matrix="0" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <tevStage colorChannel="Color0a0" texMap="-1" texCoordGen="-1" rasColSwap="0" texColSwap="0">
+                <color a="RasC" b="V0" c="V0" d="V0" konst="K0" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <alpha a="RasA" b="V0" c="V0" d="V0" konst="K0_a" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <indirect indStage="0" format="V8" bias="STU" matrix="Off" wrap_s="Off" wrap_t="Off" addPrev="false" utcLod="false" alpha="Off" />
+              </tevStage>
+              <alphaCompare comp0="Always" ref0="0" op="And" comp1="Always" ref1="0" />
+              <blendMode type="Blend" srcFactor="SrcAlpha" dstFactor="InvSrcAlpha" op="Copy" />
+            </materialRevo>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="Picture_02">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <translate x="19" y="165" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="64" y="64" />
+          <picture>
+            <vtxColLT r="255" g="255" b="255" a="255" />
+            <vtxColRT r="255" g="255" b="255" a="255" />
+            <vtxColLB r="255" g="255" b="255" a="255" />
+            <vtxColRB r="255" g="255" b="255" a="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="Picture_02">
+              <blackColor r="0" g="0" b="0" />
+              <whiteColor r="255" g="255" b="255" />
+              <texMap imageName="mark_2" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen func="Mtx2x4" srcParam="Tex0" matrix="0" />
+              <textureStage texMap="0" texCoordGen="0" />
+              <texBlendRatio color="255" />
+            </material>
+            <materialRevo name="Picture_02">
+              <channelControl channel="Color0" materialSource="Vertex" />
+              <channelControl channel="Alpha0" materialSource="Vertex" />
+              <matColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="0" g="0" b="0" a="0" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevColReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <tevConstReg r="255" g="255" b="255" a="255" />
+              <texMap imageName="mark_2" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen func="Mtx2x4" srcParam="Tex0" matrix="0" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <swapTable r="Red" g="Green" b="Blue" a="Alpha" />
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </indirectMatrix>
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <indirectStage texMap="0" texCoordGen="0" scale_s="V1" scale_t="V1" />
+              <tevStage colorChannel="Color0a0" texMap="-1" texCoordGen="-1" rasColSwap="0" texColSwap="0">
+                <color a="RasC" b="V0" c="V0" d="V0" konst="K0" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <alpha a="RasA" b="V0" c="V0" d="V0" konst="K0_a" op="Add" bias="V0" scale="V1" clamp="true" outReg="Prev" />
+                <indirect indStage="0" format="V8" bias="STU" matrix="Off" wrap_s="Off" wrap_t="Off" addPrev="false" utcLod="false" alpha="Off" />
+              </tevStage>
+              <alphaCompare comp0="Always" ref0="0" op="And" comp1="Always" ref1="0" />
+              <blendMode type="Blend" srcFactor="SrcAlpha" dstFactor="InvSrcAlpha" op="Copy" />
+            </materialRevo>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+      </paneSet>
+      <paneHierarchy>
+        <paneTree name="RootPane">
+          <paneTree name="menu1_title" />
+          <paneTree name="menu1_1" />
+          <paneTree name="menu1_2" />
+          <paneTree name="menu1_3" />
+          <paneTree name="Picture_00" />
+          <paneTree name="Picture_01" />
+          <paneTree name="Picture_02" />
+        </paneTree>
+      </paneHierarchy>
+      <groupSet>
+        <group name="RootGroup">
+          <comment />
+        </group>
+      </groupSet>
+      <screenSetting origin="Normal">
+        <layoutSize x="640" y="480" />
+        <backGround>
+          <color r="169" g="169" b="169" a="255" />
+        </backGround>
+        <grid thickLineInterval="40" thinDivisionNum="4" visible="true" moveMethod="None">
+          <color r="128" g="128" b="64" a="128" />
+        </grid>
+      </screenSetting>
+      <textureFile imagePath="..\..\..\Wii\nw4r\LayoutEditor\sample\picture\f.tga" format="RGB565" />
+      <textureFile imagePath="..\..\..\Wii\nw4r\LayoutEditor\sample\picture\rgb.tga" format="RGB565" />
+      <textureFile imagePath="..\..\..\Wii\nw4r\LayoutEditor\sample\picture\mark_1.tga" format="RGB565" />
+      <textureFile imagePath="..\..\..\Wii\nw4r\LayoutEditor\sample\picture\mark_2.tga" format="RGB565" />
+      <textureFile imagePath="..\..\..\Wii\nw4r\LayoutEditor\sample\picture\mark_3.tga" format="RGB565" />
+      <textureFile imagePath="..\..\..\Wii\nw4r\LayoutEditor\sample\picture\mark_4.tga" format="RGB565" />
+      <textureFile imagePath="..\..\..\Wii\nw4r\LayoutEditor\sample\picture\picture_01.tga" format="RGB5A3" />
+      <textureFile imagePath="..\..\..\Wii\nw4r\LayoutEditor\sample\picture\picture_02.tga" format="RGB5A3" />
+      <textureFile imagePath="..\..\..\Wii\nw4r\LayoutEditor\sample\picture\picture_03.tga" format="RGB5A3" />
+      <fontFile path="..\..\..\Wii\nw4r\LayoutEditor\sample\test_sample\font\sample.brfnt" />
+    </rlyt>
+  </body>
+</nw4r_layout>

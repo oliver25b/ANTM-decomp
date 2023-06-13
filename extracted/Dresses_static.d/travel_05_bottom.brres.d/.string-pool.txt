@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material6
+NodeTree
+Textures(NW4R)
+polygon0
+travel_05_bottom
+travel_05_bottom_Polygon__Material6
+travel_wii_05_bottom

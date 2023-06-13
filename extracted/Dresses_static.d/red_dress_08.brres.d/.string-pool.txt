@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material145
+NodeTree
+Textures(NW4R)
+polygon0
+red_dress_08
+red_dress_08_red_wii_08_dress__Material145
+red_wii_08_dress

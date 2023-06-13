@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material96
+NodeTree
+Textures(NW4R)
+ethno_06_dress
+ethno_06_dress_ethno_wii_06_dress__Material96
+ethno_wii_06_dress
+polygon0

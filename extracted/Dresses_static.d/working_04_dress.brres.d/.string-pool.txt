@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Textures(NW4R)
+m_working_wii_04_dress
+polygon0
+working_04_dress
+working_04_dress_working_wii_04_dress__m_working_wii_04_dress
+working_wii_04_dress

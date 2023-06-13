@@ -1,0 +1,13 @@
+#0
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Scene_Material
+Textures(NW4R)
+m_working_wii_06_top
+polygon0
+polygon1
+working_06_top
+working_06_top__Scene_Material
+working_06_top_working_wii_06_top__m_working_wii_06_top
+working_wii_06_top

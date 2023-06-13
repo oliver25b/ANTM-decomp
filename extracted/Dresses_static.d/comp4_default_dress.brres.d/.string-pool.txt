@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material118
+NodeTree
+Textures(NW4R)
+comp4_cloth_dress
+comp4_default_dress
+comp4_default_dress_comp4_cloth_dress__Material118
+polygon0

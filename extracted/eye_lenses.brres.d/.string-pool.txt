@@ -1,0 +1,8 @@
+Textures(NW4R)
+eye_lens_01
+eye_lens_02
+eye_lens_03
+eye_lens_04
+eye_lens_05
+eye_lens_06
+eye_lens_07

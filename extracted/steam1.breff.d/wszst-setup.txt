@@ -1,0 +1,339 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# Name of the object:
+object-name = sample
+
+# The internal archive format (U8, WU8, BRRES, BREFF or BREFT):
+archive-format = BREFF
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = BREFF
+
+# An archive format related version number (-1: unknown or not relevant)
+version = 9
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 0
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x0
+max-data-offset = 0x20b34
+
+# The calculated alignment of all files:
+data-align = 0x4
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./header.bin.d
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+./header.bin
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but not U8) this list will be used to sort the found
+# files. For archives with directory support (all but not PACK) it is very
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./header.bin
+      0x10	= ./root.bin
+      0x30	= ./file-list.bin
+		= ./files/
+    0x11d0	= ./files/Field_Random_XZ
+    0x1400	= ./files/CustomTEV_Sun
+    0x1670	= ./files/sun
+    0x1a04	= ./files/corona
+    0x1d84	= ./files/corona_s
+    0x20dc	= ./files/CustomTEV_Planet_and_moon
+    0x2374	= ./files/universe
+    0x2654	= ./files/Planet
+    0x2a0c	= ./files/inner_space
+    0x2c08	= ./files/moon
+    0x2fb0	= ./files/Fishing_swim
+    0x3364	= ./files/Fishing_swim_ripple
+    0x3658	= ./files/Fishing_column
+    0x3980	= ./files/Fishing_ripple
+    0x3c68	= ./files/Hockey_wallhit_master
+    0x3f10	= ./files/Hockey_wallhit_orange
+    0x416c	= ./files/Hockey_wallhit_yellow
+    0x43c8	= ./files/Hockey_wallhit_green
+    0x4624	= ./files/Hockey_wallhit_blue
+    0x4880	= ./files/Posemii_fireworks
+    0x4cfc	= ./files/Posemii_fireworks_ch
+    0x5074	= ./files/Posemii_bubble
+    0x5448	= ./files/Posemii_game_start
+    0x56e0	= ./files/Posemii_game_start_ripple
+    0x5a0c	= ./files/Posemii_game_start_wipe
+    0x5cc8	= ./files/Shoot_sight_1p
+    0x5f88	= ./files/Shoot_sight_1p_shadow
+    0x618c	= ./files/Shoot_sight_1p_tail
+    0x6398	= ./files/target_move
+    0x6968	= ./files/Shoot_target_hit
+    0x6c30	= ./files/Shoot_target_piece02
+    0x7020	= ./files/Shoot_target_piece01
+    0x74d0	= ./files/Shoot_target_smoke
+    0x787c	= ./files/Tank_mine_bomb
+    0x7b74	= ./files/Tank_mine_bomb_particle2
+    0x7ef0	= ./files/Tank_mine_bomb_wave
+    0x818c	= ./files/Tank_mine_bomb_spark
+    0x8470	= ./files/Tank_mine_bomb_fire
+    0x8968	= ./files/Tank_tank_bomb
+    0x8c58	= ./files/Tank_bomb01_wave
+    0x8ef4	= ./files/Tank_bomb02_glow
+    0x91b4	= ./files/Tank_bomb02_particle
+    0x9530	= ./files/Tank_bomb02_smoke
+    0x9730	= ./files/Tank_bomb02_smokefire
+    0x9bf4	= ./files/Baseball_ball_tail
+    0x9df4	= ./files/ball_move_rotate
+    0xa098	= ./files/ball_move_offset
+    0xa2f4	= ./files/Baseball_bat_tail
+    0xa4f4	= ./files/bat_move_rotate
+    0xa7c8	= ./files/Boxing_damage2D
+    0xaa54	= ./files/Boxing_damage2D_01
+    0xadfc	= ./files/Boxing_damage2D_02
+    0xb1a4	= ./files/Golf_bunker_shot
+    0xb5ac	= ./files/Golf_bunker_shot_ch
+    0xb7ac	= ./files/Golf_wind
+    0xba04	= ./files/Golf_wind_move
+    0xbcd0	= ./files/Golf_wind_stripe
+    0xbf54	= ./files/Tennis_good_blue
+    0xc26c	= ./files/Flower00
+    0xc504	= ./files/Sparkle00
+    0xc868	= ./files/SonicBoom00
+    0xcb34	= ./files/FishShoal_by_MagneticForce
+    0xcf4c	= ./files/Snow00
+    0xd320	= ./files/Rain00
+    0xd5a0	= ./files/Rain00_Ripple
+    0xd858	= ./files/Rain00_Mist
+    0xdbcc	= ./files/MissileAttack00
+    0xde24	= ./files/MissileAttack_s00
+    0xe5bc	= ./files/MissileAttack_ss00
+    0xe7b4	= ./files/Burst00
+    0xeb08	= ./files/Plasma00
+    0xed5c	= ./files/Plasma_s00
+    0xefec	= ./files/Plasma_ss00
+    0xf2e4	= ./files/Thunder00
+    0xf700	= ./files/Tunder_s00
+    0xfa20	= ./files/PowerUp00
+    0xfc64	= ./files/FallingLeaf00
+   0x100f4	= ./files/FallingLeaf_s00
+   0x1043c	= ./files/Fire00
+   0x107b4	= ./files/Fire01
+   0x10b10	= ./files/Fire01_s01
+   0x10e9c	= ./files/Fire02
+   0x112f0	= ./files/Fire03
+   0x11644	= ./files/Fire04
+   0x1199c	= ./files/Smoke00
+   0x11cf8	= ./files/Smoke01
+   0x121b4	= ./files/Smoke02
+   0x1253c	= ./files/PillarOfFire_EmtSRTAnim
+   0x12868	= ./files/PillarOfFire
+   0x12b48	= ./files/Bubble00
+   0x12fac	= ./files/Bubble_s01
+   0x1336c	= ./files/WavySmoke
+   0x136e4	= ./files/Fireworks00
+   0x13e5c	= ./files/Fireworks_s01
+   0x141b0	= ./files/Fireworks_s02
+   0x146ac	= ./files/Fireworks_s03
+   0x149a0	= ./files/Field_Gravity_Local
+   0x14dbc	= ./files/Field_Gravity_Global
+   0x151d8	= ./files/Cube00
+   0x15564	= ./files/Default
+   0x1575c	= ./files/BlendMode_Logic00
+   0x159b8	= ./files/BlendMode_Logic_s00
+   0x15bf4	= ./files/Fake_PointLight00
+   0x15f38	= ./files/EmtTransform_Translate
+   0x1617c	= ./files/BlendMode_Subtract
+   0x16424	= ./files/EmtTransform_Billboard_Y
+   0x16718	= ./files/LOD_Emittion00
+   0x16910	= ./files/EmittionInterval_Random00
+   0x16b04	= ./files/EmtTimeAnime_Color00
+   0x16d68	= ./files/EmtTimeAnime_Scale00
+   0x170a4	= ./files/EmtTimeAnime_Rotate00
+   0x17364	= ./files/EmtTimeAnime_Field_Spin00
+   0x175cc	= ./files/EmtTimeAnime_Field_Random00
+   0x17850	= ./files/EmtTimeAnime_Field_Gravity00
+   0x17ab8	= ./files/Field_GravityMoveDirection
+   0x17da8	= ./files/Field_Gravity00
+   0x18080	= ./files/Field_SpeedControl00
+   0x182fc	= ./files/Field_MagneticForce00
+   0x185cc	= ./files/Field_AttractiveForce00
+   0x188b4	= ./files/Field_Spiral00
+   0x18af0	= ./files/Field_Spin00
+   0x18d24	= ./files/Filed_Random00
+   0x18f54	= ./files/collision_sphere_size_anim
+   0x1925c	= ./files/collision_sphere_size_anim_child
+   0x19454	= ./files/collision_plane_infinit
+   0x1982c	= ./files/collision_plane_infinit_child
+   0x19ad0	= ./files/speed_limitter
+   0x19d98	= ./files/EmtShape_Torus00
+   0x1a0e4	= ./files/EmtShaape_Disc00
+   0x1a430	= ./files/EmtShaape_Cylinder00
+   0x1a7fc	= ./files/EmtShape_Line00
+   0x1aa98	= ./files/PtclShape_Point00
+   0x1ace4	= ./files/PtclShape_Line00
+   0x1aedc	= ./files/PtclShape_Billboard_Trail
+   0x1b104	= ./files/PtclShape_Stripe00
+   0x1b344	= ./files/PtclShape_Stripe_Billboard00
+   0x1b584	= ./files/PtclShape_Stripe_Tube00
+   0x1b7ec	= ./files/PtclShape_Stripe01
+   0x1bab0	= ./files/PtclShape_Stripe02
+   0x1be28	= ./files/PtclShape_Stripe_s02
+   0x1c020	= ./files/ColorAnim_Prim
+   0x1c2f4	= ./files/ColorAnim_PrinScnd
+   0x1c6a4	= ./files/ColorAnim_Prim_RndSheet
+   0x1c990	= ./files/TexFlipAnim
+   0x1cd04	= ./files/TwoTex_TexSRTanim
+   0x1cfb8	= ./files/TwoTex_TexSRTanim_Rot
+   0x1d328	= ./files/basic_scale_anim
+   0x1d5d8	= ./files/ScaleAnim
+   0x1d838	= ./files/ScaleAnim_XYSync
+   0x1da98	= ./files/ScaleRnd
+   0x1dce4	= ./files/ScaleAnim_Rnd
+   0x1df68	= ./files/RotateZAnim
+   0x1e1bc	= ./files/Rotate_Random
+   0x1e540	= ./files/SweepAnim00
+   0x1e7e0	= ./files/PtclCenterOffset_Rotate
+   0x1ea34	= ./files/Anim_Col_Hermite
+   0x1ed44	= ./files/Anim_Col_Hermite_In_S_Out_S
+   0x1ef84	= ./files/Anim_Col_Hermite_In_S_Out_F
+   0x1f1c4	= ./files/Anim_Col_Hermite_In_F_Out_F
+   0x1f404	= ./files/Anim_Col_Hermite_In_F_Out_S
+   0x1f644	= ./files/EmtSRTanim
+   0x1f950	= ./files/EmtSRTanim_Follow
+   0x1fc5c	= ./files/Follow_Parent
+   0x20070	= ./files/Follow_Child
+   0x202bc	= ./files/Spiral_by_EmtSRTAnim
+   0x205b4	= ./files/Spiral_by_SweepAnim
+   0x208b4	= ./files/Spiral_by_Spin
+
+#------------------------------------------------------------------------------
+

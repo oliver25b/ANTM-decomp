@@ -1,0 +1,9 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material146
+NodeTree
+Textures(NW4R)
+hat_01
+hat_01_hat_01__Material146
+polygon0

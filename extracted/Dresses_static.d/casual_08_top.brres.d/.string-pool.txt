@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material208
+NodeTree
+Textures(NW4R)
+casual_08_top
+casual_08_top_polymsh11__Material208
+casual_wii_08_top
+polygon0

@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material244
+NodeTree
+Textures(NW4R)
+beach_10_top
+beach_10_top_beach_wii_10_top__Material244
+beach_wii_10_top
+polygon0

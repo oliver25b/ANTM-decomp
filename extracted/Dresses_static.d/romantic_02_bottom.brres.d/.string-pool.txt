@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material181
+NodeTree
+Textures(NW4R)
+polygon0
+romantic_02_bottom
+romantic_02_bottom_romantic_wii_02_bottom__Material181
+romantic_wii_02_bottom

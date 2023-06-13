@@ -1,0 +1,657 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# The internal archive format (U8, WU8, BRRES, BREFF or BREFT):
+archive-format = U8
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = U8
+
+# An archive format related version number (-1: unknown or not relevant)
+version = -1
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 0
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x0
+max-data-offset = 0x6c7c20
+
+# The calculated alignment of all files:
+data-align = 0x20
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./course.kcl.d
+./course.kcl.flag
+./course.kcl.mtl
+./course.kcl.obj
+./course.kmp.d
+./course.kmp.txt
+./course.lex.txt
+./makeupgui/timg/WiiBG1_01.tpl.d
+./makeupgui/timg/WiiBG1_01.tpl.png
+./makeupgui/timg/animation1.tpl.d
+./makeupgui/timg/animation1.tpl.png
+./makeupgui/timg/animation2.tpl.d
+./makeupgui/timg/animation2.tpl.png
+./makeupgui/timg/animation3.tpl.d
+./makeupgui/timg/animation3.tpl.png
+./makeupgui/timg/animation4.tpl.d
+./makeupgui/timg/animation4.tpl.png
+./makeupgui/timg/animation5.tpl.d
+./makeupgui/timg/animation5.tpl.png
+./makeupgui/timg/animation6.tpl.d
+./makeupgui/timg/animation6.tpl.png
+./makeupgui/timg/checklistboxempty.tpl.d
+./makeupgui/timg/checklistboxempty.tpl.png
+./makeupgui/timg/checklistboxfilled.tpl.d
+./makeupgui/timg/checklistboxfilled.tpl.png
+./makeupgui/timg/checklistbutton1.tpl.d
+./makeupgui/timg/checklistbutton1.tpl.png
+./makeupgui/timg/checklistbutton1glow.tpl.d
+./makeupgui/timg/checklistbutton1glow.tpl.png
+./makeupgui/timg/checklistlistbox.tpl.d
+./makeupgui/timg/checklistlistbox.tpl.png
+./makeupgui/timg/eyepainta1.tpl.d
+./makeupgui/timg/eyepainta1.tpl.png
+./makeupgui/timg/eyepainta1_glow.tpl.d
+./makeupgui/timg/eyepainta1_glow.tpl.png
+./makeupgui/timg/eyepainta2.tpl.d
+./makeupgui/timg/eyepainta2.tpl.png
+./makeupgui/timg/eyepainta2_glow.tpl.d
+./makeupgui/timg/eyepainta2_glow.tpl.png
+./makeupgui/timg/eyepainta3.tpl.d
+./makeupgui/timg/eyepainta3.tpl.png
+./makeupgui/timg/eyepainta3_glow.tpl.d
+./makeupgui/timg/eyepainta3_glow.tpl.png
+./makeupgui/timg/eyepainta4.tpl.d
+./makeupgui/timg/eyepainta4.tpl.png
+./makeupgui/timg/eyepainta4_glow.tpl.d
+./makeupgui/timg/eyepainta4_glow.tpl.png
+./makeupgui/timg/eyepainta5.tpl.d
+./makeupgui/timg/eyepainta5.tpl.png
+./makeupgui/timg/eyepainta5_glow.tpl.d
+./makeupgui/timg/eyepainta5_glow.tpl.png
+./makeupgui/timg/eyepaintb1.tpl.d
+./makeupgui/timg/eyepaintb1.tpl.png
+./makeupgui/timg/eyepaintb1_glow.tpl.d
+./makeupgui/timg/eyepaintb1_glow.tpl.png
+./makeupgui/timg/eyepaintb2.tpl.d
+./makeupgui/timg/eyepaintb2.tpl.png
+./makeupgui/timg/eyepaintb2_glow.tpl.d
+./makeupgui/timg/eyepaintb2_glow.tpl.png
+./makeupgui/timg/eyepaintb3.tpl.d
+./makeupgui/timg/eyepaintb3.tpl.png
+./makeupgui/timg/eyepaintb3_glow.tpl.d
+./makeupgui/timg/eyepaintb3_glow.tpl.png
+./makeupgui/timg/eyepaintb4.tpl.d
+./makeupgui/timg/eyepaintb4.tpl.png
+./makeupgui/timg/eyepaintb4_glow.tpl.d
+./makeupgui/timg/eyepaintb4_glow.tpl.png
+./makeupgui/timg/eyepaintb5.tpl.d
+./makeupgui/timg/eyepaintb5.tpl.png
+./makeupgui/timg/eyepaintb5_glow.tpl.d
+./makeupgui/timg/eyepaintb5_glow.tpl.png
+./makeupgui/timg/eyepaintb6.tpl.d
+./makeupgui/timg/eyepaintb6.tpl.png
+./makeupgui/timg/eyepaintb6_glow.tpl.d
+./makeupgui/timg/eyepaintb6_glow.tpl.png
+./makeupgui/timg/eyepaintb7.tpl.d
+./makeupgui/timg/eyepaintb7.tpl.png
+./makeupgui/timg/eyepaintb7_glow.tpl.d
+./makeupgui/timg/eyepaintb7_glow.tpl.png
+./makeupgui/timg/eyepaintb8.tpl.d
+./makeupgui/timg/eyepaintb8.tpl.png
+./makeupgui/timg/eyepaintb8_glow.tpl.d
+./makeupgui/timg/eyepaintb8_glow.tpl.png
+./makeupgui/timg/eyepaintb9.tpl.d
+./makeupgui/timg/eyepaintb9.tpl.png
+./makeupgui/timg/eyepaintb9_glow.tpl.d
+./makeupgui/timg/eyepaintb9_glow.tpl.png
+./makeupgui/timg/eyepaintc1.tpl.d
+./makeupgui/timg/eyepaintc1.tpl.png
+./makeupgui/timg/eyepaintc1_glow.tpl.d
+./makeupgui/timg/eyepaintc1_glow.tpl.png
+./makeupgui/timg/eyepaintc2.tpl.d
+./makeupgui/timg/eyepaintc2.tpl.png
+./makeupgui/timg/eyepaintc2_glow.tpl.d
+./makeupgui/timg/eyepaintc2_glow.tpl.png
+./makeupgui/timg/eyepaintc3.tpl.d
+./makeupgui/timg/eyepaintc3.tpl.png
+./makeupgui/timg/eyepaintc3_glow.tpl.d
+./makeupgui/timg/eyepaintc3_glow.tpl.png
+./makeupgui/timg/eyepaintc4.tpl.d
+./makeupgui/timg/eyepaintc4.tpl.png
+./makeupgui/timg/eyepaintc4_glow.tpl.d
+./makeupgui/timg/eyepaintc4_glow.tpl.png
+./makeupgui/timg/eyepaintc5.tpl.d
+./makeupgui/timg/eyepaintc5.tpl.png
+./makeupgui/timg/eyepaintc5_glow.tpl.d
+./makeupgui/timg/eyepaintc5_glow.tpl.png
+./makeupgui/timg/eyepaintc6.tpl.d
+./makeupgui/timg/eyepaintc6.tpl.png
+./makeupgui/timg/eyepaintc6_glow.tpl.d
+./makeupgui/timg/eyepaintc6_glow.tpl.png
+./makeupgui/timg/eyepaintc7.tpl.d
+./makeupgui/timg/eyepaintc7.tpl.png
+./makeupgui/timg/eyepaintc7_glow.tpl.d
+./makeupgui/timg/eyepaintc7_glow.tpl.png
+./makeupgui/timg/eyepaintd1.tpl.d
+./makeupgui/timg/eyepaintd1.tpl.png
+./makeupgui/timg/eyepaintd1_glow.tpl.d
+./makeupgui/timg/eyepaintd1_glow.tpl.png
+./makeupgui/timg/eyepaintd2.tpl.d
+./makeupgui/timg/eyepaintd2.tpl.png
+./makeupgui/timg/eyepaintd2_glow.tpl.d
+./makeupgui/timg/eyepaintd2_glow.tpl.png
+./makeupgui/timg/eyepaintd3.tpl.d
+./makeupgui/timg/eyepaintd3.tpl.png
+./makeupgui/timg/eyepaintd3_glow.tpl.d
+./makeupgui/timg/eyepaintd3_glow.tpl.png
+./makeupgui/timg/eyepaintd4.tpl.d
+./makeupgui/timg/eyepaintd4.tpl.png
+./makeupgui/timg/eyepaintd4_glow.tpl.d
+./makeupgui/timg/eyepaintd4_glow.tpl.png
+./makeupgui/timg/facepainta1.tpl.d
+./makeupgui/timg/facepainta1.tpl.png
+./makeupgui/timg/facepainta1_glow.tpl.d
+./makeupgui/timg/facepainta1_glow.tpl.png
+./makeupgui/timg/facepainta2.tpl.d
+./makeupgui/timg/facepainta2.tpl.png
+./makeupgui/timg/facepainta2_glow.tpl.d
+./makeupgui/timg/facepainta2_glow.tpl.png
+./makeupgui/timg/facepainta4.tpl.d
+./makeupgui/timg/facepainta4.tpl.png
+./makeupgui/timg/facepainta4_glow.tpl.d
+./makeupgui/timg/facepainta4_glow.tpl.png
+./makeupgui/timg/facepainta5.tpl.d
+./makeupgui/timg/facepainta5.tpl.png
+./makeupgui/timg/facepainta5_glow.tpl.d
+./makeupgui/timg/facepainta5_glow.tpl.png
+./makeupgui/timg/facepainta6.tpl.d
+./makeupgui/timg/facepainta6.tpl.png
+./makeupgui/timg/facepainta6_glow.tpl.d
+./makeupgui/timg/facepainta6_glow.tpl.png
+./makeupgui/timg/facepainta7.tpl.d
+./makeupgui/timg/facepainta7.tpl.png
+./makeupgui/timg/facepainta7_glow.tpl.d
+./makeupgui/timg/facepainta7_glow.tpl.png
+./makeupgui/timg/facepainta8.tpl.d
+./makeupgui/timg/facepainta8.tpl.png
+./makeupgui/timg/facepainta8_glow.tpl.d
+./makeupgui/timg/facepainta8_glow.tpl.png
+./makeupgui/timg/facepainta9.tpl.d
+./makeupgui/timg/facepainta9.tpl.png
+./makeupgui/timg/facepainta9_glow.tpl.d
+./makeupgui/timg/facepainta9_glow.tpl.png
+./makeupgui/timg/facepaintb1.tpl.d
+./makeupgui/timg/facepaintb1.tpl.png
+./makeupgui/timg/facepaintb1_glow.tpl.d
+./makeupgui/timg/facepaintb1_glow.tpl.png
+./makeupgui/timg/facepaintb2.tpl.d
+./makeupgui/timg/facepaintb2.tpl.png
+./makeupgui/timg/facepaintb2_glow.tpl.d
+./makeupgui/timg/facepaintb2_glow.tpl.png
+./makeupgui/timg/facepaintb3.tpl.d
+./makeupgui/timg/facepaintb3.tpl.png
+./makeupgui/timg/facepaintb3_glow.tpl.d
+./makeupgui/timg/facepaintb3_glow.tpl.png
+./makeupgui/timg/facepaintb4.tpl.d
+./makeupgui/timg/facepaintb4.tpl.png
+./makeupgui/timg/facepaintb4_glow.tpl.d
+./makeupgui/timg/facepaintb4_glow.tpl.png
+./makeupgui/timg/facepaintb5.tpl.d
+./makeupgui/timg/facepaintb5.tpl.png
+./makeupgui/timg/facepaintb5_glow.tpl.d
+./makeupgui/timg/facepaintb5_glow.tpl.png
+./makeupgui/timg/facepaintc1.tpl.d
+./makeupgui/timg/facepaintc1.tpl.png
+./makeupgui/timg/facepaintc1_glow.tpl.d
+./makeupgui/timg/facepaintc1_glow.tpl.png
+./makeupgui/timg/facepaintc2.tpl.d
+./makeupgui/timg/facepaintc2.tpl.png
+./makeupgui/timg/facepaintc2_glow.tpl.d
+./makeupgui/timg/facepaintc2_glow.tpl.png
+./makeupgui/timg/facepaintc3.tpl.d
+./makeupgui/timg/facepaintc3.tpl.png
+./makeupgui/timg/facepaintc3_glow.tpl.d
+./makeupgui/timg/facepaintc3_glow.tpl.png
+./makeupgui/timg/facepaintc4.tpl.d
+./makeupgui/timg/facepaintc4.tpl.png
+./makeupgui/timg/facepaintc4_glow.tpl.d
+./makeupgui/timg/facepaintc4_glow.tpl.png
+./makeupgui/timg/facepaintc5.tpl.d
+./makeupgui/timg/facepaintc5.tpl.png
+./makeupgui/timg/facepaintc5_glow.tpl.d
+./makeupgui/timg/facepaintc5_glow.tpl.png
+./makeupgui/timg/mouthpainta1.tpl.d
+./makeupgui/timg/mouthpainta1.tpl.png
+./makeupgui/timg/mouthpainta1_glow.tpl.d
+./makeupgui/timg/mouthpainta1_glow.tpl.png
+./makeupgui/timg/mouthpainta2.tpl.d
+./makeupgui/timg/mouthpainta2.tpl.png
+./makeupgui/timg/mouthpainta2_glow.tpl.d
+./makeupgui/timg/mouthpainta2_glow.tpl.png
+./makeupgui/timg/mouthpainta3.tpl.d
+./makeupgui/timg/mouthpainta3.tpl.png
+./makeupgui/timg/mouthpainta3_glow.tpl.d
+./makeupgui/timg/mouthpainta3_glow.tpl.png
+./makeupgui/timg/mouthpainta4.tpl.d
+./makeupgui/timg/mouthpainta4.tpl.png
+./makeupgui/timg/mouthpainta4_glow.tpl.d
+./makeupgui/timg/mouthpainta4_glow.tpl.png
+./makeupgui/timg/mouthpainta5.tpl.d
+./makeupgui/timg/mouthpainta5.tpl.png
+./makeupgui/timg/mouthpainta5_glow.tpl.d
+./makeupgui/timg/mouthpainta5_glow.tpl.png
+./makeupgui/timg/mouthpaintb1.tpl.d
+./makeupgui/timg/mouthpaintb1.tpl.png
+./makeupgui/timg/mouthpaintb1_glow.tpl.d
+./makeupgui/timg/mouthpaintb1_glow.tpl.png
+./makeupgui/timg/mouthpaintb2.tpl.d
+./makeupgui/timg/mouthpaintb2.tpl.png
+./makeupgui/timg/mouthpaintb2_glow.tpl.d
+./makeupgui/timg/mouthpaintb2_glow.tpl.png
+./makeupgui/timg/mouthpaintb3.tpl.d
+./makeupgui/timg/mouthpaintb3.tpl.png
+./makeupgui/timg/mouthpaintb3_glow.tpl.d
+./makeupgui/timg/mouthpaintb3_glow.tpl.png
+./makeupgui/timg/mouthpaintb4.tpl.d
+./makeupgui/timg/mouthpaintb4.tpl.png
+./makeupgui/timg/mouthpaintb4_glow.tpl.d
+./makeupgui/timg/mouthpaintb4_glow.tpl.png
+./makeupgui/timg/mouthpaintb5.tpl.d
+./makeupgui/timg/mouthpaintb5.tpl.png
+./makeupgui/timg/mouthpaintb5_glow.tpl.d
+./makeupgui/timg/mouthpaintb5_glow.tpl.png
+./makeupgui/timg/newnavbar.tpl.d
+./makeupgui/timg/newnavbar.tpl.png
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+KCL		= ./course.kcl
+KMP		= ./course.kmp
+LEX		= ./course.lex
+TPL,CMPR,1	= ./makeupgui/timg/WiiBG1_01.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/animation1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/animation2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/animation3.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/animation4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/animation5.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/animation6.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/checklistboxempty.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/checklistboxfilled.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/checklistbutton1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/checklistbutton1glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/checklistlistbox.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta1_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta2_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta3.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta3_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta4_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta5.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepainta5_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb1_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb2_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb3.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb3_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb4_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb5.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb5_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb6.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb6_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb7.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb7_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb8.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb8_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb9.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintb9_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc1_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc2_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc3.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc3_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc4_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc5.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc5_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc6.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc6_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc7.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintc7_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintd1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintd1_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintd2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintd2_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintd3.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintd3_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintd4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/eyepaintd4_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta1_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta2_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta4_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta5.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta5_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta6.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta6_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta7.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta7_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta8.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta8_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta9.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepainta9_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb1_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb2_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb3.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb3_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb4_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb5.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintb5_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc1_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc2_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc3.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc3_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc4_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc5.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/facepaintc5_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta1_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta2_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta3.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta3_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta4_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta5.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpainta5_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb1.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb1_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb2.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb2_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb3.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb3_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb4.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb4_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb5.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/mouthpaintb5_glow.tpl
+TPL,RGB5A3,1	= ./makeupgui/timg/newnavbar.tpl
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but not U8) this list will be used to sort the found
+# files. For archives with directory support (all but not PACK) it is very
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./makeupgui/
+		= ./makeupgui/anim/
+     0xf00	= ./makeupgui/anim/makeupgui.brlan
+		= ./makeupgui/blyt/
+    0x2b20	= ./makeupgui/blyt/makeupgui.brlyt
+		= ./makeupgui/font/
+    0x8200	= ./makeupgui/font/arial_alpha_fix.brfnt
+		= ./makeupgui/timg/
+   0x685c0	= ./makeupgui/timg/animation1.tpl
+   0x71d20	= ./makeupgui/timg/animation2.tpl
+   0x7b480	= ./makeupgui/timg/animation3.tpl
+   0x84be0	= ./makeupgui/timg/animation4.tpl
+   0x8e340	= ./makeupgui/timg/animation5.tpl
+   0x97aa0	= ./makeupgui/timg/animation6.tpl
+   0xa1200	= ./makeupgui/timg/checklistboxempty.tpl
+   0xa2740	= ./makeupgui/timg/checklistboxfilled.tpl
+   0xa3c80	= ./makeupgui/timg/checklistbutton1.tpl
+   0xa8640	= ./makeupgui/timg/checklistbutton1glow.tpl
+   0xad000	= ./makeupgui/timg/checklistlistbox.tpl
+   0xb76a0	= ./makeupgui/timg/eyepainta1.tpl
+   0xc5720	= ./makeupgui/timg/eyepainta1_glow.tpl
+   0xd37a0	= ./makeupgui/timg/eyepainta2.tpl
+   0xe1820	= ./makeupgui/timg/eyepainta2_glow.tpl
+   0xef8a0	= ./makeupgui/timg/eyepainta3.tpl
+   0xfd920	= ./makeupgui/timg/eyepainta3_glow.tpl
+  0x10b9a0	= ./makeupgui/timg/eyepainta4.tpl
+  0x119a20	= ./makeupgui/timg/eyepainta4_glow.tpl
+  0x127aa0	= ./makeupgui/timg/eyepainta5.tpl
+  0x135b20	= ./makeupgui/timg/eyepainta5_glow.tpl
+  0x143ba0	= ./makeupgui/timg/eyepaintb1.tpl
+  0x151c20	= ./makeupgui/timg/eyepaintb1_glow.tpl
+  0x15fca0	= ./makeupgui/timg/eyepaintb2.tpl
+  0x16dd20	= ./makeupgui/timg/eyepaintb2_glow.tpl
+  0x17bda0	= ./makeupgui/timg/eyepaintb3.tpl
+  0x189e20	= ./makeupgui/timg/eyepaintb3_glow.tpl
+  0x197ea0	= ./makeupgui/timg/eyepaintb4.tpl
+  0x1a5f20	= ./makeupgui/timg/eyepaintb4_glow.tpl
+  0x1b3fa0	= ./makeupgui/timg/eyepaintb5.tpl
+  0x1c2020	= ./makeupgui/timg/eyepaintb5_glow.tpl
+  0x1d00a0	= ./makeupgui/timg/eyepaintb6.tpl
+  0x1de120	= ./makeupgui/timg/eyepaintb6_glow.tpl
+  0x1ec1a0	= ./makeupgui/timg/eyepaintb7.tpl
+  0x1fa220	= ./makeupgui/timg/eyepaintb7_glow.tpl
+  0x2082a0	= ./makeupgui/timg/eyepaintb8.tpl
+  0x216320	= ./makeupgui/timg/eyepaintb8_glow.tpl
+  0x2243a0	= ./makeupgui/timg/eyepaintb9.tpl
+  0x232420	= ./makeupgui/timg/eyepaintb9_glow.tpl
+  0x2404a0	= ./makeupgui/timg/eyepaintc1.tpl
+  0x24e520	= ./makeupgui/timg/eyepaintc1_glow.tpl
+  0x25c5a0	= ./makeupgui/timg/eyepaintc2.tpl
+  0x26a620	= ./makeupgui/timg/eyepaintc2_glow.tpl
+  0x2786a0	= ./makeupgui/timg/eyepaintc3.tpl
+  0x286720	= ./makeupgui/timg/eyepaintc3_glow.tpl
+  0x2947a0	= ./makeupgui/timg/eyepaintc4.tpl
+  0x2a2820	= ./makeupgui/timg/eyepaintc4_glow.tpl
+  0x2b08a0	= ./makeupgui/timg/eyepaintc5.tpl
+  0x2be920	= ./makeupgui/timg/eyepaintc5_glow.tpl
+  0x2cc9a0	= ./makeupgui/timg/eyepaintc6.tpl
+  0x2daa20	= ./makeupgui/timg/eyepaintc6_glow.tpl
+  0x2e8aa0	= ./makeupgui/timg/eyepaintc7.tpl
+  0x2f6b20	= ./makeupgui/timg/eyepaintc7_glow.tpl
+  0x304ba0	= ./makeupgui/timg/eyepaintd1.tpl
+  0x312c20	= ./makeupgui/timg/eyepaintd1_glow.tpl
+  0x320ca0	= ./makeupgui/timg/eyepaintd2.tpl
+  0x32ed20	= ./makeupgui/timg/eyepaintd2_glow.tpl
+  0x33cda0	= ./makeupgui/timg/eyepaintd3.tpl
+  0x34ae20	= ./makeupgui/timg/eyepaintd3_glow.tpl
+  0x358ea0	= ./makeupgui/timg/eyepaintd4.tpl
+  0x366f20	= ./makeupgui/timg/eyepaintd4_glow.tpl
+  0x374fa0	= ./makeupgui/timg/facepainta1.tpl
+  0x383020	= ./makeupgui/timg/facepainta1_glow.tpl
+  0x3910a0	= ./makeupgui/timg/facepainta2.tpl
+  0x39f120	= ./makeupgui/timg/facepainta2_glow.tpl
+  0x3ad1a0	= ./makeupgui/timg/facepainta4.tpl
+  0x3bb220	= ./makeupgui/timg/facepainta4_glow.tpl
+  0x3c92a0	= ./makeupgui/timg/facepainta5.tpl
+  0x3d7320	= ./makeupgui/timg/facepainta5_glow.tpl
+  0x3e53a0	= ./makeupgui/timg/facepainta6.tpl
+  0x3f3420	= ./makeupgui/timg/facepainta6_glow.tpl
+  0x4014a0	= ./makeupgui/timg/facepainta7.tpl
+  0x40f520	= ./makeupgui/timg/facepainta7_glow.tpl
+  0x41d5a0	= ./makeupgui/timg/facepainta8.tpl
+  0x42b620	= ./makeupgui/timg/facepainta8_glow.tpl
+  0x4396a0	= ./makeupgui/timg/facepainta9.tpl
+  0x447720	= ./makeupgui/timg/facepainta9_glow.tpl
+  0x4557a0	= ./makeupgui/timg/facepaintb1.tpl
+  0x463820	= ./makeupgui/timg/facepaintb1_glow.tpl
+  0x4718a0	= ./makeupgui/timg/facepaintb2.tpl
+  0x47f920	= ./makeupgui/timg/facepaintb2_glow.tpl
+  0x48d9a0	= ./makeupgui/timg/facepaintb3.tpl
+  0x49ba20	= ./makeupgui/timg/facepaintb3_glow.tpl
+  0x4a9aa0	= ./makeupgui/timg/facepaintb4.tpl
+  0x4b7b20	= ./makeupgui/timg/facepaintb4_glow.tpl
+  0x4c5ba0	= ./makeupgui/timg/facepaintb5.tpl
+  0x4d3c20	= ./makeupgui/timg/facepaintb5_glow.tpl
+  0x4e1ca0	= ./makeupgui/timg/facepaintc1.tpl
+  0x4efd20	= ./makeupgui/timg/facepaintc1_glow.tpl
+  0x4fdda0	= ./makeupgui/timg/facepaintc2.tpl
+  0x50be20	= ./makeupgui/timg/facepaintc2_glow.tpl
+  0x519ea0	= ./makeupgui/timg/facepaintc3.tpl
+  0x527f20	= ./makeupgui/timg/facepaintc3_glow.tpl
+  0x535fa0	= ./makeupgui/timg/facepaintc4.tpl
+  0x544020	= ./makeupgui/timg/facepaintc4_glow.tpl
+  0x5520a0	= ./makeupgui/timg/facepaintc5.tpl
+  0x560120	= ./makeupgui/timg/facepaintc5_glow.tpl
+  0x56e1a0	= ./makeupgui/timg/mouthpainta1.tpl
+  0x57c220	= ./makeupgui/timg/mouthpainta1_glow.tpl
+  0x58a2a0	= ./makeupgui/timg/mouthpainta2.tpl
+  0x598320	= ./makeupgui/timg/mouthpainta2_glow.tpl
+  0x5a63a0	= ./makeupgui/timg/mouthpainta3.tpl
+  0x5b4420	= ./makeupgui/timg/mouthpainta3_glow.tpl
+  0x5c24a0	= ./makeupgui/timg/mouthpainta4.tpl
+  0x5d0520	= ./makeupgui/timg/mouthpainta4_glow.tpl
+  0x5de5a0	= ./makeupgui/timg/mouthpainta5.tpl
+  0x5ec620	= ./makeupgui/timg/mouthpainta5_glow.tpl
+  0x5fa6a0	= ./makeupgui/timg/mouthpaintb1.tpl
+  0x608720	= ./makeupgui/timg/mouthpaintb1_glow.tpl
+  0x6167a0	= ./makeupgui/timg/mouthpaintb2.tpl
+  0x624820	= ./makeupgui/timg/mouthpaintb2_glow.tpl
+  0x6328a0	= ./makeupgui/timg/mouthpaintb3.tpl
+  0x640920	= ./makeupgui/timg/mouthpaintb3_glow.tpl
+  0x64e9a0	= ./makeupgui/timg/mouthpaintb4.tpl
+  0x65ca20	= ./makeupgui/timg/mouthpaintb4_glow.tpl
+  0x66aaa0	= ./makeupgui/timg/mouthpaintb5.tpl
+  0x678b20	= ./makeupgui/timg/mouthpaintb5_glow.tpl
+  0x686ba0	= ./makeupgui/timg/newnavbar.tpl
+  0x6a23e0	= ./makeupgui/timg/WiiBG1_01.tpl
+
+#------------------------------------------------------------------------------
+

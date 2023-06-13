@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Textures(NW4R)
+ethno_01_top
+ethno_01_top_ethno_wii_01_top__ethno_wii_01_top2
+ethno_wii_01_top
+ethno_wii_01_top2
+polygon0

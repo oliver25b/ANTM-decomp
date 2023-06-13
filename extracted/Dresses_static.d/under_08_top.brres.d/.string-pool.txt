@@ -1,0 +1,13 @@
+#0
+3DModels(NW4R)
+DrawOpa
+NodeTree
+Scene_Material1
+Textures(NW4R)
+m_under_wii_08_top
+polygon0
+polygon1
+under_08_top
+under_08_top__Scene_Material1
+under_08_top_cloth__m_under_wii_08_top
+under_wii_08_top

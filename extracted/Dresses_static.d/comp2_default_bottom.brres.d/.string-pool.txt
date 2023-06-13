@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material97
+NodeTree
+Textures(NW4R)
+comp2_cloth_bottom
+comp2_default_bottom
+comp2_default_bottom_comp2_cloth_bottom__Material97
+polygon0

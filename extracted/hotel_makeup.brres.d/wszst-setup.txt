@@ -1,0 +1,1140 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# The internal archive format (U8, WU8, BRRES, BREFF or BREFT):
+archive-format = BRRES
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = BRRES
+
+# An archive format related version number (-1: unknown or not relevant)
+version = -1
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 0
+
+# The minimum and maximum file data positions:
+min-data-offset = 0xe20
+max-data-offset = 0x782a80
+
+# The calculated alignment of all files:
+data-align = 0x20
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./.string-pool.bin
+./.string-pool.txt
+./3DModels(NW4R)/hotel_catwalk.d
+./3DModels(NW4R)/hotel_catwalk.txt
+./3DModels(NW4R)/hotel_hall.d
+./3DModels(NW4R)/hotel_hall.txt
+./3DModels(NW4R)/hotel_lower.d
+./3DModels(NW4R)/hotel_lower.txt
+./Textures(NW4R)/Corridoor_metal.d
+./Textures(NW4R)/Corridoor_metal.png
+./Textures(NW4R)/Corridoor_metal_01.d
+./Textures(NW4R)/Corridoor_metal_01.mm1.png
+./Textures(NW4R)/Corridoor_metal_01.mm2.png
+./Textures(NW4R)/Corridoor_metal_01.png
+./Textures(NW4R)/Door04LightingMap.d
+./Textures(NW4R)/Door04LightingMap.png
+./Textures(NW4R)/Door09LightingMap.d
+./Textures(NW4R)/Door09LightingMap.png
+./Textures(NW4R)/Door16LightingMap.d
+./Textures(NW4R)/Door16LightingMap.png
+./Textures(NW4R)/Door17LightingMap.d
+./Textures(NW4R)/Door17LightingMap.png
+./Textures(NW4R)/Door20LightingMap.d
+./Textures(NW4R)/Door20LightingMap.png
+./Textures(NW4R)/DressingRoom_Lamp.d
+./Textures(NW4R)/DressingRoom_Lamp.png
+./Textures(NW4R)/DressingRoom_ceiling.d
+./Textures(NW4R)/DressingRoom_ceiling.mm1.png
+./Textures(NW4R)/DressingRoom_ceiling.mm2.png
+./Textures(NW4R)/DressingRoom_ceiling.png
+./Textures(NW4R)/Dressingroom_Painting.d
+./Textures(NW4R)/Dressingroom_Painting.mm1.png
+./Textures(NW4R)/Dressingroom_Painting.mm2.png
+./Textures(NW4R)/Dressingroom_Painting.png
+./Textures(NW4R)/Gym_glass_frame.d
+./Textures(NW4R)/Gym_glass_frame.png
+./Textures(NW4R)/Gym_glassfibre.d
+./Textures(NW4R)/Gym_glassfibre.png
+./Textures(NW4R)/Gym_hifi_wii.d
+./Textures(NW4R)/Gym_hifi_wii.png
+./Textures(NW4R)/Makeup_Cloth.d
+./Textures(NW4R)/Makeup_Cloth.png
+./Textures(NW4R)/Makeuproom_Handwash.d
+./Textures(NW4R)/Makeuproom_Handwash.png
+./Textures(NW4R)/Makeuproom_LampTop.d
+./Textures(NW4R)/Makeuproom_LampTop.png
+./Textures(NW4R)/Makeuproom_Towel.d
+./Textures(NW4R)/Makeuproom_Towel.png
+./Textures(NW4R)/Makeuproom_chrome.d
+./Textures(NW4R)/Makeuproom_chrome.png
+./Textures(NW4R)/Makeuproom_makeup.d
+./Textures(NW4R)/Makeuproom_makeup.png
+./Textures(NW4R)/Object115LightingMap.d
+./Textures(NW4R)/Object115LightingMap.png
+./Textures(NW4R)/Object164LightingMap.d
+./Textures(NW4R)/Object164LightingMap.png
+./Textures(NW4R)/Object164_01LightingMap.d
+./Textures(NW4R)/Object164_01LightingMap.png
+./Textures(NW4R)/Object165LightingMap.d
+./Textures(NW4R)/Object165LightingMap.png
+./Textures(NW4R)/Object166LightingMap.d
+./Textures(NW4R)/Object166LightingMap.png
+./Textures(NW4R)/Object169LightingMap.d
+./Textures(NW4R)/Object169LightingMap.png
+./Textures(NW4R)/Object170LightingMap.d
+./Textures(NW4R)/Object170LightingMap.png
+./Textures(NW4R)/Object46LightingMap.d
+./Textures(NW4R)/Object46LightingMap.png
+./Textures(NW4R)/Object87LightingMap.d
+./Textures(NW4R)/Object87LightingMap.png
+./Textures(NW4R)/Plane45LightingMap.d
+./Textures(NW4R)/Plane45LightingMap.png
+./Textures(NW4R)/Plane48LightingMap.d
+./Textures(NW4R)/Plane48LightingMap.png
+./Textures(NW4R)/Plane49LightingMap.d
+./Textures(NW4R)/Plane49LightingMap.png
+./Textures(NW4R)/Plane77LightingMap.d
+./Textures(NW4R)/Plane77LightingMap.png
+./Textures(NW4R)/Posters.d
+./Textures(NW4R)/Posters.png
+./Textures(NW4R)/Restaurant_dado1.d
+./Textures(NW4R)/Restaurant_dado1.mm1.png
+./Textures(NW4R)/Restaurant_dado1.mm2.png
+./Textures(NW4R)/Restaurant_dado1.png
+./Textures(NW4R)/Restaurant_light.d
+./Textures(NW4R)/Restaurant_light.png
+./Textures(NW4R)/Restaurant_wall6.d
+./Textures(NW4R)/Restaurant_wall6.mm1.png
+./Textures(NW4R)/Restaurant_wall6.mm2.png
+./Textures(NW4R)/Restaurant_wall6.png
+./Textures(NW4R)/Restaurant_wood_light.d
+./Textures(NW4R)/Restaurant_wood_light.mm1.png
+./Textures(NW4R)/Restaurant_wood_light.mm2.png
+./Textures(NW4R)/Restaurant_wood_light.png
+./Textures(NW4R)/Salon1LightingMap.d
+./Textures(NW4R)/Salon1LightingMap.png
+./Textures(NW4R)/Salon_chairs.d
+./Textures(NW4R)/Salon_chairs.png
+./Textures(NW4R)/Salon_lamp.d
+./Textures(NW4R)/Salon_lamp.png
+./Textures(NW4R)/Salon_mat_1.d
+./Textures(NW4R)/Salon_mat_1.mm1.png
+./Textures(NW4R)/Salon_mat_1.mm2.png
+./Textures(NW4R)/Salon_mat_1.png
+./Textures(NW4R)/Salon_rug_blue.d
+./Textures(NW4R)/Salon_rug_blue.mm1.png
+./Textures(NW4R)/Salon_rug_blue.mm2.png
+./Textures(NW4R)/Salon_rug_blue.png
+./Textures(NW4R)/Salon_smallmagazine.d
+./Textures(NW4R)/Salon_smallmagazine.png
+./Textures(NW4R)/Salon_smallmagazine2.d
+./Textures(NW4R)/Salon_smallmagazine2.png
+./Textures(NW4R)/Salon_wood_light.d
+./Textures(NW4R)/Salon_wood_light.mm1.png
+./Textures(NW4R)/Salon_wood_light.mm2.png
+./Textures(NW4R)/Salon_wood_light.png
+./Textures(NW4R)/asdfaLightingMap.d
+./Textures(NW4R)/asdfaLightingMap.png
+./Textures(NW4R)/asphalt.d
+./Textures(NW4R)/asphalt.png
+./Textures(NW4R)/base_furniture2.d
+./Textures(NW4R)/base_furniture2.png
+./Textures(NW4R)/bedroo_wardrobe.d
+./Textures(NW4R)/bedroo_wardrobe.mm1.png
+./Textures(NW4R)/bedroo_wardrobe.mm2.png
+./Textures(NW4R)/bedroo_wardrobe.png
+./Textures(NW4R)/bedroom_Skirting.d
+./Textures(NW4R)/bedroom_Skirting.mm1.png
+./Textures(NW4R)/bedroom_Skirting.mm2.png
+./Textures(NW4R)/bedroom_Skirting.png
+./Textures(NW4R)/bedroom_maniquine.d
+./Textures(NW4R)/bedroom_maniquine.png
+./Textures(NW4R)/bedroom_metal.d
+./Textures(NW4R)/bedroom_metal.png
+./Textures(NW4R)/bedroom_wood2.d
+./Textures(NW4R)/bedroom_wood2.mm1.png
+./Textures(NW4R)/bedroom_wood2.mm2.png
+./Textures(NW4R)/bedroom_wood2.png
+./Textures(NW4R)/book1.d
+./Textures(NW4R)/book1.png
+./Textures(NW4R)/book2.d
+./Textures(NW4R)/book2.png
+./Textures(NW4R)/book3.d
+./Textures(NW4R)/book3.png
+./Textures(NW4R)/book4.d
+./Textures(NW4R)/book4.png
+./Textures(NW4R)/book5.d
+./Textures(NW4R)/book5.png
+./Textures(NW4R)/book6.d
+./Textures(NW4R)/book6.png
+./Textures(NW4R)/book8.d
+./Textures(NW4R)/book8.png
+./Textures(NW4R)/bouotique_ceilingLightingMap.d
+./Textures(NW4R)/bouotique_ceilingLightingMap.png
+./Textures(NW4R)/boutique_book.d
+./Textures(NW4R)/boutique_book.png
+./Textures(NW4R)/boutique_boxnbelt.d
+./Textures(NW4R)/boutique_boxnbelt.png
+./Textures(NW4R)/boutique_computer_a.d
+./Textures(NW4R)/boutique_computer_a.png
+./Textures(NW4R)/boutique_dress.d
+./Textures(NW4R)/boutique_dress.png
+./Textures(NW4R)/boutique_fabric.d
+./Textures(NW4R)/boutique_fabric.png
+./Textures(NW4R)/boutique_floorLightingMap.d
+./Textures(NW4R)/boutique_floorLightingMap.png
+./Textures(NW4R)/boutique_floor_gradient.d
+./Textures(NW4R)/boutique_floor_gradient.mm1.png
+./Textures(NW4R)/boutique_floor_gradient.mm2.png
+./Textures(NW4R)/boutique_floor_gradient.png
+./Textures(NW4R)/boutique_glassfibre.d
+./Textures(NW4R)/boutique_glassfibre.png
+./Textures(NW4R)/boutique_rafLightingMap.d
+./Textures(NW4R)/boutique_rafLightingMap.png
+./Textures(NW4R)/boutique_sandal.d
+./Textures(NW4R)/boutique_sandal.png
+./Textures(NW4R)/boutique_tablewood.d
+./Textures(NW4R)/boutique_tablewood.mm1.png
+./Textures(NW4R)/boutique_tablewood.mm2.png
+./Textures(NW4R)/boutique_tablewood.png
+./Textures(NW4R)/boutique_wallsLightingMap.d
+./Textures(NW4R)/boutique_wallsLightingMap.png
+./Textures(NW4R)/boutique_woodLightingMap.d
+./Textures(NW4R)/boutique_woodLightingMap.png
+./Textures(NW4R)/carpet01inddorLightingMap.d
+./Textures(NW4R)/carpet01inddorLightingMap.png
+./Textures(NW4R)/carpet_f.d
+./Textures(NW4R)/carpet_f.mm1.png
+./Textures(NW4R)/carpet_f.mm2.png
+./Textures(NW4R)/carpet_f.png
+./Textures(NW4R)/casual_wii_04_bottom.d
+./Textures(NW4R)/casual_wii_04_bottom.png
+./Textures(NW4R)/casual_wii_05_bottom.d
+./Textures(NW4R)/casual_wii_05_bottom.png
+./Textures(NW4R)/catwalk_poster.d
+./Textures(NW4R)/catwalk_poster.mm1.png
+./Textures(NW4R)/catwalk_poster.mm2.png
+./Textures(NW4R)/catwalk_poster.png
+./Textures(NW4R)/city_brick_b.d
+./Textures(NW4R)/city_brick_b.png
+./Textures(NW4R)/cloth_folded_ba.d
+./Textures(NW4R)/cloth_folded_ba.png
+./Textures(NW4R)/cloth_folded_bb.d
+./Textures(NW4R)/cloth_folded_bb.png
+./Textures(NW4R)/cloth_folded_bc.d
+./Textures(NW4R)/cloth_folded_bc.png
+./Textures(NW4R)/cloth_skin_light_a_wii.d
+./Textures(NW4R)/cloth_skin_light_a_wii.png
+./Textures(NW4R)/clothes_hang_a.d
+./Textures(NW4R)/clothes_hang_a.png
+./Textures(NW4R)/clothes_hang_b.d
+./Textures(NW4R)/clothes_hang_b.png
+./Textures(NW4R)/clothes_hang_c.d
+./Textures(NW4R)/clothes_hang_c.png
+./Textures(NW4R)/clothes_hang_d.d
+./Textures(NW4R)/clothes_hang_d.png
+./Textures(NW4R)/clothes_hang_e.d
+./Textures(NW4R)/clothes_hang_e.png
+./Textures(NW4R)/clothes_hang_f.d
+./Textures(NW4R)/clothes_hang_f.png
+./Textures(NW4R)/clothes_hang_g.d
+./Textures(NW4R)/clothes_hang_g.png
+./Textures(NW4R)/clothes_hang_h.d
+./Textures(NW4R)/clothes_hang_h.png
+./Textures(NW4R)/cw_lightgrow_alpha.d
+./Textures(NW4R)/cw_lightgrow_alpha.png
+./Textures(NW4R)/cw_lights01.d
+./Textures(NW4R)/cw_lights01.png
+./Textures(NW4R)/cw_poster.d
+./Textures(NW4R)/cw_poster.png
+./Textures(NW4R)/darkgray.d
+./Textures(NW4R)/darkgray.png
+./Textures(NW4R)/dress_screen05lightingmap.d
+./Textures(NW4R)/dress_screen05lightingmap.png
+./Textures(NW4R)/dressingRoom_carpet.d
+./Textures(NW4R)/dressingRoom_carpet.mm1.png
+./Textures(NW4R)/dressingRoom_carpet.mm2.png
+./Textures(NW4R)/dressingRoom_carpet.png
+./Textures(NW4R)/dressingroom_wall.d
+./Textures(NW4R)/dressingroom_wall.mm1.png
+./Textures(NW4R)/dressingroom_wall.mm2.png
+./Textures(NW4R)/dressingroom_wall.png
+./Textures(NW4R)/ecset2.d
+./Textures(NW4R)/ecset2.png
+./Textures(NW4R)/elevator_Out_button.d
+./Textures(NW4R)/elevator_Out_button.png
+./Textures(NW4R)/fc_blackmetal.d
+./Textures(NW4R)/fc_blackmetal.png
+./Textures(NW4R)/fc_metal_tube.d
+./Textures(NW4R)/fc_metal_tube.png
+./Textures(NW4R)/fitnes_stone_black.d
+./Textures(NW4R)/fitnes_stone_black.png
+./Textures(NW4R)/fitnes_stone_orange.d
+./Textures(NW4R)/fitnes_stone_orange.png
+./Textures(NW4R)/fitnes_stone_white__.d
+./Textures(NW4R)/fitnes_stone_white__.png
+./Textures(NW4R)/fitnes_wood.d
+./Textures(NW4R)/fitnes_wood.mm1.png
+./Textures(NW4R)/fitnes_wood.mm2.png
+./Textures(NW4R)/fitnes_wood.png
+./Textures(NW4R)/floor.d
+./Textures(NW4R)/floor.png
+./Textures(NW4R)/floorsregular0006_s.d
+./Textures(NW4R)/floorsregular0006_s.mm1.png
+./Textures(NW4R)/floorsregular0006_s.mm2.png
+./Textures(NW4R)/floorsregular0006_s.png
+./Textures(NW4R)/fullblack.d
+./Textures(NW4R)/fullblack.png
+./Textures(NW4R)/gate_gold.d
+./Textures(NW4R)/gate_gold.png
+./Textures(NW4R)/glass_01_.d
+./Textures(NW4R)/glass_01_.png
+./Textures(NW4R)/glass_02_.d
+./Textures(NW4R)/glass_02_.png
+./Textures(NW4R)/glass_04_.d
+./Textures(NW4R)/glass_04_.png
+./Textures(NW4R)/glass_05_.d
+./Textures(NW4R)/glass_05_.png
+./Textures(NW4R)/gym_glass_stripes.d
+./Textures(NW4R)/gym_glass_stripes.png
+./Textures(NW4R)/gym_tv03.d
+./Textures(NW4R)/gym_tv03.png
+./Textures(NW4R)/hairdr_wallcarpet_a.d
+./Textures(NW4R)/hairdr_wallcarpet_a.mm1.png
+./Textures(NW4R)/hairdr_wallcarpet_a.mm2.png
+./Textures(NW4R)/hairdr_wallcarpet_a.png
+./Textures(NW4R)/hat_02.d
+./Textures(NW4R)/hat_02.png
+./Textures(NW4R)/hat_04.d
+./Textures(NW4R)/hat_04.png
+./Textures(NW4R)/hat_06.d
+./Textures(NW4R)/hat_06.png
+./Textures(NW4R)/hotel_building_balcony_floor.d
+./Textures(NW4R)/hotel_building_balcony_floor.mm1.png
+./Textures(NW4R)/hotel_building_balcony_floor.mm2.png
+./Textures(NW4R)/hotel_building_balcony_floor.png
+./Textures(NW4R)/hotel_building_wall_c.d
+./Textures(NW4R)/hotel_building_wall_c.mm1.png
+./Textures(NW4R)/hotel_building_wall_c.mm2.png
+./Textures(NW4R)/hotel_building_wall_c.png
+./Textures(NW4R)/lamp.d
+./Textures(NW4R)/lamp.png
+./Textures(NW4R)/leather.d
+./Textures(NW4R)/leather.mm1.png
+./Textures(NW4R)/leather.mm2.png
+./Textures(NW4R)/leather.png
+./Textures(NW4R)/leather02.d
+./Textures(NW4R)/leather02.mm1.png
+./Textures(NW4R)/leather02.mm2.png
+./Textures(NW4R)/leather02.png
+./Textures(NW4R)/light1.d
+./Textures(NW4R)/light1.png
+./Textures(NW4R)/livingroom_splitainting_a.d
+./Textures(NW4R)/livingroom_splitainting_a.mm1.png
+./Textures(NW4R)/livingroom_splitainting_a.mm2.png
+./Textures(NW4R)/livingroom_splitainting_a.png
+./Textures(NW4R)/livingroom_splitainting_b.d
+./Textures(NW4R)/livingroom_splitainting_b.mm1.png
+./Textures(NW4R)/livingroom_splitainting_b.mm2.png
+./Textures(NW4R)/livingroom_splitainting_b.png
+./Textures(NW4R)/livingroom_splitainting_c.d
+./Textures(NW4R)/livingroom_splitainting_c.mm1.png
+./Textures(NW4R)/livingroom_splitainting_c.mm2.png
+./Textures(NW4R)/livingroom_splitainting_c.png
+./Textures(NW4R)/lobby_fotelja.d
+./Textures(NW4R)/lobby_fotelja.mm1.png
+./Textures(NW4R)/lobby_fotelja.mm2.png
+./Textures(NW4R)/lobby_fotelja.png
+./Textures(NW4R)/lobby_fotelja02.d
+./Textures(NW4R)/lobby_fotelja02.mm1.png
+./Textures(NW4R)/lobby_fotelja02.mm2.png
+./Textures(NW4R)/lobby_fotelja02.png
+./Textures(NW4R)/makeup_tools_b.d
+./Textures(NW4R)/makeup_tools_b.png
+./Textures(NW4R)/makeuproom_blockfloor.d
+./Textures(NW4R)/makeuproom_blockfloor.mm1.png
+./Textures(NW4R)/makeuproom_blockfloor.mm2.png
+./Textures(NW4R)/makeuproom_blockfloor.png
+./Textures(NW4R)/makeuproom_ceramic.d
+./Textures(NW4R)/makeuproom_ceramic.png
+./Textures(NW4R)/makeuproom_chandelier.d
+./Textures(NW4R)/makeuproom_chandelier.png
+./Textures(NW4R)/makeuproom_lacecurtain.d
+./Textures(NW4R)/makeuproom_lacecurtain.png
+./Textures(NW4R)/makeuproom_mirrorwood.d
+./Textures(NW4R)/makeuproom_mirrorwood.png
+./Textures(NW4R)/marbleLightingMap.d
+./Textures(NW4R)/marbleLightingMap.png
+./Textures(NW4R)/marble_black.d
+./Textures(NW4R)/marble_black.png
+./Textures(NW4R)/metal.d
+./Textures(NW4R)/metal.png
+./Textures(NW4R)/metal1.d
+./Textures(NW4R)/metal1.png
+./Textures(NW4R)/muchapainting1.d
+./Textures(NW4R)/muchapainting1.mm1.png
+./Textures(NW4R)/muchapainting1.mm2.png
+./Textures(NW4R)/muchapainting1.png
+./Textures(NW4R)/muchapainting2.d
+./Textures(NW4R)/muchapainting2.mm1.png
+./Textures(NW4R)/muchapainting2.mm2.png
+./Textures(NW4R)/muchapainting2.png
+./Textures(NW4R)/photostudio_MetalHandle.d
+./Textures(NW4R)/photostudio_MetalHandle.png
+./Textures(NW4R)/photostudio_chrome.d
+./Textures(NW4R)/photostudio_chrome.png
+./Textures(NW4R)/photostudio_partition_wood.d
+./Textures(NW4R)/photostudio_partition_wood.mm1.png
+./Textures(NW4R)/photostudio_partition_wood.mm2.png
+./Textures(NW4R)/photostudio_partition_wood.png
+./Textures(NW4R)/pillar_03LightingMap.d
+./Textures(NW4R)/pillar_03LightingMap.png
+./Textures(NW4R)/plant.d
+./Textures(NW4R)/plant.png
+./Textures(NW4R)/planter.d
+./Textures(NW4R)/planter.png
+./Textures(NW4R)/polySurface1488LightingMap.d
+./Textures(NW4R)/polySurface1488LightingMap.png
+./Textures(NW4R)/polySurface1500LightingMap.d
+./Textures(NW4R)/polySurface1500LightingMap.png
+./Textures(NW4R)/polySurface1503LightingMap.d
+./Textures(NW4R)/polySurface1503LightingMap.png
+./Textures(NW4R)/polySurface1584LightingMap.d
+./Textures(NW4R)/polySurface1584LightingMap.png
+./Textures(NW4R)/polySurface194LightingMap.d
+./Textures(NW4R)/polySurface194LightingMap.png
+./Textures(NW4R)/polySurface196LightingMap.d
+./Textures(NW4R)/polySurface196LightingMap.png
+./Textures(NW4R)/polySurface276LightingMap.d
+./Textures(NW4R)/polySurface276LightingMap.png
+./Textures(NW4R)/polySurface303LightingMap.d
+./Textures(NW4R)/polySurface303LightingMap.png
+./Textures(NW4R)/polySurface382LightingMap.d
+./Textures(NW4R)/polySurface382LightingMap.png
+./Textures(NW4R)/polySurface386LightingMap.d
+./Textures(NW4R)/polySurface386LightingMap.png
+./Textures(NW4R)/polySurface388LightingMap.d
+./Textures(NW4R)/polySurface388LightingMap.png
+./Textures(NW4R)/polySurface392LightingMap.d
+./Textures(NW4R)/polySurface392LightingMap.png
+./Textures(NW4R)/polySurface52LightingMap.d
+./Textures(NW4R)/polySurface52LightingMap.png
+./Textures(NW4R)/polySurface57LightingMap.d
+./Textures(NW4R)/polySurface57LightingMap.png
+./Textures(NW4R)/polySurface66LightingMap.d
+./Textures(NW4R)/polySurface66LightingMap.png
+./Textures(NW4R)/polySurface67LightingMap.d
+./Textures(NW4R)/polySurface67LightingMap.png
+./Textures(NW4R)/polySurface80LightingMap.d
+./Textures(NW4R)/polySurface80LightingMap.png
+./Textures(NW4R)/polysurface192lightingmap.d
+./Textures(NW4R)/polysurface192lightingmap.png
+./Textures(NW4R)/polysurface193lightingmap.d
+./Textures(NW4R)/polysurface193lightingmap.png
+./Textures(NW4R)/polysurface195lightingmap.d
+./Textures(NW4R)/polysurface195lightingmap.png
+./Textures(NW4R)/polysurface387lightingmap.d
+./Textures(NW4R)/polysurface387lightingmap.png
+./Textures(NW4R)/polysurface393lightingmap.d
+./Textures(NW4R)/polysurface393lightingmap.png
+./Textures(NW4R)/poster12LightingMap.d
+./Textures(NW4R)/poster12LightingMap.png
+./Textures(NW4R)/posters.d
+./Textures(NW4R)/posters.mm1.png
+./Textures(NW4R)/posters.mm2.png
+./Textures(NW4R)/posters.png
+./Textures(NW4R)/ramp_wallpaper.d
+./Textures(NW4R)/ramp_wallpaper.mm1.png
+./Textures(NW4R)/ramp_wallpaper.mm2.png
+./Textures(NW4R)/ramp_wallpaper.png
+./Textures(NW4R)/rampfloor.d
+./Textures(NW4R)/rampfloor.mm1.png
+./Textures(NW4R)/rampfloor.mm2.png
+./Textures(NW4R)/rampfloor.png
+./Textures(NW4R)/reception_ceilingLightingMap.d
+./Textures(NW4R)/reception_ceilingLightingMap.png
+./Textures(NW4R)/reception_cupolLightingMap.d
+./Textures(NW4R)/reception_cupolLightingMap.png
+./Textures(NW4R)/reception_elevatorLightingMap.d
+./Textures(NW4R)/reception_elevatorLightingMap.png
+./Textures(NW4R)/reception_elevator_floorceiling.d
+./Textures(NW4R)/reception_elevator_floorceiling.png
+./Textures(NW4R)/reception_elevator_indicator.d
+./Textures(NW4R)/reception_elevator_indicator.png
+./Textures(NW4R)/reception_elevatorinterior.d
+./Textures(NW4R)/reception_elevatorinterior.png
+./Textures(NW4R)/reception_floor.d
+./Textures(NW4R)/reception_floor.mm1.png
+./Textures(NW4R)/reception_floor.mm2.png
+./Textures(NW4R)/reception_floor.png
+./Textures(NW4R)/reception_metal.d
+./Textures(NW4R)/reception_metal.png
+./Textures(NW4R)/reception_pillar.d
+./Textures(NW4R)/reception_pillar.png
+./Textures(NW4R)/reception_pillarsLightingMap.d
+./Textures(NW4R)/reception_pillarsLightingMap.png
+./Textures(NW4R)/reception_red_carpet.d
+./Textures(NW4R)/reception_red_carpet.mm1.png
+./Textures(NW4R)/reception_red_carpet.mm2.png
+./Textures(NW4R)/reception_red_carpet.png
+./Textures(NW4R)/reception_wallsLightingMap.d
+./Textures(NW4R)/reception_wallsLightingMap.png
+./Textures(NW4R)/reception_walls_frontLightingMap.d
+./Textures(NW4R)/reception_walls_frontLightingMap.png
+./Textures(NW4R)/red_ornament.d
+./Textures(NW4R)/red_ornament.png
+./Textures(NW4R)/restaurant_lamp_shade.d
+./Textures(NW4R)/restaurant_lamp_shade.mm1.png
+./Textures(NW4R)/restaurant_lamp_shade.mm2.png
+./Textures(NW4R)/restaurant_lamp_shade.png
+./Textures(NW4R)/restaurant_wall1.d
+./Textures(NW4R)/restaurant_wall1.mm1.png
+./Textures(NW4R)/restaurant_wall1.mm2.png
+./Textures(NW4R)/restaurant_wall1.png
+./Textures(NW4R)/rim_wii_04.d
+./Textures(NW4R)/rim_wii_04.png
+./Textures(NW4R)/rim_wii_09.d
+./Textures(NW4R)/rim_wii_09.png
+./Textures(NW4R)/rim_wii_10.d
+./Textures(NW4R)/rim_wii_10.png
+./Textures(NW4R)/rim_wii_18.d
+./Textures(NW4R)/rim_wii_18.png
+./Textures(NW4R)/romantic_wii_04_dress.d
+./Textures(NW4R)/romantic_wii_04_dress.png
+./Textures(NW4R)/ruzs.d
+./Textures(NW4R)/ruzs.png
+./Textures(NW4R)/rws.d
+./Textures(NW4R)/rws.mm1.png
+./Textures(NW4R)/rws.mm2.png
+./Textures(NW4R)/rws.png
+./Textures(NW4R)/salon_mirror_green.d
+./Textures(NW4R)/salon_mirror_green.png
+./Textures(NW4R)/salon_poster02.d
+./Textures(NW4R)/salon_poster02.png
+./Textures(NW4R)/shoji.d
+./Textures(NW4R)/shoji.mm1.png
+./Textures(NW4R)/shoji.mm2.png
+./Textures(NW4R)/shoji.png
+./Textures(NW4R)/slaghotel.d
+./Textures(NW4R)/slaghotel.mm1.png
+./Textures(NW4R)/slaghotel.mm2.png
+./Textures(NW4R)/slaghotel.png
+./Textures(NW4R)/smallmagazine.d
+./Textures(NW4R)/smallmagazine.png
+./Textures(NW4R)/suny_logo.d
+./Textures(NW4R)/suny_logo.mm1.png
+./Textures(NW4R)/suny_logo.mm2.png
+./Textures(NW4R)/suny_logo.png
+./Textures(NW4R)/szonyeg_h_wii.d
+./Textures(NW4R)/szonyeg_h_wii.mm1.png
+./Textures(NW4R)/szonyeg_h_wii.mm2.png
+./Textures(NW4R)/szonyeg_h_wii.png
+./Textures(NW4R)/travel_wii_02_bottom.d
+./Textures(NW4R)/travel_wii_02_bottom.png
+./Textures(NW4R)/travel_wii_04_bottom.d
+./Textures(NW4R)/travel_wii_04_bottom.png
+./Textures(NW4R)/vase_chinese.d
+./Textures(NW4R)/vase_chinese.png
+./Textures(NW4R)/wall_bedroom.d
+./Textures(NW4R)/wall_bedroom.mm1.png
+./Textures(NW4R)/wall_bedroom.mm2.png
+./Textures(NW4R)/wall_bedroom.png
+./Textures(NW4R)/wall_tileable.d
+./Textures(NW4R)/wall_tileable.mm1.png
+./Textures(NW4R)/wall_tileable.mm2.png
+./Textures(NW4R)/wall_tileable.png
+./Textures(NW4R)/washroom_wood.d
+./Textures(NW4R)/washroom_wood.mm1.png
+./Textures(NW4R)/washroom_wood.mm2.png
+./Textures(NW4R)/washroom_wood.png
+./Textures(NW4R)/wood.d
+./Textures(NW4R)/wood.mm1.png
+./Textures(NW4R)/wood.mm2.png
+./Textures(NW4R)/wood.png
+./Textures(NW4R)/wood02LightingMap.d
+./Textures(NW4R)/wood02LightingMap.png
+./Textures(NW4R)/working_wii_02_bottom.d
+./Textures(NW4R)/working_wii_02_bottom.png
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+MDL		= ./3DModels(NW4R)/hotel_catwalk
+MDL		= ./3DModels(NW4R)/hotel_hall
+MDL		= ./3DModels(NW4R)/hotel_lower
+TEX,CMPR,1	= ./Textures(NW4R)/Corridoor_metal
+TEX,CMPR,3	= ./Textures(NW4R)/Corridoor_metal_01
+TEX,CMPR,1	= ./Textures(NW4R)/Door04LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Door09LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Door16LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Door17LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Door20LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/DressingRoom_Lamp
+TEX,CMPR,3	= ./Textures(NW4R)/DressingRoom_ceiling
+TEX,CMPR,3	= ./Textures(NW4R)/Dressingroom_Painting
+TEX,CMPR,1	= ./Textures(NW4R)/Gym_glass_frame
+TEX,CMPR,1	= ./Textures(NW4R)/Gym_glassfibre
+TEX,CMPR,1	= ./Textures(NW4R)/Gym_hifi_wii
+TEX,CMPR,1	= ./Textures(NW4R)/Makeup_Cloth
+TEX,CMPR,1	= ./Textures(NW4R)/Makeuproom_Handwash
+TEX,CMPR,1	= ./Textures(NW4R)/Makeuproom_LampTop
+TEX,CMPR,1	= ./Textures(NW4R)/Makeuproom_Towel
+TEX,CMPR,1	= ./Textures(NW4R)/Makeuproom_chrome
+TEX,CMPR,1	= ./Textures(NW4R)/Makeuproom_makeup
+TEX,CMPR,1	= ./Textures(NW4R)/Object115LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object164LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object164_01LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object165LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object166LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object169LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object170LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object46LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Object87LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Plane45LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Plane48LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Plane49LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Plane77LightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/Posters
+TEX,CMPR,3	= ./Textures(NW4R)/Restaurant_dado1
+TEX,CMPR,1	= ./Textures(NW4R)/Restaurant_light
+TEX,CMPR,3	= ./Textures(NW4R)/Restaurant_wall6
+TEX,CMPR,3	= ./Textures(NW4R)/Restaurant_wood_light
+TEX,CMPR,1	= ./Textures(NW4R)/Salon1LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/Salon_chairs
+TEX,CMPR,1	= ./Textures(NW4R)/Salon_lamp
+TEX,CMPR,3	= ./Textures(NW4R)/Salon_mat_1
+TEX,CMPR,3	= ./Textures(NW4R)/Salon_rug_blue
+TEX,CMPR,1	= ./Textures(NW4R)/Salon_smallmagazine
+TEX,CMPR,1	= ./Textures(NW4R)/Salon_smallmagazine2
+TEX,CMPR,3	= ./Textures(NW4R)/Salon_wood_light
+TEX,CMPR,1	= ./Textures(NW4R)/asdfaLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/asphalt
+TEX,CMPR,1	= ./Textures(NW4R)/base_furniture2
+TEX,CMPR,3	= ./Textures(NW4R)/bedroo_wardrobe
+TEX,CMPR,3	= ./Textures(NW4R)/bedroom_Skirting
+TEX,CMPR,1	= ./Textures(NW4R)/bedroom_maniquine
+TEX,CMPR,1	= ./Textures(NW4R)/bedroom_metal
+TEX,CMPR,3	= ./Textures(NW4R)/bedroom_wood2
+TEX,CMPR,1	= ./Textures(NW4R)/book1
+TEX,CMPR,1	= ./Textures(NW4R)/book2
+TEX,CMPR,1	= ./Textures(NW4R)/book3
+TEX,CMPR,1	= ./Textures(NW4R)/book4
+TEX,CMPR,1	= ./Textures(NW4R)/book5
+TEX,CMPR,1	= ./Textures(NW4R)/book6
+TEX,CMPR,1	= ./Textures(NW4R)/book8
+TEX,CMPR,1	= ./Textures(NW4R)/bouotique_ceilingLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_book
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_boxnbelt
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_computer_a
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_dress
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_fabric
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_floorLightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/boutique_floor_gradient
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_glassfibre
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_rafLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_sandal
+TEX,CMPR,3	= ./Textures(NW4R)/boutique_tablewood
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_wallsLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/boutique_woodLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/carpet01inddorLightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/carpet_f
+TEX,CMPR,1	= ./Textures(NW4R)/casual_wii_04_bottom
+TEX,CMPR,1	= ./Textures(NW4R)/casual_wii_05_bottom
+TEX,CMPR,3	= ./Textures(NW4R)/catwalk_poster
+TEX,CMPR,1	= ./Textures(NW4R)/city_brick_b
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_folded_ba
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_folded_bb
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_folded_bc
+TEX,CMPR,1	= ./Textures(NW4R)/cloth_skin_light_a_wii
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_a
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_b
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_c
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_d
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_e
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_f
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_g
+TEX,CMPR,1	= ./Textures(NW4R)/clothes_hang_h
+TEX,RGBA32,1	= ./Textures(NW4R)/cw_lightgrow_alpha
+TEX,CMPR,1	= ./Textures(NW4R)/cw_lights01
+TEX,RGBA32,1	= ./Textures(NW4R)/cw_poster
+TEX,CMPR,1	= ./Textures(NW4R)/darkgray
+TEX,CMPR,1	= ./Textures(NW4R)/dress_screen05lightingmap
+TEX,CMPR,3	= ./Textures(NW4R)/dressingRoom_carpet
+TEX,CMPR,3	= ./Textures(NW4R)/dressingroom_wall
+TEX,CMPR,1	= ./Textures(NW4R)/ecset2
+TEX,CMPR,1	= ./Textures(NW4R)/elevator_Out_button
+TEX,CMPR,1	= ./Textures(NW4R)/fc_blackmetal
+TEX,CMPR,1	= ./Textures(NW4R)/fc_metal_tube
+TEX,CMPR,1	= ./Textures(NW4R)/fitnes_stone_black
+TEX,CMPR,1	= ./Textures(NW4R)/fitnes_stone_orange
+TEX,CMPR,1	= ./Textures(NW4R)/fitnes_stone_white__
+TEX,CMPR,3	= ./Textures(NW4R)/fitnes_wood
+TEX,CMPR,1	= ./Textures(NW4R)/floor
+TEX,CMPR,3	= ./Textures(NW4R)/floorsregular0006_s
+TEX,CMPR,1	= ./Textures(NW4R)/fullblack
+TEX,CMPR,1	= ./Textures(NW4R)/gate_gold
+TEX,CMPR,1	= ./Textures(NW4R)/glass_01_
+TEX,CMPR,1	= ./Textures(NW4R)/glass_02_
+TEX,CMPR,1	= ./Textures(NW4R)/glass_04_
+TEX,CMPR,1	= ./Textures(NW4R)/glass_05_
+TEX,IA8,1	= ./Textures(NW4R)/gym_glass_stripes
+TEX,CMPR,1	= ./Textures(NW4R)/gym_tv03
+TEX,CMPR,3	= ./Textures(NW4R)/hairdr_wallcarpet_a
+TEX,CMPR,1	= ./Textures(NW4R)/hat_02
+TEX,CMPR,1	= ./Textures(NW4R)/hat_04
+TEX,CMPR,1	= ./Textures(NW4R)/hat_06
+TEX,CMPR,3	= ./Textures(NW4R)/hotel_building_balcony_floor
+TEX,CMPR,3	= ./Textures(NW4R)/hotel_building_wall_c
+TEX,CMPR,1	= ./Textures(NW4R)/lamp
+TEX,CMPR,3	= ./Textures(NW4R)/leather
+TEX,CMPR,3	= ./Textures(NW4R)/leather02
+TEX,RGB5A3,1	= ./Textures(NW4R)/light1
+TEX,CMPR,3	= ./Textures(NW4R)/livingroom_splitainting_a
+TEX,CMPR,3	= ./Textures(NW4R)/livingroom_splitainting_b
+TEX,CMPR,3	= ./Textures(NW4R)/livingroom_splitainting_c
+TEX,CMPR,3	= ./Textures(NW4R)/lobby_fotelja
+TEX,CMPR,3	= ./Textures(NW4R)/lobby_fotelja02
+TEX,CMPR,1	= ./Textures(NW4R)/makeup_tools_b
+TEX,CMPR,3	= ./Textures(NW4R)/makeuproom_blockfloor
+TEX,CMPR,1	= ./Textures(NW4R)/makeuproom_ceramic
+TEX,CMPR,1	= ./Textures(NW4R)/makeuproom_chandelier
+TEX,RGB5A3,1	= ./Textures(NW4R)/makeuproom_lacecurtain
+TEX,CMPR,1	= ./Textures(NW4R)/makeuproom_mirrorwood
+TEX,CMPR,1	= ./Textures(NW4R)/marbleLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/marble_black
+TEX,CMPR,1	= ./Textures(NW4R)/metal
+TEX,CMPR,1	= ./Textures(NW4R)/metal1
+TEX,CMPR,3	= ./Textures(NW4R)/muchapainting1
+TEX,CMPR,3	= ./Textures(NW4R)/muchapainting2
+TEX,CMPR,1	= ./Textures(NW4R)/photostudio_MetalHandle
+TEX,CMPR,1	= ./Textures(NW4R)/photostudio_chrome
+TEX,CMPR,3	= ./Textures(NW4R)/photostudio_partition_wood
+TEX,CMPR,1	= ./Textures(NW4R)/pillar_03LightingMap
+TEX,RGB5A3,1	= ./Textures(NW4R)/plant
+TEX,RGB5A3,1	= ./Textures(NW4R)/planter
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface1488LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface1500LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface1503LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface1584LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface194LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface196LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface276LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface303LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface382LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface386LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface388LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface392LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface52LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface57LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface66LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface67LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polySurface80LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/polysurface192lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/polysurface193lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/polysurface195lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/polysurface387lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/polysurface393lightingmap
+TEX,CMPR,1	= ./Textures(NW4R)/poster12LightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/posters
+TEX,CMPR,3	= ./Textures(NW4R)/ramp_wallpaper
+TEX,CMPR,3	= ./Textures(NW4R)/rampfloor
+TEX,CMPR,1	= ./Textures(NW4R)/reception_ceilingLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/reception_cupolLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/reception_elevatorLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/reception_elevator_floorceiling
+TEX,CMPR,1	= ./Textures(NW4R)/reception_elevator_indicator
+TEX,CMPR,1	= ./Textures(NW4R)/reception_elevatorinterior
+TEX,CMPR,3	= ./Textures(NW4R)/reception_floor
+TEX,CMPR,1	= ./Textures(NW4R)/reception_metal
+TEX,CMPR,1	= ./Textures(NW4R)/reception_pillar
+TEX,CMPR,1	= ./Textures(NW4R)/reception_pillarsLightingMap
+TEX,CMPR,3	= ./Textures(NW4R)/reception_red_carpet
+TEX,CMPR,1	= ./Textures(NW4R)/reception_wallsLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/reception_walls_frontLightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/red_ornament
+TEX,CMPR,3	= ./Textures(NW4R)/restaurant_lamp_shade
+TEX,CMPR,3	= ./Textures(NW4R)/restaurant_wall1
+TEX,CMPR,1	= ./Textures(NW4R)/rim_wii_04
+TEX,CMPR,1	= ./Textures(NW4R)/rim_wii_09
+TEX,CMPR,1	= ./Textures(NW4R)/rim_wii_10
+TEX,CMPR,1	= ./Textures(NW4R)/rim_wii_18
+TEX,CMPR,1	= ./Textures(NW4R)/romantic_wii_04_dress
+TEX,CMPR,1	= ./Textures(NW4R)/ruzs
+TEX,CMPR,3	= ./Textures(NW4R)/rws
+TEX,CMPR,1	= ./Textures(NW4R)/salon_mirror_green
+TEX,CMPR,1	= ./Textures(NW4R)/salon_poster02
+TEX,CMPR,3	= ./Textures(NW4R)/shoji
+TEX,CMPR,3	= ./Textures(NW4R)/slaghotel
+TEX,CMPR,1	= ./Textures(NW4R)/smallmagazine
+TEX,CMPR,3	= ./Textures(NW4R)/suny_logo
+TEX,CMPR,3	= ./Textures(NW4R)/szonyeg_h_wii
+TEX,CMPR,1	= ./Textures(NW4R)/travel_wii_02_bottom
+TEX,CMPR,1	= ./Textures(NW4R)/travel_wii_04_bottom
+TEX,CMPR,1	= ./Textures(NW4R)/vase_chinese
+TEX,CMPR,3	= ./Textures(NW4R)/wall_bedroom
+TEX,CMPR,3	= ./Textures(NW4R)/wall_tileable
+TEX,CMPR,3	= ./Textures(NW4R)/washroom_wood
+TEX,CMPR,3	= ./Textures(NW4R)/wood
+TEX,CMPR,1	= ./Textures(NW4R)/wood02LightingMap
+TEX,CMPR,1	= ./Textures(NW4R)/working_wii_02_bottom
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but not U8) this list will be used to sort the found
+# files. For archives with directory support (all but not PACK) it is very
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./3DModels(NW4R)/
+     0xe20	= ./3DModels(NW4R)/hotel_catwalk
+   0x94040	= ./3DModels(NW4R)/hotel_hall
+  0x106f00	= ./3DModels(NW4R)/hotel_lower
+		= ./Textures(NW4R)/
+  0x1c1f80	= ./Textures(NW4R)/asdfaLightingMap
+  0x1c9fc0	= ./Textures(NW4R)/asphalt
+  0x1ca020	= ./Textures(NW4R)/base_furniture2
+  0x1d2060	= ./Textures(NW4R)/bedroo_wardrobe
+  0x1dc8a0	= ./Textures(NW4R)/bedroom_maniquine
+  0x1e48e0	= ./Textures(NW4R)/bedroom_metal
+  0x1ec920	= ./Textures(NW4R)/bedroom_Skirting
+  0x1f7160	= ./Textures(NW4R)/bedroom_wood2
+  0x2019a0	= ./Textures(NW4R)/book1
+  0x2039e0	= ./Textures(NW4R)/book2
+  0x205a20	= ./Textures(NW4R)/book3
+  0x207a60	= ./Textures(NW4R)/book4
+  0x209aa0	= ./Textures(NW4R)/book5
+  0x20bae0	= ./Textures(NW4R)/book6
+  0x20db20	= ./Textures(NW4R)/book8
+  0x20fb60	= ./Textures(NW4R)/bouotique_ceilingLightingMap
+  0x217ba0	= ./Textures(NW4R)/boutique_book
+  0x218be0	= ./Textures(NW4R)/boutique_boxnbelt
+  0x220c20	= ./Textures(NW4R)/boutique_computer_a
+  0x228c60	= ./Textures(NW4R)/boutique_dress
+  0x230ca0	= ./Textures(NW4R)/boutique_fabric
+  0x238ce0	= ./Textures(NW4R)/boutique_floor_gradient
+  0x243520	= ./Textures(NW4R)/boutique_floorLightingMap
+  0x24b560	= ./Textures(NW4R)/boutique_glassfibre
+  0x2535a0	= ./Textures(NW4R)/boutique_rafLightingMap
+  0x25b5e0	= ./Textures(NW4R)/boutique_sandal
+  0x263620	= ./Textures(NW4R)/boutique_tablewood
+  0x26de60	= ./Textures(NW4R)/boutique_wallsLightingMap
+  0x275ea0	= ./Textures(NW4R)/boutique_woodLightingMap
+  0x27dee0	= ./Textures(NW4R)/carpet_f
+  0x288720	= ./Textures(NW4R)/carpet01inddorLightingMap
+  0x290760	= ./Textures(NW4R)/casual_wii_04_bottom
+  0x2987a0	= ./Textures(NW4R)/casual_wii_05_bottom
+  0x2a07e0	= ./Textures(NW4R)/catwalk_poster
+  0x2ab020	= ./Textures(NW4R)/city_brick_b
+  0x2ad060	= ./Textures(NW4R)/cloth_folded_ba
+  0x2ad0c0	= ./Textures(NW4R)/cloth_folded_bb
+  0x2ad120	= ./Textures(NW4R)/cloth_folded_bc
+  0x2ad180	= ./Textures(NW4R)/cloth_skin_light_a_wii
+  0x2af1c0	= ./Textures(NW4R)/clothes_hang_a
+  0x2b7200	= ./Textures(NW4R)/clothes_hang_b
+  0x2bf240	= ./Textures(NW4R)/clothes_hang_c
+  0x2c7280	= ./Textures(NW4R)/clothes_hang_d
+  0x2cf2c0	= ./Textures(NW4R)/clothes_hang_e
+  0x2d7300	= ./Textures(NW4R)/clothes_hang_f
+  0x2df340	= ./Textures(NW4R)/clothes_hang_g
+  0x2e7380	= ./Textures(NW4R)/clothes_hang_h
+  0x2ef3c0	= ./Textures(NW4R)/Corridoor_metal
+  0x2f7400	= ./Textures(NW4R)/Corridoor_metal_01
+  0x301c40	= ./Textures(NW4R)/cw_lightgrow_alpha
+  0x311c80	= ./Textures(NW4R)/cw_lights01
+  0x3124c0	= ./Textures(NW4R)/cw_poster
+  0x332500	= ./Textures(NW4R)/darkgray
+  0x33a540	= ./Textures(NW4R)/Door04LightingMap
+  0x342580	= ./Textures(NW4R)/Door09LightingMap
+  0x34a5c0	= ./Textures(NW4R)/Door16LightingMap
+  0x352600	= ./Textures(NW4R)/Door17LightingMap
+  0x35a640	= ./Textures(NW4R)/Door20LightingMap
+  0x362680	= ./Textures(NW4R)/dress_screen05lightingmap
+  0x36a6c0	= ./Textures(NW4R)/dressingRoom_carpet
+  0x374f00	= ./Textures(NW4R)/DressingRoom_ceiling
+  0x37f740	= ./Textures(NW4R)/DressingRoom_Lamp
+  0x387780	= ./Textures(NW4R)/Dressingroom_Painting
+  0x391fc0	= ./Textures(NW4R)/dressingroom_wall
+  0x39c800	= ./Textures(NW4R)/ecset2
+  0x3a4840	= ./Textures(NW4R)/elevator_Out_button
+  0x3a5080	= ./Textures(NW4R)/fc_blackmetal
+  0x3a5140	= ./Textures(NW4R)/fc_metal_tube
+  0x3a9180	= ./Textures(NW4R)/fitnes_stone_black
+  0x3ab1c0	= ./Textures(NW4R)/fitnes_stone_orange
+  0x3b3200	= ./Textures(NW4R)/fitnes_stone_white__
+  0x3bb240	= ./Textures(NW4R)/fitnes_wood
+  0x3c5a80	= ./Textures(NW4R)/floor
+  0x3c7ac0	= ./Textures(NW4R)/floorsregular0006_s
+  0x3d2300	= ./Textures(NW4R)/fullblack
+  0x3d2540	= ./Textures(NW4R)/gate_gold
+  0x3d25a0	= ./Textures(NW4R)/glass_01_
+  0x3d27e0	= ./Textures(NW4R)/glass_02_
+  0x3d2a20	= ./Textures(NW4R)/glass_04_
+  0x3d2c60	= ./Textures(NW4R)/glass_05_
+  0x3d2ea0	= ./Textures(NW4R)/Gym_glass_frame
+  0x3daee0	= ./Textures(NW4R)/gym_glass_stripes
+  0x3e2f20	= ./Textures(NW4R)/Gym_glassfibre
+  0x3eaf60	= ./Textures(NW4R)/Gym_hifi_wii
+  0x3f2fa0	= ./Textures(NW4R)/gym_tv03
+  0x3f6fe0	= ./Textures(NW4R)/hairdr_wallcarpet_a
+  0x401820	= ./Textures(NW4R)/hat_02
+  0x402060	= ./Textures(NW4R)/hat_04
+  0x4040a0	= ./Textures(NW4R)/hat_06
+  0x4060e0	= ./Textures(NW4R)/hotel_building_balcony_floor
+  0x410920	= ./Textures(NW4R)/hotel_building_wall_c
+  0x415d60	= ./Textures(NW4R)/lamp
+  0x4165a0	= ./Textures(NW4R)/leather
+  0x418fe0	= ./Textures(NW4R)/leather02
+  0x41ba20	= ./Textures(NW4R)/light1
+  0x41da60	= ./Textures(NW4R)/livingroom_splitainting_a
+  0x4282a0	= ./Textures(NW4R)/livingroom_splitainting_b
+  0x432ae0	= ./Textures(NW4R)/livingroom_splitainting_c
+  0x43d320	= ./Textures(NW4R)/lobby_fotelja
+  0x43fd60	= ./Textures(NW4R)/lobby_fotelja02
+  0x4427a0	= ./Textures(NW4R)/Makeup_Cloth
+  0x44a7e0	= ./Textures(NW4R)/makeup_tools_b
+  0x44c820	= ./Textures(NW4R)/makeuproom_blockfloor
+  0x457060	= ./Textures(NW4R)/makeuproom_ceramic
+  0x4590a0	= ./Textures(NW4R)/makeuproom_chandelier
+  0x4610e0	= ./Textures(NW4R)/Makeuproom_chrome
+  0x463120	= ./Textures(NW4R)/Makeuproom_Handwash
+  0x463180	= ./Textures(NW4R)/makeuproom_lacecurtain
+  0x4731c0	= ./Textures(NW4R)/Makeuproom_LampTop
+  0x47b200	= ./Textures(NW4R)/Makeuproom_makeup
+  0x47ba40	= ./Textures(NW4R)/makeuproom_mirrorwood
+  0x47fa80	= ./Textures(NW4R)/Makeuproom_Towel
+  0x487ac0	= ./Textures(NW4R)/marble_black
+  0x489b00	= ./Textures(NW4R)/marbleLightingMap
+  0x491b40	= ./Textures(NW4R)/metal
+  0x493b80	= ./Textures(NW4R)/metal1
+  0x495bc0	= ./Textures(NW4R)/muchapainting1
+  0x4a0400	= ./Textures(NW4R)/muchapainting2
+  0x4aac40	= ./Textures(NW4R)/Object115LightingMap
+  0x4b2c80	= ./Textures(NW4R)/Object164_01LightingMap
+  0x4bacc0	= ./Textures(NW4R)/Object164LightingMap
+  0x4c2d00	= ./Textures(NW4R)/Object165LightingMap
+  0x4cad40	= ./Textures(NW4R)/Object166LightingMap
+  0x4d2d80	= ./Textures(NW4R)/Object169LightingMap
+  0x4dadc0	= ./Textures(NW4R)/Object170LightingMap
+  0x4e2e00	= ./Textures(NW4R)/Object46LightingMap
+  0x4eae40	= ./Textures(NW4R)/Object87LightingMap
+  0x4f2e80	= ./Textures(NW4R)/photostudio_chrome
+  0x4faec0	= ./Textures(NW4R)/photostudio_MetalHandle
+  0x502f00	= ./Textures(NW4R)/photostudio_partition_wood
+  0x50d740	= ./Textures(NW4R)/pillar_03LightingMap
+  0x515780	= ./Textures(NW4R)/Plane45LightingMap
+  0x51d7c0	= ./Textures(NW4R)/Plane48LightingMap
+  0x525800	= ./Textures(NW4R)/Plane49LightingMap
+  0x52d840	= ./Textures(NW4R)/Plane77LightingMap
+  0x535880	= ./Textures(NW4R)/plant
+  0x53d8c0	= ./Textures(NW4R)/planter
+  0x545900	= ./Textures(NW4R)/polySurface1488LightingMap
+  0x54d940	= ./Textures(NW4R)/polySurface1500LightingMap
+  0x555980	= ./Textures(NW4R)/polySurface1503LightingMap
+  0x55d9c0	= ./Textures(NW4R)/polySurface1584LightingMap
+  0x565a00	= ./Textures(NW4R)/polysurface192lightingmap
+  0x56da40	= ./Textures(NW4R)/polysurface193lightingmap
+  0x575a80	= ./Textures(NW4R)/polySurface194LightingMap
+  0x57dac0	= ./Textures(NW4R)/polysurface195lightingmap
+  0x585b00	= ./Textures(NW4R)/polySurface196LightingMap
+  0x58db40	= ./Textures(NW4R)/polySurface276LightingMap
+  0x595b80	= ./Textures(NW4R)/polySurface303LightingMap
+  0x59dbc0	= ./Textures(NW4R)/polySurface382LightingMap
+  0x5a5c00	= ./Textures(NW4R)/polySurface386LightingMap
+  0x5adc40	= ./Textures(NW4R)/polysurface387lightingmap
+  0x5b5c80	= ./Textures(NW4R)/polySurface388LightingMap
+  0x5bdcc0	= ./Textures(NW4R)/polySurface392LightingMap
+  0x5c5d00	= ./Textures(NW4R)/polysurface393lightingmap
+  0x5cdd40	= ./Textures(NW4R)/polySurface52LightingMap
+  0x5d5d80	= ./Textures(NW4R)/polySurface57LightingMap
+  0x5dddc0	= ./Textures(NW4R)/polySurface66LightingMap
+  0x5e5e00	= ./Textures(NW4R)/polySurface67LightingMap
+  0x5ede40	= ./Textures(NW4R)/polySurface80LightingMap
+  0x5f5e80	= ./Textures(NW4R)/poster12LightingMap
+  0x5fdec0	= ./Textures(NW4R)/posters
+  0x608700	= ./Textures(NW4R)/Posters
+  0x612f40	= ./Textures(NW4R)/ramp_wallpaper
+  0x61d780	= ./Textures(NW4R)/rampfloor
+  0x627fc0	= ./Textures(NW4R)/reception_ceilingLightingMap
+  0x630000	= ./Textures(NW4R)/reception_cupolLightingMap
+  0x638040	= ./Textures(NW4R)/reception_elevator_floorceiling
+  0x640080	= ./Textures(NW4R)/reception_elevator_indicator
+  0x6420c0	= ./Textures(NW4R)/reception_elevatorinterior
+  0x64a100	= ./Textures(NW4R)/reception_elevatorLightingMap
+  0x652140	= ./Textures(NW4R)/reception_floor
+  0x65c980	= ./Textures(NW4R)/reception_metal
+  0x65e9c0	= ./Textures(NW4R)/reception_pillar
+  0x666a00	= ./Textures(NW4R)/reception_pillarsLightingMap
+  0x66ea40	= ./Textures(NW4R)/reception_red_carpet
+  0x679280	= ./Textures(NW4R)/reception_walls_frontLightingMap
+  0x6812c0	= ./Textures(NW4R)/reception_wallsLightingMap
+  0x689300	= ./Textures(NW4R)/red_ornament
+  0x68d340	= ./Textures(NW4R)/Restaurant_dado1
+  0x697b80	= ./Textures(NW4R)/restaurant_lamp_shade
+  0x6a23c0	= ./Textures(NW4R)/Restaurant_light
+  0x6aa400	= ./Textures(NW4R)/restaurant_wall1
+  0x6b4c40	= ./Textures(NW4R)/Restaurant_wall6
+  0x6bf480	= ./Textures(NW4R)/Restaurant_wood_light
+  0x6c9cc0	= ./Textures(NW4R)/rim_wii_04
+  0x6ca500	= ./Textures(NW4R)/rim_wii_09
+  0x6cad40	= ./Textures(NW4R)/rim_wii_10
+  0x6cb580	= ./Textures(NW4R)/rim_wii_18
+  0x6cbdc0	= ./Textures(NW4R)/romantic_wii_04_dress
+  0x6d3e00	= ./Textures(NW4R)/ruzs
+  0x6d4640	= ./Textures(NW4R)/rws
+  0x6dee80	= ./Textures(NW4R)/Salon_chairs
+  0x6e6ec0	= ./Textures(NW4R)/Salon_lamp
+  0x6e7700	= ./Textures(NW4R)/Salon_mat_1
+  0x6f1f40	= ./Textures(NW4R)/salon_mirror_green
+  0x6f9f80	= ./Textures(NW4R)/salon_poster02
+  0x6fbfc0	= ./Textures(NW4R)/Salon_rug_blue
+  0x706800	= ./Textures(NW4R)/Salon_smallmagazine
+  0x707040	= ./Textures(NW4R)/Salon_smallmagazine2
+  0x707880	= ./Textures(NW4R)/Salon_wood_light
+  0x7120c0	= ./Textures(NW4R)/Salon1LightingMap
+  0x71a100	= ./Textures(NW4R)/shoji
+  0x71cb40	= ./Textures(NW4R)/slaghotel
+  0x71f580	= ./Textures(NW4R)/smallmagazine
+  0x71f7c0	= ./Textures(NW4R)/suny_logo
+  0x72a000	= ./Textures(NW4R)/szonyeg_h_wii
+  0x734840	= ./Textures(NW4R)/travel_wii_02_bottom
+  0x73c880	= ./Textures(NW4R)/travel_wii_04_bottom
+  0x7448c0	= ./Textures(NW4R)/vase_chinese
+  0x748900	= ./Textures(NW4R)/wall_bedroom
+  0x753140	= ./Textures(NW4R)/wall_tileable
+  0x75d980	= ./Textures(NW4R)/washroom_wood
+  0x7681c0	= ./Textures(NW4R)/wood
+  0x772a00	= ./Textures(NW4R)/wood02LightingMap
+  0x77aa40	= ./Textures(NW4R)/working_wii_02_bottom
+  0x782a80	= ./.string-pool.bin
+
+#------------------------------------------------------------------------------
+

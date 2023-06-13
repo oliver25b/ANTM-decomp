@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material179
+NodeTree
+Textures(NW4R)
+casual_04_bottom
+casual_04_bottom_bottom3__Material179
+casual_wii_04_bottom
+polygon0

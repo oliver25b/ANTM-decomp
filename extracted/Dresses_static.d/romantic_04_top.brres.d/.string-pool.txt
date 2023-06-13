@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material180
+NodeTree
+Textures(NW4R)
+polygon0
+romantic_04_top
+romantic_04_top_romantic_wii_04_top__Material180
+romantic_wii_04_top

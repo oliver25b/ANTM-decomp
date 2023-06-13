@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material169
+NodeTree
+Textures(NW4R)
+polygon0
+travel_07_dress
+travel_07_dress_travel_wii_07_dress__Material169
+travel_wii_07_dress

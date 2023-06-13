@@ -1,0 +1,17 @@
+#0
+#1
+3DModels(NW4R)
+BackDrop
+BackDrop__backdrop
+DrawOpa
+NodeTree
+Snowman
+Snowman__lambert3
+Textures(NW4R)
+Winter
+backdrop
+lambert3
+nw4r_root
+photoshoot_city_winter
+polygon0
+polygon1

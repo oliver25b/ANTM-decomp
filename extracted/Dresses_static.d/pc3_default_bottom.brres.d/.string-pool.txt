@@ -1,0 +1,10 @@
+#0
+3DModels(NW4R)
+DrawOpa
+Material9
+NodeTree
+Textures(NW4R)
+pc3_cloth_bottom
+pc3_default_bottom
+pc3_default_bottom_bottom__Material9
+polygon0
